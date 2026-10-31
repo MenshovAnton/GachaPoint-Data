@@ -183,16 +183,9 @@ def moderate_promocodes(data: dict) -> dict:
             deduped[key] = item
             continue
 
-        # 2. Определение стримового кода
-        is_stream = bool(item.get("is_stream", False)) or item.get("status") == "STREAM"
-        rewards_desc = (item.get("rewards_description", "") + " " + item.get("rewards_description_ru", "")).lower()
-
-        # Авто-распознавание стримовых кодов по характерной награде в 100 гемов/нефрита/полихромов
-        if ("100 камней" in rewards_desc or "100 звёздного" in rewards_desc or "100 полихромов" in rewards_desc
-                or "100 primogems" in rewards_desc or "100 stellar" in rewards_desc or "100 polychrome" in rewards_desc
-                or "300 полихромов" in rewards_desc):
-            is_stream = True
-            item["is_stream"] = True
+        # 2. Определение стримового кода: строго по явному флагу, статусу или стримовому ID
+        is_stream = bool(item.get("is_stream", False)) or item.get("status") == "STREAM" or "stream" in str(item.get("id", "")).lower()
+        item["is_stream"] = is_stream
 
         expires_at_dt = parse_iso_datetime(item.get("expires_at"))
         created_at_dt = parse_iso_datetime(item.get("created_at"))
