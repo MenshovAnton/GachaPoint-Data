@@ -293,7 +293,7 @@ def main():
     promocodes_file = "promocodes.json"
     banners_file = "banners_schedule.json"
 
-    promo_data = load_json(promocodes_file, {"version": 4, "codes": []})
+    promo_data = load_json(promocodes_file, {"version": 1, "codes": []})
 
     # Авто-импорт из очереди pending_codes.json
     import_pending_codes(promo_data)
@@ -327,7 +327,7 @@ def main():
     save_json(promocodes_file, promo_data)
 
     if os.path.exists(banners_file):
-        banner_data = load_json(banners_file, {"version": 4, "games": []})
+        banner_data = load_json(banners_file, {"version": 1, "games": []})
         banner_data = moderate_banners(banner_data)
         save_json(banners_file, banner_data)
 
