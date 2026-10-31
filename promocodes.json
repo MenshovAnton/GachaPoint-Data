@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "last_updated": "2026-10-31T12:00:00Z",
+  "codes": [
+    {
+      "id": "genshin_5_1_01",
+      "game_type": 0,
+      "code": "GENSHINGIFT",
+      "rewards_description": "50 Камней Истока, 3 Опыта героя",
+      "reward_types": ["GEMS", "EXP"],
+      "status": "PERMANENT",
+      "expires_at": null,
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "genshin_5_1_02",
+      "game_type": 0,
+      "code": "WTXV36BMH747",
+      "rewards_description": "100 Камней Истока, 10 Волшебной руды",
+      "reward_types": ["GEMS", "OTHER"],
+      "status": "NEW",
+      "expires_at": null,
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "genshin_5_2_stream_01",
+      "game_type": 0,
+      "code": "5A2WEGVPQ87Z",
+      "rewards_description": "100 Камней Истока, 50 000 Моры",
+      "reward_types": ["GEMS", "CREDITS"],
+      "status": "STREAM",
+      "expires_at": "2026-11-05T04:00:00Z",
+      "is_stream": true,
+      "is_active": true
+    },
+    {
+      "id": "hsr_2_6_01",
+      "game_type": 1,
+      "code": "STARRAILGIFT",
+      "rewards_description": "50 Звездного нефрита, 10 000 Кредитов, 2 Путеводителя путешественника",
+      "reward_types": ["GEMS", "CREDITS", "EXP"],
+      "status": "PERMANENT",
+      "expires_at": null,
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "hsr_2_6_02",
+      "game_type": 1,
+      "code": "HSRGFN24",
+      "rewards_description": "3 Журнала приключений, 30 000 Кредитов",
+      "reward_types": ["EXP", "CREDITS"],
+      "status": "NEW",
+      "expires_at": null,
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "hsr_2_7_stream_01",
+      "game_type": 1,
+      "code": "VAPORSTATION",
+      "rewards_description": "100 Звездного нефрита, 50 000 Кредитов",
+      "reward_types": ["GEMS", "CREDITS"],
+      "status": "STREAM",
+      "expires_at": "2026-11-08T04:00:00Z",
+      "is_stream": true,
+      "is_active": true
+    },
+    {
+      "id": "zzz_1_2_01",
+      "game_type": 2,
+      "code": "ZENLESSGIFT",
+      "rewards_description": "50 Полихромов, 2 Журнала специалиста, 3 Источника питания",
+      "reward_types": ["GEMS", "EXP"],
+      "status": "PERMANENT",
+      "expires_at": null,
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "zzz_1_3_01",
+      "game_type": 2,
+      "code": "CATCHABOO",
+      "rewards_description": "30 Полихромов, 1 Бупон",
+      "reward_types": ["GEMS", "OTHER"],
+      "status": "NEW",
+      "expires_at": null,
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "zzz_1_3_stream_01",
+      "game_type": 2,
+      "code": "ZZZ13SPECIAL",
+      "rewards_description": "300 Полихромов, 30 000 Денни",
+      "reward_types": ["GEMS", "CREDITS"],
+      "status": "STREAM",
+      "expires_at": "2026-11-03T04:00:00Z",
+      "is_stream": true,
+      "is_active": true
+    },
+    {
+      "id": "hi3_7_8_01",
+      "game_type": 3,
+      "code": "BRONYA123",
+      "rewards_description": "120 Кристаллов, 9 999 Астерита",
+      "reward_types": ["GEMS", "OTHER"],
+      "status": "NEW",
+      "expires_at": null,
+      "is_stream": false,
+      "is_active": true
+    }
+  ]
+}
