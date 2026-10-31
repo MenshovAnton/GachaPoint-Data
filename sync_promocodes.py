@@ -2,14 +2,10 @@
 """
 GachaPoint Data Hub — Autonomous Validation, Moderation & Sync Script
 
-Обеспечивает автономную и бесперебойную поддержку данных:
-1. Внесение новых промокодов на автомате (из pending_codes.json, CLI или внешних зеркал).
-2. Четкое разделение на 4 категории:
-   - PERMANENT: постоянные бессрочные коды (GENSHINGIFT, STARRAILGIFT, ZENLESSGIFT, ZZZTVCM, HONKAIGIFT)
-   - STREAM: коды со стримов разработчиков (100 гемов/нефрита, живут 16ч, затем бережно архивируются)
-   - ACTIVE: регулярные коды патчей и событий
-   - EXPIRED: структурированный архив недействительных кодов для проверки истории
-3. Модерация баннеров по календарю без порчи состава персонажей.
+Provides automated data maintenance:
+1. Auto-import new promo codes from pending_codes.json or CLI.
+2. Maintain strict categorization: PERMANENT, STREAM, ACTIVE, EXPIRED.
+3. Banner schedule moderation with calendar-based status updates.
 """
 
 import json
@@ -139,7 +135,7 @@ def import_pending_codes(data: dict, pending_file: str = "pending_codes.json") -
         existing_codes.add((game_type, code_str))
         added_count += 1
 
-    # Очищаем обработанный буферный файл
+    # Clean up pending queue
     try:
         os.remove(pending_file)
         print(f"Imported {added_count} new codes from {pending_file} and cleared pending queue.")
@@ -167,7 +163,7 @@ def moderate_promocodes(data: dict) -> dict:
         item["code"] = raw_code
         item["game_type"] = game_type
 
-        # 1. Защита постоянных кодов (PERMANENT)
+        # 1. Protect permanent codes
         if key in PERMANENT_CODES or item.get("status") == "PERMANENT":
             perm_meta = PERMANENT_CODES.get(key, {})
             item["status"] = "PERMANENT"
@@ -183,20 +179,20 @@ def moderate_promocodes(data: dict) -> dict:
             deduped[key] = item
             continue
 
-        # 2. Определение стримового кода: строго по явному флагу, статусу или стримовому ID
+        # 2. Identify livestream codes
         is_stream = bool(item.get("is_stream", False)) or item.get("status") == "STREAM" or "stream" in str(item.get("id", "")).lower()
         item["is_stream"] = is_stream
 
         expires_at_dt = parse_iso_datetime(item.get("expires_at"))
         created_at_dt = parse_iso_datetime(item.get("created_at"))
 
-        # 3. Проверка истечения срока действия
+        # 3. Check expiration
         is_expired = False
         if expires_at_dt is not None:
             if now > expires_at_dt:
                 is_expired = True
         elif is_stream:
-            # Стримовые коды живут максимум 16-24 часа с момента стрима
+            # Livestream codes expire within 16-24 hours
             if created_at_dt is not None and (now - created_at_dt) > timedelta(hours=20):
                 is_expired = True
             elif created_at_dt is None:
@@ -210,7 +206,6 @@ def moderate_promocodes(data: dict) -> dict:
             if is_stream:
                 item["status"] = "STREAM"
             elif item.get("status") == "NEW":
-                # Снятие статуса NEW через 7 дней
                 if created_at_dt is not None and (now - created_at_dt) > timedelta(days=7):
                     item["status"] = "ACTIVE"
             elif not item.get("status") or item.get("status") == "EXPIRED":
@@ -218,7 +213,7 @@ def moderate_promocodes(data: dict) -> dict:
 
         deduped[key] = item
 
-    # 4. Разделение на активные и архивные (истёкшие)
+    # 4. Separate active and expired codes
     active_codes = []
     expired_codes = []
 
@@ -228,7 +223,6 @@ def moderate_promocodes(data: dict) -> dict:
         else:
             expired_codes.append(item)
 
-    # Активные: сначала стримовые (0), затем временные (1), затем постоянные (2)
     def active_sort_key(x):
         is_stream = 0 if (x.get("is_stream") or x.get("status") == "STREAM") else 1
         is_perm = 2 if x.get("status") == "PERMANENT" else 0
@@ -236,7 +230,7 @@ def moderate_promocodes(data: dict) -> dict:
 
     active_codes.sort(key=active_sort_key)
 
-    # Истёкшие: упорядочиваем по дате завершения/создания (самые свежие первыми), храним до 15 на игру в архиве
+    # Sort expired by expiration/creation date and prune to limit
     expired_codes.sort(key=lambda x: x.get("expires_at") or x.get("created_at") or "", reverse=True)
     pruned_expired = []
     counts_by_game = {}
@@ -295,10 +289,10 @@ def main():
 
     promo_data = load_json(promocodes_file, {"version": 1, "codes": []})
 
-    # Авто-импорт из очереди pending_codes.json
+    # Auto-import from pending_codes.json queue
     import_pending_codes(promo_data)
 
-    # Ручное добавление через CLI
+    # Manual addition via CLI
     if args.add_code:
         g_type = int(args.add_code[0])
         raw_code = args.add_code[1].strip().upper()
