@@ -4483,7 +4483,7 @@
           "phase": 2,
           "start_date": "2025-02-05",
           "end_date": "2025-02-25",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Церейдра",
             "Бутхилл"
@@ -4518,7 +4518,7 @@
           "phase": 1,
           "start_date": "2025-02-26",
           "end_date": "2025-03-18",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Гиацина",
             "Воскресенье"
@@ -4553,7 +4553,7 @@
           "phase": 2,
           "start_date": "2025-03-19",
           "end_date": "2025-04-08",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Мидей",
             "Линша"
@@ -5418,7 +5418,7 @@
           "phase": 1,
           "start_date": "2018-12-11",
           "end_date": "2018-12-31",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Киана: Судья Пустоты"
           ],
@@ -5444,7 +5444,7 @@
           "phase": 1,
           "start_date": "2019-07-04",
           "end_date": "2019-07-25",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Броня: Судья Разума"
           ],
@@ -5470,7 +5470,7 @@
           "phase": 1,
           "start_date": "2020-08-06",
           "end_date": "2020-08-27",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Мей: Судья Грома"
           ],
@@ -5496,7 +5496,7 @@
           "phase": 1,
           "start_date": "2021-03-04",
           "end_date": "2021-03-25",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Фу Хуа: Судья Чувств"
           ],
@@ -5522,7 +5522,7 @@
           "phase": 1,
           "start_date": "2021-08-12",
           "end_date": "2021-09-02",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Киана: Судья Пламени"
           ],
@@ -5548,7 +5548,7 @@
           "phase": 1,
           "start_date": "2021-09-16",
           "end_date": "2021-10-07",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Элизия: Розовая эльфийка"
           ],
@@ -5574,7 +5574,7 @@
           "phase": 1,
           "start_date": "2021-10-21",
           "end_date": "2021-11-18",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Мебиус: Бесконечный Уроборос"
           ],
@@ -5600,7 +5600,7 @@
           "phase": 1,
           "start_date": "2022-01-13",
           "end_date": "2022-02-03",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Броня: Серебряное крыло"
           ],
@@ -5626,7 +5626,7 @@
           "phase": 1,
           "start_date": "2022-02-24",
           "end_date": "2022-03-24",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Дюрандаль: Палатинус"
           ],
@@ -5652,7 +5652,7 @@
           "phase": 1,
           "start_date": "2022-05-19",
           "end_date": "2022-06-09",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Апония: Дисциплина"
           ],
@@ -5678,7 +5678,7 @@
           "phase": 1,
           "start_date": "2022-08-11",
           "end_date": "2022-09-01",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Вилл-Ви: Спираль"
           ],
@@ -6055,7 +6055,7 @@
           "phase": 1,
           "start_date": "2025-01-16",
           "end_date": "2025-02-13",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Сенадина",
             "Телема"
@@ -6087,7 +6087,7 @@
           "phase": 1,
           "start_date": "2025-02-27",
           "end_date": "2025-03-27",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Лантерн",
             "Сонквэ"
@@ -6119,7 +6119,7 @@
           "phase": 1,
           "start_date": "2025-04-10",
           "end_date": "2025-05-08",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Серапеум",
             "Вита"
@@ -6151,7 +6151,7 @@
           "phase": 1,
           "start_date": "2025-05-22",
           "end_date": "2025-06-19",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Киана: Судья Финала",
             "Мей: Судья Происхождения"
@@ -6183,7 +6183,7 @@
           "phase": 1,
           "start_date": "2025-07-03",
           "end_date": "2025-07-31",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Броня: Судья Истины",
             "Зеле: Судья Перерождения"
@@ -6215,7 +6215,7 @@
           "phase": 1,
           "start_date": "2025-08-14",
           "end_date": "2025-09-11",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Элизия: Судья Человечества",
             "Фу Хуа: Гаруда"
@@ -6364,6 +6364,6 @@
       ]
     }
   ],
-  "updated_at": "2026-11-01T12:25:11Z",
+  "updated_at": "2026-11-01T15:50:36Z",
   "version": 1
 }
