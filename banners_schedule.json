@@ -1593,7 +1593,7 @@
         {
           "start_date": "2026-11-07",
           "id": "hi3_8_7_1",
-          "version": "v8.7",
+          "version": "8.7",
           "featured_four_stars_ru": [
             "Гельвеция",
             "Корали",
@@ -1628,7 +1628,7 @@
         {
           "start_date": "2026-10-17",
           "id": "hi3_8_6_2",
-          "version": "v8.6",
+          "version": "8.6",
           "featured_four_stars_ru": [
             "Корали",
             "Хелия",
@@ -1663,7 +1663,7 @@
         {
           "start_date": "2026-09-26",
           "id": "hi3_8_6_1",
-          "version": "v8.6",
+          "version": "8.6",
           "featured_four_stars_ru": [
             "Корали",
             "Хелия",
@@ -1701,18 +1701,18 @@
         {
           "title": "Свет финальной главы",
           "start_date": "2026-11-07",
-          "version": "v8.7",
+          "version": "8.7",
           "end_date": "2026-12-18"
         },
         {
           "title": "Звёздный паломник",
           "start_date": "2026-09-26",
-          "version": "v8.6",
+          "version": "8.6",
           "end_date": "2026-11-06"
         }
       ]
     }
   ],
-  "updated_at": "2026-11-01T07:08:08Z",
+  "updated_at": "2026-11-01T08:13:51Z",
   "version": 1
 }

@@ -30,7 +30,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://enka.network/ui/UI_AvatarIcon_Mity.png"
         },
         {
           "name": "Фурина",
@@ -336,7 +336,7 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://enka.network/ui/UI_AvatarIcon_Dahlia.png"
         },
         {
           "name": "Качина",
@@ -363,7 +363,7 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://enka.network/ui/UI_AvatarIcon_Lanyan.png"
         },
         {
           "name": "Беннет",
@@ -400,6 +400,96 @@
           "type": "CHARACTER",
           "is_standard": false,
           "icon_url": "https://enka.network/ui/UI_AvatarIcon_Shinobu.png"
+        },
+        {
+          "name": "Небесный меч",
+          "name_ru": "Небесный меч",
+          "name_en": "Skyward Blade",
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://enka.network/ui/UI_EquipIcon_Sword_Zephyrus.png"
+        },
+        {
+          "name": "Небесное величие",
+          "name_ru": "Небесное величие",
+          "name_en": "Skyward Pride",
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://enka.network/ui/UI_EquipIcon_Claymore_Zephyrus.png"
+        },
+        {
+          "name": "Небесная ось",
+          "name_ru": "Небесная ось",
+          "name_en": "Skyward Spine",
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://enka.network/ui/UI_EquipIcon_Pole_Zephyrus.png"
+        },
+        {
+          "name": "Небесный атлас",
+          "name_ru": "Небесный атлас",
+          "name_en": "Skyward Atlas",
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://enka.network/ui/UI_EquipIcon_Catalyst_Zephyrus.png"
+        },
+        {
+          "name": "Небесное крыло",
+          "name_ru": "Небесное крыло",
+          "name_en": "Skyward Harp",
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://enka.network/ui/UI_EquipIcon_Bow_Zephyrus.png"
+        },
+        {
+          "name": "Лук Амоса",
+          "name_ru": "Лук Амоса",
+          "name_en": "Amos' Bow",
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://enka.network/ui/UI_EquipIcon_Bow_Amos.png"
+        },
+        {
+          "name": "Молитва святым ветрам",
+          "name_ru": "Молитва святым ветрам",
+          "name_en": "Lost Prayer to the Sacred Winds",
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://enka.network/ui/UI_EquipIcon_Catalyst_Fourwinds.png"
+        },
+        {
+          "name": "Волчья погибель",
+          "name_ru": "Волчья погибель",
+          "name_en": "Wolf's Gravestone",
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://enka.network/ui/UI_EquipIcon_Claymore_Wolfmound.png"
+        },
+        {
+          "name": "Нефритовый коршун",
+          "name_ru": "Нефритовый коршун",
+          "name_en": "Primordial Jade Winged-Spear",
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://enka.network/ui/UI_EquipIcon_Pole_Morax.png"
+        },
+        {
+          "name": "Меч Сокола",
+          "name_ru": "Меч Сокола",
+          "name_en": "Aquila Favonia",
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://enka.network/ui/UI_EquipIcon_Sword_Falcon.png"
         }
       ]
     },
@@ -413,7 +503,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1403.png"
         },
         {
           "name": "Церейдра",
@@ -422,7 +512,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1404.png"
         },
         {
           "name": "Аглая",
@@ -431,7 +521,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1402.png"
         },
         {
           "name": "Воскресенье",
@@ -440,7 +530,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1313.png"
         },
         {
           "name": "Раппа",
@@ -485,7 +575,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1303.png"
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1304.png"
         },
         {
           "name": "Зарянка",
@@ -512,7 +602,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1304.png"
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1307.png"
         },
         {
           "name": "Жуань Мэй",
@@ -521,7 +611,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1307.png"
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1303.png"
         },
         {
           "name": "Цзинлю",
@@ -648,6 +738,69 @@
           "type": "CHARACTER",
           "is_standard": false,
           "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1106.png"
+        },
+        {
+          "name": "Ночь на Млечном Пути",
+          "name_ru": "Ночь на Млечном Пути",
+          "name_en": "Night on the Milky Way",
+          "rarity": "5★",
+          "type": "LIGHT_CONE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/light_cone/23000.png"
+        },
+        {
+          "name": "Что-то незаменимое",
+          "name_ru": "Что-то незаменимое",
+          "name_en": "Something Irreplaceable",
+          "rarity": "5★",
+          "type": "LIGHT_CONE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/light_cone/23001.png"
+        },
+        {
+          "name": "Битва не окончена",
+          "name_ru": "Битва не окончена",
+          "name_en": "But the Battle Isn't Over",
+          "rarity": "5★",
+          "type": "LIGHT_CONE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/light_cone/23003.png"
+        },
+        {
+          "name": "Во имя мира",
+          "name_ru": "Во имя мира",
+          "name_en": "In the Name of the World",
+          "rarity": "5★",
+          "type": "LIGHT_CONE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/light_cone/23004.png"
+        },
+        {
+          "name": "Момент победы",
+          "name_ru": "Момент победы",
+          "name_en": "Moment of Victory",
+          "rarity": "5★",
+          "type": "LIGHT_CONE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/light_cone/23005.png"
+        },
+        {
+          "name": "Время никого не ждет",
+          "name_ru": "Время никого не ждет",
+          "name_en": "Time Waits for No One",
+          "rarity": "5★",
+          "type": "LIGHT_CONE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/light_cone/23012.png"
+        },
+        {
+          "name": "Мертвецкий сон",
+          "name_ru": "Мертвецкий сон",
+          "name_en": "Sleep Like the Dead",
+          "rarity": "5★",
+          "type": "LIGHT_CONE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/light_cone/23013.png"
         }
       ]
     },
@@ -661,7 +814,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Lighter.png"
         },
         {
           "name": "Велина",
@@ -670,7 +823,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Yanagi.png"
         },
         {
           "name": "Севериан",
@@ -679,7 +832,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Burnice.png"
         },
         {
           "name": "Норма",
@@ -688,7 +841,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Caesar.png"
         },
         {
           "name": "Лайтер",
@@ -697,7 +850,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Lighter.png"
         },
         {
           "name": "Янаги",
@@ -706,7 +859,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Yanagi.png"
         },
         {
           "name": "Бёрнис",
@@ -715,7 +868,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Burnice.png"
         },
         {
           "name": "Цезарь",
@@ -724,7 +877,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Caesar.png"
         },
         {
           "name": "Джейн Доу",
@@ -733,7 +886,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Jane.png"
         },
         {
           "name": "Цинъи",
@@ -742,7 +895,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Qingyi.png"
         },
         {
           "name": "Чжу Юань",
@@ -751,7 +904,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/ZhuYuan.png"
         },
         {
           "name": "Эллен",
@@ -760,7 +913,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Ellen.png"
         },
         {
           "name": "Солдат 11",
@@ -769,7 +922,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Soldier11.png"
         },
         {
           "name": "Грейс",
@@ -778,7 +931,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Grace.png"
         },
         {
           "name": "Александрина",
@@ -787,7 +940,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Rina.png"
         },
         {
           "name": "Коляда",
@@ -796,7 +949,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Koleda.png"
         },
         {
           "name": "Фон Ликаон",
@@ -805,7 +958,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Lycaon.png"
         },
         {
           "name": "Нэкомата",
@@ -814,7 +967,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Nekomata.png"
         },
         {
           "name": "Энби",
@@ -823,7 +976,7 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Anby.png"
         },
         {
           "name": "Николь",
@@ -832,7 +985,7 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Nicole.png"
         },
         {
           "name": "Билли",
@@ -841,7 +994,88 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/avatars/Billy.png"
+        },
+        {
+          "name": "Стальная лапа",
+          "name_ru": "Стальная лапа",
+          "name_en": "Steel Cushion",
+          "rarity": "5★",
+          "type": "W_ENGINE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/w-engines/SteelCushion.png"
+        },
+        {
+          "name": "Сера",
+          "name_ru": "Сера",
+          "name_en": "The Brimstone",
+          "rarity": "5★",
+          "type": "W_ENGINE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/w-engines/TheBrimstone.png"
+        },
+        {
+          "name": "Сдержанный",
+          "name_ru": "Сдержанный",
+          "name_en": "The Restrained",
+          "rarity": "5★",
+          "type": "W_ENGINE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/w-engines/TheRestrained.png"
+        },
+        {
+          "name": "Колыбель плача",
+          "name_ru": "Колыбель плача",
+          "name_en": "Weeping Cradle",
+          "rarity": "5★",
+          "type": "W_ENGINE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/w-engines/WeepingCradle.png"
+        },
+        {
+          "name": "Электрический блеск",
+          "name_ru": "Электрический блеск",
+          "name_en": "Fusion Compiler",
+          "rarity": "5★",
+          "type": "W_ENGINE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/w-engines/FusionCompiler.png"
+        },
+        {
+          "name": "Шестерня адского пламени",
+          "name_ru": "Шестерня адского пламени",
+          "name_en": "Hellfire Gears",
+          "rarity": "5★",
+          "type": "W_ENGINE",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/w-engines/HellfireGears.png"
+        },
+        {
+          "name": "Амиллион",
+          "name_ru": "Амиллион",
+          "name_en": "Amillion",
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/bangboo/Amillion.png"
+        },
+        {
+          "name": "Револьвербу",
+          "name_ru": "Револьвербу",
+          "name_en": "Revolverboo",
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/bangboo/Revolverboo.png"
+        },
+        {
+          "name": "Батлер",
+          "name_ru": "Батлер",
+          "name_en": "Butler",
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/nep-zz/zzz-assets/main/bangboo/Butler.png"
         }
       ]
     },
@@ -855,7 +1089,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://upload-os-bbs.hoyolab.com/game_record/bh3/avatar/avatar_sparkle.png"
         },
         {
           "name": "Сенадина",
@@ -864,7 +1098,7 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://upload-os-bbs.hoyolab.com/game_record/bh3/avatar/avatar_senadina.png"
         },
         {
           "name": "Валькирия Стрела",
@@ -873,7 +1107,7 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": null
+          "icon_url": "https://upload-os-bbs.hoyolab.com/game_record/bh3/avatar/avatar_helia.png"
         }
       ]
     }

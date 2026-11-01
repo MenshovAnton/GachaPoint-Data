@@ -110,6 +110,36 @@ def notify_new_codes(new_codes: list[dict]):
     send_telegram_message(msg)
 
 
+def notify_suspicious_announcement(game_name: str, title: str, reason: str, post_url: Optional[str] = None):
+    """Sends an alert when an announcement contains unknown characters or ambiguous info requiring manual verification."""
+    msg = (
+        f"⚠️ <b>[GachaPoint Bot: Требуется проверка анонса]</b>\n\n"
+        f"<b>Игра:</b> {game_name}\n"
+        f"<b>Новость:</b> {title}\n"
+        f"<b>Причина:</b> {reason}\n"
+    )
+    if post_url:
+        msg += f"🔗 <a href=\"{post_url}\">Открыть публикацию HoYoLAB</a>\n\n"
+    msg += "<i>Бот не стал добавлять непроверенные данные, чтобы исключить сливы и ошибки. Проверьте и примените вручную.</i>"
+    send_telegram_message(msg)
+
+
+def notify_new_banners(new_banners: list[dict]):
+    """Sends an alert when new verified official banners are scheduled."""
+    if not new_banners:
+        return
+    game_names = {0: "Genshin Impact", 1: "Honkai: Star Rail", 2: "Zenless Zone Zero", 3: "Honkai Impact 3rd"}
+    msg = f"🗓️ <b>[GachaPoint: Обнаружены новые официальные баннеры]</b>\n\n"
+    for b in new_banners:
+        g_name = game_names.get(b.get("game_type", 0), "Gacha")
+        ver = b.get("version", "?")
+        phase = b.get("phase", "?")
+        fives = ", ".join(b.get("featured_five_stars_ru") or b.get("featured_five_stars") or [])
+        dates = f"{b.get('start_date', '?')} — {b.get('end_date', '?')}"
+        msg += f"• <b>{g_name} v{ver} (Фаза {phase})</b>\n  5★: {fives}\n  Сроки: {dates}\n"
+    send_telegram_message(msg)
+
+
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "--failure":
         error_msg = sys.argv[2] if len(sys.argv) > 2 else "Unknown workflow error"

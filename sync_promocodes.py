@@ -21,17 +21,27 @@ from typing import List, Dict, Any, Tuple
 
 # Safe imports for alerts and parsers
 try:
-    from notify import notify_failure, notify_new_codes
+    from notify import notify_failure, notify_new_codes, notify_new_banners, notify_suspicious_announcement
 except ImportError:
     def notify_failure(summary, details=None):
         print(f"[Alert] Failure: {summary} - {details}")
     def notify_new_codes(new_codes):
         print(f"[Alert] New codes found: {len(new_codes)}")
+    def notify_new_banners(new_banners):
+        print(f"[Alert] New banners found: {len(new_banners)}")
+    def notify_suspicious_announcement(game_name, title, reason, post_url=None):
+        print(f"[Alert] Suspicious announcement in {game_name}: {title} ({reason})")
 
 try:
     from parsers.fandom_parser import parse_all_games
 except ImportError:
     def parse_all_games():
+        return []
+
+try:
+    from parsers.official_banners_parser import parse_all_official_banners
+except ImportError:
+    def parse_all_official_banners(catalog_path):
         return []
 
 CODE_REGEX = re.compile(r"^[A-Za-z0-9_-]{3,30}$")
@@ -427,6 +437,46 @@ def moderate_promocodes(data: dict) -> dict:
     }
 
 
+def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Merges freshly parsed official banners safely into banners_schedule.json without duplicates."""
+    if not scraped_banners:
+        return []
+
+    games = data.setdefault("games", [])
+    game_dict = {}
+    for g in games:
+        game_dict[g.get("game_type", 0)] = g
+
+    newly_added = []
+
+    for b in scraped_banners:
+        gt = b.get("game_type", 0)
+        if gt not in game_dict:
+            new_g = {"game_type": gt, "banners": []}
+            games.append(new_g)
+            game_dict[gt] = new_g
+
+        existing_banners = game_dict[gt].setdefault("banners", [])
+        existing_ids = {ex.get("id") for ex in existing_banners}
+        # Also check existing versions and 5 stars to prevent duplicate phases
+        existing_keys = {
+            (ex.get("version"), ex.get("phase"), tuple(sorted(ex.get("featured_five_stars_en", []))))
+            for ex in existing_banners
+        }
+
+        b_key = (b.get("version"), b.get("phase"), tuple(sorted(b.get("featured_five_stars_en", []))))
+
+        if b.get("id") in existing_ids or b_key in existing_keys:
+            continue
+
+        existing_banners.insert(0, b)
+        newly_added.append(b)
+
+    if newly_added:
+        print(f"Merged {len(newly_added)} newly discovered official banners.")
+    return newly_added
+
+
 def moderate_banners(data: dict) -> dict:
     today = datetime.now(timezone.utc).date()
     games = data.get("games", [])
@@ -519,11 +569,25 @@ def main():
         promo_data = moderate_promocodes(promo_data)
         save_json(promocodes_file, promo_data)
 
-        # 5. Banner calendar moderation
+        # 5. Banner announcements scraping & calendar moderation
         if os.path.exists(banners_file):
             banner_data = load_json(banners_file, {"version": 1, "games": []})
+            newly_added_banners = []
+
+            if not args.no_scrape:
+                try:
+                    catalog_file = os.path.join(base_dir, "game_catalog.json")
+                    print("Running automated official banner scraping from HoYoLAB...")
+                    scraped_banners = parse_all_official_banners(catalog_file)
+                    newly_added_banners = import_scraped_banners(banner_data, scraped_banners)
+                except Exception as e:
+                    print(f"[Warning] Official banner parser encountered non-fatal error: {e}")
+
             banner_data = moderate_banners(banner_data)
             save_json(banners_file, banner_data)
+
+            if newly_added_banners:
+                notify_new_banners(newly_added_banners)
 
         # 6. Telegram notification on new codes
         if all_new_codes:
