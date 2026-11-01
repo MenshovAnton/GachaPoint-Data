@@ -267,7 +267,19 @@ def moderate_promocodes(data: dict) -> dict:
             continue
 
         # 2. Identify livestream codes
-        is_stream = bool(item.get("is_stream", False)) or item.get("status") == "STREAM" or "stream" in str(item.get("id", "")).lower()
+        primary_match_100 = False
+        r_desc = str(item.get("rewards_description", "")).lower()
+        if ("primogem" in r_desc or "камен" in r_desc or "нефрит" in r_desc or "jade" in r_desc) and "100" in r_desc:
+            primary_match_100 = True
+        elif ("polychrome" in r_desc or "полихром" in r_desc) and "300" in r_desc:
+            primary_match_100 = True
+
+        is_stream = (
+            bool(item.get("is_stream", False))
+            or item.get("status") == "STREAM"
+            or "stream" in str(item.get("id", "")).lower()
+            or primary_match_100
+        )
         item["is_stream"] = is_stream
 
         expires_at_dt = parse_iso_datetime(item.get("expires_at"))
