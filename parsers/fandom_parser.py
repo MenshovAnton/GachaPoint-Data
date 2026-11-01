@@ -271,6 +271,13 @@ def parse_game_promocodes(game_type: int) -> List[Dict[str, Any]]:
                     is_expired = True
             except Exception:
                 pass
+        elif not is_stream and dates:
+            try:
+                disc_dt = datetime.strptime(dates[0], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                if "indef" not in row.lower() and (datetime.now(timezone.utc) - disc_dt).days >= 45:
+                    is_expired = True
+            except Exception:
+                pass
 
         if is_expired:
             continue
@@ -288,7 +295,7 @@ def parse_game_promocodes(game_type: int) -> List[Dict[str, Any]]:
             "reward_types": reward_types,
             "status": status,
             "expires_at": expires_at,
-            "created_at": now_iso,
+            "created_at": f"{dates[0]}T12:00:00Z" if dates else now_iso,
             "is_stream": is_stream,
             "is_active": is_active
         })
