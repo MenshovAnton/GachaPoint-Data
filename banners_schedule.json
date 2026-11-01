@@ -8,7 +8,7 @@
           "phase": 1,
           "start_date": "2020-09-28",
           "end_date": "2020-10-18",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Венти"
           ],
@@ -40,7 +40,7 @@
           "phase": 2,
           "start_date": "2020-10-18",
           "end_date": "2020-11-10",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Кли"
           ],
@@ -72,7 +72,7 @@
           "phase": 1,
           "start_date": "2020-11-11",
           "end_date": "2020-12-01",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Тарталья"
           ],
@@ -104,7 +104,7 @@
           "phase": 2,
           "start_date": "2020-12-01",
           "end_date": "2020-12-22",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Чжун Ли"
           ],
@@ -136,7 +136,7 @@
           "phase": 1,
           "start_date": "2020-12-23",
           "end_date": "2021-01-12",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Альбедо"
           ],
@@ -168,7 +168,7 @@
           "phase": 2,
           "start_date": "2021-01-12",
           "end_date": "2021-02-02",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Гань Юй"
           ],
@@ -200,7 +200,7 @@
           "phase": 1,
           "start_date": "2021-02-03",
           "end_date": "2021-02-17",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Сяо"
           ],
@@ -232,7 +232,7 @@
           "phase": 2,
           "start_date": "2021-02-17",
           "end_date": "2021-03-02",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Кэ Цин"
           ],
@@ -264,7 +264,7 @@
           "phase": 3,
           "start_date": "2021-03-02",
           "end_date": "2021-03-16",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Ху Тао"
           ],
@@ -296,7 +296,7 @@
           "phase": 1,
           "start_date": "2021-03-17",
           "end_date": "2021-04-06",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Венти"
           ],
@@ -328,7 +328,7 @@
           "phase": 2,
           "start_date": "2021-04-06",
           "end_date": "2021-04-27",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Тарталья"
           ],
@@ -360,7 +360,7 @@
           "phase": 1,
           "start_date": "2021-04-28",
           "end_date": "2021-05-18",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Чжун Ли"
           ],
@@ -392,7 +392,7 @@
           "phase": 2,
           "start_date": "2021-05-18",
           "end_date": "2021-06-08",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Эола"
           ],
@@ -424,7 +424,7 @@
           "phase": 1,
           "start_date": "2021-06-09",
           "end_date": "2021-06-29",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Кли"
           ],
@@ -456,7 +456,7 @@
           "phase": 2,
           "start_date": "2021-06-29",
           "end_date": "2021-07-20",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Кадзуха"
           ],
@@ -488,7 +488,7 @@
           "phase": 1,
           "start_date": "2021-07-21",
           "end_date": "2021-08-10",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Аяка"
           ],
@@ -520,7 +520,7 @@
           "phase": 2,
           "start_date": "2021-08-10",
           "end_date": "2021-08-31",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Ёимия"
           ],
@@ -552,7 +552,7 @@
           "phase": 1,
           "start_date": "2021-09-01",
           "end_date": "2021-09-21",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Райдэн"
           ],
@@ -584,7 +584,7 @@
           "phase": 2,
           "start_date": "2021-09-21",
           "end_date": "2021-10-12",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Кокоми"
           ],
@@ -616,7 +616,7 @@
           "phase": 1,
           "start_date": "2021-10-13",
           "end_date": "2021-11-02",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Тарталья"
           ],
@@ -648,7 +648,7 @@
           "phase": 2,
           "start_date": "2021-11-02",
           "end_date": "2021-11-23",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Ху Тао"
           ],
@@ -680,7 +680,7 @@
           "phase": 1,
           "start_date": "2021-11-24",
           "end_date": "2021-12-14",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Альбедо",
             "Эола"
@@ -715,7 +715,7 @@
           "phase": 2,
           "start_date": "2021-12-14",
           "end_date": "2022-01-04",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Итто"
           ],
@@ -747,7 +747,7 @@
           "phase": 1,
           "start_date": "2022-01-05",
           "end_date": "2022-01-25",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Шэнь Хэ",
             "Сяо"
@@ -782,7 +782,7 @@
           "phase": 2,
           "start_date": "2022-01-25",
           "end_date": "2022-02-15",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Чжун Ли",
             "Гань Юй"
@@ -817,7 +817,7 @@
           "phase": 1,
           "start_date": "2022-02-16",
           "end_date": "2022-03-08",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Яэ Мико"
           ],
@@ -849,7 +849,7 @@
           "phase": 2,
           "start_date": "2022-03-08",
           "end_date": "2022-03-29",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Райдэн",
             "Кокоми"
@@ -884,7 +884,7 @@
           "phase": 1,
           "start_date": "2022-03-30",
           "end_date": "2022-04-19",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Аято",
             "Венти"
@@ -919,7 +919,7 @@
           "phase": 2,
           "start_date": "2022-04-19",
           "end_date": "2022-05-31",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Аяка"
           ],
@@ -951,7 +951,7 @@
           "phase": 1,
           "start_date": "2022-05-31",
           "end_date": "2022-06-21",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Елань",
             "Сяо"
@@ -986,7 +986,7 @@
           "phase": 2,
           "start_date": "2022-06-21",
           "end_date": "2022-07-12",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Итто"
           ],
@@ -1018,7 +1018,7 @@
           "phase": 1,
           "start_date": "2022-07-13",
           "end_date": "2022-08-02",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Кадзуха",
             "Кли"
@@ -1053,7 +1053,7 @@
           "phase": 2,
           "start_date": "2022-08-02",
           "end_date": "2022-08-23",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Ёимия"
           ],
@@ -1085,7 +1085,7 @@
           "phase": 1,
           "start_date": "2022-08-24",
           "end_date": "2022-09-09",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Тигнари",
             "Чжун Ли"
@@ -1120,7 +1120,7 @@
           "phase": 2,
           "start_date": "2022-09-09",
           "end_date": "2022-09-27",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Гань Юй",
             "Кокоми"
@@ -1155,7 +1155,7 @@
           "phase": 1,
           "start_date": "2022-09-28",
           "end_date": "2022-10-14",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Сайно",
             "Венти"
@@ -1190,7 +1190,7 @@
           "phase": 2,
           "start_date": "2022-10-14",
           "end_date": "2022-11-01",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Нилу",
             "Альбедо"
@@ -1225,7 +1225,7 @@
           "phase": 1,
           "start_date": "2022-11-02",
           "end_date": "2022-11-18",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Нахида",
             "Ёимия"
@@ -1260,7 +1260,7 @@
           "phase": 2,
           "start_date": "2022-11-18",
           "end_date": "2022-12-06",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Яэ Мико",
             "Тарталья"
@@ -1295,7 +1295,7 @@
           "phase": 1,
           "start_date": "2022-12-07",
           "end_date": "2022-12-27",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Странник",
             "Итто"
@@ -1330,7 +1330,7 @@
           "phase": 2,
           "start_date": "2022-12-27",
           "end_date": "2023-01-17",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Райдэн",
             "Аято"
@@ -1365,7 +1365,7 @@
           "phase": 1,
           "start_date": "2023-01-18",
           "end_date": "2023-02-07",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Аль-Хайтам",
             "Сяо"
@@ -1400,7 +1400,7 @@
           "phase": 2,
           "start_date": "2023-02-07",
           "end_date": "2023-02-28",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Ху Тао",
             "Елань"
@@ -1435,7 +1435,7 @@
           "phase": 1,
           "start_date": "2023-03-01",
           "end_date": "2023-03-21",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Дэхья",
             "Сайно"
@@ -1470,7 +1470,7 @@
           "phase": 2,
           "start_date": "2023-03-21",
           "end_date": "2023-04-11",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Аяка",
             "Шэнь Хэ"
@@ -1505,7 +1505,7 @@
           "phase": 1,
           "start_date": "2023-04-12",
           "end_date": "2023-05-02",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Нахида",
             "Нилу"
@@ -1540,7 +1540,7 @@
           "phase": 2,
           "start_date": "2023-05-02",
           "end_date": "2023-05-23",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Бай Чжу",
             "Гань Юй"
@@ -1575,7 +1575,7 @@
           "phase": 1,
           "start_date": "2023-05-24",
           "end_date": "2023-06-13",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Ёимия",
             "Яэ Мико"
@@ -1610,7 +1610,7 @@
           "phase": 2,
           "start_date": "2023-06-13",
           "end_date": "2023-07-04",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Аль-Хайтам",
             "Кадзуха"
@@ -1645,7 +1645,7 @@
           "phase": 1,
           "start_date": "2023-07-05",
           "end_date": "2023-07-25",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Кли",
             "Эола"
@@ -1680,7 +1680,7 @@
           "phase": 2,
           "start_date": "2023-07-25",
           "end_date": "2023-08-15",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Кокоми",
             "Странник"
@@ -1715,7 +1715,7 @@
           "phase": 1,
           "start_date": "2023-08-16",
           "end_date": "2023-09-05",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Лини",
             "Елань"
@@ -1750,7 +1750,7 @@
           "phase": 2,
           "start_date": "2023-09-05",
           "end_date": "2023-09-26",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Чжун Ли",
             "Тарталья"
@@ -1785,7 +1785,7 @@
           "phase": 1,
           "start_date": "2023-09-27",
           "end_date": "2023-10-17",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Невиллет",
             "Ху Тао"
@@ -1820,7 +1820,7 @@
           "phase": 2,
           "start_date": "2023-10-17",
           "end_date": "2023-11-07",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Ризли",
             "Венти"
@@ -1855,7 +1855,7 @@
           "phase": 1,
           "start_date": "2023-11-08",
           "end_date": "2023-11-28",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Фурина",
             "Бай Чжу"
@@ -1890,7 +1890,7 @@
           "phase": 2,
           "start_date": "2023-11-28",
           "end_date": "2023-12-19",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Сайно",
             "Аято"
@@ -1925,7 +1925,7 @@
           "phase": 1,
           "start_date": "2023-12-20",
           "end_date": "2024-01-09",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Навия",
             "Аяка"
@@ -1960,7 +1960,7 @@
           "phase": 2,
           "start_date": "2024-01-09",
           "end_date": "2024-01-30",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Райдэн",
             "Ёимия"
@@ -1995,7 +1995,7 @@
           "phase": 1,
           "start_date": "2024-01-31",
           "end_date": "2024-02-20",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Сянь Юнь",
             "Нахида"
@@ -2030,7 +2030,7 @@
           "phase": 2,
           "start_date": "2024-02-20",
           "end_date": "2024-03-12",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Сяо",
             "Яэ Мико"
@@ -2065,7 +2065,7 @@
           "phase": 1,
           "start_date": "2024-03-13",
           "end_date": "2024-04-02",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Тиори",
             "Итто"
@@ -2100,7 +2100,7 @@
           "phase": 2,
           "start_date": "2024-04-02",
           "end_date": "2024-04-23",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Невиллет",
             "Кадзуха"
@@ -2135,7 +2135,7 @@
           "phase": 1,
           "start_date": "2024-04-24",
           "end_date": "2024-05-14",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Арлекино",
             "Лини"
@@ -2170,7 +2170,7 @@
           "phase": 2,
           "start_date": "2024-05-14",
           "end_date": "2024-06-04",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Странник",
             "Бай Чжу"
@@ -2205,7 +2205,7 @@
           "phase": 1,
           "start_date": "2024-06-05",
           "end_date": "2024-06-25",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Клоринда",
             "Аль-Хайтам"
@@ -2240,7 +2240,7 @@
           "phase": 2,
           "start_date": "2024-06-25",
           "end_date": "2024-07-16",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Сиджвин",
             "Фурина"
@@ -2310,7 +2310,7 @@
           "phase": 1,
           "start_date": "2024-07-17",
           "end_date": "2024-08-06",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Навия",
             "Нилу"
@@ -2345,7 +2345,7 @@
           "phase": 2,
           "start_date": "2024-08-06",
           "end_date": "2024-08-27",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Эмилия",
             "Елань"
@@ -3457,7 +3457,7 @@
           "phase": 1,
           "start_date": "2023-04-26",
           "end_date": "2023-05-17",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Зеле"
           ],
@@ -3489,7 +3489,7 @@
           "phase": 2,
           "start_date": "2023-05-17",
           "end_date": "2023-06-06",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Цзин Юань"
           ],
@@ -3521,7 +3521,7 @@
           "phase": 1,
           "start_date": "2023-06-07",
           "end_date": "2023-06-28",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Серебряный Волк"
           ],
@@ -3553,7 +3553,7 @@
           "phase": 2,
           "start_date": "2023-06-28",
           "end_date": "2023-07-18",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Лоча"
           ],
@@ -3585,7 +3585,7 @@
           "phase": 1,
           "start_date": "2023-07-19",
           "end_date": "2023-08-09",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Блэйд"
           ],
@@ -3617,7 +3617,7 @@
           "phase": 2,
           "start_date": "2023-08-09",
           "end_date": "2023-08-29",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Кафка"
           ],
@@ -3649,7 +3649,7 @@
           "phase": 1,
           "start_date": "2023-08-30",
           "end_date": "2023-09-20",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Пожиратель Луны"
           ],
@@ -3681,7 +3681,7 @@
           "phase": 2,
           "start_date": "2023-09-20",
           "end_date": "2023-10-10",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Фу Сюань"
           ],
@@ -3713,7 +3713,7 @@
           "phase": 1,
           "start_date": "2023-10-11",
           "end_date": "2023-10-27",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Цзинлю"
           ],
@@ -3745,7 +3745,7 @@
           "phase": 2,
           "start_date": "2023-10-27",
           "end_date": "2023-11-14",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Топаз и Счетовод",
             "Зеле"
@@ -3780,7 +3780,7 @@
           "phase": 1,
           "start_date": "2023-11-15",
           "end_date": "2023-12-06",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Хохо"
           ],
@@ -3812,7 +3812,7 @@
           "phase": 2,
           "start_date": "2023-12-06",
           "end_date": "2023-12-26",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Аргенти",
             "Серебряный Волк"
@@ -3847,7 +3847,7 @@
           "phase": 1,
           "start_date": "2023-12-27",
           "end_date": "2024-01-17",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Жуань Мэй",
             "Блэйд"
@@ -3882,7 +3882,7 @@
           "phase": 2,
           "start_date": "2024-01-17",
           "end_date": "2024-02-05",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Доктор Рацио",
             "Кафка"
@@ -3917,7 +3917,7 @@
           "phase": 1,
           "start_date": "2024-02-06",
           "end_date": "2024-02-29",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Черный Лебедь",
             "Пожиратель Луны"
@@ -3952,7 +3952,7 @@
           "phase": 2,
           "start_date": "2024-02-29",
           "end_date": "2024-03-26",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Искорка",
             "Цзин Юань"
@@ -3987,7 +3987,7 @@
           "phase": 1,
           "start_date": "2024-03-27",
           "end_date": "2024-04-17",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Ахерон",
             "Лоча"
@@ -4022,7 +4022,7 @@
           "phase": 2,
           "start_date": "2024-04-17",
           "end_date": "2024-05-07",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Авантюрин",
             "Цзинлю"
@@ -4057,7 +4057,7 @@
           "phase": 1,
           "start_date": "2024-05-08",
           "end_date": "2024-05-29",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Зарянка",
             "Топаз и Счетовод"
@@ -4092,7 +4092,7 @@
           "phase": 2,
           "start_date": "2024-05-29",
           "end_date": "2024-06-18",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Бутхилл",
             "Фу Сюань"
@@ -4127,7 +4127,7 @@
           "phase": 1,
           "start_date": "2024-06-19",
           "end_date": "2024-07-10",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Светлячок",
             "Жуань Мэй"
@@ -4162,7 +4162,7 @@
           "phase": 2,
           "start_date": "2024-07-10",
           "end_date": "2024-07-30",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Нефрит",
             "Аргенти"
@@ -4197,7 +4197,7 @@
           "phase": 1,
           "start_date": "2024-07-31",
           "end_date": "2024-08-21",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Юньли",
             "Хохо"
@@ -4232,7 +4232,7 @@
           "phase": 2,
           "start_date": "2024-08-21",
           "end_date": "2024-09-09",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Цзяоцю",
             "Искорка"
@@ -4267,7 +4267,7 @@
           "phase": 1,
           "start_date": "2024-09-10",
           "end_date": "2024-10-02",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Фэйсяо",
             "Зарянка",
@@ -4308,7 +4308,7 @@
           "phase": 2,
           "start_date": "2024-10-02",
           "end_date": "2024-10-22",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Линша",
             "Топаз и Счетовод"
@@ -4343,7 +4343,7 @@
           "phase": 1,
           "start_date": "2024-10-23",
           "end_date": "2024-11-13",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Раппа",
             "Пожиратель Луны"
@@ -4378,7 +4378,7 @@
           "phase": 1,
           "start_date": "2024-12-04",
           "end_date": "2024-12-25",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Воскресенье",
             "Цзин Юань"
@@ -4413,7 +4413,7 @@
           "phase": 2,
           "start_date": "2024-12-25",
           "end_date": "2025-01-14",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Фуга",
             "Светлячок"
@@ -4448,7 +4448,7 @@
           "phase": 1,
           "start_date": "2025-01-15",
           "end_date": "2025-02-04",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Аглая",
             "Фэйсяо"
@@ -4759,7 +4759,7 @@
           "phase": 1,
           "start_date": "2024-07-04",
           "end_date": "2024-07-24",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Эллен Джо"
           ],
@@ -4788,7 +4788,7 @@
           "phase": 2,
           "start_date": "2024-07-24",
           "end_date": "2024-08-13",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Чжу Юань"
           ],
@@ -4817,7 +4817,7 @@
           "phase": 1,
           "start_date": "2024-08-14",
           "end_date": "2024-09-04",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Цинъи"
           ],
@@ -4846,7 +4846,7 @@
           "phase": 2,
           "start_date": "2024-09-04",
           "end_date": "2024-09-24",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Джейн Доу"
           ],
@@ -4875,7 +4875,7 @@
           "phase": 1,
           "start_date": "2024-09-25",
           "end_date": "2024-10-15",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Цезарь Кинг"
           ],
@@ -4904,7 +4904,7 @@
           "phase": 2,
           "start_date": "2024-10-16",
           "end_date": "2024-11-05",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Бернис Уайт"
           ],
@@ -4933,7 +4933,7 @@
           "phase": 1,
           "start_date": "2024-11-06",
           "end_date": "2024-11-26",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Янаги"
           ],
@@ -4962,7 +4962,7 @@
           "phase": 2,
           "start_date": "2024-11-27",
           "end_date": "2024-12-17",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Лайтер"
           ],
@@ -4991,7 +4991,7 @@
           "phase": 1,
           "start_date": "2024-12-18",
           "end_date": "2025-01-08",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Хосими Мияби"
           ],
@@ -5020,7 +5020,7 @@
           "phase": 2,
           "start_date": "2025-01-08",
           "end_date": "2025-01-28",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Харумаса"
           ],
@@ -5049,7 +5049,7 @@
           "phase": 1,
           "start_date": "2025-01-29",
           "end_date": "2025-02-18",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Астра Яо",
             "Эллен Джо"
@@ -5081,7 +5081,7 @@
           "phase": 2,
           "start_date": "2025-02-18",
           "end_date": "2025-03-11",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Эвелин",
             "Чжу Юань"
@@ -5313,7 +5313,7 @@
           "phase": 1,
           "start_date": "2022-09-15",
           "end_date": "2022-10-07",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Элизия: Судья Человечества"
           ],
@@ -5342,7 +5342,7 @@
           "phase": 1,
           "start_date": "2023-01-12",
           "end_date": "2023-02-03",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Броня: Судья Истины"
           ],
@@ -5371,7 +5371,7 @@
           "phase": 1,
           "start_date": "2023-02-16",
           "end_date": "2023-03-10",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Киана: Судья Финала",
             "Мей: Судья Происхождения"
@@ -5403,7 +5403,7 @@
           "phase": 1,
           "start_date": "2023-08-03",
           "end_date": "2023-08-25",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Зеле: Судья Перерождения"
           ],
@@ -5432,7 +5432,7 @@
           "phase": 1,
           "start_date": "2024-01-25",
           "end_date": "2024-02-16",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Фу Хуа: Гаруда"
           ],
@@ -5461,7 +5461,7 @@
           "phase": 1,
           "start_date": "2024-02-29",
           "end_date": "2024-03-29",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Сенадина"
           ],
@@ -5490,7 +5490,7 @@
           "phase": 1,
           "start_date": "2024-04-25",
           "end_date": "2024-05-24",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Телема"
           ],
@@ -5519,7 +5519,7 @@
           "phase": 1,
           "start_date": "2024-06-06",
           "end_date": "2024-07-05",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Лантерн"
           ],
@@ -5548,7 +5548,7 @@
           "phase": 1,
           "start_date": "2024-07-25",
           "end_date": "2024-08-23",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Сонквэ"
           ],
@@ -5577,7 +5577,7 @@
           "phase": 1,
           "start_date": "2024-09-05",
           "end_date": "2024-10-04",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Серапеум"
           ],
@@ -5606,7 +5606,7 @@
           "phase": 1,
           "start_date": "2024-10-17",
           "end_date": "2024-11-15",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Вита"
           ],
@@ -5635,7 +5635,7 @@
           "phase": 1,
           "start_date": "2024-11-28",
           "end_date": "2024-12-27",
-          "status": "ENDED",
+          "status": "EXPIRED",
           "featured_five_stars": [
             "Спаркл: Тысяча масок"
           ],
@@ -5781,6 +5781,6 @@
       ]
     }
   ],
-  "updated_at": "2026-11-01T08:13:51Z",
+  "updated_at": "2026-11-01T12:25:11Z",
   "version": 1
 }
