@@ -4478,6 +4478,111 @@
           ]
         },
         {
+          "id": "hsr_3_0_2",
+          "version": "3.0",
+          "phase": 2,
+          "start_date": "2025-02-05",
+          "end_date": "2025-02-25",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Церейдра",
+            "Бутхилл"
+          ],
+          "featured_five_stars_ru": [
+            "Церейдра",
+            "Бутхилл"
+          ],
+          "featured_five_stars_en": [
+            "Tribbie",
+            "Boothill"
+          ],
+          "featured_four_stars": [
+            "Галлахер",
+            "Лука",
+            "Пела"
+          ],
+          "featured_four_stars_ru": [
+            "Галлахер",
+            "Лука",
+            "Пела"
+          ],
+          "featured_four_stars_en": [
+            "Gallagher",
+            "Luka",
+            "Pela"
+          ]
+        },
+        {
+          "id": "hsr_3_1_1",
+          "version": "3.1",
+          "phase": 1,
+          "start_date": "2025-02-26",
+          "end_date": "2025-03-18",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Гиацина",
+            "Воскресенье"
+          ],
+          "featured_five_stars_ru": [
+            "Гиацина",
+            "Воскресенье"
+          ],
+          "featured_five_stars_en": [
+            "Hyacine",
+            "Sunday"
+          ],
+          "featured_four_stars": [
+            "Тинъюнь",
+            "Аста",
+            "Ханья"
+          ],
+          "featured_four_stars_ru": [
+            "Тинъюнь",
+            "Аста",
+            "Ханья"
+          ],
+          "featured_four_stars_en": [
+            "Tingyun",
+            "Asta",
+            "Hanya"
+          ]
+        },
+        {
+          "id": "hsr_3_1_2",
+          "version": "3.1",
+          "phase": 2,
+          "start_date": "2025-03-19",
+          "end_date": "2025-04-08",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Мидей",
+            "Линша"
+          ],
+          "featured_five_stars_ru": [
+            "Мидей",
+            "Линша"
+          ],
+          "featured_five_stars_en": [
+            "Mydei",
+            "Lingsha"
+          ],
+          "featured_four_stars": [
+            "Сюэи",
+            "Март 7",
+            "Рысь"
+          ],
+          "featured_four_stars_ru": [
+            "Сюэи",
+            "Март 7",
+            "Рысь"
+          ],
+          "featured_four_stars_en": [
+            "Xueyi",
+            "March 7th",
+            "Lynx"
+          ]
+        },
+        {
           "start_date": "2026-07-02",
           "id": "hsr_4_1_1",
           "version": "4.1",
@@ -5159,11 +5264,11 @@
           "phase": 2,
           "featured_five_stars_ru": [
             "Цинъи",
-            "Эллен"
+            "Эллен Джо"
           ],
           "featured_five_stars": [
             "Цинъи",
-            "Эллен"
+            "Эллен Джо"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
@@ -5193,11 +5298,11 @@
           ],
           "phase": 1,
           "featured_five_stars_ru": [
-            "Бёрнис",
+            "Бернис Уайт",
             "Джейн Доу"
           ],
           "featured_five_stars": [
-            "Бёрнис",
+            "Бернис Уайт",
             "Джейн Доу"
           ],
           "status": "EXPIRED",
@@ -5264,11 +5369,11 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Лайтер",
-            "Цезарь"
+            "Цезарь Кинг"
           ],
           "featured_five_stars": [
             "Лайтер",
-            "Цезарь"
+            "Цезарь Кинг"
           ],
           "status": "ANNOUNCED",
           "featured_five_stars_en": [
@@ -5307,6 +5412,292 @@
     },
     {
       "banners": [
+        {
+          "id": "hi3_2_7_1",
+          "version": "2.7",
+          "phase": 1,
+          "start_date": "2018-12-11",
+          "end_date": "2018-12-31",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Киана: Судья Пустоты"
+          ],
+          "featured_five_stars_ru": [
+            "Киана: Судья Пустоты"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of the Void"
+          ],
+          "featured_four_stars": [
+            "Ночная Роза"
+          ],
+          "featured_four_stars_ru": [
+            "Ночная Роза"
+          ],
+          "featured_four_stars_en": [
+            "Night Squire"
+          ]
+        },
+        {
+          "id": "hi3_3_2_1",
+          "version": "3.2",
+          "phase": 1,
+          "start_date": "2019-07-04",
+          "end_date": "2019-07-25",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Броня: Судья Разума"
+          ],
+          "featured_five_stars_ru": [
+            "Броня: Судья Разума"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Reason"
+          ],
+          "featured_four_stars": [
+            "Валькирия Рейнджер"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Рейнджер"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Ranger"
+          ]
+        },
+        {
+          "id": "hi3_4_1_1",
+          "version": "4.1",
+          "phase": 1,
+          "start_date": "2020-08-06",
+          "end_date": "2020-08-27",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Мей: Судья Грома"
+          ],
+          "featured_five_stars_ru": [
+            "Мей: Судья Грома"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Thunder"
+          ],
+          "featured_four_stars": [
+            "Грешная Сакитама"
+          ],
+          "featured_four_stars_ru": [
+            "Грешная Сакитама"
+          ],
+          "featured_four_stars_en": [
+            "Flame Sakitama"
+          ]
+        },
+        {
+          "id": "hi3_4_6_1",
+          "version": "4.6",
+          "phase": 1,
+          "start_date": "2021-03-04",
+          "end_date": "2021-03-25",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Фу Хуа: Судья Чувств"
+          ],
+          "featured_five_stars_ru": [
+            "Фу Хуа: Судья Чувств"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Sentience"
+          ],
+          "featured_four_stars": [
+            "Ночной оруженосец"
+          ],
+          "featured_four_stars_ru": [
+            "Ночной оруженосец"
+          ],
+          "featured_four_stars_en": [
+            "Night Squire"
+          ]
+        },
+        {
+          "id": "hi3_5_0_1",
+          "version": "5.0",
+          "phase": 1,
+          "start_date": "2021-08-12",
+          "end_date": "2021-09-02",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Киана: Судья Пламени"
+          ],
+          "featured_five_stars_ru": [
+            "Киана: Судья Пламени"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Flamescion"
+          ],
+          "featured_four_stars": [
+            "Валькирия Глория"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Глория"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Gloria"
+          ]
+        },
+        {
+          "id": "hi3_5_1_1",
+          "version": "5.1",
+          "phase": 1,
+          "start_date": "2021-09-16",
+          "end_date": "2021-10-07",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Элизия: Розовая эльфийка"
+          ],
+          "featured_five_stars_ru": [
+            "Элизия: Розовая эльфийка"
+          ],
+          "featured_five_stars_en": [
+            "Miss Pink Elf♪"
+          ],
+          "featured_four_stars": [
+            "Полуночная Полынь"
+          ],
+          "featured_four_stars_ru": [
+            "Полуночная Полынь"
+          ],
+          "featured_four_stars_en": [
+            "Midnight Absinthe"
+          ]
+        },
+        {
+          "id": "hi3_5_2_1",
+          "version": "5.2",
+          "phase": 1,
+          "start_date": "2021-10-21",
+          "end_date": "2021-11-18",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Мебиус: Бесконечный Уроборос"
+          ],
+          "featured_five_stars_ru": [
+            "Мебиус: Бесконечный Уроборос"
+          ],
+          "featured_five_stars_en": [
+            "Infinite Ouroboros"
+          ],
+          "featured_four_stars": [
+            "Полуночная Полынь"
+          ],
+          "featured_four_stars_ru": [
+            "Полуночная Полынь"
+          ],
+          "featured_four_stars_en": [
+            "Midnight Absinthe"
+          ]
+        },
+        {
+          "id": "hi3_5_4_1",
+          "version": "5.4",
+          "phase": 1,
+          "start_date": "2022-01-13",
+          "end_date": "2022-02-03",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Броня: Серебряное крыло"
+          ],
+          "featured_five_stars_ru": [
+            "Броня: Серебряное крыло"
+          ],
+          "featured_five_stars_en": [
+            "Silverwing: N-EX"
+          ],
+          "featured_four_stars": [
+            "Сладкая и Пряная"
+          ],
+          "featured_four_stars_ru": [
+            "Сладкая и Пряная"
+          ],
+          "featured_four_stars_en": [
+            "Sweet 'n' Spicy"
+          ]
+        },
+        {
+          "id": "hi3_5_5_1",
+          "version": "5.5",
+          "phase": 1,
+          "start_date": "2022-02-24",
+          "end_date": "2022-03-24",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Дюрандаль: Палатинус"
+          ],
+          "featured_five_stars_ru": [
+            "Дюрандаль: Палатинус"
+          ],
+          "featured_five_stars_en": [
+            "Palatinus Equinox"
+          ],
+          "featured_four_stars": [
+            "Спина Астера"
+          ],
+          "featured_four_stars_ru": [
+            "Спина Астера"
+          ],
+          "featured_four_stars_en": [
+            "Spina Astera"
+          ]
+        },
+        {
+          "id": "hi3_5_7_1",
+          "version": "5.7",
+          "phase": 1,
+          "start_date": "2022-05-19",
+          "end_date": "2022-06-09",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Апония: Дисциплина"
+          ],
+          "featured_five_stars_ru": [
+            "Апония: Дисциплина"
+          ],
+          "featured_five_stars_en": [
+            "Disciplinary Perdition"
+          ],
+          "featured_four_stars": [
+            "Золотая Дива"
+          ],
+          "featured_four_stars_ru": [
+            "Золотая Дива"
+          ],
+          "featured_four_stars_en": [
+            "Golden Diva"
+          ]
+        },
+        {
+          "id": "hi3_5_9_1",
+          "version": "5.9",
+          "phase": 1,
+          "start_date": "2022-08-11",
+          "end_date": "2022-09-01",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Вилл-Ви: Спираль"
+          ],
+          "featured_five_stars_ru": [
+            "Вилл-Ви: Спираль"
+          ],
+          "featured_five_stars_en": [
+            "Vill-V (Helix)"
+          ],
+          "featured_four_stars": [
+            "Звездная импрессионистка"
+          ],
+          "featured_four_stars_ru": [
+            "Звездная импрессионистка"
+          ],
+          "featured_four_stars_en": [
+            "Starry Impression"
+          ]
+        },
         {
           "id": "hi3_6_0_1",
           "version": "6.0",
@@ -5656,6 +6047,198 @@
           "featured_four_stars_en": [
             "Valkyrie Boltstorm",
             "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_8_0_1",
+          "version": "8.0",
+          "phase": 1,
+          "start_date": "2025-01-16",
+          "end_date": "2025-02-13",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Сенадина",
+            "Телема"
+          ],
+          "featured_five_stars_ru": [
+            "Сенадина",
+            "Телема"
+          ],
+          "featured_five_stars_en": [
+            "Senadina",
+            "Thelema"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_8_1_1",
+          "version": "8.1",
+          "phase": 1,
+          "start_date": "2025-02-27",
+          "end_date": "2025-03-27",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Лантерн",
+            "Сонквэ"
+          ],
+          "featured_five_stars_ru": [
+            "Лантерн",
+            "Сонквэ"
+          ],
+          "featured_five_stars_en": [
+            "Lantern",
+            "Songque"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_8_2_1",
+          "version": "8.2",
+          "phase": 1,
+          "start_date": "2025-04-10",
+          "end_date": "2025-05-08",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Серапеум",
+            "Вита"
+          ],
+          "featured_five_stars_ru": [
+            "Серапеум",
+            "Вита"
+          ],
+          "featured_five_stars_en": [
+            "Serapeum",
+            "Vita"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_8_3_1",
+          "version": "8.3",
+          "phase": 1,
+          "start_date": "2025-05-22",
+          "end_date": "2025-06-19",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Киана: Судья Финала",
+            "Мей: Судья Происхождения"
+          ],
+          "featured_five_stars_ru": [
+            "Киана: Судья Финала",
+            "Мей: Судья Происхождения"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Finality",
+            "Herrscher of Origin"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_8_4_1",
+          "version": "8.4",
+          "phase": 1,
+          "start_date": "2025-07-03",
+          "end_date": "2025-07-31",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Броня: Судья Истины",
+            "Зеле: Судья Перерождения"
+          ],
+          "featured_five_stars_ru": [
+            "Броня: Судья Истины",
+            "Зеле: Судья Перерождения"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Truth",
+            "Herrscher of Rebirth"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_8_5_1",
+          "version": "8.5",
+          "phase": 1,
+          "start_date": "2025-08-14",
+          "end_date": "2025-09-11",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Элизия: Судья Человечества",
+            "Фу Хуа: Гаруда"
+          ],
+          "featured_five_stars_ru": [
+            "Элизия: Судья Человечества",
+            "Фу Хуа: Гаруда"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Human: Ego",
+            "Fenghuang of Vicissitude"
+          ],
+          "featured_four_stars": [
+            "Шигурэ Кира",
+            "Прометей"
+          ],
+          "featured_four_stars_ru": [
+            "Шигурэ Кира",
+            "Прометей"
+          ],
+          "featured_four_stars_en": [
+            "Sugary Starburst",
+            "Terminal Aide 0017"
           ]
         },
         {
