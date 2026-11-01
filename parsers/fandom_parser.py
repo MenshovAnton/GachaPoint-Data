@@ -264,15 +264,19 @@ def parse_game_promocodes(game_type: int) -> List[Dict[str, Any]]:
                 else (datetime.now(timezone.utc) + timedelta(days=25)).strftime("%Y-%m-%dT%H:%M:%SZ")
             )
 
+        if is_stream and dates:
+            try:
+                disc_dt = datetime.strptime(dates[0], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                if (datetime.now(timezone.utc) - disc_dt).days >= 2:
+                    is_expired = True
+            except Exception:
+                pass
+
         if is_expired:
-            status = "EXPIRED"
-            is_active = False
-        elif is_stream:
-            status = "STREAM"
-            is_active = True
-        else:
-            status = "ACTIVE"
-            is_active = True
+            continue
+
+        status = "STREAM" if is_stream else "ACTIVE"
+        is_active = True
 
         results.append({
             "id": f"scraped_{game_type}_{found_code.lower()}",
