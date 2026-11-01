@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T06:58:41Z",
+  "updated_at": "2026-11-01T07:08:08Z",
   "codes": [
     {
       "id": "genshin_oktcv81f9h8d",
@@ -613,6 +613,326 @@
       "is_active": false
     },
     {
+      "id": "hi3_cheerscaptain",
+      "game_type": 3,
+      "code": "CHEERSCAPTAIN",
+      "rewards_description": "100 Кристаллов",
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-10-01T12:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_godentropy",
+      "game_type": 3,
+      "code": "GODENTROPY",
+      "rewards_description": "350 Кристаллов",
+      "rewards_description_ru": "350 Кристаллов",
+      "rewards_description_en": "350 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_bv8fvtzx6k",
+      "game_type": 3,
+      "code": "BV8FVTZX6K",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_qubp3ncyi3",
+      "game_type": 3,
+      "code": "QUBP3NCYI3",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_tosenadina",
+      "game_type": 3,
+      "code": "TOSENADINA",
+      "rewards_description": "100 Кристаллов",
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_zu1tnfwrx2",
+      "game_type": 3,
+      "code": "ZU1TNFWRX2",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_w1gpb7dgnh",
+      "game_type": 3,
+      "code": "W1GPB7DGNH",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_g5mponnqut",
+      "game_type": 3,
+      "code": "G5MPONNQUT",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_mydelivery",
+      "game_type": 3,
+      "code": "MYDELIVERY",
+      "rewards_description": "100 Кристаллов",
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_chiefmedic",
+      "game_type": 3,
+      "code": "CHIEFMEDIC",
+      "rewards_description": "350 Кристаллов",
+      "rewards_description_ru": "350 Кристаллов",
+      "rewards_description_en": "350 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_q9mpenxj6n",
+      "game_type": 3,
+      "code": "Q9MPENXJ6N",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_timealbum",
+      "game_type": 3,
+      "code": "TIMEALBUM",
+      "rewards_description": "100 Кристаллов",
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_m1xt0frzlc",
+      "game_type": 3,
+      "code": "M1XT0FRZLC",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_5t8nupyuc2",
+      "game_type": 3,
+      "code": "5T8NUPYUC2",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_39mtmfmmsp",
+      "game_type": 3,
+      "code": "39MTMFMMSP",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_youyunsgift",
+      "game_type": 3,
+      "code": "YOUYUNSGIFT",
+      "rewards_description": "100 Кристаллов",
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_gt8penfn5i",
+      "game_type": 3,
+      "code": "GT8PENFN5I",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_79vnqp4wqv",
+      "game_type": 3,
+      "code": "79VNQP4WQV",
+      "rewards_description": "30 Кристаллов",
+      "rewards_description_ru": "30 Кристаллов",
+      "rewards_description_en": "30 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_1n6pu7w6fl",
+      "game_type": 3,
+      "code": "1N6PU7W6FL",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_6tztqfars7",
+      "game_type": 3,
+      "code": "6TZTQFARS7",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-11-01T07:08:08Z",
+      "created_at": "2026-11-01T07:08:08Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
       "id": "genshin_hourofruin",
       "game_type": 0,
       "code": "HOUROFRUIN",
@@ -904,22 +1224,6 @@
       "is_active": false
     },
     {
-      "id": "hi3_veritas",
-      "game_type": 3,
-      "code": "VERITAS",
-      "rewards_description": "100 Кристаллов",
-      "rewards_description_ru": "100 Кристаллов",
-      "rewards_description_en": "100 Crystals",
-      "reward_types": [
-        "CRYSTAL"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-09-01T23:59:59Z",
-      "created_at": "2026-07-01T00:00:00Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
       "id": "genshin_genshinsummernight",
       "game_type": 0,
       "code": "GENSHINSUMMERNIGHT",
@@ -954,6 +1258,56 @@
       "is_active": false
     },
     {
+      "id": "scraped_1_yajq2tr6zy2p",
+      "game_type": 1,
+      "code": "YAJQ2TR6ZY2P",
+      "rewards_description": "100 Звёздного нефрита",
+      "rewards_description_ru": "100 Звёздного нефрита",
+      "rewards_description_en": "100 Stellar Jade",
+      "reward_types": [
+        "JADE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-08-15T23:59:59Z",
+      "created_at": "2026-08-14T12:00:00Z",
+      "is_stream": true,
+      "is_active": false
+    },
+    {
+      "id": "scraped_1_lsj9jarpzh33",
+      "game_type": 1,
+      "code": "LSJ9JARPZH33",
+      "rewards_description": "100 Звёздного нефрита, 5 Путеводителей",
+      "rewards_description_ru": "100 Звёздного нефрита, 5 Путеводителей",
+      "rewards_description_en": "100 Stellar Jade, 5 Traveler's Guides",
+      "reward_types": [
+        "JADE",
+        "EXP"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-08-15T23:59:59Z",
+      "created_at": "2026-08-14T12:00:00Z",
+      "is_stream": true,
+      "is_active": false
+    },
+    {
+      "id": "scraped_1_2tkrkar6yg2x",
+      "game_type": 1,
+      "code": "2TKRKAR6YG2X",
+      "rewards_description": "100 Звёздного нефрита, 50 000 Кредитов",
+      "rewards_description_ru": "100 Звёздного нефрита, 50 000 Кредитов",
+      "rewards_description_en": "100 Stellar Jade, 50 000 Credits",
+      "reward_types": [
+        "JADE",
+        "CREDIT"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-08-15T23:59:59Z",
+      "created_at": "2026-08-14T12:00:00Z",
+      "is_stream": true,
+      "is_active": false
+    },
+    {
       "id": "zzz_catchaboo",
       "game_type": 2,
       "code": "CATCHABOO",
@@ -970,19 +1324,53 @@
       "is_active": false
     },
     {
-      "id": "hi3_paradox",
-      "game_type": 3,
-      "code": "PARADOX",
-      "rewards_description": "120 Кристаллов",
-      "rewards_description_ru": "120 Кристаллов",
-      "rewards_description_en": "120 Crystals",
+      "id": "scraped_1_xtj9mv38dl3x",
+      "game_type": 1,
+      "code": "XTJ9MV38DL3X",
+      "rewards_description": "100 Звёздного нефрита",
+      "rewards_description_ru": "100 Звёздного нефрита",
+      "rewards_description_en": "100 Stellar Jade",
       "reward_types": [
-        "CRYSTAL"
+        "JADE"
       ],
       "status": "EXPIRED",
-      "expires_at": "2026-08-01T23:59:59Z",
-      "created_at": "2026-06-01T00:00:00Z",
-      "is_stream": false,
+      "expires_at": "2026-07-04T23:59:59Z",
+      "created_at": "2026-07-03T12:00:00Z",
+      "is_stream": true,
+      "is_active": false
+    },
+    {
+      "id": "scraped_1_ht3qmcj9u4jb",
+      "game_type": 1,
+      "code": "HT3QMCJ9U4JB",
+      "rewards_description": "100 Звёздного нефрита, 5 Путеводителей",
+      "rewards_description_ru": "100 Звёздного нефрита, 5 Путеводителей",
+      "rewards_description_en": "100 Stellar Jade, 5 Traveler's Guides",
+      "reward_types": [
+        "JADE",
+        "EXP"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-07-04T23:59:59Z",
+      "created_at": "2026-07-03T12:00:00Z",
+      "is_stream": true,
+      "is_active": false
+    },
+    {
+      "id": "scraped_1_wak84u29vlyp",
+      "game_type": 1,
+      "code": "WAK84U29VLYP",
+      "rewards_description": "100 Звёздного нефрита, 50 000 Кредитов",
+      "rewards_description_ru": "100 Звёздного нефрита, 50 000 Кредитов",
+      "rewards_description_en": "100 Stellar Jade, 50 000 Credits",
+      "reward_types": [
+        "JADE",
+        "CREDIT"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-07-04T23:59:59Z",
+      "created_at": "2026-07-03T12:00:00Z",
+      "is_stream": true,
       "is_active": false
     },
     {
@@ -1019,36 +1407,69 @@
       "is_active": false
     },
     {
-      "id": "hsr_kbj8vz6y27qx",
+      "id": "scraped_1_happy3rdanniv",
       "game_type": 1,
-      "code": "KBJ8VZ6Y27QX",
-      "rewards_description": "50 Звёздного нефрита, 10 000 Кредитов",
-      "rewards_description_ru": "50 Звёздного нефрита, 10 000 Кредитов",
-      "rewards_description_en": "50 Stellar Jade, 10,000 Credits",
+      "code": "HAPPY3RDANNIV",
+      "rewards_description": "100 Звёздного нефрита",
+      "rewards_description_ru": "100 Звёздного нефрита",
+      "rewards_description_en": "100 Stellar Jade",
       "reward_types": [
-        "JADE",
-        "CREDIT"
+        "JADE"
       ],
       "status": "EXPIRED",
-      "expires_at": "2026-02-24T23:59:59Z",
-      "created_at": "2026-02-13T00:00:00Z",
-      "is_stream": false,
+      "expires_at": "2026-04-11T23:59:59Z",
+      "created_at": "2026-04-10T12:00:00Z",
+      "is_stream": true,
       "is_active": false
     },
     {
-      "id": "hsr_hailyaoguang",
+      "id": "scraped_1_shareandsaveit",
       "game_type": 1,
-      "code": "HAILYAOGUANG",
-      "rewards_description": "50 Звёздного нефрита, 10 000 Кредитов",
-      "rewards_description_ru": "50 Звёздного нефрита, 10 000 Кредитов",
-      "rewards_description_en": "50 Stellar Jade, 10,000 Credits",
+      "code": "SHAREANDSAVEIT",
+      "rewards_description": "100 Звёздного нефрита, 5 Путеводителей",
+      "rewards_description_ru": "100 Звёздного нефрита, 5 Путеводителей",
+      "rewards_description_en": "100 Stellar Jade, 5 Traveler's Guides",
+      "reward_types": [
+        "JADE",
+        "EXP"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-04-11T23:59:59Z",
+      "created_at": "2026-04-10T12:00:00Z",
+      "is_stream": true,
+      "is_active": false
+    },
+    {
+      "id": "scraped_1_heresthecode",
+      "game_type": 1,
+      "code": "HERESTHECODE",
+      "rewards_description": "100 Звёздного нефрита, 50 000 Кредитов",
+      "rewards_description_ru": "100 Звёздного нефрита, 50 000 Кредитов",
+      "rewards_description_en": "100 Stellar Jade, 50 000 Credits",
       "reward_types": [
         "JADE",
         "CREDIT"
       ],
       "status": "EXPIRED",
-      "expires_at": "2026-02-19T23:59:59Z",
-      "created_at": "2026-02-13T00:00:00Z",
+      "expires_at": "2026-04-11T23:59:59Z",
+      "created_at": "2026-04-10T12:00:00Z",
+      "is_stream": true,
+      "is_active": false
+    },
+    {
+      "id": "scraped_1_xak9qj454sg7",
+      "game_type": 1,
+      "code": "XAK9QJ454SG7",
+      "rewards_description": "50 Звёздного нефрита, 10 000 Кредитов",
+      "rewards_description_ru": "50 Звёздного нефрита, 10 000 Кредитов",
+      "rewards_description_en": "50 Stellar Jade, 10 000 Credits",
+      "reward_types": [
+        "JADE",
+        "CREDIT"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2026-03-19T23:59:59Z",
+      "created_at": "2026-02-13T12:00:00Z",
       "is_stream": false,
       "is_active": false
     }
