@@ -3558,19 +3558,6 @@
           "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/umbrall_rose.png"
         },
         {
-          "name": "Гельвеция",
-          "name_ru": "Гельвеция",
-          "name_en": "Helvetia",
-          "aliases": [
-            "Гельвеция",
-            "Helvetia"
-          ],
-          "rarity": "5★",
-          "type": "CHARACTER",
-          "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/helvetia.png"
-        },
-        {
           "name": "Фу Хуа: Лазурная Эмпирея",
           "name_ru": "Фу Хуа: Лазурная Эмпирея",
           "name_en": "Azure Empyrea",
