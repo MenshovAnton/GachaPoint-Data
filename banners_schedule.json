@@ -3,948 +3,2375 @@
     {
       "banners": [
         {
-          "start_date": "2026-11-04",
-          "id": "genshin_7_2_1",
-          "version": "7.2",
-          "featured_four_stars_ru": [
-            "Шарлотта",
-            "Линнетт",
-            "Фремине"
-          ],
-          "featured_four_stars": [
-            "Шарлотта",
-            "Линнетт",
-            "Фремине"
-          ],
+          "id": "genshin_1_0_1",
+          "version": "1.0",
           "phase": 1,
-          "featured_five_stars_ru": [
-            "Митя",
-            "Фурина"
-          ],
+          "start_date": "2020-09-28",
+          "end_date": "2020-10-18",
+          "status": "ENDED",
           "featured_five_stars": [
-            "Митя",
-            "Фурина"
+            "Венти"
           ],
-          "status": "ANNOUNCED",
+          "featured_five_stars_ru": [
+            "Венти"
+          ],
           "featured_five_stars_en": [
-            "Mitya",
-            "Furina"
-          ],
-          "end_date": "2026-11-24",
-          "featured_four_stars_en": [
-            "Charlotte",
-            "Lynette",
-            "Freminet"
-          ]
-        },
-        {
-          "start_date": "2026-10-14",
-          "id": "genshin_7_1_2",
-          "version": "7.1",
-          "featured_four_stars_ru": [
-            "Мика",
-            "Кандакия",
-            "Далия"
+            "Venti"
           ],
           "featured_four_stars": [
-            "Мика",
-            "Кандакия",
-            "Далия"
-          ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Скирк",
-            "Эскофье"
-          ],
-          "featured_five_stars": [
-            "Скирк",
-            "Эскофье"
-          ],
-          "status": "CURRENT",
-          "featured_five_stars_en": [
-            "Skirk",
-            "Escoffier"
-          ],
-          "end_date": "2026-11-03",
-          "featured_four_stars_en": [
-            "Mika",
-            "Candace",
-            "Dahlia"
-          ]
-        },
-        {
-          "start_date": "2026-09-23",
-          "id": "genshin_7_1_1",
-          "version": "7.1",
-          "featured_four_stars_ru": [
-            "Сахароза",
-            "Беннет",
-            "Фишль"
-          ],
-          "featured_four_stars": [
-            "Сахароза",
-            "Беннет",
-            "Фишль"
-          ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Весна",
-            "Водяница"
-          ],
-          "featured_five_stars": [
-            "Весна",
-            "Водяница"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Vesna",
-            "Vodyanitsa"
-          ],
-          "end_date": "2026-10-13",
-          "featured_four_stars_en": [
-            "Sucrose",
-            "Bennett",
-            "Fischl"
-          ]
-        },
-        {
-          "start_date": "2026-09-02",
-          "id": "genshin_7_0_2",
-          "version": "7.0",
-          "featured_four_stars_ru": [
-            "Шеврёз",
-            "Кавех",
-            "Розария"
-          ],
-          "featured_four_stars": [
-            "Шеврёз",
-            "Кавех",
-            "Розария"
-          ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Инеффа",
-            "Флинс"
-          ],
-          "featured_five_stars": [
-            "Инеффа",
-            "Флинс"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Ineffa",
-            "Flins"
-          ],
-          "end_date": "2026-09-22",
-          "featured_four_stars_en": [
-            "Chevreuse",
-            "Kaveh",
-            "Rosaria"
-          ]
-        },
-        {
-          "start_date": "2026-08-12",
-          "id": "genshin_7_0_1",
-          "version": "7.0",
-          "featured_four_stars_ru": [
-            "Алёша",
             "Барбара",
-            "Синобу"
+            "Фишль",
+            "Сян Лин"
           ],
-          "featured_four_stars": [
-            "Алёша",
+          "featured_four_stars_ru": [
             "Барбара",
-            "Синобу"
+            "Фишль",
+            "Сян Лин"
           ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Одетта",
-            "Арлекино"
-          ],
-          "featured_five_stars": [
-            "Одетта",
-            "Арлекино"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Odette",
-            "Arlecchino"
-          ],
-          "end_date": "2026-09-01",
           "featured_four_stars_en": [
-            "Alyosha",
             "Barbara",
-            "Kuki Shinobu"
+            "Fischl",
+            "Xiangling"
           ]
         },
         {
-          "start_date": "2026-07-22",
-          "id": "genshin_6_7_2",
-          "version": "6.7",
-          "featured_four_stars_ru": [
-            "Сара",
-            "Шеврёз",
-            "Тома"
-          ],
-          "featured_four_stars": [
-            "Сара",
-            "Шеврёз",
-            "Тома"
-          ],
+          "id": "genshin_1_0_2",
+          "version": "1.0",
           "phase": 2,
-          "featured_five_stars_ru": [
-            "Райдэн",
-            "Ситлали"
-          ],
+          "start_date": "2020-10-18",
+          "end_date": "2020-11-10",
+          "status": "ENDED",
           "featured_five_stars": [
-            "Райдэн",
-            "Ситлали"
+            "Кли"
           ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Raiden Shogun",
-            "Citlali"
-          ],
-          "end_date": "2026-08-11",
-          "featured_four_stars_en": [
-            "Kujou Sara",
-            "Chevreuse",
-            "Thoma"
-          ]
-        },
-        {
-          "start_date": "2026-07-01",
-          "id": "genshin_6_7_1",
-          "version": "6.7",
-          "featured_four_stars_ru": [
-            "Линнетт",
-            "Фремине",
-            "Шарлотта"
-          ],
-          "featured_four_stars": [
-            "Линнетт",
-            "Фремине",
-            "Шарлотта"
-          ],
-          "phase": 1,
           "featured_five_stars_ru": [
-            "Сандроне",
-            "Коломбина"
+            "Кли"
           ],
-          "featured_five_stars": [
-            "Сандроне",
-            "Коломбина"
-          ],
-          "status": "EXPIRED",
           "featured_five_stars_en": [
-            "Sandrone",
-            "Columbina"
-          ],
-          "end_date": "2026-07-21",
-          "featured_four_stars_en": [
-            "Lynette",
-            "Freminet",
-            "Charlotte"
-          ]
-        },
-        {
-          "start_date": "2026-04-29",
-          "id": "genshin_6_6_2",
-          "version": "6.6",
-          "featured_four_stars_ru": [
-            "Мика",
-            "Розария",
-            "Барбара"
-          ],
-          "featured_four_stars": [
-            "Мика",
-            "Розария",
-            "Барбара"
-          ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Лоэн",
-            "Мавуика"
-          ],
-          "featured_five_stars": [
-            "Лоэн",
-            "Мавуика"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Lohen",
-            "Mavuika"
-          ],
-          "end_date": "2026-05-19",
-          "featured_four_stars_en": [
-            "Mika",
-            "Rosaria",
-            "Barbara"
-          ]
-        },
-        {
-          "start_date": "2026-04-08",
-          "id": "genshin_6_6_1",
-          "version": "6.6",
-          "featured_four_stars_ru": [
-            "Ноэлль",
-            "Рэйзор",
-            "Сахароза"
+            "Klee"
           ],
           "featured_four_stars": [
             "Ноэлль",
-            "Рэйзор",
+            "Син Цю",
             "Сахароза"
           ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Николь Рейн",
-            "Дурин"
+          "featured_four_stars_ru": [
+            "Ноэлль",
+            "Син Цю",
+            "Сахароза"
           ],
-          "featured_five_stars": [
-            "Николь Рейн",
-            "Дурин"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Nicole Reeyn",
-            "Durin"
-          ],
-          "end_date": "2026-04-28",
           "featured_four_stars_en": [
             "Noelle",
-            "Razor",
+            "Xingqiu",
             "Sucrose"
           ]
         },
         {
-          "start_date": "2026-03-18",
-          "id": "genshin_6_5_2",
-          "version": "6.5",
-          "featured_four_stars_ru": [
-            "Синь Янь",
-            "Бэй Доу",
-            "Нин Гуан"
+          "id": "genshin_1_1_1",
+          "version": "1.1",
+          "phase": 1,
+          "start_date": "2020-11-11",
+          "end_date": "2020-12-01",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Тарталья"
+          ],
+          "featured_five_stars_ru": [
+            "Тарталья"
+          ],
+          "featured_five_stars_en": [
+            "Tartaglia"
           ],
           "featured_four_stars": [
-            "Синь Янь",
+            "Диона",
             "Бэй Доу",
             "Нин Гуан"
           ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Нефер",
-            "Лаума"
+          "featured_four_stars_ru": [
+            "Диона",
+            "Бэй Доу",
+            "Нин Гуан"
           ],
-          "featured_five_stars": [
-            "Нефер",
-            "Лаума"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Nefer",
-            "Lauma"
-          ],
-          "end_date": "2026-04-07",
           "featured_four_stars_en": [
-            "Xinyan",
+            "Diona",
             "Beidou",
             "Ningguang"
           ]
         },
         {
-          "start_date": "2026-02-25",
-          "id": "genshin_6_5_1",
-          "version": "6.5",
-          "featured_four_stars_ru": [
-            "Шарлотта",
-            "Линнетт",
-            "Фремине"
-          ],
-          "featured_four_stars": [
-            "Шарлотта",
-            "Линнетт",
-            "Фремине"
-          ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Линнея",
-            "Часка"
-          ],
-          "featured_five_stars": [
-            "Линнея",
-            "Часка"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Linnea",
-            "Chasca"
-          ],
-          "end_date": "2026-03-17",
-          "featured_four_stars_en": [
-            "Charlotte",
-            "Lynette",
-            "Freminet"
-          ]
-        },
-        {
-          "start_date": "2026-02-04",
-          "id": "genshin_6_4_2",
-          "version": "6.4",
-          "featured_four_stars_ru": [
-            "Лань Янь",
-            "Яо Яо",
-            "Юнь Цзинь"
-          ],
-          "featured_four_stars": [
-            "Лань Янь",
-            "Яо Яо",
-            "Юнь Цзинь"
-          ],
+          "id": "genshin_1_1_2",
+          "version": "1.1",
           "phase": 2,
-          "featured_five_stars_ru": [
-            "Скирк",
-            "Эскофье"
-          ],
+          "start_date": "2020-12-01",
+          "end_date": "2020-12-22",
+          "status": "ENDED",
           "featured_five_stars": [
-            "Скирк",
-            "Эскофье"
+            "Чжун Ли"
           ],
-          "status": "EXPIRED",
+          "featured_five_stars_ru": [
+            "Чжун Ли"
+          ],
           "featured_five_stars_en": [
-            "Skirk",
-            "Escoffier"
-          ],
-          "end_date": "2026-02-24",
-          "featured_four_stars_en": [
-            "Lan Yan",
-            "Yaoyao",
-            "Yun Jin"
-          ]
-        },
-        {
-          "start_date": "2026-01-14",
-          "id": "genshin_6_4_1",
-          "version": "6.4",
-          "featured_four_stars_ru": [
-            "Янь Фэй",
-            "Чун Юнь",
-            "Син Цю"
+            "Zhongli"
           ],
           "featured_four_stars": [
-            "Янь Фэй",
+            "Синь Янь",
             "Чун Юнь",
-            "Син Цю"
+            "Рэйзор"
           ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Варка",
-            "Флинс"
+          "featured_four_stars_ru": [
+            "Синь Янь",
+            "Чун Юнь",
+            "Рэйзор"
           ],
-          "featured_five_stars": [
-            "Варка",
-            "Флинс"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Varka",
-            "Flins"
-          ],
-          "end_date": "2026-02-03",
           "featured_four_stars_en": [
-            "Yanfei",
+            "Xinyan",
             "Chongyun",
-            "Xingqiu"
+            "Razor"
           ]
         },
         {
-          "start_date": "2025-12-24",
-          "id": "genshin_6_3_2",
-          "version": "6.3",
-          "featured_four_stars_ru": [
-            "Иллуга",
-            "Айно",
-            "Горо"
-          ],
-          "featured_four_stars": [
-            "Иллуга",
-            "Айно",
-            "Горо"
-          ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Цзы Бай",
-            "Инеффа"
-          ],
-          "featured_five_stars": [
-            "Цзы Бай",
-            "Инеффа"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Zi Bai",
-            "Ineffa"
-          ],
-          "end_date": "2026-01-13",
-          "featured_four_stars_en": [
-            "Illuga",
-            "Aino",
-            "Gorou"
-          ]
-        },
-        {
-          "start_date": "2025-12-03",
-          "id": "genshin_6_3_1",
-          "version": "6.3",
-          "featured_four_stars_ru": [
-            "Ифа",
-            "Сетос",
-            "Фишль"
-          ],
-          "featured_four_stars": [
-            "Ифа",
-            "Сетос",
-            "Фишль"
-          ],
+          "id": "genshin_1_2_1",
+          "version": "1.2",
           "phase": 1,
-          "featured_five_stars_ru": [
-            "Коломбина",
-            "Нёвиллет"
-          ],
+          "start_date": "2020-12-23",
+          "end_date": "2021-01-12",
+          "status": "ENDED",
           "featured_five_stars": [
-            "Коломбина",
-            "Нёвиллет"
+            "Альбедо"
           ],
-          "status": "EXPIRED",
+          "featured_five_stars_ru": [
+            "Альбедо"
+          ],
           "featured_five_stars_en": [
-            "Columbina",
-            "Neuvillette"
+            "Albedo"
           ],
-          "end_date": "2025-12-23",
+          "featured_four_stars": [
+            "Фишль",
+            "Сахароза",
+            "Беннет"
+          ],
+          "featured_four_stars_ru": [
+            "Фишль",
+            "Сахароза",
+            "Беннет"
+          ],
           "featured_four_stars_en": [
-            "Ifa",
-            "Sethos",
+            "Fischl",
+            "Sucrose",
+            "Bennett"
+          ]
+        },
+        {
+          "id": "genshin_1_2_2",
+          "version": "1.2",
+          "phase": 2,
+          "start_date": "2021-01-12",
+          "end_date": "2021-02-02",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Гань Юй"
+          ],
+          "featured_five_stars_ru": [
+            "Гань Юй"
+          ],
+          "featured_five_stars_en": [
+            "Ganyu"
+          ],
+          "featured_four_stars": [
+            "Сян Лин",
+            "Син Цю",
+            "Ноэлль"
+          ],
+          "featured_four_stars_ru": [
+            "Сян Лин",
+            "Син Цю",
+            "Ноэлль"
+          ],
+          "featured_four_stars_en": [
+            "Xiangling",
+            "Xingqiu",
+            "Noelle"
+          ]
+        },
+        {
+          "id": "genshin_1_3_1",
+          "version": "1.3",
+          "phase": 1,
+          "start_date": "2021-02-03",
+          "end_date": "2021-02-17",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Сяо"
+          ],
+          "featured_five_stars_ru": [
+            "Сяо"
+          ],
+          "featured_five_stars_en": [
+            "Xiao"
+          ],
+          "featured_four_stars": [
+            "Диона",
+            "Бэй Доу",
+            "Синь Янь"
+          ],
+          "featured_four_stars_ru": [
+            "Диона",
+            "Бэй Доу",
+            "Синь Янь"
+          ],
+          "featured_four_stars_en": [
+            "Diona",
+            "Beidou",
+            "Xinyan"
+          ]
+        },
+        {
+          "id": "genshin_1_3_2",
+          "version": "1.3",
+          "phase": 2,
+          "start_date": "2021-02-17",
+          "end_date": "2021-03-02",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Кэ Цин"
+          ],
+          "featured_five_stars_ru": [
+            "Кэ Цин"
+          ],
+          "featured_five_stars_en": [
+            "Keqing"
+          ],
+          "featured_four_stars": [
+            "Беннет",
+            "Нин Гуан",
+            "Барбара"
+          ],
+          "featured_four_stars_ru": [
+            "Беннет",
+            "Нин Гуан",
+            "Барбара"
+          ],
+          "featured_four_stars_en": [
+            "Bennett",
+            "Ningguang",
+            "Barbara"
+          ]
+        },
+        {
+          "id": "genshin_1_3_3",
+          "version": "1.3",
+          "phase": 3,
+          "start_date": "2021-03-02",
+          "end_date": "2021-03-16",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Ху Тао"
+          ],
+          "featured_five_stars_ru": [
+            "Ху Тао"
+          ],
+          "featured_five_stars_en": [
+            "Hu Tao"
+          ],
+          "featured_four_stars": [
+            "Син Цю",
+            "Чун Юнь",
+            "Сян Лин"
+          ],
+          "featured_four_stars_ru": [
+            "Син Цю",
+            "Чун Юнь",
+            "Сян Лин"
+          ],
+          "featured_four_stars_en": [
+            "Xingqiu",
+            "Chongyun",
+            "Xiangling"
+          ]
+        },
+        {
+          "id": "genshin_1_4_1",
+          "version": "1.4",
+          "phase": 1,
+          "start_date": "2021-03-17",
+          "end_date": "2021-04-06",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Венти"
+          ],
+          "featured_five_stars_ru": [
+            "Венти"
+          ],
+          "featured_five_stars_en": [
+            "Venti"
+          ],
+          "featured_four_stars": [
+            "Сахароза",
+            "Рэйзор",
+            "Ноэлль"
+          ],
+          "featured_four_stars_ru": [
+            "Сахароза",
+            "Рэйзор",
+            "Ноэлль"
+          ],
+          "featured_four_stars_en": [
+            "Sucrose",
+            "Razor",
+            "Noelle"
+          ]
+        },
+        {
+          "id": "genshin_1_4_2",
+          "version": "1.4",
+          "phase": 2,
+          "start_date": "2021-04-06",
+          "end_date": "2021-04-27",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Тарталья"
+          ],
+          "featured_five_stars_ru": [
+            "Тарталья"
+          ],
+          "featured_five_stars_en": [
+            "Tartaglia"
+          ],
+          "featured_four_stars": [
+            "Розария",
+            "Барбара",
+            "Фишль"
+          ],
+          "featured_four_stars_ru": [
+            "Розария",
+            "Барбара",
+            "Фишль"
+          ],
+          "featured_four_stars_en": [
+            "Rosaria",
+            "Barbara",
             "Fischl"
           ]
         },
         {
-          "start_date": "2025-11-12",
-          "id": "genshin_6_2_2",
-          "version": "6.2",
-          "featured_four_stars_ru": [
-            "Иансан",
-            "Камин",
-            "Шеврёз"
-          ],
-          "featured_four_stars": [
-            "Иансан",
-            "Камин",
-            "Шеврёз"
-          ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Шилонен",
-            "Вареса"
-          ],
-          "featured_five_stars": [
-            "Шилонен",
-            "Вареса"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Xilonen",
-            "Varesa"
-          ],
-          "end_date": "2025-12-02",
-          "featured_four_stars_en": [
-            "Iansan",
-            "Gaming",
-            "Chevreuse"
-          ]
-        },
-        {
-          "start_date": "2025-10-22",
-          "id": "genshin_6_2_1",
-          "version": "6.2",
-          "featured_four_stars_ru": [
-            "Ягода",
-            "Беннет",
-            "Фаризан"
-          ],
-          "featured_four_stars": [
-            "Ягода",
-            "Беннет",
-            "Фаризан"
-          ],
+          "id": "genshin_1_5_1",
+          "version": "1.5",
           "phase": 1,
-          "featured_five_stars_ru": [
-            "Дурин",
-            "Венти"
-          ],
+          "start_date": "2021-04-28",
+          "end_date": "2021-05-18",
+          "status": "ENDED",
           "featured_five_stars": [
-            "Дурин",
-            "Венти"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Durin",
-            "Venti"
-          ],
-          "end_date": "2025-11-11",
-          "featured_four_stars_en": [
-            "Jahoda",
-            "Bennett",
-            "Faruzan"
-          ]
-        },
-        {
-          "start_date": "2025-10-01",
-          "id": "genshin_6_1_2",
-          "version": "6.1",
-          "featured_four_stars_ru": [
-            "Бэй Доу",
-            "Синь Янь",
-            "Розария"
-          ],
-          "featured_four_stars": [
-            "Бэй Доу",
-            "Синь Янь",
-            "Розария"
-          ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Арлекино",
             "Чжун Ли"
           ],
-          "featured_five_stars": [
-            "Арлекино",
+          "featured_five_stars_ru": [
             "Чжун Ли"
           ],
-          "status": "EXPIRED",
           "featured_five_stars_en": [
-            "Arlecchino",
             "Zhongli"
           ],
-          "end_date": "2025-10-21",
+          "featured_four_stars": [
+            "Янь Фэй",
+            "Ноэлль",
+            "Диона"
+          ],
+          "featured_four_stars_ru": [
+            "Янь Фэй",
+            "Ноэлль",
+            "Диона"
+          ],
           "featured_four_stars_en": [
-            "Beidou",
+            "Yanfei",
+            "Noelle",
+            "Diona"
+          ]
+        },
+        {
+          "id": "genshin_1_5_2",
+          "version": "1.5",
+          "phase": 2,
+          "start_date": "2021-05-18",
+          "end_date": "2021-06-08",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Эола"
+          ],
+          "featured_five_stars_ru": [
+            "Эола"
+          ],
+          "featured_five_stars_en": [
+            "Eula"
+          ],
+          "featured_four_stars": [
+            "Синь Янь",
+            "Син Цю",
+            "Бэй Доу"
+          ],
+          "featured_four_stars_ru": [
+            "Синь Янь",
+            "Син Цю",
+            "Бэй Доу"
+          ],
+          "featured_four_stars_en": [
             "Xinyan",
+            "Xingqiu",
+            "Beidou"
+          ]
+        },
+        {
+          "id": "genshin_1_6_1",
+          "version": "1.6",
+          "phase": 1,
+          "start_date": "2021-06-09",
+          "end_date": "2021-06-29",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Кли"
+          ],
+          "featured_five_stars_ru": [
+            "Кли"
+          ],
+          "featured_five_stars_en": [
+            "Klee"
+          ],
+          "featured_four_stars": [
+            "Барбара",
+            "Сахароза",
+            "Фишль"
+          ],
+          "featured_four_stars_ru": [
+            "Барбара",
+            "Сахароза",
+            "Фишль"
+          ],
+          "featured_four_stars_en": [
+            "Barbara",
+            "Sucrose",
+            "Fischl"
+          ]
+        },
+        {
+          "id": "genshin_1_6_2",
+          "version": "1.6",
+          "phase": 2,
+          "start_date": "2021-06-29",
+          "end_date": "2021-07-20",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Кадзуха"
+          ],
+          "featured_five_stars_ru": [
+            "Кадзуха"
+          ],
+          "featured_five_stars_en": [
+            "Kaedehara Kazuha"
+          ],
+          "featured_four_stars": [
+            "Розария",
+            "Беннет",
+            "Рэйзор"
+          ],
+          "featured_four_stars_ru": [
+            "Розария",
+            "Беннет",
+            "Рэйзор"
+          ],
+          "featured_four_stars_en": [
+            "Rosaria",
+            "Bennett",
+            "Razor"
+          ]
+        },
+        {
+          "id": "genshin_2_0_1",
+          "version": "2.0",
+          "phase": 1,
+          "start_date": "2021-07-21",
+          "end_date": "2021-08-10",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Аяка"
+          ],
+          "featured_five_stars_ru": [
+            "Аяка"
+          ],
+          "featured_five_stars_en": [
+            "Kamisato Ayaka"
+          ],
+          "featured_four_stars": [
+            "Нин Гуан",
+            "Чун Юнь",
+            "Янь Фэй"
+          ],
+          "featured_four_stars_ru": [
+            "Нин Гуан",
+            "Чун Юнь",
+            "Янь Фэй"
+          ],
+          "featured_four_stars_en": [
+            "Ningguang",
+            "Chongyun",
+            "Yanfei"
+          ]
+        },
+        {
+          "id": "genshin_2_0_2",
+          "version": "2.0",
+          "phase": 2,
+          "start_date": "2021-08-10",
+          "end_date": "2021-08-31",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Ёимия"
+          ],
+          "featured_five_stars_ru": [
+            "Ёимия"
+          ],
+          "featured_five_stars_en": [
+            "Yoimiya"
+          ],
+          "featured_four_stars": [
+            "Саю",
+            "Диона",
+            "Синь Янь"
+          ],
+          "featured_four_stars_ru": [
+            "Саю",
+            "Диона",
+            "Синь Янь"
+          ],
+          "featured_four_stars_en": [
+            "Sayu",
+            "Diona",
+            "Xinyan"
+          ]
+        },
+        {
+          "id": "genshin_2_1_1",
+          "version": "2.1",
+          "phase": 1,
+          "start_date": "2021-09-01",
+          "end_date": "2021-09-21",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Райдэн"
+          ],
+          "featured_five_stars_ru": [
+            "Райдэн"
+          ],
+          "featured_five_stars_en": [
+            "Raiden Shogun"
+          ],
+          "featured_four_stars": [
+            "Кудзё Сара",
+            "Сян Лин",
+            "Сахароза"
+          ],
+          "featured_four_stars_ru": [
+            "Кудзё Сара",
+            "Сян Лин",
+            "Сахароза"
+          ],
+          "featured_four_stars_en": [
+            "Kujou Sara",
+            "Xiangling",
+            "Sucrose"
+          ]
+        },
+        {
+          "id": "genshin_2_1_2",
+          "version": "2.1",
+          "phase": 2,
+          "start_date": "2021-09-21",
+          "end_date": "2021-10-12",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Кокоми"
+          ],
+          "featured_five_stars_ru": [
+            "Кокоми"
+          ],
+          "featured_five_stars_en": [
+            "Sangonomiya Kokomi"
+          ],
+          "featured_four_stars": [
+            "Розария",
+            "Бэй Доу",
+            "Син Цю"
+          ],
+          "featured_four_stars_ru": [
+            "Розария",
+            "Бэй Доу",
+            "Син Цю"
+          ],
+          "featured_four_stars_en": [
+            "Rosaria",
+            "Beidou",
+            "Xingqiu"
+          ]
+        },
+        {
+          "id": "genshin_2_2_1",
+          "version": "2.2",
+          "phase": 1,
+          "start_date": "2021-10-13",
+          "end_date": "2021-11-02",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Тарталья"
+          ],
+          "featured_five_stars_ru": [
+            "Тарталья"
+          ],
+          "featured_five_stars_en": [
+            "Tartaglia"
+          ],
+          "featured_four_stars": [
+            "Нин Гуан",
+            "Чун Юнь",
+            "Янь Фэй"
+          ],
+          "featured_four_stars_ru": [
+            "Нин Гуан",
+            "Чун Юнь",
+            "Янь Фэй"
+          ],
+          "featured_four_stars_en": [
+            "Ningguang",
+            "Chongyun",
+            "Yanfei"
+          ]
+        },
+        {
+          "id": "genshin_2_2_2",
+          "version": "2.2",
+          "phase": 2,
+          "start_date": "2021-11-02",
+          "end_date": "2021-11-23",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Ху Тао"
+          ],
+          "featured_five_stars_ru": [
+            "Ху Тао"
+          ],
+          "featured_five_stars_en": [
+            "Hu Tao"
+          ],
+          "featured_four_stars": [
+            "Тома",
+            "Диона",
+            "Саю"
+          ],
+          "featured_four_stars_ru": [
+            "Тома",
+            "Диона",
+            "Саю"
+          ],
+          "featured_four_stars_en": [
+            "Thoma",
+            "Diona",
+            "Sayu"
+          ]
+        },
+        {
+          "id": "genshin_2_3_1",
+          "version": "2.3",
+          "phase": 1,
+          "start_date": "2021-11-24",
+          "end_date": "2021-12-14",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Альбедо",
+            "Эола"
+          ],
+          "featured_five_stars_ru": [
+            "Альбедо",
+            "Эола"
+          ],
+          "featured_five_stars_en": [
+            "Albedo",
+            "Eula"
+          ],
+          "featured_four_stars": [
+            "Беннет",
+            "Ноэлль",
+            "Розария"
+          ],
+          "featured_four_stars_ru": [
+            "Беннет",
+            "Ноэлль",
+            "Розария"
+          ],
+          "featured_four_stars_en": [
+            "Bennett",
+            "Noelle",
             "Rosaria"
           ]
         },
         {
-          "start_date": "2025-09-10",
-          "id": "genshin_6_1_1",
-          "version": "6.1",
-          "featured_four_stars_ru": [
-            "Шеврёз",
-            "Куки Синобу",
-            "Сара"
+          "id": "genshin_2_3_2",
+          "version": "2.3",
+          "phase": 2,
+          "start_date": "2021-12-14",
+          "end_date": "2022-01-04",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Итто"
+          ],
+          "featured_five_stars_ru": [
+            "Итто"
+          ],
+          "featured_five_stars_en": [
+            "Arataki Itto"
           ],
           "featured_four_stars": [
-            "Шеврёз",
-            "Куки Синобу",
-            "Сара"
+            "Горо",
+            "Барбара",
+            "Сян Лин"
           ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Нефер",
-            "Фурина"
+          "featured_four_stars_ru": [
+            "Горо",
+            "Барбара",
+            "Сян Лин"
           ],
-          "featured_five_stars": [
-            "Нефер",
-            "Фурина"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Nefer",
-            "Furina"
-          ],
-          "end_date": "2025-09-30",
           "featured_four_stars_en": [
-            "Chevreuse",
+            "Gorou",
+            "Barbara",
+            "Xiangling"
+          ]
+        },
+        {
+          "id": "genshin_2_4_1",
+          "version": "2.4",
+          "phase": 1,
+          "start_date": "2022-01-05",
+          "end_date": "2022-01-25",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Шэнь Хэ",
+            "Сяо"
+          ],
+          "featured_five_stars_ru": [
+            "Шэнь Хэ",
+            "Сяо"
+          ],
+          "featured_five_stars_en": [
+            "Shenhe",
+            "Xiao"
+          ],
+          "featured_four_stars": [
+            "Юнь Цзинь",
+            "Нин Гуан",
+            "Чун Юнь"
+          ],
+          "featured_four_stars_ru": [
+            "Юнь Цзинь",
+            "Нин Гуан",
+            "Чун Юнь"
+          ],
+          "featured_four_stars_en": [
+            "Yun Jin",
+            "Ningguang",
+            "Chongyun"
+          ]
+        },
+        {
+          "id": "genshin_2_4_2",
+          "version": "2.4",
+          "phase": 2,
+          "start_date": "2022-01-25",
+          "end_date": "2022-02-15",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Чжун Ли",
+            "Гань Юй"
+          ],
+          "featured_five_stars_ru": [
+            "Чжун Ли",
+            "Гань Юй"
+          ],
+          "featured_five_stars_en": [
+            "Zhongli",
+            "Ganyu"
+          ],
+          "featured_four_stars": [
+            "Син Цю",
+            "Бэй Доу",
+            "Янь Фэй"
+          ],
+          "featured_four_stars_ru": [
+            "Син Цю",
+            "Бэй Доу",
+            "Янь Фэй"
+          ],
+          "featured_four_stars_en": [
+            "Xingqiu",
+            "Beidou",
+            "Yanfei"
+          ]
+        },
+        {
+          "id": "genshin_2_5_1",
+          "version": "2.5",
+          "phase": 1,
+          "start_date": "2022-02-16",
+          "end_date": "2022-03-08",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Яэ Мико"
+          ],
+          "featured_five_stars_ru": [
+            "Яэ Мико"
+          ],
+          "featured_five_stars_en": [
+            "Yae Miko"
+          ],
+          "featured_four_stars": [
+            "Тома",
+            "Диона",
+            "Фишль"
+          ],
+          "featured_four_stars_ru": [
+            "Тома",
+            "Диона",
+            "Фишль"
+          ],
+          "featured_four_stars_en": [
+            "Thoma",
+            "Diona",
+            "Fischl"
+          ]
+        },
+        {
+          "id": "genshin_2_5_2",
+          "version": "2.5",
+          "phase": 2,
+          "start_date": "2022-03-08",
+          "end_date": "2022-03-29",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Райдэн",
+            "Кокоми"
+          ],
+          "featured_five_stars_ru": [
+            "Райдэн",
+            "Кокоми"
+          ],
+          "featured_five_stars_en": [
+            "Raiden Shogun",
+            "Sangonomiya Kokomi"
+          ],
+          "featured_four_stars": [
+            "Кудзё Сара",
+            "Беннет",
+            "Синь Янь"
+          ],
+          "featured_four_stars_ru": [
+            "Кудзё Сара",
+            "Беннет",
+            "Синь Янь"
+          ],
+          "featured_four_stars_en": [
+            "Kujou Sara",
+            "Bennett",
+            "Xinyan"
+          ]
+        },
+        {
+          "id": "genshin_2_6_1",
+          "version": "2.6",
+          "phase": 1,
+          "start_date": "2022-03-30",
+          "end_date": "2022-04-19",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Аято",
+            "Венти"
+          ],
+          "featured_five_stars_ru": [
+            "Аято",
+            "Венти"
+          ],
+          "featured_five_stars_en": [
+            "Kamisato Ayato",
+            "Venti"
+          ],
+          "featured_four_stars": [
+            "Сахароза",
+            "Сян Лин",
+            "Юнь Цзинь"
+          ],
+          "featured_four_stars_ru": [
+            "Сахароза",
+            "Сян Лин",
+            "Юнь Цзинь"
+          ],
+          "featured_four_stars_en": [
+            "Sucrose",
+            "Xiangling",
+            "Yun Jin"
+          ]
+        },
+        {
+          "id": "genshin_2_6_2",
+          "version": "2.6",
+          "phase": 2,
+          "start_date": "2022-04-19",
+          "end_date": "2022-05-31",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Аяка"
+          ],
+          "featured_five_stars_ru": [
+            "Аяка"
+          ],
+          "featured_five_stars_en": [
+            "Kamisato Ayaka"
+          ],
+          "featured_four_stars": [
+            "Розария",
+            "Саю",
+            "Рэйзор"
+          ],
+          "featured_four_stars_ru": [
+            "Розария",
+            "Саю",
+            "Рэйзор"
+          ],
+          "featured_four_stars_en": [
+            "Rosaria",
+            "Sayu",
+            "Razor"
+          ]
+        },
+        {
+          "id": "genshin_2_7_1",
+          "version": "2.7",
+          "phase": 1,
+          "start_date": "2022-05-31",
+          "end_date": "2022-06-21",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Елань",
+            "Сяо"
+          ],
+          "featured_five_stars_ru": [
+            "Елань",
+            "Сяо"
+          ],
+          "featured_five_stars_en": [
+            "Yelan",
+            "Xiao"
+          ],
+          "featured_four_stars": [
+            "Барбара",
+            "Янь Фэй",
+            "Ноэлль"
+          ],
+          "featured_four_stars_ru": [
+            "Барбара",
+            "Янь Фэй",
+            "Ноэлль"
+          ],
+          "featured_four_stars_en": [
+            "Barbara",
+            "Yanfei",
+            "Noelle"
+          ]
+        },
+        {
+          "id": "genshin_2_7_2",
+          "version": "2.7",
+          "phase": 2,
+          "start_date": "2022-06-21",
+          "end_date": "2022-07-12",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Итто"
+          ],
+          "featured_five_stars_ru": [
+            "Итто"
+          ],
+          "featured_five_stars_en": [
+            "Arataki Itto"
+          ],
+          "featured_four_stars": [
+            "Куки Синобу",
+            "Чун Юнь",
+            "Горо"
+          ],
+          "featured_four_stars_ru": [
+            "Куки Синобу",
+            "Чун Юнь",
+            "Горо"
+          ],
+          "featured_four_stars_en": [
             "Kuki Shinobu",
+            "Chongyun",
+            "Gorou"
+          ]
+        },
+        {
+          "id": "genshin_2_8_1",
+          "version": "2.8",
+          "phase": 1,
+          "start_date": "2022-07-13",
+          "end_date": "2022-08-02",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Кадзуха",
+            "Кли"
+          ],
+          "featured_five_stars_ru": [
+            "Кадзуха",
+            "Кли"
+          ],
+          "featured_five_stars_en": [
+            "Kaedehara Kazuha",
+            "Klee"
+          ],
+          "featured_four_stars": [
+            "Сиканоин Хэйдзо",
+            "Нин Гуан",
+            "Тома"
+          ],
+          "featured_four_stars_ru": [
+            "Сиканоин Хэйдзо",
+            "Нин Гуан",
+            "Тома"
+          ],
+          "featured_four_stars_en": [
+            "Shikanoin Heizou",
+            "Ningguang",
+            "Thoma"
+          ]
+        },
+        {
+          "id": "genshin_2_8_2",
+          "version": "2.8",
+          "phase": 2,
+          "start_date": "2022-08-02",
+          "end_date": "2022-08-23",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Ёимия"
+          ],
+          "featured_five_stars_ru": [
+            "Ёимия"
+          ],
+          "featured_five_stars_en": [
+            "Yoimiya"
+          ],
+          "featured_four_stars": [
+            "Беннет",
+            "Синь Янь",
+            "Юнь Цзинь"
+          ],
+          "featured_four_stars_ru": [
+            "Беннет",
+            "Синь Янь",
+            "Юнь Цзинь"
+          ],
+          "featured_four_stars_en": [
+            "Bennett",
+            "Xinyan",
+            "Yun Jin"
+          ]
+        },
+        {
+          "id": "genshin_3_0_1",
+          "version": "3.0",
+          "phase": 1,
+          "start_date": "2022-08-24",
+          "end_date": "2022-09-09",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Тигнари",
+            "Чжун Ли"
+          ],
+          "featured_five_stars_ru": [
+            "Тигнари",
+            "Чжун Ли"
+          ],
+          "featured_five_stars_en": [
+            "Tighnari",
+            "Zhongli"
+          ],
+          "featured_four_stars": [
+            "Коллеи",
+            "Диона",
+            "Фишль"
+          ],
+          "featured_four_stars_ru": [
+            "Коллеи",
+            "Диона",
+            "Фишль"
+          ],
+          "featured_four_stars_en": [
+            "Collei",
+            "Diona",
+            "Fischl"
+          ]
+        },
+        {
+          "id": "genshin_3_0_2",
+          "version": "3.0",
+          "phase": 2,
+          "start_date": "2022-09-09",
+          "end_date": "2022-09-27",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Гань Юй",
+            "Кокоми"
+          ],
+          "featured_five_stars_ru": [
+            "Гань Юй",
+            "Кокоми"
+          ],
+          "featured_five_stars_en": [
+            "Ganyu",
+            "Sangonomiya Kokomi"
+          ],
+          "featured_four_stars": [
+            "Дори",
+            "Сахароза",
+            "Син Цю"
+          ],
+          "featured_four_stars_ru": [
+            "Дори",
+            "Сахароза",
+            "Син Цю"
+          ],
+          "featured_four_stars_en": [
+            "Dori",
+            "Sucrose",
+            "Xingqiu"
+          ]
+        },
+        {
+          "id": "genshin_3_1_1",
+          "version": "3.1",
+          "phase": 1,
+          "start_date": "2022-09-28",
+          "end_date": "2022-10-14",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Сайно",
+            "Венти"
+          ],
+          "featured_five_stars_ru": [
+            "Сайно",
+            "Венти"
+          ],
+          "featured_five_stars_en": [
+            "Cyno",
+            "Venti"
+          ],
+          "featured_four_stars": [
+            "Кандакия",
+            "Куки Синобу",
+            "Саю"
+          ],
+          "featured_four_stars_ru": [
+            "Кандакия",
+            "Куки Синобу",
+            "Саю"
+          ],
+          "featured_four_stars_en": [
+            "Candace",
+            "Kuki Shinobu",
+            "Sayu"
+          ]
+        },
+        {
+          "id": "genshin_3_1_2",
+          "version": "3.1",
+          "phase": 2,
+          "start_date": "2022-10-14",
+          "end_date": "2022-11-01",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Нилу",
+            "Альбедо"
+          ],
+          "featured_five_stars_ru": [
+            "Нилу",
+            "Альбедо"
+          ],
+          "featured_five_stars_en": [
+            "Nilou",
+            "Albedo"
+          ],
+          "featured_four_stars": [
+            "Бэй Доу",
+            "Барбара",
+            "Сян Лин"
+          ],
+          "featured_four_stars_ru": [
+            "Бэй Доу",
+            "Барбара",
+            "Сян Лин"
+          ],
+          "featured_four_stars_en": [
+            "Beidou",
+            "Barbara",
+            "Xiangling"
+          ]
+        },
+        {
+          "id": "genshin_3_2_1",
+          "version": "3.2",
+          "phase": 1,
+          "start_date": "2022-11-02",
+          "end_date": "2022-11-18",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Нахида",
+            "Ёимия"
+          ],
+          "featured_five_stars_ru": [
+            "Нахида",
+            "Ёимия"
+          ],
+          "featured_five_stars_en": [
+            "Nahida",
+            "Yoimiya"
+          ],
+          "featured_four_stars": [
+            "Лайла",
+            "Рэйзор",
+            "Ноэлль"
+          ],
+          "featured_four_stars_ru": [
+            "Лайла",
+            "Рэйзор",
+            "Ноэлль"
+          ],
+          "featured_four_stars_en": [
+            "Layla",
+            "Razor",
+            "Noelle"
+          ]
+        },
+        {
+          "id": "genshin_3_2_2",
+          "version": "3.2",
+          "phase": 2,
+          "start_date": "2022-11-18",
+          "end_date": "2022-12-06",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Яэ Мико",
+            "Тарталья"
+          ],
+          "featured_five_stars_ru": [
+            "Яэ Мико",
+            "Тарталья"
+          ],
+          "featured_five_stars_en": [
+            "Yae Miko",
+            "Tartaglia"
+          ],
+          "featured_four_stars": [
+            "Тома",
+            "Хэйдзо",
+            "Лайла"
+          ],
+          "featured_four_stars_ru": [
+            "Тома",
+            "Хэйдзо",
+            "Лайла"
+          ],
+          "featured_four_stars_en": [
+            "Thoma",
+            "Heizou",
+            "Layla"
+          ]
+        },
+        {
+          "id": "genshin_3_3_1",
+          "version": "3.3",
+          "phase": 1,
+          "start_date": "2022-12-07",
+          "end_date": "2022-12-27",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Странник",
+            "Итто"
+          ],
+          "featured_five_stars_ru": [
+            "Странник",
+            "Итто"
+          ],
+          "featured_five_stars_en": [
+            "Wanderer",
+            "Arataki Itto"
+          ],
+          "featured_four_stars": [
+            "Фарузан",
+            "Горо",
+            "Янь Фэй"
+          ],
+          "featured_four_stars_ru": [
+            "Фарузан",
+            "Горо",
+            "Янь Фэй"
+          ],
+          "featured_four_stars_en": [
+            "Faruzan",
+            "Gorou",
+            "Yanfei"
+          ]
+        },
+        {
+          "id": "genshin_3_3_2",
+          "version": "3.3",
+          "phase": 2,
+          "start_date": "2022-12-27",
+          "end_date": "2023-01-17",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Райдэн",
+            "Аято"
+          ],
+          "featured_five_stars_ru": [
+            "Райдэн",
+            "Аято"
+          ],
+          "featured_five_stars_en": [
+            "Raiden Shogun",
+            "Kamisato Ayato"
+          ],
+          "featured_four_stars": [
+            "Розария",
+            "Саю",
+            "Кудзё Сара"
+          ],
+          "featured_four_stars_ru": [
+            "Розария",
+            "Саю",
+            "Кудзё Сара"
+          ],
+          "featured_four_stars_en": [
+            "Rosaria",
+            "Sayu",
             "Kujou Sara"
           ]
         },
         {
-          "start_date": "2025-08-20",
-          "id": "genshin_6_0_2",
-          "version": "6.0",
-          "featured_four_stars_ru": [
-            "Айно",
-            "Синобу",
-            "Диона"
-          ],
-          "featured_four_stars": [
-            "Айно",
-            "Синобу",
-            "Диона"
-          ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Флинс",
-            "Тиори"
-          ],
-          "featured_five_stars": [
-            "Флинс",
-            "Тиори"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Flins",
-            "Chiori"
-          ],
-          "end_date": "2025-09-09",
-          "featured_four_stars_en": [
-            "Aino",
-            "Kuki Shinobu",
-            "Diona"
-          ]
-        },
-        {
-          "start_date": "2025-07-30",
-          "id": "genshin_6_0_1",
-          "version": "6.0",
-          "featured_four_stars_ru": [
-            "Кавех",
-            "Синобу",
-            "Барбара"
-          ],
-          "featured_four_stars": [
-            "Кавех",
-            "Синобу",
-            "Барбара"
-          ],
+          "id": "genshin_3_4_1",
+          "version": "3.4",
           "phase": 1,
-          "featured_five_stars_ru": [
-            "Лаума",
-            "Нахида"
-          ],
+          "start_date": "2023-01-18",
+          "end_date": "2023-02-07",
+          "status": "ENDED",
           "featured_five_stars": [
-            "Лаума",
-            "Нахида"
+            "Аль-Хайтам",
+            "Сяо"
           ],
-          "status": "EXPIRED",
+          "featured_five_stars_ru": [
+            "Аль-Хайтам",
+            "Сяо"
+          ],
           "featured_five_stars_en": [
-            "Lauma",
-            "Nahida"
-          ],
-          "end_date": "2025-08-19",
-          "featured_four_stars_en": [
-            "Kaveh",
-            "Kuki Shinobu",
-            "Barbara"
-          ]
-        },
-        {
-          "start_date": "2024-12-11",
-          "id": "genshin_5_3_2",
-          "version": "5.3",
-          "featured_four_stars_ru": [
-            "Шеврёз",
-            "Розария",
-            "Кавех"
+            "Alhaitham",
+            "Xiao"
           ],
           "featured_four_stars": [
-            "Шеврёз",
-            "Розария",
-            "Кавех"
+            "Яо Яо",
+            "Юнь Цзинь",
+            "Синь Янь"
           ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Арлекино",
-            "Клоринда"
+          "featured_four_stars_ru": [
+            "Яо Яо",
+            "Юнь Цзинь",
+            "Синь Янь"
           ],
-          "featured_five_stars": [
-            "Арлекино",
-            "Клоринда"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Arlecchino",
-            "Clorinde"
-          ],
-          "end_date": "2024-12-31",
           "featured_four_stars_en": [
-            "Chevreuse",
-            "Rosaria",
-            "Kaveh"
+            "Yaoyao",
+            "Yun Jin",
+            "Xinyan"
           ]
         },
         {
-          "start_date": "2024-11-20",
-          "id": "genshin_5_3_1",
-          "version": "5.3",
+          "id": "genshin_3_4_2",
+          "version": "3.4",
+          "phase": 2,
+          "start_date": "2023-02-07",
+          "end_date": "2023-02-28",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Ху Тао",
+            "Елань"
+          ],
+          "featured_five_stars_ru": [
+            "Ху Тао",
+            "Елань"
+          ],
+          "featured_five_stars_en": [
+            "Hu Tao",
+            "Yelan"
+          ],
+          "featured_four_stars": [
+            "Син Цю",
+            "Нин Гуан",
+            "Бэй Доу"
+          ],
           "featured_four_stars_ru": [
-            "Беннет",
-            "Качина",
-            "Диона"
+            "Син Цю",
+            "Нин Гуан",
+            "Бэй Доу"
+          ],
+          "featured_four_stars_en": [
+            "Xingqiu",
+            "Ningguang",
+            "Beidou"
+          ]
+        },
+        {
+          "id": "genshin_3_5_1",
+          "version": "3.5",
+          "phase": 1,
+          "start_date": "2023-03-01",
+          "end_date": "2023-03-21",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Дэхья",
+            "Сайно"
+          ],
+          "featured_five_stars_ru": [
+            "Дэхья",
+            "Сайно"
+          ],
+          "featured_five_stars_en": [
+            "Dehya",
+            "Cyno"
           ],
           "featured_four_stars": [
             "Беннет",
-            "Качина",
-            "Диона"
+            "Барбара",
+            "Коллеи"
           ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Мавуика",
-            "Ситлали"
+          "featured_four_stars_ru": [
+            "Беннет",
+            "Барбара",
+            "Коллеи"
           ],
-          "featured_five_stars": [
-            "Мавуика",
-            "Ситлали"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Mavuika",
-            "Citlali"
-          ],
-          "end_date": "2024-12-10",
           "featured_four_stars_en": [
             "Bennett",
-            "Kachina",
-            "Diona"
+            "Barbara",
+            "Collei"
           ]
         },
         {
-          "start_date": "2024-10-30",
-          "id": "genshin_5_2_2",
-          "version": "5.2",
-          "featured_four_stars_ru": [
-            "Сиканоин Хэйдзо",
-            "Фишль",
-            "Яо Яо"
-          ],
-          "featured_four_stars": [
-            "Сиканоин Хэйдзо",
-            "Фишль",
-            "Яо Яо"
-          ],
+          "id": "genshin_3_5_2",
+          "version": "3.5",
           "phase": 2,
-          "featured_five_stars_ru": [
-            "Невиллет",
-            "Чжун Ли"
-          ],
+          "start_date": "2023-03-21",
+          "end_date": "2023-04-11",
+          "status": "ENDED",
           "featured_five_stars": [
-            "Невиллет",
-            "Чжун Ли"
+            "Аяка",
+            "Шэнь Хэ"
           ],
-          "status": "EXPIRED",
+          "featured_five_stars_ru": [
+            "Аяка",
+            "Шэнь Хэ"
+          ],
           "featured_five_stars_en": [
-            "Neuvillette",
-            "Zhongli"
+            "Kamisato Ayaka",
+            "Shenhe"
           ],
-          "end_date": "2024-11-19",
+          "featured_four_stars": [
+            "Мика",
+            "Диона",
+            "Сахароза"
+          ],
+          "featured_four_stars_ru": [
+            "Мика",
+            "Диона",
+            "Сахароза"
+          ],
           "featured_four_stars_en": [
-            "Shikanoin Heizou",
-            "Fischl",
-            "Yaoyao"
+            "Mika",
+            "Diona",
+            "Sucrose"
           ]
         },
         {
-          "start_date": "2024-10-09",
-          "id": "genshin_5_2_1",
-          "version": "5.2",
-          "featured_four_stars_ru": [
-            "Оророн",
-            "Сахароза",
-            "Барбара"
+          "id": "genshin_3_6_1",
+          "version": "3.6",
+          "phase": 1,
+          "start_date": "2023-04-12",
+          "end_date": "2023-05-02",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Нахида",
+            "Нилу"
+          ],
+          "featured_five_stars_ru": [
+            "Нахида",
+            "Нилу"
+          ],
+          "featured_five_stars_en": [
+            "Nahida",
+            "Nilou"
           ],
           "featured_four_stars": [
-            "Оророн",
-            "Сахароза",
+            "Куки Синобу",
+            "Дори",
+            "Лайла"
+          ],
+          "featured_four_stars_ru": [
+            "Куки Синобу",
+            "Дори",
+            "Лайла"
+          ],
+          "featured_four_stars_en": [
+            "Kuki Shinobu",
+            "Dori",
+            "Layla"
+          ]
+        },
+        {
+          "id": "genshin_3_6_2",
+          "version": "3.6",
+          "phase": 2,
+          "start_date": "2023-05-02",
+          "end_date": "2023-05-23",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Бай Чжу",
+            "Гань Юй"
+          ],
+          "featured_five_stars_ru": [
+            "Бай Чжу",
+            "Гань Юй"
+          ],
+          "featured_five_stars_en": [
+            "Baizhu",
+            "Ganyu"
+          ],
+          "featured_four_stars": [
+            "Кавех",
+            "Кандакия",
+            "Фишль"
+          ],
+          "featured_four_stars_ru": [
+            "Кавех",
+            "Кандакия",
+            "Фишль"
+          ],
+          "featured_four_stars_en": [
+            "Kaveh",
+            "Candace",
+            "Fischl"
+          ]
+        },
+        {
+          "id": "genshin_3_7_1",
+          "version": "3.7",
+          "phase": 1,
+          "start_date": "2023-05-24",
+          "end_date": "2023-06-13",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Ёимия",
+            "Яэ Мико"
+          ],
+          "featured_five_stars_ru": [
+            "Ёимия",
+            "Яэ Мико"
+          ],
+          "featured_five_stars_en": [
+            "Yoimiya",
+            "Yae Miko"
+          ],
+          "featured_four_stars": [
+            "Кирара",
+            "Юнь Цзинь",
+            "Чун Юнь"
+          ],
+          "featured_four_stars_ru": [
+            "Кирара",
+            "Юнь Цзинь",
+            "Чун Юнь"
+          ],
+          "featured_four_stars_en": [
+            "Kirara",
+            "Yun Jin",
+            "Chongyun"
+          ]
+        },
+        {
+          "id": "genshin_3_7_2",
+          "version": "3.7",
+          "phase": 2,
+          "start_date": "2023-06-13",
+          "end_date": "2023-07-04",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Аль-Хайтам",
+            "Кадзуха"
+          ],
+          "featured_five_stars_ru": [
+            "Аль-Хайтам",
+            "Кадзуха"
+          ],
+          "featured_five_stars_en": [
+            "Alhaitham",
+            "Kaedehara Kazuha"
+          ],
+          "featured_four_stars": [
+            "Яо Яо",
+            "Хэйдзо",
+            "Сян Лин"
+          ],
+          "featured_four_stars_ru": [
+            "Яо Яо",
+            "Хэйдзо",
+            "Сян Лин"
+          ],
+          "featured_four_stars_en": [
+            "Yaoyao",
+            "Heizou",
+            "Xiangling"
+          ]
+        },
+        {
+          "id": "genshin_3_8_1",
+          "version": "3.8",
+          "phase": 1,
+          "start_date": "2023-07-05",
+          "end_date": "2023-07-25",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Кли",
+            "Эола"
+          ],
+          "featured_five_stars_ru": [
+            "Кли",
+            "Эола"
+          ],
+          "featured_five_stars_en": [
+            "Klee",
+            "Eula"
+          ],
+          "featured_four_stars": [
+            "Мика",
+            "Рэйзор",
+            "Тома"
+          ],
+          "featured_four_stars_ru": [
+            "Мика",
+            "Рэйзор",
+            "Тома"
+          ],
+          "featured_four_stars_en": [
+            "Mika",
+            "Razor",
+            "Thoma"
+          ]
+        },
+        {
+          "id": "genshin_3_8_2",
+          "version": "3.8",
+          "phase": 2,
+          "start_date": "2023-07-25",
+          "end_date": "2023-08-15",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Кокоми",
+            "Странник"
+          ],
+          "featured_five_stars_ru": [
+            "Кокоми",
+            "Странник"
+          ],
+          "featured_five_stars_en": [
+            "Sangonomiya Kokomi",
+            "Wanderer"
+          ],
+          "featured_four_stars": [
+            "Фарузан",
+            "Янь Фэй",
+            "Розария"
+          ],
+          "featured_four_stars_ru": [
+            "Фарузан",
+            "Янь Фэй",
+            "Розария"
+          ],
+          "featured_four_stars_en": [
+            "Faruzan",
+            "Yanfei",
+            "Rosaria"
+          ]
+        },
+        {
+          "id": "genshin_4_0_1",
+          "version": "4.0",
+          "phase": 1,
+          "start_date": "2023-08-16",
+          "end_date": "2023-09-05",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Лини",
+            "Елань"
+          ],
+          "featured_five_stars_ru": [
+            "Лини",
+            "Елань"
+          ],
+          "featured_five_stars_en": [
+            "Lyney",
+            "Yelan"
+          ],
+          "featured_four_stars": [
+            "Линетт",
+            "Беннет",
             "Барбара"
           ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Часка",
-            "Лини"
+          "featured_four_stars_ru": [
+            "Линетт",
+            "Беннет",
+            "Барбара"
           ],
-          "featured_five_stars": [
-            "Часка",
-            "Лини"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Chasca",
-            "Lyney"
-          ],
-          "end_date": "2024-10-29",
           "featured_four_stars_en": [
-            "Ororon",
-            "Sucrose",
+            "Lynette",
+            "Bennett",
             "Barbara"
           ]
         },
         {
-          "start_date": "2024-09-18",
-          "id": "genshin_5_1_2",
-          "version": "5.1",
-          "featured_four_stars_ru": [
-            "Сетхос",
-            "Синь Янь",
-            "Дори"
+          "id": "genshin_4_0_2",
+          "version": "4.0",
+          "phase": 2,
+          "start_date": "2023-09-05",
+          "end_date": "2023-09-26",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Чжун Ли",
+            "Тарталья"
+          ],
+          "featured_five_stars_ru": [
+            "Чжун Ли",
+            "Тарталья"
+          ],
+          "featured_five_stars_en": [
+            "Zhongli",
+            "Tartaglia"
           ],
           "featured_four_stars": [
-            "Сетхос",
-            "Синь Янь",
-            "Дори"
+            "Фремине",
+            "Саю",
+            "Ноэлль"
           ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Нахида",
-            "Ху Тао"
+          "featured_four_stars_ru": [
+            "Фремине",
+            "Саю",
+            "Ноэлль"
           ],
+          "featured_four_stars_en": [
+            "Freminet",
+            "Sayu",
+            "Noelle"
+          ]
+        },
+        {
+          "id": "genshin_4_1_1",
+          "version": "4.1",
+          "phase": 1,
+          "start_date": "2023-09-27",
+          "end_date": "2023-10-17",
+          "status": "ENDED",
           "featured_five_stars": [
-            "Нахида",
+            "Невиллет",
             "Ху Тао"
           ],
-          "status": "EXPIRED",
+          "featured_five_stars_ru": [
+            "Невиллет",
+            "Ху Тао"
+          ],
           "featured_five_stars_en": [
-            "Nahida",
+            "Neuvillette",
             "Hu Tao"
           ],
-          "end_date": "2024-10-08",
+          "featured_four_stars": [
+            "Син Цю",
+            "Фишль",
+            "Диона"
+          ],
+          "featured_four_stars_ru": [
+            "Син Цю",
+            "Фишль",
+            "Диона"
+          ],
           "featured_four_stars_en": [
-            "Sethos",
-            "Xinyan",
+            "Xingqiu",
+            "Fischl",
+            "Diona"
+          ]
+        },
+        {
+          "id": "genshin_4_1_2",
+          "version": "4.1",
+          "phase": 2,
+          "start_date": "2023-10-17",
+          "end_date": "2023-11-07",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Ризли",
+            "Венти"
+          ],
+          "featured_five_stars_ru": [
+            "Ризли",
+            "Венти"
+          ],
+          "featured_five_stars_en": [
+            "Wriothesley",
+            "Venti"
+          ],
+          "featured_four_stars": [
+            "Тома",
+            "Чун Юнь",
+            "Дори"
+          ],
+          "featured_four_stars_ru": [
+            "Тома",
+            "Чун Юнь",
+            "Дори"
+          ],
+          "featured_four_stars_en": [
+            "Thoma",
+            "Chongyun",
             "Dori"
           ]
         },
         {
-          "start_date": "2024-08-28",
-          "id": "genshin_5_1_1",
-          "version": "5.1",
-          "featured_four_stars_ru": [
-            "Диона",
-            "Коллеи",
-            "Кандакия"
+          "id": "genshin_4_2_1",
+          "version": "4.2",
+          "phase": 1,
+          "start_date": "2023-11-08",
+          "end_date": "2023-11-28",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Фурина",
+            "Бай Чжу"
+          ],
+          "featured_five_stars_ru": [
+            "Фурина",
+            "Бай Чжу"
+          ],
+          "featured_five_stars_en": [
+            "Furina",
+            "Baizhu"
           ],
           "featured_four_stars": [
-            "Диона",
+            "Шарлотта",
             "Коллеи",
-            "Кандакия"
+            "Бэй Доу"
+          ],
+          "featured_four_stars_ru": [
+            "Шарлотта",
+            "Коллеи",
+            "Бэй Доу"
+          ],
+          "featured_four_stars_en": [
+            "Charlotte",
+            "Collei",
+            "Beidou"
+          ]
+        },
+        {
+          "id": "genshin_4_2_2",
+          "version": "4.2",
+          "phase": 2,
+          "start_date": "2023-11-28",
+          "end_date": "2023-12-19",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Сайно",
+            "Аято"
+          ],
+          "featured_five_stars_ru": [
+            "Сайно",
+            "Аято"
+          ],
+          "featured_five_stars_en": [
+            "Cyno",
+            "Kamisato Ayato"
+          ],
+          "featured_four_stars": [
+            "Кирара",
+            "Куки Синобу",
+            "Сян Лин"
+          ],
+          "featured_four_stars_ru": [
+            "Кирара",
+            "Куки Синобу",
+            "Сян Лин"
+          ],
+          "featured_four_stars_en": [
+            "Kirara",
+            "Kuki Shinobu",
+            "Xiangling"
+          ]
+        },
+        {
+          "id": "genshin_4_3_1",
+          "version": "4.3",
+          "phase": 1,
+          "start_date": "2023-12-20",
+          "end_date": "2024-01-09",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Навия",
+            "Аяка"
+          ],
+          "featured_five_stars_ru": [
+            "Навия",
+            "Аяка"
+          ],
+          "featured_five_stars_en": [
+            "Navia",
+            "Kamisato Ayaka"
+          ],
+          "featured_four_stars": [
+            "Шеврёз",
+            "Розария",
+            "Сахароза"
+          ],
+          "featured_four_stars_ru": [
+            "Шеврёз",
+            "Розария",
+            "Сахароза"
+          ],
+          "featured_four_stars_en": [
+            "Chevreuse",
+            "Rosaria",
+            "Sucrose"
+          ]
+        },
+        {
+          "id": "genshin_4_3_2",
+          "version": "4.3",
+          "phase": 2,
+          "start_date": "2024-01-09",
+          "end_date": "2024-01-30",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Райдэн",
+            "Ёимия"
+          ],
+          "featured_five_stars_ru": [
+            "Райдэн",
+            "Ёимия"
+          ],
+          "featured_five_stars_en": [
+            "Raiden Shogun",
+            "Yoimiya"
+          ],
+          "featured_four_stars": [
+            "Кудзё Сара",
+            "Беннет",
+            "Шеврёз"
+          ],
+          "featured_four_stars_ru": [
+            "Кудзё Сара",
+            "Беннет",
+            "Шеврёз"
+          ],
+          "featured_four_stars_en": [
+            "Kujou Sara",
+            "Bennett",
+            "Chevreuse"
+          ]
+        },
+        {
+          "id": "genshin_4_4_1",
+          "version": "4.4",
+          "phase": 1,
+          "start_date": "2024-01-31",
+          "end_date": "2024-02-20",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Сянь Юнь",
+            "Нахида"
+          ],
+          "featured_five_stars_ru": [
+            "Сянь Юнь",
+            "Нахида"
+          ],
+          "featured_five_stars_en": [
+            "Xianyun",
+            "Nahida"
+          ],
+          "featured_four_stars": [
+            "Ка Мин",
+            "Фарузан",
+            "Ноэлль"
+          ],
+          "featured_four_stars_ru": [
+            "Ка Мин",
+            "Фарузан",
+            "Ноэлль"
+          ],
+          "featured_four_stars_en": [
+            "Gaming",
+            "Faruzan",
+            "Noelle"
+          ]
+        },
+        {
+          "id": "genshin_4_4_2",
+          "version": "4.4",
+          "phase": 2,
+          "start_date": "2024-02-20",
+          "end_date": "2024-03-12",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Сяо",
+            "Яэ Мико"
+          ],
+          "featured_five_stars_ru": [
+            "Сяо",
+            "Яэ Мико"
+          ],
+          "featured_five_stars_en": [
+            "Xiao",
+            "Yae Miko"
+          ],
+          "featured_four_stars": [
+            "Яо Яо",
+            "Синь Янь",
+            "Нин Гуан"
+          ],
+          "featured_four_stars_ru": [
+            "Яо Яо",
+            "Синь Янь",
+            "Нин Гуан"
+          ],
+          "featured_four_stars_en": [
+            "Yaoyao",
+            "Xinyan",
+            "Ningguang"
+          ]
+        },
+        {
+          "id": "genshin_4_5_1",
+          "version": "4.5",
+          "phase": 1,
+          "start_date": "2024-03-13",
+          "end_date": "2024-04-02",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Тиори",
+            "Итто"
+          ],
+          "featured_five_stars_ru": [
+            "Тиори",
+            "Итто"
+          ],
+          "featured_five_stars_en": [
+            "Chiori",
+            "Arataki Itto"
+          ],
+          "featured_four_stars": [
+            "Горо",
+            "Юнь Цзинь",
+            "Дори"
+          ],
+          "featured_four_stars_ru": [
+            "Горо",
+            "Юнь Цзинь",
+            "Дори"
+          ],
+          "featured_four_stars_en": [
+            "Gorou",
+            "Yun Jin",
+            "Dori"
+          ]
+        },
+        {
+          "id": "genshin_4_5_2",
+          "version": "4.5",
+          "phase": 2,
+          "start_date": "2024-04-02",
+          "end_date": "2024-04-23",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Невиллет",
+            "Кадзуха"
+          ],
+          "featured_five_stars_ru": [
+            "Невиллет",
+            "Кадзуха"
+          ],
+          "featured_five_stars_en": [
+            "Neuvillette",
+            "Kaedehara Kazuha"
+          ],
+          "featured_four_stars": [
+            "Барбара",
+            "Син Цю",
+            "Янь Фэй"
+          ],
+          "featured_four_stars_ru": [
+            "Барбара",
+            "Син Цю",
+            "Янь Фэй"
+          ],
+          "featured_four_stars_en": [
+            "Barbara",
+            "Xingqiu",
+            "Yanfei"
+          ]
+        },
+        {
+          "id": "genshin_4_6_1",
+          "version": "4.6",
+          "phase": 1,
+          "start_date": "2024-04-24",
+          "end_date": "2024-05-14",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Арлекино",
+            "Лини"
+          ],
+          "featured_five_stars_ru": [
+            "Арлекино",
+            "Лини"
+          ],
+          "featured_five_stars_en": [
+            "Arlecchino",
+            "Lyney"
+          ],
+          "featured_four_stars": [
+            "Линетт",
+            "Фремине",
+            "Сян Лин"
+          ],
+          "featured_four_stars_ru": [
+            "Линетт",
+            "Фремине",
+            "Сян Лин"
+          ],
+          "featured_four_stars_en": [
+            "Lynette",
+            "Freminet",
+            "Xiangling"
+          ]
+        },
+        {
+          "id": "genshin_4_6_2",
+          "version": "4.6",
+          "phase": 2,
+          "start_date": "2024-05-14",
+          "end_date": "2024-06-04",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Странник",
+            "Бай Чжу"
+          ],
+          "featured_five_stars_ru": [
+            "Странник",
+            "Бай Чжу"
+          ],
+          "featured_five_stars_en": [
+            "Wanderer",
+            "Baizhu"
+          ],
+          "featured_four_stars": [
+            "Фарузан",
+            "Бэй Доу",
+            "Лайла"
+          ],
+          "featured_four_stars_ru": [
+            "Фарузан",
+            "Бэй Доу",
+            "Лайла"
+          ],
+          "featured_four_stars_en": [
+            "Faruzan",
+            "Beidou",
+            "Layla"
+          ]
+        },
+        {
+          "id": "genshin_4_7_1",
+          "version": "4.7",
+          "phase": 1,
+          "start_date": "2024-06-05",
+          "end_date": "2024-06-25",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Клоринда",
+            "Аль-Хайтам"
+          ],
+          "featured_five_stars_ru": [
+            "Клоринда",
+            "Аль-Хайтам"
+          ],
+          "featured_five_stars_en": [
+            "Clorinde",
+            "Alhaitham"
+          ],
+          "featured_four_stars": [
+            "Сетос",
+            "Тома",
+            "Беннет"
+          ],
+          "featured_four_stars_ru": [
+            "Сетос",
+            "Тома",
+            "Беннет"
+          ],
+          "featured_four_stars_en": [
+            "Sethos",
+            "Thoma",
+            "Bennett"
+          ]
+        },
+        {
+          "id": "genshin_4_7_2",
+          "version": "4.7",
+          "phase": 2,
+          "start_date": "2024-06-25",
+          "end_date": "2024-07-16",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Сиджвин",
+            "Фурина"
+          ],
+          "featured_five_stars_ru": [
+            "Сиджвин",
+            "Фурина"
+          ],
+          "featured_five_stars_en": [
+            "Sigewinne",
+            "Furina"
+          ],
+          "featured_four_stars": [
+            "Ноэлль",
+            "Розария",
+            "Ка Мин"
+          ],
+          "featured_four_stars_ru": [
+            "Ноэлль",
+            "Розария",
+            "Ка Мин"
+          ],
+          "featured_four_stars_en": [
+            "Noelle",
+            "Rosaria",
+            "Gaming"
+          ]
+        },
+        {
+          "start_date": "2024-07-17",
+          "id": "genshin_5_0_1",
+          "version": "5.0",
+          "featured_four_stars_ru": [
+            "Качина",
+            "Беннет",
+            "Син Цю"
+          ],
+          "featured_four_stars": [
+            "Качина",
+            "Беннет",
+            "Син Цю"
           ],
           "phase": 1,
           "featured_five_stars_ru": [
-            "Шилонен",
-            "Тиори"
+            "Муалани",
+            "Кадзуха"
           ],
           "featured_five_stars": [
-            "Шилонен",
-            "Тиори"
+            "Муалани",
+            "Кадзуха"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
-            "Xilonen",
-            "Chiori"
+            "Mualani",
+            "Kaedehara Kazuha"
           ],
-          "end_date": "2024-09-17",
+          "end_date": "2024-08-06",
           "featured_four_stars_en": [
-            "Diona",
-            "Collei",
-            "Candace"
+            "Kachina",
+            "Bennett",
+            "Xingqiu"
+          ]
+        },
+        {
+          "id": "genshin_4_8_1",
+          "version": "4.8",
+          "phase": 1,
+          "start_date": "2024-07-17",
+          "end_date": "2024-08-06",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Навия",
+            "Нилу"
+          ],
+          "featured_five_stars_ru": [
+            "Навия",
+            "Нилу"
+          ],
+          "featured_five_stars_en": [
+            "Navia",
+            "Nilou"
+          ],
+          "featured_four_stars": [
+            "Кирара",
+            "Кавех",
+            "Нин Гуан"
+          ],
+          "featured_four_stars_ru": [
+            "Кирара",
+            "Кавех",
+            "Нин Гуан"
+          ],
+          "featured_four_stars_en": [
+            "Kirara",
+            "Kaveh",
+            "Ningguang"
+          ]
+        },
+        {
+          "id": "genshin_4_8_2",
+          "version": "4.8",
+          "phase": 2,
+          "start_date": "2024-08-06",
+          "end_date": "2024-08-27",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Эмилия",
+            "Елань"
+          ],
+          "featured_five_stars_ru": [
+            "Эмилия",
+            "Елань"
+          ],
+          "featured_five_stars_en": [
+            "Emilie",
+            "Yelan"
+          ],
+          "featured_four_stars": [
+            "Сян Лин",
+            "Янь Фэй",
+            "Рэйзор"
+          ],
+          "featured_four_stars_ru": [
+            "Сян Лин",
+            "Янь Фэй",
+            "Рэйзор"
+          ],
+          "featured_four_stars_en": [
+            "Xiangling",
+            "Yanfei",
+            "Razor"
           ]
         },
         {
@@ -983,38 +2410,948 @@
           ]
         },
         {
-          "start_date": "2024-07-17",
-          "id": "genshin_5_0_1",
-          "version": "5.0",
+          "start_date": "2024-08-28",
+          "id": "genshin_5_1_1",
+          "version": "5.1",
           "featured_four_stars_ru": [
-            "Качина",
+            "Диона",
+            "Коллеи",
+            "Кандакия"
+          ],
+          "featured_four_stars": [
+            "Диона",
+            "Коллеи",
+            "Кандакия"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Шилонен",
+            "Тиори"
+          ],
+          "featured_five_stars": [
+            "Шилонен",
+            "Тиори"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Xilonen",
+            "Chiori"
+          ],
+          "end_date": "2024-09-17",
+          "featured_four_stars_en": [
+            "Diona",
+            "Collei",
+            "Candace"
+          ]
+        },
+        {
+          "start_date": "2024-09-18",
+          "id": "genshin_5_1_2",
+          "version": "5.1",
+          "featured_four_stars_ru": [
+            "Сетхос",
+            "Синь Янь",
+            "Дори"
+          ],
+          "featured_four_stars": [
+            "Сетхос",
+            "Синь Янь",
+            "Дори"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Нахида",
+            "Ху Тао"
+          ],
+          "featured_five_stars": [
+            "Нахида",
+            "Ху Тао"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Nahida",
+            "Hu Tao"
+          ],
+          "end_date": "2024-10-08",
+          "featured_four_stars_en": [
+            "Sethos",
+            "Xinyan",
+            "Dori"
+          ]
+        },
+        {
+          "start_date": "2024-10-09",
+          "id": "genshin_5_2_1",
+          "version": "5.2",
+          "featured_four_stars_ru": [
+            "Оророн",
+            "Сахароза",
+            "Барбара"
+          ],
+          "featured_four_stars": [
+            "Оророн",
+            "Сахароза",
+            "Барбара"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Часка",
+            "Лини"
+          ],
+          "featured_five_stars": [
+            "Часка",
+            "Лини"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Chasca",
+            "Lyney"
+          ],
+          "end_date": "2024-10-29",
+          "featured_four_stars_en": [
+            "Ororon",
+            "Sucrose",
+            "Barbara"
+          ]
+        },
+        {
+          "start_date": "2024-10-30",
+          "id": "genshin_5_2_2",
+          "version": "5.2",
+          "featured_four_stars_ru": [
+            "Сиканоин Хэйдзо",
+            "Фишль",
+            "Яо Яо"
+          ],
+          "featured_four_stars": [
+            "Сиканоин Хэйдзо",
+            "Фишль",
+            "Яо Яо"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Невиллет",
+            "Чжун Ли"
+          ],
+          "featured_five_stars": [
+            "Невиллет",
+            "Чжун Ли"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Neuvillette",
+            "Zhongli"
+          ],
+          "end_date": "2024-11-19",
+          "featured_four_stars_en": [
+            "Shikanoin Heizou",
+            "Fischl",
+            "Yaoyao"
+          ]
+        },
+        {
+          "start_date": "2024-11-20",
+          "id": "genshin_5_3_1",
+          "version": "5.3",
+          "featured_four_stars_ru": [
             "Беннет",
+            "Качина",
+            "Диона"
+          ],
+          "featured_four_stars": [
+            "Беннет",
+            "Качина",
+            "Диона"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Мавуика",
+            "Ситлали"
+          ],
+          "featured_five_stars": [
+            "Мавуика",
+            "Ситлали"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Mavuika",
+            "Citlali"
+          ],
+          "end_date": "2024-12-10",
+          "featured_four_stars_en": [
+            "Bennett",
+            "Kachina",
+            "Diona"
+          ]
+        },
+        {
+          "start_date": "2024-12-11",
+          "id": "genshin_5_3_2",
+          "version": "5.3",
+          "featured_four_stars_ru": [
+            "Шеврёз",
+            "Розария",
+            "Кавех"
+          ],
+          "featured_four_stars": [
+            "Шеврёз",
+            "Розария",
+            "Кавех"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Арлекино",
+            "Клоринда"
+          ],
+          "featured_five_stars": [
+            "Арлекино",
+            "Клоринда"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Arlecchino",
+            "Clorinde"
+          ],
+          "end_date": "2024-12-31",
+          "featured_four_stars_en": [
+            "Chevreuse",
+            "Rosaria",
+            "Kaveh"
+          ]
+        },
+        {
+          "start_date": "2025-07-30",
+          "id": "genshin_6_0_1",
+          "version": "6.0",
+          "featured_four_stars_ru": [
+            "Кавех",
+            "Синобу",
+            "Барбара"
+          ],
+          "featured_four_stars": [
+            "Кавех",
+            "Синобу",
+            "Барбара"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Лаума",
+            "Нахида"
+          ],
+          "featured_five_stars": [
+            "Лаума",
+            "Нахида"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Lauma",
+            "Nahida"
+          ],
+          "end_date": "2025-08-19",
+          "featured_four_stars_en": [
+            "Kaveh",
+            "Kuki Shinobu",
+            "Barbara"
+          ]
+        },
+        {
+          "start_date": "2025-08-20",
+          "id": "genshin_6_0_2",
+          "version": "6.0",
+          "featured_four_stars_ru": [
+            "Айно",
+            "Синобу",
+            "Диона"
+          ],
+          "featured_four_stars": [
+            "Айно",
+            "Синобу",
+            "Диона"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Флинс",
+            "Тиори"
+          ],
+          "featured_five_stars": [
+            "Флинс",
+            "Тиори"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Flins",
+            "Chiori"
+          ],
+          "end_date": "2025-09-09",
+          "featured_four_stars_en": [
+            "Aino",
+            "Kuki Shinobu",
+            "Diona"
+          ]
+        },
+        {
+          "start_date": "2025-09-10",
+          "id": "genshin_6_1_1",
+          "version": "6.1",
+          "featured_four_stars_ru": [
+            "Шеврёз",
+            "Куки Синобу",
+            "Сара"
+          ],
+          "featured_four_stars": [
+            "Шеврёз",
+            "Куки Синобу",
+            "Сара"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Нефер",
+            "Фурина"
+          ],
+          "featured_five_stars": [
+            "Нефер",
+            "Фурина"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Nefer",
+            "Furina"
+          ],
+          "end_date": "2025-09-30",
+          "featured_four_stars_en": [
+            "Chevreuse",
+            "Kuki Shinobu",
+            "Kujou Sara"
+          ]
+        },
+        {
+          "start_date": "2025-10-01",
+          "id": "genshin_6_1_2",
+          "version": "6.1",
+          "featured_four_stars_ru": [
+            "Бэй Доу",
+            "Синь Янь",
+            "Розария"
+          ],
+          "featured_four_stars": [
+            "Бэй Доу",
+            "Синь Янь",
+            "Розария"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Арлекино",
+            "Чжун Ли"
+          ],
+          "featured_five_stars": [
+            "Арлекино",
+            "Чжун Ли"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Arlecchino",
+            "Zhongli"
+          ],
+          "end_date": "2025-10-21",
+          "featured_four_stars_en": [
+            "Beidou",
+            "Xinyan",
+            "Rosaria"
+          ]
+        },
+        {
+          "start_date": "2025-10-22",
+          "id": "genshin_6_2_1",
+          "version": "6.2",
+          "featured_four_stars_ru": [
+            "Ягода",
+            "Беннет",
+            "Фаризан"
+          ],
+          "featured_four_stars": [
+            "Ягода",
+            "Беннет",
+            "Фаризан"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Дурин",
+            "Венти"
+          ],
+          "featured_five_stars": [
+            "Дурин",
+            "Венти"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Durin",
+            "Venti"
+          ],
+          "end_date": "2025-11-11",
+          "featured_four_stars_en": [
+            "Jahoda",
+            "Bennett",
+            "Faruzan"
+          ]
+        },
+        {
+          "start_date": "2025-11-12",
+          "id": "genshin_6_2_2",
+          "version": "6.2",
+          "featured_four_stars_ru": [
+            "Иансан",
+            "Камин",
+            "Шеврёз"
+          ],
+          "featured_four_stars": [
+            "Иансан",
+            "Камин",
+            "Шеврёз"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Шилонен",
+            "Вареса"
+          ],
+          "featured_five_stars": [
+            "Шилонен",
+            "Вареса"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Xilonen",
+            "Varesa"
+          ],
+          "end_date": "2025-12-02",
+          "featured_four_stars_en": [
+            "Iansan",
+            "Gaming",
+            "Chevreuse"
+          ]
+        },
+        {
+          "start_date": "2025-12-03",
+          "id": "genshin_6_3_1",
+          "version": "6.3",
+          "featured_four_stars_ru": [
+            "Ифа",
+            "Сетос",
+            "Фишль"
+          ],
+          "featured_four_stars": [
+            "Ифа",
+            "Сетос",
+            "Фишль"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Коломбина",
+            "Невиллет"
+          ],
+          "featured_five_stars": [
+            "Коломбина",
+            "Невиллет"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Columbina",
+            "Neuvillette"
+          ],
+          "end_date": "2025-12-23",
+          "featured_four_stars_en": [
+            "Ifa",
+            "Sethos",
+            "Fischl"
+          ]
+        },
+        {
+          "start_date": "2025-12-24",
+          "id": "genshin_6_3_2",
+          "version": "6.3",
+          "featured_four_stars_ru": [
+            "Иллуга",
+            "Айно",
+            "Горо"
+          ],
+          "featured_four_stars": [
+            "Иллуга",
+            "Айно",
+            "Горо"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Цзы Бай",
+            "Инеффа"
+          ],
+          "featured_five_stars": [
+            "Цзы Бай",
+            "Инеффа"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Zi Bai",
+            "Ineffa"
+          ],
+          "end_date": "2026-01-13",
+          "featured_four_stars_en": [
+            "Illuga",
+            "Aino",
+            "Gorou"
+          ]
+        },
+        {
+          "start_date": "2026-01-14",
+          "id": "genshin_6_4_1",
+          "version": "6.4",
+          "featured_four_stars_ru": [
+            "Янь Фэй",
+            "Чун Юнь",
             "Син Цю"
           ],
           "featured_four_stars": [
-            "Качина",
-            "Беннет",
+            "Янь Фэй",
+            "Чун Юнь",
             "Син Цю"
           ],
           "phase": 1,
           "featured_five_stars_ru": [
-            "Муалани",
-            "Кадзуха"
+            "Варка",
+            "Флинс"
           ],
           "featured_five_stars": [
-            "Муалани",
-            "Кадзуха"
+            "Варка",
+            "Флинс"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
-            "Mualani",
-            "Kaedehara Kazuha"
+            "Varka",
+            "Flins"
           ],
-          "end_date": "2024-08-06",
+          "end_date": "2026-02-03",
           "featured_four_stars_en": [
-            "Kachina",
-            "Bennett",
+            "Yanfei",
+            "Chongyun",
             "Xingqiu"
+          ]
+        },
+        {
+          "start_date": "2026-02-04",
+          "id": "genshin_6_4_2",
+          "version": "6.4",
+          "featured_four_stars_ru": [
+            "Лань Янь",
+            "Яо Яо",
+            "Юнь Цзинь"
+          ],
+          "featured_four_stars": [
+            "Лань Янь",
+            "Яо Яо",
+            "Юнь Цзинь"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Скирк",
+            "Эскофье"
+          ],
+          "featured_five_stars": [
+            "Скирк",
+            "Эскофье"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Skirk",
+            "Escoffier"
+          ],
+          "end_date": "2026-02-24",
+          "featured_four_stars_en": [
+            "Lan Yan",
+            "Yaoyao",
+            "Yun Jin"
+          ]
+        },
+        {
+          "start_date": "2026-02-25",
+          "id": "genshin_6_5_1",
+          "version": "6.5",
+          "featured_four_stars_ru": [
+            "Шарлотта",
+            "Линнетт",
+            "Фремине"
+          ],
+          "featured_four_stars": [
+            "Шарлотта",
+            "Линнетт",
+            "Фремине"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Линнея",
+            "Часка"
+          ],
+          "featured_five_stars": [
+            "Линнея",
+            "Часка"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Linnea",
+            "Chasca"
+          ],
+          "end_date": "2026-03-17",
+          "featured_four_stars_en": [
+            "Charlotte",
+            "Lynette",
+            "Freminet"
+          ]
+        },
+        {
+          "start_date": "2026-03-18",
+          "id": "genshin_6_5_2",
+          "version": "6.5",
+          "featured_four_stars_ru": [
+            "Синь Янь",
+            "Бэй Доу",
+            "Нин Гуан"
+          ],
+          "featured_four_stars": [
+            "Синь Янь",
+            "Бэй Доу",
+            "Нин Гуан"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Нефер",
+            "Лаума"
+          ],
+          "featured_five_stars": [
+            "Нефер",
+            "Лаума"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Nefer",
+            "Lauma"
+          ],
+          "end_date": "2026-04-07",
+          "featured_four_stars_en": [
+            "Xinyan",
+            "Beidou",
+            "Ningguang"
+          ]
+        },
+        {
+          "start_date": "2026-04-08",
+          "id": "genshin_6_6_1",
+          "version": "6.6",
+          "featured_four_stars_ru": [
+            "Ноэлль",
+            "Рэйзор",
+            "Сахароза"
+          ],
+          "featured_four_stars": [
+            "Ноэлль",
+            "Рэйзор",
+            "Сахароза"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Николь Рейн",
+            "Дурин"
+          ],
+          "featured_five_stars": [
+            "Николь Рейн",
+            "Дурин"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Nicole Reeyn",
+            "Durin"
+          ],
+          "end_date": "2026-04-28",
+          "featured_four_stars_en": [
+            "Noelle",
+            "Razor",
+            "Sucrose"
+          ]
+        },
+        {
+          "start_date": "2026-04-29",
+          "id": "genshin_6_6_2",
+          "version": "6.6",
+          "featured_four_stars_ru": [
+            "Мика",
+            "Розария",
+            "Барбара"
+          ],
+          "featured_four_stars": [
+            "Мика",
+            "Розария",
+            "Барбара"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Лоэн",
+            "Мавуика"
+          ],
+          "featured_five_stars": [
+            "Лоэн",
+            "Мавуика"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Lohen",
+            "Mavuika"
+          ],
+          "end_date": "2026-05-19",
+          "featured_four_stars_en": [
+            "Mika",
+            "Rosaria",
+            "Barbara"
+          ]
+        },
+        {
+          "start_date": "2026-07-01",
+          "id": "genshin_6_7_1",
+          "version": "6.7",
+          "featured_four_stars_ru": [
+            "Линнетт",
+            "Фремине",
+            "Шарлотта"
+          ],
+          "featured_four_stars": [
+            "Линнетт",
+            "Фремине",
+            "Шарлотта"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Сандроне",
+            "Коломбина"
+          ],
+          "featured_five_stars": [
+            "Сандроне",
+            "Коломбина"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Sandrone",
+            "Columbina"
+          ],
+          "end_date": "2026-07-21",
+          "featured_four_stars_en": [
+            "Lynette",
+            "Freminet",
+            "Charlotte"
+          ]
+        },
+        {
+          "start_date": "2026-07-22",
+          "id": "genshin_6_7_2",
+          "version": "6.7",
+          "featured_four_stars_ru": [
+            "Сара",
+            "Шеврёз",
+            "Тома"
+          ],
+          "featured_four_stars": [
+            "Сара",
+            "Шеврёз",
+            "Тома"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Райдэн",
+            "Ситлали"
+          ],
+          "featured_five_stars": [
+            "Райдэн",
+            "Ситлали"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Raiden Shogun",
+            "Citlali"
+          ],
+          "end_date": "2026-08-11",
+          "featured_four_stars_en": [
+            "Kujou Sara",
+            "Chevreuse",
+            "Thoma"
+          ]
+        },
+        {
+          "start_date": "2026-08-12",
+          "id": "genshin_7_0_1",
+          "version": "7.0",
+          "featured_four_stars_ru": [
+            "Алёша",
+            "Барбара",
+            "Синобу"
+          ],
+          "featured_four_stars": [
+            "Алёша",
+            "Барбара",
+            "Синобу"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Одетта",
+            "Арлекино"
+          ],
+          "featured_five_stars": [
+            "Одетта",
+            "Арлекино"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Odette",
+            "Arlecchino"
+          ],
+          "end_date": "2026-09-01",
+          "featured_four_stars_en": [
+            "Alyosha",
+            "Barbara",
+            "Kuki Shinobu"
+          ]
+        },
+        {
+          "start_date": "2026-09-02",
+          "id": "genshin_7_0_2",
+          "version": "7.0",
+          "featured_four_stars_ru": [
+            "Шеврёз",
+            "Кавех",
+            "Розария"
+          ],
+          "featured_four_stars": [
+            "Шеврёз",
+            "Кавех",
+            "Розария"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Инеффа",
+            "Флинс"
+          ],
+          "featured_five_stars": [
+            "Инеффа",
+            "Флинс"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Ineffa",
+            "Flins"
+          ],
+          "end_date": "2026-09-22",
+          "featured_four_stars_en": [
+            "Chevreuse",
+            "Kaveh",
+            "Rosaria"
+          ]
+        },
+        {
+          "start_date": "2026-09-23",
+          "id": "genshin_7_1_1",
+          "version": "7.1",
+          "featured_four_stars_ru": [
+            "Сахароза",
+            "Беннет",
+            "Фишль"
+          ],
+          "featured_four_stars": [
+            "Сахароза",
+            "Беннет",
+            "Фишль"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Весна",
+            "Водяница"
+          ],
+          "featured_five_stars": [
+            "Весна",
+            "Водяница"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Vesna",
+            "Vodyanitsa"
+          ],
+          "end_date": "2026-10-13",
+          "featured_four_stars_en": [
+            "Sucrose",
+            "Bennett",
+            "Fischl"
+          ]
+        },
+        {
+          "start_date": "2026-10-14",
+          "id": "genshin_7_1_2",
+          "version": "7.1",
+          "featured_four_stars_ru": [
+            "Мика",
+            "Кандакия",
+            "Далия"
+          ],
+          "featured_four_stars": [
+            "Мика",
+            "Кандакия",
+            "Далия"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Скирк",
+            "Эскофье"
+          ],
+          "featured_five_stars": [
+            "Скирк",
+            "Эскофье"
+          ],
+          "status": "CURRENT",
+          "featured_five_stars_en": [
+            "Skirk",
+            "Escoffier"
+          ],
+          "end_date": "2026-11-03",
+          "featured_four_stars_en": [
+            "Mika",
+            "Candace",
+            "Dahlia"
+          ]
+        },
+        {
+          "start_date": "2026-11-04",
+          "id": "genshin_7_2_1",
+          "version": "7.2",
+          "featured_four_stars_ru": [
+            "Шарлотта",
+            "Линнетт",
+            "Фремине"
+          ],
+          "featured_four_stars": [
+            "Шарлотта",
+            "Линнетт",
+            "Фремине"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Митя",
+            "Фурина"
+          ],
+          "featured_five_stars": [
+            "Митя",
+            "Фурина"
+          ],
+          "status": "ANNOUNCED",
+          "featured_five_stars_en": [
+            "Mitya",
+            "Furina"
+          ],
+          "end_date": "2026-11-24",
+          "featured_four_stars_en": [
+            "Charlotte",
+            "Lynette",
+            "Freminet"
           ]
         }
       ],
@@ -1115,178 +3452,1064 @@
     {
       "banners": [
         {
-          "start_date": "2026-11-05",
-          "id": "hsr_4_4_1",
-          "version": "4.4",
-          "featured_four_stars_ru": [
-            "Герта",
-            "Пела",
-            "Тинъюнь"
+          "id": "hsr_1_0_1",
+          "version": "1.0",
+          "phase": 1,
+          "start_date": "2023-04-26",
+          "end_date": "2023-05-17",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Зеле"
+          ],
+          "featured_five_stars_ru": [
+            "Зеле"
+          ],
+          "featured_five_stars_en": [
+            "Seele"
           ],
           "featured_four_stars": [
-            "Герта",
+            "Наташа",
             "Пела",
-            "Тинъюнь"
+            "Хук"
           ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Стивен Ллойд",
-            "Жуань Мэй"
+          "featured_four_stars_ru": [
+            "Наташа",
+            "Пела",
+            "Хук"
           ],
-          "featured_five_stars": [
-            "Стивен Ллойд",
-            "Жуань Мэй"
-          ],
-          "status": "ANNOUNCED",
-          "featured_five_stars_en": [
-            "Stephen Lloyd",
-            "Ruan Mei"
-          ],
-          "end_date": "2026-11-25",
           "featured_four_stars_en": [
-            "Herta",
+            "Natasha",
             "Pela",
-            "Tingyun"
+            "Hook"
           ]
         },
         {
-          "start_date": "2026-10-15",
-          "id": "hsr_4_3_2",
-          "version": "4.3",
-          "featured_four_stars_ru": [
-            "Галлахер",
-            "Рысь",
-            "Цинцюэ"
+          "id": "hsr_1_0_2",
+          "version": "1.0",
+          "phase": 2,
+          "start_date": "2023-05-17",
+          "end_date": "2023-06-06",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Цзин Юань"
+          ],
+          "featured_five_stars_ru": [
+            "Цзин Юань"
+          ],
+          "featured_five_stars_en": [
+            "Jing Yuan"
           ],
           "featured_four_stars": [
-            "Галлахер",
-            "Рысь",
+            "Тинъюнь",
+            "Сушан",
+            "Март 7"
+          ],
+          "featured_four_stars_ru": [
+            "Тинъюнь",
+            "Сушан",
+            "Март 7"
+          ],
+          "featured_four_stars_en": [
+            "Tingyun",
+            "Sushang",
+            "March 7th"
+          ]
+        },
+        {
+          "id": "hsr_1_1_1",
+          "version": "1.1",
+          "phase": 1,
+          "start_date": "2023-06-07",
+          "end_date": "2023-06-28",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Серебряный Волк"
+          ],
+          "featured_five_stars_ru": [
+            "Серебряный Волк"
+          ],
+          "featured_five_stars_en": [
+            "Silver Wolf"
+          ],
+          "featured_four_stars": [
+            "Дань Хэн",
+            "Аста",
+            "Сервал"
+          ],
+          "featured_four_stars_ru": [
+            "Дань Хэн",
+            "Аста",
+            "Сервал"
+          ],
+          "featured_four_stars_en": [
+            "Dan Heng",
+            "Asta",
+            "Serval"
+          ]
+        },
+        {
+          "id": "hsr_1_1_2",
+          "version": "1.1",
+          "phase": 2,
+          "start_date": "2023-06-28",
+          "end_date": "2023-07-18",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Лоча"
+          ],
+          "featured_five_stars_ru": [
+            "Лоча"
+          ],
+          "featured_five_stars_en": [
+            "Luocha"
+          ],
+          "featured_four_stars": [
+            "Юйкун",
+            "Пела",
             "Цинцюэ"
           ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Касторис",
-            "Искорка"
+          "featured_four_stars_ru": [
+            "Юйкун",
+            "Пела",
+            "Цинцюэ"
           ],
-          "featured_five_stars": [
-            "Касторис",
-            "Искорка"
-          ],
-          "status": "CURRENT",
-          "featured_five_stars_en": [
-            "Castorice",
-            "Sparkle"
-          ],
-          "end_date": "2026-11-04",
           "featured_four_stars_en": [
-            "Gallagher",
-            "Lynx",
+            "Yukong",
+            "Pela",
             "Qingque"
           ]
         },
         {
-          "start_date": "2026-09-24",
-          "id": "hsr_4_3_1",
-          "version": "4.3",
-          "featured_four_stars_ru": [
-            "Модзе",
-            "Март 7",
-            "Ханья"
+          "id": "hsr_1_2_1",
+          "version": "1.2",
+          "phase": 1,
+          "start_date": "2023-07-19",
+          "end_date": "2023-08-09",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Блэйд"
+          ],
+          "featured_five_stars_ru": [
+            "Блэйд"
+          ],
+          "featured_five_stars_en": [
+            "Blade"
           ],
           "featured_four_stars": [
-            "Модзе",
-            "Март 7",
-            "Ханья"
+            "Арлан",
+            "Сушан",
+            "Наташа"
           ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Воскресенье",
-            "Фуга"
+          "featured_four_stars_ru": [
+            "Арлан",
+            "Сушан",
+            "Наташа"
           ],
-          "featured_five_stars": [
-            "Воскресенье",
-            "Фуга"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Sunday",
-            "Fugue"
-          ],
-          "end_date": "2026-10-14",
           "featured_four_stars_en": [
-            "Moze",
-            "March 7th",
-            "Hanya"
+            "Arlan",
+            "Sushang",
+            "Natasha"
           ]
         },
         {
-          "start_date": "2026-09-03",
-          "id": "hsr_4_2_2",
-          "version": "4.2",
+          "id": "hsr_1_2_2",
+          "version": "1.2",
+          "phase": 2,
+          "start_date": "2023-08-09",
+          "end_date": "2023-08-29",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Кафка"
+          ],
+          "featured_five_stars_ru": [
+            "Кафка"
+          ],
+          "featured_five_stars_en": [
+            "Kafka"
+          ],
+          "featured_four_stars": [
+            "Лука",
+            "Сампо",
+            "Сервал"
+          ],
           "featured_four_stars_ru": [
-            "Пела",
+            "Лука",
+            "Сампо",
+            "Сервал"
+          ],
+          "featured_four_stars_en": [
+            "Luka",
+            "Sampo",
+            "Serval"
+          ]
+        },
+        {
+          "id": "hsr_1_3_1",
+          "version": "1.3",
+          "phase": 1,
+          "start_date": "2023-08-30",
+          "end_date": "2023-09-20",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Пожиратель Луны"
+          ],
+          "featured_five_stars_ru": [
+            "Пожиратель Луны"
+          ],
+          "featured_five_stars_en": [
+            "Dan Heng - Imbibitor Lunae"
+          ],
+          "featured_four_stars": [
+            "Юйкун",
+            "Аста",
+            "Март 7"
+          ],
+          "featured_four_stars_ru": [
+            "Юйкун",
+            "Аста",
+            "Март 7"
+          ],
+          "featured_four_stars_en": [
+            "Yukong",
+            "Asta",
+            "March 7th"
+          ]
+        },
+        {
+          "id": "hsr_1_3_2",
+          "version": "1.3",
+          "phase": 2,
+          "start_date": "2023-09-20",
+          "end_date": "2023-10-10",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Фу Сюань"
+          ],
+          "featured_five_stars_ru": [
+            "Фу Сюань"
+          ],
+          "featured_five_stars_en": [
+            "Fu Xuan"
+          ],
+          "featured_four_stars": [
+            "Рысь",
+            "Хук",
+            "Пела"
+          ],
+          "featured_four_stars_ru": [
+            "Рысь",
+            "Хук",
+            "Пела"
+          ],
+          "featured_four_stars_en": [
+            "Lynx",
+            "Hook",
+            "Pela"
+          ]
+        },
+        {
+          "id": "hsr_1_4_1",
+          "version": "1.4",
+          "phase": 1,
+          "start_date": "2023-10-11",
+          "end_date": "2023-10-27",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Цзинлю"
+          ],
+          "featured_five_stars_ru": [
+            "Цзинлю"
+          ],
+          "featured_five_stars_en": [
+            "Jingliu"
+          ],
+          "featured_four_stars": [
+            "Тинъюнь",
+            "Цинцюэ",
+            "Сампо"
+          ],
+          "featured_four_stars_ru": [
+            "Тинъюнь",
+            "Цинцюэ",
+            "Сампо"
+          ],
+          "featured_four_stars_en": [
+            "Tingyun",
+            "Qingque",
+            "Sampo"
+          ]
+        },
+        {
+          "id": "hsr_1_4_2",
+          "version": "1.4",
+          "phase": 2,
+          "start_date": "2023-10-27",
+          "end_date": "2023-11-14",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Топаз и Счетовод",
+            "Зеле"
+          ],
+          "featured_five_stars_ru": [
+            "Топаз и Счетовод",
+            "Зеле"
+          ],
+          "featured_five_stars_en": [
+            "Topaz & Numby",
+            "Seele"
+          ],
+          "featured_four_stars": [
             "Гуйнайфэнь",
-            "Лука"
+            "Лука",
+            "Сушан"
+          ],
+          "featured_four_stars_ru": [
+            "Гуйнайфэнь",
+            "Лука",
+            "Сушан"
+          ],
+          "featured_four_stars_en": [
+            "Guinaifen",
+            "Luka",
+            "Sushang"
+          ]
+        },
+        {
+          "id": "hsr_1_5_1",
+          "version": "1.5",
+          "phase": 1,
+          "start_date": "2023-11-15",
+          "end_date": "2023-12-06",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Хохо"
+          ],
+          "featured_five_stars_ru": [
+            "Хохо"
+          ],
+          "featured_five_stars_en": [
+            "Huohuo"
+          ],
+          "featured_four_stars": [
+            "Дань Хэн",
+            "Арлан",
+            "Сервал"
+          ],
+          "featured_four_stars_ru": [
+            "Дань Хэн",
+            "Арлан",
+            "Сервал"
+          ],
+          "featured_four_stars_en": [
+            "Dan Heng",
+            "Arlan",
+            "Serval"
+          ]
+        },
+        {
+          "id": "hsr_1_5_2",
+          "version": "1.5",
+          "phase": 2,
+          "start_date": "2023-12-06",
+          "end_date": "2023-12-26",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Аргенти",
+            "Серебряный Волк"
+          ],
+          "featured_five_stars_ru": [
+            "Аргенти",
+            "Серебряный Волк"
+          ],
+          "featured_five_stars_en": [
+            "Argenti",
+            "Silver Wolf"
+          ],
+          "featured_four_stars": [
+            "Ханья",
+            "Рысь",
+            "Аста"
+          ],
+          "featured_four_stars_ru": [
+            "Ханья",
+            "Рысь",
+            "Аста"
+          ],
+          "featured_four_stars_en": [
+            "Hanya",
+            "Lynx",
+            "Asta"
+          ]
+        },
+        {
+          "id": "hsr_1_6_1",
+          "version": "1.6",
+          "phase": 1,
+          "start_date": "2023-12-27",
+          "end_date": "2024-01-17",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Жуань Мэй",
+            "Блэйд"
+          ],
+          "featured_five_stars_ru": [
+            "Жуань Мэй",
+            "Блэйд"
+          ],
+          "featured_five_stars_en": [
+            "Ruan Mei",
+            "Blade"
+          ],
+          "featured_four_stars": [
+            "Сюэи",
+            "Март 7",
+            "Тинъюнь"
+          ],
+          "featured_four_stars_ru": [
+            "Сюэи",
+            "Март 7",
+            "Тинъюнь"
+          ],
+          "featured_four_stars_en": [
+            "Xueyi",
+            "March 7th",
+            "Tingyun"
+          ]
+        },
+        {
+          "id": "hsr_1_6_2",
+          "version": "1.6",
+          "phase": 2,
+          "start_date": "2024-01-17",
+          "end_date": "2024-02-05",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Доктор Рацио",
+            "Кафка"
+          ],
+          "featured_five_stars_ru": [
+            "Доктор Рацио",
+            "Кафка"
+          ],
+          "featured_five_stars_en": [
+            "Dr. Ratio",
+            "Kafka"
+          ],
+          "featured_four_stars": [
+            "Сушан",
+            "Наташа",
+            "Хук"
+          ],
+          "featured_four_stars_ru": [
+            "Сушан",
+            "Наташа",
+            "Хук"
+          ],
+          "featured_four_stars_en": [
+            "Sushang",
+            "Natasha",
+            "Hook"
+          ]
+        },
+        {
+          "id": "hsr_2_0_1",
+          "version": "2.0",
+          "phase": 1,
+          "start_date": "2024-02-06",
+          "end_date": "2024-02-29",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Черный Лебедь",
+            "Пожиратель Луны"
+          ],
+          "featured_five_stars_ru": [
+            "Черный Лебедь",
+            "Пожиратель Луны"
+          ],
+          "featured_five_stars_en": [
+            "Black Swan",
+            "Dan Heng - Imbibitor Lunae"
+          ],
+          "featured_four_stars": [
+            "Миша",
+            "Тинъюнь",
+            "Гуйнайфэнь"
+          ],
+          "featured_four_stars_ru": [
+            "Миша",
+            "Тинъюнь",
+            "Гуйнайфэнь"
+          ],
+          "featured_four_stars_en": [
+            "Misha",
+            "Tingyun",
+            "Guinaifen"
+          ]
+        },
+        {
+          "id": "hsr_2_0_2",
+          "version": "2.0",
+          "phase": 2,
+          "start_date": "2024-02-29",
+          "end_date": "2024-03-26",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Искорка",
+            "Цзин Юань"
+          ],
+          "featured_five_stars_ru": [
+            "Искорка",
+            "Цзин Юань"
+          ],
+          "featured_five_stars_en": [
+            "Sparkle",
+            "Jing Yuan"
+          ],
+          "featured_four_stars": [
+            "Цинцюэ",
+            "Сампо",
+            "Юйкун"
+          ],
+          "featured_four_stars_ru": [
+            "Цинцюэ",
+            "Сампо",
+            "Юйкун"
+          ],
+          "featured_four_stars_en": [
+            "Qingque",
+            "Sampo",
+            "Yukong"
+          ]
+        },
+        {
+          "id": "hsr_2_1_1",
+          "version": "2.1",
+          "phase": 1,
+          "start_date": "2024-03-27",
+          "end_date": "2024-04-17",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Ахерон",
+            "Лоча"
+          ],
+          "featured_five_stars_ru": [
+            "Ахерон",
+            "Лоча"
+          ],
+          "featured_five_stars_en": [
+            "Acheron",
+            "Luocha"
+          ],
+          "featured_four_stars": [
+            "Галлахер",
+            "Пела",
+            "Дань Хэн"
+          ],
+          "featured_four_stars_ru": [
+            "Галлахер",
+            "Пела",
+            "Дань Хэн"
+          ],
+          "featured_four_stars_en": [
+            "Gallagher",
+            "Pela",
+            "Dan Heng"
+          ]
+        },
+        {
+          "id": "hsr_2_1_2",
+          "version": "2.1",
+          "phase": 2,
+          "start_date": "2024-04-17",
+          "end_date": "2024-05-07",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Авантюрин",
+            "Цзинлю"
+          ],
+          "featured_five_stars_ru": [
+            "Авантюрин",
+            "Цзинлю"
+          ],
+          "featured_five_stars_en": [
+            "Aventurine",
+            "Jingliu"
+          ],
+          "featured_four_stars": [
+            "Рысь",
+            "Лука",
+            "Сервал"
+          ],
+          "featured_four_stars_ru": [
+            "Рысь",
+            "Лука",
+            "Сервал"
+          ],
+          "featured_four_stars_en": [
+            "Lynx",
+            "Luka",
+            "Serval"
+          ]
+        },
+        {
+          "id": "hsr_2_2_1",
+          "version": "2.2",
+          "phase": 1,
+          "start_date": "2024-05-08",
+          "end_date": "2024-05-29",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Зарянка",
+            "Топаз и Счетовод"
+          ],
+          "featured_five_stars_ru": [
+            "Зарянка",
+            "Топаз и Счетовод"
+          ],
+          "featured_five_stars_en": [
+            "Robin",
+            "Topaz & Numby"
+          ],
+          "featured_four_stars": [
+            "Март 7",
+            "Ханья",
+            "Сюэи"
+          ],
+          "featured_four_stars_ru": [
+            "Март 7",
+            "Ханья",
+            "Сюэи"
+          ],
+          "featured_four_stars_en": [
+            "March 7th",
+            "Hanya",
+            "Xueyi"
+          ]
+        },
+        {
+          "id": "hsr_2_2_2",
+          "version": "2.2",
+          "phase": 2,
+          "start_date": "2024-05-29",
+          "end_date": "2024-06-18",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Бутхилл",
+            "Фу Сюань"
+          ],
+          "featured_five_stars_ru": [
+            "Бутхилл",
+            "Фу Сюань"
+          ],
+          "featured_five_stars_en": [
+            "Boothill",
+            "Fu Xuan"
           ],
           "featured_four_stars": [
             "Пела",
-            "Гуйнайфэнь",
-            "Лука"
+            "Лука",
+            "Хук"
           ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Аглая",
-            "Ахерон"
+          "featured_four_stars_ru": [
+            "Пела",
+            "Лука",
+            "Хук"
           ],
-          "featured_five_stars": [
-            "Аглая",
-            "Ахерон"
-          ],
-          "status": "EXPIRED",
-          "featured_five_stars_en": [
-            "Aglaea",
-            "Acheron"
-          ],
-          "end_date": "2026-09-23",
           "featured_four_stars_en": [
             "Pela",
-            "Guinaifen",
-            "Luka"
+            "Luka",
+            "Hook"
           ]
         },
         {
-          "start_date": "2026-08-13",
-          "id": "hsr_4_2_1",
-          "version": "4.2",
-          "featured_four_stars_ru": [
-            "Цзяоцю",
-            "Модзе",
-            "Тинъюнь"
+          "id": "hsr_2_3_1",
+          "version": "2.3",
+          "phase": 1,
+          "start_date": "2024-06-19",
+          "end_date": "2024-07-10",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Светлячок",
+            "Жуань Мэй"
+          ],
+          "featured_five_stars_ru": [
+            "Светлячок",
+            "Жуань Мэй"
+          ],
+          "featured_five_stars_en": [
+            "Firefly",
+            "Ruan Mei"
           ],
           "featured_four_stars": [
+            "Галлахер",
+            "Миша",
+            "Сюэи"
+          ],
+          "featured_four_stars_ru": [
+            "Галлахер",
+            "Миша",
+            "Сюэи"
+          ],
+          "featured_four_stars_en": [
+            "Gallagher",
+            "Misha",
+            "Xueyi"
+          ]
+        },
+        {
+          "id": "hsr_2_3_2",
+          "version": "2.3",
+          "phase": 2,
+          "start_date": "2024-07-10",
+          "end_date": "2024-07-30",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Нефрит",
+            "Аргенти"
+          ],
+          "featured_five_stars_ru": [
+            "Нефрит",
+            "Аргенти"
+          ],
+          "featured_five_stars_en": [
+            "Jade",
+            "Argenti"
+          ],
+          "featured_four_stars": [
+            "Сервал",
+            "Наташа",
+            "Аста"
+          ],
+          "featured_four_stars_ru": [
+            "Сервал",
+            "Наташа",
+            "Аста"
+          ],
+          "featured_four_stars_en": [
+            "Serval",
+            "Natasha",
+            "Asta"
+          ]
+        },
+        {
+          "id": "hsr_2_4_1",
+          "version": "2.4",
+          "phase": 1,
+          "start_date": "2024-07-31",
+          "end_date": "2024-08-21",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Юньли",
+            "Хохо"
+          ],
+          "featured_five_stars_ru": [
+            "Юньли",
+            "Хохо"
+          ],
+          "featured_five_stars_en": [
+            "Yunli",
+            "Huohuo"
+          ],
+          "featured_four_stars": [
+            "Ханья",
+            "Юйкун",
+            "Рысь"
+          ],
+          "featured_four_stars_ru": [
+            "Ханья",
+            "Юйкун",
+            "Рысь"
+          ],
+          "featured_four_stars_en": [
+            "Hanya",
+            "Yukong",
+            "Lynx"
+          ]
+        },
+        {
+          "id": "hsr_2_4_2",
+          "version": "2.4",
+          "phase": 2,
+          "start_date": "2024-08-21",
+          "end_date": "2024-09-09",
+          "status": "ENDED",
+          "featured_five_stars": [
             "Цзяоцю",
-            "Модзе",
-            "Тинъюнь"
+            "Искорка"
+          ],
+          "featured_five_stars_ru": [
+            "Цзяоцю",
+            "Искорка"
+          ],
+          "featured_five_stars_en": [
+            "Jiaoqiu",
+            "Sparkle"
+          ],
+          "featured_four_stars": [
+            "Хук",
+            "Арлан",
+            "Гуйнайфэнь"
+          ],
+          "featured_four_stars_ru": [
+            "Хук",
+            "Арлан",
+            "Гуйнайфэнь"
+          ],
+          "featured_four_stars_en": [
+            "Hook",
+            "Arlan",
+            "Guinaifen"
+          ]
+        },
+        {
+          "id": "hsr_2_5_1",
+          "version": "2.5",
+          "phase": 1,
+          "start_date": "2024-09-10",
+          "end_date": "2024-10-02",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Фэйсяо",
+            "Зарянка",
+            "Черный Лебедь",
+            "Кафка"
+          ],
+          "featured_five_stars_ru": [
+            "Фэйсяо",
+            "Зарянка",
+            "Черный Лебедь",
+            "Кафка"
+          ],
+          "featured_five_stars_en": [
+            "Feixiao",
+            "Robin",
+            "Black Swan",
+            "Kafka"
+          ],
+          "featured_four_stars": [
+            "Моцзэ",
+            "Аста",
+            "Рысь"
+          ],
+          "featured_four_stars_ru": [
+            "Моцзэ",
+            "Аста",
+            "Рысь"
+          ],
+          "featured_four_stars_en": [
+            "Moze",
+            "Asta",
+            "Lynx"
+          ]
+        },
+        {
+          "id": "hsr_2_5_2",
+          "version": "2.5",
+          "phase": 2,
+          "start_date": "2024-10-02",
+          "end_date": "2024-10-22",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Линша",
+            "Топаз и Счетовод"
+          ],
+          "featured_five_stars_ru": [
+            "Линша",
+            "Топаз и Счетовод"
+          ],
+          "featured_five_stars_en": [
+            "Lingsha",
+            "Topaz & Numby"
+          ],
+          "featured_four_stars": [
+            "Миша",
+            "Наташа",
+            "Гуйнайфэнь"
+          ],
+          "featured_four_stars_ru": [
+            "Миша",
+            "Наташа",
+            "Гуйнайфэнь"
+          ],
+          "featured_four_stars_en": [
+            "Misha",
+            "Natasha",
+            "Guinaifen"
+          ]
+        },
+        {
+          "id": "hsr_2_6_1",
+          "version": "2.6",
+          "phase": 1,
+          "start_date": "2024-10-23",
+          "end_date": "2024-11-13",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Раппа",
+            "Пожиратель Луны"
+          ],
+          "featured_five_stars_ru": [
+            "Раппа",
+            "Пожиратель Луны"
+          ],
+          "featured_five_stars_en": [
+            "Rappa",
+            "Dan Heng - Imbibitor Lunae"
+          ],
+          "featured_four_stars": [
+            "Рысь",
+            "Сюэи",
+            "Юйкун"
+          ],
+          "featured_four_stars_ru": [
+            "Рысь",
+            "Сюэи",
+            "Юйкун"
+          ],
+          "featured_four_stars_en": [
+            "Lynx",
+            "Xueyi",
+            "Yukong"
+          ]
+        },
+        {
+          "id": "hsr_2_7_1",
+          "version": "2.7",
+          "phase": 1,
+          "start_date": "2024-12-04",
+          "end_date": "2024-12-25",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Воскресенье",
+            "Цзин Юань"
+          ],
+          "featured_five_stars_ru": [
+            "Воскресенье",
+            "Цзин Юань"
+          ],
+          "featured_five_stars_en": [
+            "Sunday",
+            "Jing Yuan"
+          ],
+          "featured_four_stars": [
+            "Тинъюнь",
+            "Галлахер",
+            "Пела"
+          ],
+          "featured_four_stars_ru": [
+            "Тинъюнь",
+            "Галлахер",
+            "Пела"
+          ],
+          "featured_four_stars_en": [
+            "Tingyun",
+            "Gallagher",
+            "Pela"
+          ]
+        },
+        {
+          "id": "hsr_2_7_2",
+          "version": "2.7",
+          "phase": 2,
+          "start_date": "2024-12-25",
+          "end_date": "2025-01-14",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Фуга",
+            "Светлячок"
+          ],
+          "featured_five_stars_ru": [
+            "Фуга",
+            "Светлячок"
+          ],
+          "featured_five_stars_en": [
+            "Fugue",
+            "Firefly"
+          ],
+          "featured_four_stars": [
+            "Моцзэ",
+            "Ханья",
+            "Аста"
+          ],
+          "featured_four_stars_ru": [
+            "Моцзэ",
+            "Ханья",
+            "Аста"
+          ],
+          "featured_four_stars_en": [
+            "Moze",
+            "Hanya",
+            "Asta"
+          ]
+        },
+        {
+          "id": "hsr_3_0_1",
+          "version": "3.0",
+          "phase": 1,
+          "start_date": "2025-01-15",
+          "end_date": "2025-02-04",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Аглая",
+            "Фэйсяо"
+          ],
+          "featured_five_stars_ru": [
+            "Аглая",
+            "Фэйсяо"
+          ],
+          "featured_five_stars_en": [
+            "Aglaea",
+            "Feixiao"
+          ],
+          "featured_four_stars": [
+            "Март 7",
+            "Дань Хэн",
+            "Сервал"
+          ],
+          "featured_four_stars_ru": [
+            "Март 7",
+            "Дань Хэн",
+            "Сервал"
+          ],
+          "featured_four_stars_en": [
+            "March 7th",
+            "Dan Heng",
+            "Serval"
+          ]
+        },
+        {
+          "start_date": "2026-07-02",
+          "id": "hsr_4_1_1",
+          "version": "4.1",
+          "featured_four_stars_ru": [
+            "Миша",
+            "Сюэи",
+            "Галлахер"
+          ],
+          "featured_four_stars": [
+            "Миша",
+            "Сюэи",
+            "Галлахер"
           ],
           "phase": 1,
           "featured_five_stars_ru": [
-            "Линша",
-            "Фэйсяо"
+            "Зарянка",
+            "Светлячок"
           ],
           "featured_five_stars": [
-            "Линша",
-            "Фэйсяо"
+            "Зарянка",
+            "Светлячок"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
-            "Lingsha",
-            "Feixiao"
+            "Robin",
+            "Firefly"
           ],
-          "end_date": "2026-09-02",
+          "end_date": "2026-07-22",
           "featured_four_stars_en": [
-            "Jiaoqiu",
-            "Moze",
-            "Tingyun"
+            "Misha",
+            "Xueyi",
+            "Gallagher"
           ]
         },
         {
@@ -1325,38 +4548,178 @@
           ]
         },
         {
-          "start_date": "2026-07-02",
-          "id": "hsr_4_1_1",
-          "version": "4.1",
+          "start_date": "2026-08-13",
+          "id": "hsr_4_2_1",
+          "version": "4.2",
           "featured_four_stars_ru": [
-            "Миша",
-            "Сюэи",
-            "Галлахер"
+            "Цзяоцю",
+            "Модзе",
+            "Тинъюнь"
           ],
           "featured_four_stars": [
-            "Миша",
-            "Сюэи",
-            "Галлахер"
+            "Цзяоцю",
+            "Модзе",
+            "Тинъюнь"
           ],
           "phase": 1,
           "featured_five_stars_ru": [
-            "Зарянка",
-            "Светлячок"
+            "Линша",
+            "Фэйсяо"
           ],
           "featured_five_stars": [
-            "Зарянка",
-            "Светлячок"
+            "Линша",
+            "Фэйсяо"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
-            "Robin",
-            "Firefly"
+            "Lingsha",
+            "Feixiao"
           ],
-          "end_date": "2026-07-22",
+          "end_date": "2026-09-02",
           "featured_four_stars_en": [
-            "Misha",
-            "Xueyi",
-            "Gallagher"
+            "Jiaoqiu",
+            "Moze",
+            "Tingyun"
+          ]
+        },
+        {
+          "start_date": "2026-09-03",
+          "id": "hsr_4_2_2",
+          "version": "4.2",
+          "featured_four_stars_ru": [
+            "Пела",
+            "Гуйнайфэнь",
+            "Лука"
+          ],
+          "featured_four_stars": [
+            "Пела",
+            "Гуйнайфэнь",
+            "Лука"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Аглая",
+            "Ахерон"
+          ],
+          "featured_five_stars": [
+            "Аглая",
+            "Ахерон"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Aglaea",
+            "Acheron"
+          ],
+          "end_date": "2026-09-23",
+          "featured_four_stars_en": [
+            "Pela",
+            "Guinaifen",
+            "Luka"
+          ]
+        },
+        {
+          "start_date": "2026-09-24",
+          "id": "hsr_4_3_1",
+          "version": "4.3",
+          "featured_four_stars_ru": [
+            "Модзе",
+            "Март 7",
+            "Ханья"
+          ],
+          "featured_four_stars": [
+            "Модзе",
+            "Март 7",
+            "Ханья"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Воскресенье",
+            "Фуга"
+          ],
+          "featured_five_stars": [
+            "Воскресенье",
+            "Фуга"
+          ],
+          "status": "EXPIRED",
+          "featured_five_stars_en": [
+            "Sunday",
+            "Fugue"
+          ],
+          "end_date": "2026-10-14",
+          "featured_four_stars_en": [
+            "Moze",
+            "March 7th",
+            "Hanya"
+          ]
+        },
+        {
+          "start_date": "2026-10-15",
+          "id": "hsr_4_3_2",
+          "version": "4.3",
+          "featured_four_stars_ru": [
+            "Галлахер",
+            "Рысь",
+            "Цинцюэ"
+          ],
+          "featured_four_stars": [
+            "Галлахер",
+            "Рысь",
+            "Цинцюэ"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Касторис",
+            "Искорка"
+          ],
+          "featured_five_stars": [
+            "Касторис",
+            "Искорка"
+          ],
+          "status": "CURRENT",
+          "featured_five_stars_en": [
+            "Castorice",
+            "Sparkle"
+          ],
+          "end_date": "2026-11-04",
+          "featured_four_stars_en": [
+            "Gallagher",
+            "Lynx",
+            "Qingque"
+          ]
+        },
+        {
+          "start_date": "2026-11-05",
+          "id": "hsr_4_4_1",
+          "version": "4.4",
+          "featured_four_stars_ru": [
+            "Герта",
+            "Пела",
+            "Тинъюнь"
+          ],
+          "featured_four_stars": [
+            "Герта",
+            "Пела",
+            "Тинъюнь"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Стивен Ллойд",
+            "Жуань Мэй"
+          ],
+          "featured_five_stars": [
+            "Стивен Ллойд",
+            "Жуань Мэй"
+          ],
+          "status": "ANNOUNCED",
+          "featured_five_stars_en": [
+            "Stephen Lloyd",
+            "Ruan Mei"
+          ],
+          "end_date": "2026-11-25",
+          "featured_four_stars_en": [
+            "Herta",
+            "Pela",
+            "Tingyun"
           ]
         }
       ],
@@ -1391,108 +4754,392 @@
     {
       "banners": [
         {
-          "start_date": "2026-11-06",
-          "id": "zzz_3_2_1",
-          "version": "3.2",
-          "featured_four_stars_ru": [
-            "Люси",
-            "Пайпер",
-            "Билли"
+          "id": "zzz_1_0_1",
+          "version": "1.0",
+          "phase": 1,
+          "start_date": "2024-07-04",
+          "end_date": "2024-07-24",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Эллен Джо"
+          ],
+          "featured_five_stars_ru": [
+            "Эллен Джо"
+          ],
+          "featured_five_stars_en": [
+            "Ellen Joe"
           ],
           "featured_four_stars": [
-            "Люси",
-            "Пайпер",
-            "Билли"
+            "Антон",
+            "Сокаку"
           ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Лайтер",
-            "Цезарь"
+          "featured_four_stars_ru": [
+            "Антон",
+            "Сокаку"
           ],
-          "featured_five_stars": [
-            "Лайтер",
-            "Цезарь"
-          ],
-          "status": "ANNOUNCED",
-          "featured_five_stars_en": [
-            "Lighter",
-            "Caesar"
-          ],
-          "end_date": "2026-11-26",
           "featured_four_stars_en": [
-            "Lucy",
-            "Piper",
-            "Billy"
+            "Anton",
+            "Soukaku"
           ]
         },
         {
-          "start_date": "2026-10-16",
-          "id": "zzz_3_1_2",
-          "version": "3.1",
+          "id": "zzz_1_0_2",
+          "version": "1.0",
+          "phase": 2,
+          "start_date": "2024-07-24",
+          "end_date": "2024-08-13",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Чжу Юань"
+          ],
+          "featured_five_stars_ru": [
+            "Чжу Юань"
+          ],
+          "featured_five_stars_en": [
+            "Zhu Yuan"
+          ],
+          "featured_four_stars": [
+            "Николь",
+            "Бен"
+          ],
           "featured_four_stars_ru": [
-            "Сет",
-            "Анби",
-            "Николь"
+            "Николь",
+            "Бен"
+          ],
+          "featured_four_stars_en": [
+            "Nicole",
+            "Ben"
+          ]
+        },
+        {
+          "id": "zzz_1_1_1",
+          "version": "1.1",
+          "phase": 1,
+          "start_date": "2024-08-14",
+          "end_date": "2024-09-04",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Цинъи"
+          ],
+          "featured_five_stars_ru": [
+            "Цинъи"
+          ],
+          "featured_five_stars_en": [
+            "Qingyi"
+          ],
+          "featured_four_stars": [
+            "Билли",
+            "Корин"
+          ],
+          "featured_four_stars_ru": [
+            "Билли",
+            "Корин"
+          ],
+          "featured_four_stars_en": [
+            "Billy",
+            "Corin"
+          ]
+        },
+        {
+          "id": "zzz_1_1_2",
+          "version": "1.1",
+          "phase": 2,
+          "start_date": "2024-09-04",
+          "end_date": "2024-09-24",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Джейн Доу"
+          ],
+          "featured_five_stars_ru": [
+            "Джейн Доу"
+          ],
+          "featured_five_stars_en": [
+            "Jane Doe"
           ],
           "featured_four_stars": [
             "Сет",
-            "Анби",
-            "Николь"
+            "Энби"
           ],
-          "phase": 2,
-          "featured_five_stars_ru": [
-            "Янаги",
-            "Мияби"
+          "featured_four_stars_ru": [
+            "Сет",
+            "Энби"
           ],
-          "featured_five_stars": [
-            "Янаги",
-            "Мияби"
-          ],
-          "status": "CURRENT",
-          "featured_five_stars_en": [
-            "Yanagi",
-            "Miyabi"
-          ],
-          "end_date": "2026-11-05",
           "featured_four_stars_en": [
             "Seth",
-            "Anby",
+            "Anby"
+          ]
+        },
+        {
+          "id": "zzz_1_2_1",
+          "version": "1.2",
+          "phase": 1,
+          "start_date": "2024-09-25",
+          "end_date": "2024-10-15",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Цезарь Кинг"
+          ],
+          "featured_five_stars_ru": [
+            "Цезарь Кинг"
+          ],
+          "featured_five_stars_en": [
+            "Caesar King"
+          ],
+          "featured_four_stars": [
+            "Пайпер",
+            "Антон"
+          ],
+          "featured_four_stars_ru": [
+            "Пайпер",
+            "Антон"
+          ],
+          "featured_four_stars_en": [
+            "Piper",
+            "Anton"
+          ]
+        },
+        {
+          "id": "zzz_1_2_2",
+          "version": "1.2",
+          "phase": 2,
+          "start_date": "2024-10-16",
+          "end_date": "2024-11-05",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Бернис Уайт"
+          ],
+          "featured_five_stars_ru": [
+            "Бернис Уайт"
+          ],
+          "featured_five_stars_en": [
+            "Burnice White"
+          ],
+          "featured_four_stars": [
+            "Люси",
+            "Николь"
+          ],
+          "featured_four_stars_ru": [
+            "Люси",
+            "Николь"
+          ],
+          "featured_four_stars_en": [
+            "Lucy",
             "Nicole"
           ]
         },
         {
-          "start_date": "2026-09-25",
-          "id": "zzz_3_1_1",
-          "version": "3.1",
-          "featured_four_stars_ru": [
-            "Люси",
-            "Пайпер",
-            "Корин"
+          "id": "zzz_1_3_1",
+          "version": "1.3",
+          "phase": 1,
+          "start_date": "2024-11-06",
+          "end_date": "2024-11-26",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Янаги"
+          ],
+          "featured_five_stars_ru": [
+            "Янаги"
+          ],
+          "featured_five_stars_en": [
+            "Yanagi"
           ],
           "featured_four_stars": [
-            "Люси",
-            "Пайпер",
+            "Энби",
+            "Билли"
+          ],
+          "featured_four_stars_ru": [
+            "Энби",
+            "Билли"
+          ],
+          "featured_four_stars_en": [
+            "Anby",
+            "Billy"
+          ]
+        },
+        {
+          "id": "zzz_1_3_2",
+          "version": "1.3",
+          "phase": 2,
+          "start_date": "2024-11-27",
+          "end_date": "2024-12-17",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Лайтер"
+          ],
+          "featured_five_stars_ru": [
+            "Лайтер"
+          ],
+          "featured_five_stars_en": [
+            "Lighter"
+          ],
+          "featured_four_stars": [
+            "Бен",
             "Корин"
+          ],
+          "featured_four_stars_ru": [
+            "Бен",
+            "Корин"
+          ],
+          "featured_four_stars_en": [
+            "Ben",
+            "Corin"
+          ]
+        },
+        {
+          "id": "zzz_1_4_1",
+          "version": "1.4",
+          "phase": 1,
+          "start_date": "2024-12-18",
+          "end_date": "2025-01-08",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Хосими Мияби"
+          ],
+          "featured_five_stars_ru": [
+            "Хосими Мияби"
+          ],
+          "featured_five_stars_en": [
+            "Hoshimi Miyabi"
+          ],
+          "featured_four_stars": [
+            "Сокаку",
+            "Сет"
+          ],
+          "featured_four_stars_ru": [
+            "Сокаку",
+            "Сет"
+          ],
+          "featured_four_stars_en": [
+            "Soukaku",
+            "Seth"
+          ]
+        },
+        {
+          "id": "zzz_1_4_2",
+          "version": "1.4",
+          "phase": 2,
+          "start_date": "2025-01-08",
+          "end_date": "2025-01-28",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Харумаса"
+          ],
+          "featured_five_stars_ru": [
+            "Харумаса"
+          ],
+          "featured_five_stars_en": [
+            "Asahina Harumasa"
+          ],
+          "featured_four_stars": [
+            "Пайпер",
+            "Люси"
+          ],
+          "featured_four_stars_ru": [
+            "Пайпер",
+            "Люси"
+          ],
+          "featured_four_stars_en": [
+            "Piper",
+            "Lucy"
+          ]
+        },
+        {
+          "id": "zzz_1_5_1",
+          "version": "1.5",
+          "phase": 1,
+          "start_date": "2025-01-29",
+          "end_date": "2025-02-18",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Астра Яо",
+            "Эллен Джо"
+          ],
+          "featured_five_stars_ru": [
+            "Астра Яо",
+            "Эллен Джо"
+          ],
+          "featured_five_stars_en": [
+            "Astra Yao",
+            "Ellen Joe"
+          ],
+          "featured_four_stars": [
+            "Антон",
+            "Николь"
+          ],
+          "featured_four_stars_ru": [
+            "Антон",
+            "Николь"
+          ],
+          "featured_four_stars_en": [
+            "Anton",
+            "Nicole"
+          ]
+        },
+        {
+          "id": "zzz_1_5_2",
+          "version": "1.5",
+          "phase": 2,
+          "start_date": "2025-02-18",
+          "end_date": "2025-03-11",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Эвелин",
+            "Чжу Юань"
+          ],
+          "featured_five_stars_ru": [
+            "Эвелин",
+            "Чжу Юань"
+          ],
+          "featured_five_stars_en": [
+            "Evelyn",
+            "Zhu Yuan"
+          ],
+          "featured_four_stars": [
+            "Корин",
+            "Билли"
+          ],
+          "featured_four_stars_ru": [
+            "Корин",
+            "Билли"
+          ],
+          "featured_four_stars_en": [
+            "Corin",
+            "Billy"
+          ]
+        },
+        {
+          "start_date": "2026-08-14",
+          "id": "zzz_3_0_1",
+          "version": "3.0",
+          "featured_four_stars_ru": [
+            "Николь",
+            "Бен",
+            "Сокаку"
+          ],
+          "featured_four_stars": [
+            "Николь",
+            "Бен",
+            "Сокаку"
           ],
           "phase": 1,
           "featured_five_stars_ru": [
-            "Бёрнис",
-            "Джейн Доу"
+            "Чжу Юань",
+            "Хосими Мияби"
           ],
           "featured_five_stars": [
-            "Бёрнис",
-            "Джейн Доу"
+            "Чжу Юань",
+            "Хосими Мияби"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
-            "Burnice",
-            "Jane Doe"
+            "Zhu Yuan",
+            "Miyabi"
           ],
-          "end_date": "2026-10-15",
+          "end_date": "2026-09-03",
           "featured_four_stars_en": [
-            "Lucy",
-            "Piper",
-            "Corin"
+            "Nicole",
+            "Ben",
+            "Soukaku"
           ]
         },
         {
@@ -1531,38 +5178,108 @@
           ]
         },
         {
-          "start_date": "2026-08-14",
-          "id": "zzz_3_0_1",
-          "version": "3.0",
+          "start_date": "2026-09-25",
+          "id": "zzz_3_1_1",
+          "version": "3.1",
           "featured_four_stars_ru": [
-            "Николь",
-            "Бен",
-            "Сокаку"
+            "Люси",
+            "Пайпер",
+            "Корин"
           ],
           "featured_four_stars": [
-            "Николь",
-            "Бен",
-            "Сокаку"
+            "Люси",
+            "Пайпер",
+            "Корин"
           ],
           "phase": 1,
           "featured_five_stars_ru": [
-            "Чжу Юань",
-            "Мияби"
+            "Бёрнис",
+            "Джейн Доу"
           ],
           "featured_five_stars": [
-            "Чжу Юань",
-            "Мияби"
+            "Бёрнис",
+            "Джейн Доу"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
-            "Zhu Yuan",
+            "Burnice",
+            "Jane Doe"
+          ],
+          "end_date": "2026-10-15",
+          "featured_four_stars_en": [
+            "Lucy",
+            "Piper",
+            "Corin"
+          ]
+        },
+        {
+          "start_date": "2026-10-16",
+          "id": "zzz_3_1_2",
+          "version": "3.1",
+          "featured_four_stars_ru": [
+            "Сет",
+            "Анби",
+            "Николь"
+          ],
+          "featured_four_stars": [
+            "Сет",
+            "Анби",
+            "Николь"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Янаги",
+            "Хосими Мияби"
+          ],
+          "featured_five_stars": [
+            "Янаги",
+            "Хосими Мияби"
+          ],
+          "status": "CURRENT",
+          "featured_five_stars_en": [
+            "Yanagi",
             "Miyabi"
           ],
-          "end_date": "2026-09-03",
+          "end_date": "2026-11-05",
           "featured_four_stars_en": [
-            "Nicole",
-            "Ben",
-            "Soukaku"
+            "Seth",
+            "Anby",
+            "Nicole"
+          ]
+        },
+        {
+          "start_date": "2026-11-06",
+          "id": "zzz_3_2_1",
+          "version": "3.2",
+          "featured_four_stars_ru": [
+            "Люси",
+            "Пайпер",
+            "Билли"
+          ],
+          "featured_four_stars": [
+            "Люси",
+            "Пайпер",
+            "Билли"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Лайтер",
+            "Цезарь"
+          ],
+          "featured_five_stars": [
+            "Лайтер",
+            "Цезарь"
+          ],
+          "status": "ANNOUNCED",
+          "featured_five_stars_en": [
+            "Lighter",
+            "Caesar"
+          ],
+          "end_date": "2026-11-26",
+          "featured_four_stars_en": [
+            "Lucy",
+            "Piper",
+            "Billy"
           ]
         }
       ],
@@ -1591,73 +5308,354 @@
     {
       "banners": [
         {
-          "start_date": "2026-11-07",
-          "id": "hi3_8_7_1",
-          "version": "8.7",
-          "featured_four_stars_ru": [
-            "Гельвеция",
-            "Корали",
-            "Хелия"
+          "id": "hi3_6_0_1",
+          "version": "6.0",
+          "phase": 1,
+          "start_date": "2022-09-15",
+          "end_date": "2022-10-07",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Элизия: Судья Человечества"
+          ],
+          "featured_five_stars_ru": [
+            "Элизия: Судья Человечества"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Human: Ego"
           ],
           "featured_four_stars": [
-            "Гельвеция",
-            "Корали",
-            "Хелия"
+            "Пардофелис",
+            "Грисео: Звездный рисунок"
           ],
-          "phase": 1,
-          "featured_five_stars_ru": [
-            "Киана (Финал)",
-            "Сенадина"
+          "featured_four_stars_ru": [
+            "Пардофелис",
+            "Грисео: Звездный рисунок"
           ],
-          "featured_five_stars": [
-            "Киана (Финал)",
-            "Сенадина"
-          ],
-          "status": "ANNOUNCED",
-          "featured_five_stars_en": [
-            "Kiana (Finality)",
-            "Senadina"
-          ],
-          "end_date": "2026-11-27",
           "featured_four_stars_en": [
-            "Helvetia",
-            "Coralie",
-            "Helia"
+            "Reverist Calico",
+            "Starry Impression"
           ]
         },
         {
-          "start_date": "2026-10-17",
-          "id": "hi3_8_6_2",
-          "version": "8.6",
-          "featured_four_stars_ru": [
-            "Корали",
-            "Хелия",
-            "Телема"
+          "id": "hi3_6_3_1",
+          "version": "6.3",
+          "phase": 1,
+          "start_date": "2023-01-12",
+          "end_date": "2023-02-03",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Броня: Судья Истины"
+          ],
+          "featured_five_stars_ru": [
+            "Броня: Судья Истины"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Truth"
           ],
           "featured_four_stars": [
-            "Корали",
-            "Хелия",
+            "Шигурэ Кира",
+            "Прометей"
+          ],
+          "featured_four_stars_ru": [
+            "Шигурэ Кира",
+            "Прометей"
+          ],
+          "featured_four_stars_en": [
+            "Sugary Starburst",
+            "Terminal Aide 0017"
+          ]
+        },
+        {
+          "id": "hi3_6_4_1",
+          "version": "6.4",
+          "phase": 1,
+          "start_date": "2023-02-16",
+          "end_date": "2023-03-10",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Киана: Судья Финала",
+            "Мей: Судья Происхождения"
+          ],
+          "featured_five_stars_ru": [
+            "Киана: Судья Финала",
+            "Мей: Судья Происхождения"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Finality",
+            "Herrscher of Origin"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_6_8_1",
+          "version": "6.8",
+          "phase": 1,
+          "start_date": "2023-08-03",
+          "end_date": "2023-08-25",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Зеле: Судья Перерождения"
+          ],
+          "featured_five_stars_ru": [
+            "Зеле: Судья Перерождения"
+          ],
+          "featured_five_stars_en": [
+            "Herrscher of Rebirth"
+          ],
+          "featured_four_stars": [
+            "Пардофелис",
+            "Шигурэ Кира"
+          ],
+          "featured_four_stars_ru": [
+            "Пардофелис",
+            "Шигурэ Кира"
+          ],
+          "featured_four_stars_en": [
+            "Reverist Calico",
+            "Sugary Starburst"
+          ]
+        },
+        {
+          "id": "hi3_7_2_1",
+          "version": "7.2",
+          "phase": 1,
+          "start_date": "2024-01-25",
+          "end_date": "2024-02-16",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Фу Хуа: Гаруда"
+          ],
+          "featured_five_stars_ru": [
+            "Фу Хуа: Гаруда"
+          ],
+          "featured_five_stars_en": [
+            "Fenghuang of Vicissitude"
+          ],
+          "featured_four_stars": [
+            "Грисео: Звездный рисунок",
+            "Прометей"
+          ],
+          "featured_four_stars_ru": [
+            "Грисео: Звездный рисунок",
+            "Прометей"
+          ],
+          "featured_four_stars_en": [
+            "Starry Impression",
+            "Terminal Aide 0017"
+          ]
+        },
+        {
+          "id": "hi3_7_3_1",
+          "version": "7.3",
+          "phase": 1,
+          "start_date": "2024-02-29",
+          "end_date": "2024-03-29",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Сенадина"
+          ],
+          "featured_five_stars_ru": [
+            "Сенадина"
+          ],
+          "featured_five_stars_en": [
+            "Senadina (Deepspace Anchor: First Light)"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_7_4_1",
+          "version": "7.4",
+          "phase": 1,
+          "start_date": "2024-04-25",
+          "end_date": "2024-05-24",
+          "status": "ENDED",
+          "featured_five_stars": [
             "Телема"
           ],
-          "phase": 2,
           "featured_five_stars_ru": [
-            "Вита (Одинокий странник)",
-            "Сунцюэ"
+            "Телема"
           ],
-          "featured_five_stars": [
-            "Вита (Одинокий странник)",
-            "Сунцюэ"
-          ],
-          "status": "CURRENT",
           "featured_five_stars_en": [
-            "Vita (Lone Planetfarer)",
-            "Songque"
+            "Thelema (Mad Pleasure: Shadowbringer)"
           ],
-          "end_date": "2026-11-06",
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
           "featured_four_stars_en": [
-            "Coralie",
-            "Helia",
-            "Thelema"
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_7_5_1",
+          "version": "7.5",
+          "phase": 1,
+          "start_date": "2024-06-06",
+          "end_date": "2024-07-05",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Лантерн"
+          ],
+          "featured_five_stars_ru": [
+            "Лантерн"
+          ],
+          "featured_five_stars_en": [
+            "Lantern (Lone Destruction: Shadowchaser)"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_7_6_1",
+          "version": "7.6",
+          "phase": 1,
+          "start_date": "2024-07-25",
+          "end_date": "2024-08-23",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Сонквэ"
+          ],
+          "featured_five_stars_ru": [
+            "Сонквэ"
+          ],
+          "featured_five_stars_en": [
+            "Songque (Jovial Deception: Shadowdimmer)"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_7_7_1",
+          "version": "7.7",
+          "phase": 1,
+          "start_date": "2024-09-05",
+          "end_date": "2024-10-04",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Серапеум"
+          ],
+          "featured_five_stars_ru": [
+            "Серапеум"
+          ],
+          "featured_five_stars_en": [
+            "Serapeum (Morning Dawn)"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_7_8_1",
+          "version": "7.8",
+          "phase": 1,
+          "start_date": "2024-10-17",
+          "end_date": "2024-11-15",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Вита"
+          ],
+          "featured_five_stars_ru": [
+            "Вита"
+          ],
+          "featured_five_stars_en": [
+            "Vita (Lone Planetfarer)"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
+          ]
+        },
+        {
+          "id": "hi3_7_9_1",
+          "version": "7.9",
+          "phase": 1,
+          "start_date": "2024-11-28",
+          "end_date": "2024-12-27",
+          "status": "ENDED",
+          "featured_five_stars": [
+            "Спаркл: Тысяча масок"
+          ],
+          "featured_five_stars_ru": [
+            "Спаркл: Тысяча масок"
+          ],
+          "featured_five_stars_en": [
+            "Sparkle (Thousand-Faced Maestro)"
+          ],
+          "featured_four_stars": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_ru": [
+            "Валькирия Стрела",
+            "Валькирия Взрыв"
+          ],
+          "featured_four_stars_en": [
+            "Valkyrie Boltstorm",
+            "Valkyrie Blastmetal"
           ]
         },
         {
@@ -1693,6 +5691,76 @@
             "Coralie",
             "Helia",
             "Songque"
+          ]
+        },
+        {
+          "start_date": "2026-10-17",
+          "id": "hi3_8_6_2",
+          "version": "8.6",
+          "featured_four_stars_ru": [
+            "Корали",
+            "Хелия",
+            "Телема"
+          ],
+          "featured_four_stars": [
+            "Корали",
+            "Хелия",
+            "Телема"
+          ],
+          "phase": 2,
+          "featured_five_stars_ru": [
+            "Вита",
+            "Сонквэ"
+          ],
+          "featured_five_stars": [
+            "Вита",
+            "Сонквэ"
+          ],
+          "status": "CURRENT",
+          "featured_five_stars_en": [
+            "Vita (Lone Planetfarer)",
+            "Songque"
+          ],
+          "end_date": "2026-11-06",
+          "featured_four_stars_en": [
+            "Coralie",
+            "Helia",
+            "Thelema"
+          ]
+        },
+        {
+          "start_date": "2026-11-07",
+          "id": "hi3_8_7_1",
+          "version": "8.7",
+          "featured_four_stars_ru": [
+            "Гельвеция",
+            "Корали",
+            "Хелия"
+          ],
+          "featured_four_stars": [
+            "Гельвеция",
+            "Корали",
+            "Хелия"
+          ],
+          "phase": 1,
+          "featured_five_stars_ru": [
+            "Киана: Судья Финала",
+            "Сенадина"
+          ],
+          "featured_five_stars": [
+            "Киана: Судья Финала",
+            "Сенадина"
+          ],
+          "status": "ANNOUNCED",
+          "featured_five_stars_en": [
+            "Kiana (Finality)",
+            "Senadina"
+          ],
+          "end_date": "2026-11-27",
+          "featured_four_stars_en": [
+            "Helvetia",
+            "Coralie",
+            "Helia"
           ]
         }
       ],
