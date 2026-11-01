@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T03:32:07Z",
+  "updated_at": "2026-11-01T05:23:06Z",
   "codes": [
     {
       "id": "genshin_6ls3f3",
@@ -435,6 +435,2406 @@
       "is_active": true
     },
     {
+      "id": "scraped_3_1n6pu7w6fl",
+      "game_type": 3,
+      "code": "1N6PU7W6FL",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_2b6tfbu5cuyb",
+      "game_type": 3,
+      "code": "2B6TFBU5CUYB",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_2b7tz8tmjzgf",
+      "game_type": 3,
+      "code": "2B7TZ8TMJZGF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_2tnbfzqz59sb",
+      "game_type": 3,
+      "code": "2TNBFZQZ59SB",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_2yvneq3xrf",
+      "game_type": 3,
+      "code": "2YVNEQ3XRF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_30kp7ntgcm",
+      "game_type": 3,
+      "code": "30KP7NTGCM",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_39mtmfmmsp",
+      "game_type": 3,
+      "code": "39MTMFMMSP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_5npru9h5rr",
+      "game_type": 3,
+      "code": "5NPRU9H5RR",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_5sptfe372qhx",
+      "game_type": 3,
+      "code": "5SPTFE372QHX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_5t8nupyuc2",
+      "game_type": 3,
+      "code": "5T8NUPYUC2",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_60ahdasfblafl",
+      "game_type": 3,
+      "code": "60AHDASFBLAFL",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_6pgpin58il",
+      "game_type": 3,
+      "code": "6PGPIN58IL",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_6tztqfars7",
+      "game_type": 3,
+      "code": "6TZTQFARS7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_79vnqp4wqv",
+      "game_type": 3,
+      "code": "79VNQP4WQV",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_7apthqt52hlp",
+      "game_type": 3,
+      "code": "7APTHQT52HLP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_7bntwwjpjrgt",
+      "game_type": 3,
+      "code": "7BNTWWJPJRGT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_8ansy9bljxl3",
+      "game_type": 3,
+      "code": "8ANSY9BLJXL3",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_8av7cph0sa",
+      "game_type": 3,
+      "code": "8AV7CPH0SA",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_8xw7bpqala",
+      "game_type": 3,
+      "code": "8XW7BPQALA",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_9b7ag9tm3fck",
+      "game_type": 3,
+      "code": "9B7AG9TM3FCK",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_9mxfytap6m",
+      "game_type": 3,
+      "code": "9MXFYTAP6M",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_aa07kpf5pm",
+      "game_type": 3,
+      "code": "AA07KPF5PM",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_aichan010",
+      "game_type": 3,
+      "code": "AICHAN010",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_aide0017",
+      "game_type": 3,
+      "code": "AIDE0017",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_apho2",
+      "game_type": 3,
+      "code": "APHO2",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_aponiav57",
+      "game_type": 3,
+      "code": "APONIAV57",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_arahato2022",
+      "game_type": 3,
+      "code": "ARAHATO2022",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_arrowofnovae",
+      "game_type": 3,
+      "code": "ARROWOFNOVAE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ashkjhdu",
+      "game_type": 3,
+      "code": "ASHKJHDU",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_asmallgift",
+      "game_type": 3,
+      "code": "ASMALLGIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ba7ah9a43wd7",
+      "game_type": 3,
+      "code": "BA7AH9A43WD7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_badumisland",
+      "game_type": 3,
+      "code": "BADUMISLAND",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_badwomen",
+      "game_type": 3,
+      "code": "BADWOMEN",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_banquetrose",
+      "game_type": 3,
+      "code": "BANQUETROSE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_bb7sy8t52y5k",
+      "game_type": 3,
+      "code": "BB7SY8T52Y5K",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_bronya0019bc",
+      "game_type": 3,
+      "code": "BRONYA0019BC",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_bronya123",
+      "game_type": 3,
+      "code": "BRONYA123",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_bronya321",
+      "game_type": 3,
+      "code": "BRONYA321",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_bronyanex",
+      "game_type": 3,
+      "code": "BRONYANEX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_bspbhrs5ky33",
+      "game_type": 3,
+      "code": "BSPBHRS5KY33",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_bv8fvtzx6k",
+      "game_type": 3,
+      "code": "BV8FVTZX6K",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_c0jp1706gh",
+      "game_type": 3,
+      "code": "C0JP1706GH",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_cbnsh9bmjw33",
+      "game_type": 3,
+      "code": "CBNSH9BMJW33",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ccpleu07",
+      "game_type": 3,
+      "code": "CCPLEU07",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ccqklp02",
+      "game_type": 3,
+      "code": "CCQKLP02",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ccqwpo01",
+      "game_type": 3,
+      "code": "CCQWPO01",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_chiefmedic",
+      "game_type": 3,
+      "code": "CHIEFMEDIC",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_chillsummer",
+      "game_type": 3,
+      "code": "CHILLSUMMER",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_coettffr36",
+      "game_type": 3,
+      "code": "COETTFFR36",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_crimsonlove",
+      "game_type": 3,
+      "code": "CRIMSONLOVE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ctnth8t52rxj",
+      "game_type": 3,
+      "code": "CTNTH8T52RXJ",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ctnth8t52xr3",
+      "game_type": 3,
+      "code": "CTNTH8T52XR3",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_cutecat",
+      "game_type": 3,
+      "code": "CUTECAT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_d7670plbl2",
+      "game_type": 3,
+      "code": "D7670PLBL2",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_dbpafaftme3x",
+      "game_type": 3,
+      "code": "DBPAFAFTME3X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_dreamyeuphony",
+      "game_type": 3,
+      "code": "DREAMYEUPHONY",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_durandalgift",
+      "game_type": 3,
+      "code": "DURANDALGIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_e1afttkx1z",
+      "game_type": 3,
+      "code": "E1AFTTKX1Z",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_eapag8tlkg2t",
+      "game_type": 3,
+      "code": "EAPAG8TLKG2T",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_eapty8tl2zrb",
+      "game_type": 3,
+      "code": "EAPTY8TL2ZRB",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_elug8aas7x",
+      "game_type": 3,
+      "code": "ELUG8AAS7X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_elux4wtx3g",
+      "game_type": 3,
+      "code": "ELUX4WTX3G",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_eluy8g2t9p",
+      "game_type": 3,
+      "code": "ELUY8G2T9P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_elwq9cjp9x",
+      "game_type": 3,
+      "code": "ELWQ9CJP9X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_elwqhcvwm7",
+      "game_type": 3,
+      "code": "ELWQHCVWM7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_elyf4w4wpp",
+      "game_type": 3,
+      "code": "ELYF4W4WPP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_elysia02",
+      "game_type": 3,
+      "code": "ELYSIA02",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_elysiaonlive",
+      "game_type": 3,
+      "code": "ELYSIAONLIVE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_elyw8abtpx",
+      "game_type": 3,
+      "code": "ELYW8ABTPX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_elyw9aatrx",
+      "game_type": 3,
+      "code": "ELYW9AATRX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ems68gdjmx",
+      "game_type": 3,
+      "code": "EMS68GDJMX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ems89gdn3x",
+      "game_type": 3,
+      "code": "EMS89GDN3X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_emsq8c2n3x",
+      "game_type": 3,
+      "code": "EMSQ8C2N3X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_emuh4w3nrp",
+      "game_type": 3,
+      "code": "EMUH4W3NRP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_emwpcwkj5p",
+      "game_type": 3,
+      "code": "EMWPCWKJ5P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_emyfdw3p7y",
+      "game_type": 3,
+      "code": "EMYFDW3P7Y",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_emyz5s2wkf",
+      "game_type": 3,
+      "code": "EMYZ5S2WKF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_espionage",
+      "game_type": 3,
+      "code": "ESPIONAGE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_eus8gc2k9y",
+      "game_type": 3,
+      "code": "EUS8GC2K9Y",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_eusq9g2j9x",
+      "game_type": 3,
+      "code": "EUSQ9G2J9X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euuf4wbx37",
+      "game_type": 3,
+      "code": "EUUF4WBX37",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euug9aunp7",
+      "game_type": 3,
+      "code": "EUUG9AUNP7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euuh4wkw3p",
+      "game_type": 3,
+      "code": "EUUH4WKW3P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euuygc4wrf",
+      "game_type": 3,
+      "code": "EUUYGC4WRF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euw7csdwkf",
+      "game_type": 3,
+      "code": "EUW7CSDWKF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euwq8glwmx",
+      "game_type": 3,
+      "code": "EUWQ8GLWMX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euyw9g5spf",
+      "game_type": 3,
+      "code": "EUYW9G5SPF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euywgeut7p",
+      "game_type": 3,
+      "code": "EUYWGEUT7P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euyx5svj3f",
+      "game_type": 3,
+      "code": "EUYX5SVJ3F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euyygcmj7f",
+      "game_type": 3,
+      "code": "EUYYGCMJ7F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_euyz4s4p3f",
+      "game_type": 3,
+      "code": "EUYZ4S4P3F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_evildragon",
+      "game_type": 3,
+      "code": "EVILDRAGON",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_evs7ds3s9f",
+      "game_type": 3,
+      "code": "EVS7DS3S9F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_evuegckp7f",
+      "game_type": 3,
+      "code": "EVUEGCKP7F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_evuggacw5p",
+      "game_type": 3,
+      "code": "EVUGGACW5P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_evyx4slp5x",
+      "game_type": 3,
+      "code": "EVYX4SLP5X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_evyyhacpmf",
+      "game_type": 3,
+      "code": "EVYYHACPMF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_fandomcarnival",
+      "game_type": 3,
+      "code": "FANDOMCARNIVAL",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_fenghuang",
+      "game_type": 3,
+      "code": "FENGHUANG",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_flavor1",
+      "game_type": 3,
+      "code": "FLAVOR1",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_flavor2",
+      "game_type": 3,
+      "code": "FLAVOR2",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_flavor3",
+      "game_type": 3,
+      "code": "FLAVOR3",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_flavor4",
+      "game_type": 3,
+      "code": "FLAVOR4",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_fwn7fphcjq",
+      "game_type": 3,
+      "code": "FWN7FPHCJQ",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_g5mponnqut",
+      "game_type": 3,
+      "code": "G5MPONNQUT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_galacticvoyage",
+      "game_type": 3,
+      "code": "GALACTICVOYAGE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gluf4svspf",
+      "game_type": 3,
+      "code": "GLUF4SVSPF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gluyhcmp3p",
+      "game_type": 3,
+      "code": "GLUYHCMP3P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_glwnhcjppp",
+      "game_type": 3,
+      "code": "GLWNHCJPPP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_glyghasp7p",
+      "game_type": 3,
+      "code": "GLYGHASP7P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_glyh4sujp7",
+      "game_type": 3,
+      "code": "GLYH4SUJP7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_glyhdwaj97",
+      "game_type": 3,
+      "code": "GLYHDWAJ97",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_glyw8euxmp",
+      "game_type": 3,
+      "code": "GLYW8EUXMP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_glywheat5f",
+      "game_type": 3,
+      "code": "GLYWHEAT5F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gmuegevwmp",
+      "game_type": 3,
+      "code": "GMUEGEVWMP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gmuggevp37",
+      "game_type": 3,
+      "code": "GMUGGEVP37",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gmuggg2x7x",
+      "game_type": 3,
+      "code": "GMUGGG2X7X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gmughcls5x",
+      "game_type": 3,
+      "code": "GMUGHCLS5X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gmuwgcktm7",
+      "game_type": 3,
+      "code": "GMUWGCKTM7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gmwpdsuk9f",
+      "game_type": 3,
+      "code": "GMWPDSUK9F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gmyg9asj57",
+      "game_type": 3,
+      "code": "GMYG9ASJ57",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gmyhdsvs9p",
+      "game_type": 3,
+      "code": "GMYHDSVS9P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gmyygavn57",
+      "game_type": 3,
+      "code": "GMYYGAVN57",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gmyzcw4jp8",
+      "game_type": 3,
+      "code": "GMYZCW4JP8",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_godentropy",
+      "game_type": 3,
+      "code": "GODENTROPY",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_goldenage",
+      "game_type": 3,
+      "code": "GOLDENAGE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gt7sgqsl3ecx",
+      "game_type": 3,
+      "code": "GT7SGQSL3ECX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gt8penfn5i",
+      "game_type": 3,
+      "code": "GT8PENFN5I",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_guardian",
+      "game_type": 3,
+      "code": "GUARDIAN",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_guue8c5t5f",
+      "game_type": 3,
+      "code": "GUUE8C5T5F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_guwnggukmx",
+      "game_type": 3,
+      "code": "GUWNGGUKMX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_guwq8gbn5p",
+      "game_type": 3,
+      "code": "GUWQ8GBN5P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_guyf4wujpx",
+      "game_type": 3,
+      "code": "GUYF4WUJPX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_guyhdwtpp7",
+      "game_type": 3,
+      "code": "GUYHDWTPP7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_guyw9ckpp7",
+      "game_type": 3,
+      "code": "GUYW9CKPP7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_guyxdwux5x",
+      "game_type": 3,
+      "code": "GUYXDWUX5X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_guyy8c5s5p",
+      "game_type": 3,
+      "code": "GUYY8C5S5P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gvs94wdx5f",
+      "game_type": 3,
+      "code": "GVS94WDX5F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gvuh4wus37",
+      "game_type": 3,
+      "code": "GVUH4WUS37",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gvuygattm7",
+      "game_type": 3,
+      "code": "GVUYGATTM7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gvuz5wdp7x",
+      "game_type": 3,
+      "code": "GVUZ5WDP7X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gvw8hgtkmp",
+      "game_type": 3,
+      "code": "GVW8HGTKMP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gvyegg5npx",
+      "game_type": 3,
+      "code": "GVYEGG5NPX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_gvyz5s4prf",
+      "game_type": 3,
+      "code": "GVYZ5S4PRF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_happiness",
+      "game_type": 3,
+      "code": "HAPPINESS",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_happyhonkaianni",
+      "game_type": 3,
+      "code": "HAPPYHONKAIANNI",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_hardworker",
+      "game_type": 3,
+      "code": "HARDWORKER",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_headtomars229",
+      "game_type": 3,
+      "code": "HEADTOMARS229",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_hi3newyear",
+      "game_type": 3,
+      "code": "HI3NEWYEAR",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_hi3spring",
+      "game_type": 3,
+      "code": "HI3SPRING",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
       "id": "hi3_v86celeb",
       "game_type": 3,
       "code": "HI3V86CELEB",
@@ -447,6 +2847,1814 @@
       "status": "ACTIVE",
       "expires_at": "2026-11-30T23:59:59Z",
       "created_at": "2026-10-15T00:00:00Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_hmuecect58",
+      "game_type": 3,
+      "code": "HMUECECT58",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_holyblade",
+      "game_type": 3,
+      "code": "HOLYBLADE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_honkai23",
+      "game_type": 3,
+      "code": "HONKAI23",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_honkai24",
+      "game_type": 3,
+      "code": "HONKAI24",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_honkaiontiktok",
+      "game_type": 3,
+      "code": "HONKAIONTIKTOK",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_honkaispring",
+      "game_type": 3,
+      "code": "HONKAISPRING",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_hyprn62ai",
+      "game_type": 3,
+      "code": "HYPRN62AI",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ichliebedich",
+      "game_type": 3,
+      "code": "ICHLIEBEDICH",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ichliebeidch",
+      "game_type": 3,
+      "code": "ICHLIEBEIDCH",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_jhsgfdsvv",
+      "game_type": 3,
+      "code": "JHSGFDSVV",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_jkabcnfnl59lk",
+      "game_type": 3,
+      "code": "JKABCNFNL59LK",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_jkssdnfnl58lk",
+      "game_type": 3,
+      "code": "JKSSDNFNL58LK",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_k4nqwfortp",
+      "game_type": 3,
+      "code": "K4NQWFORTP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_kb5pz7shpg",
+      "game_type": 3,
+      "code": "KB5PZ7SHPG",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_kexmvqqzlu",
+      "game_type": 3,
+      "code": "KEXMVQQZLU",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_kfphoenix",
+      "game_type": 3,
+      "code": "KFPHOENIX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_kiana2025",
+      "game_type": 3,
+      "code": "KIANA2025",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_kianagift",
+      "game_type": 3,
+      "code": "KIANAGIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_kiarectnoonh",
+      "game_type": 3,
+      "code": "KIARECTNOONH",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_kiranow",
+      "game_type": 3,
+      "code": "KIRANOW",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_kr9r89k622",
+      "game_type": 3,
+      "code": "KR9R89K622",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ks58qwgr8w",
+      "game_type": 3,
+      "code": "KS58QWGR8W",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_laqpv7km9f",
+      "game_type": 3,
+      "code": "LAQPV7KM9F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_lastsnow",
+      "game_type": 3,
+      "code": "LASTSNOW",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_lbwy2yi5v4",
+      "game_type": 3,
+      "code": "LBWY2YI5V4",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_lisushang",
+      "game_type": 3,
+      "code": "LISUSHANG",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_littleknight",
+      "game_type": 3,
+      "code": "LITTLEKNIGHT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_littleque",
+      "game_type": 3,
+      "code": "LITTLEQUE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_lollipop",
+      "game_type": 3,
+      "code": "LOLLIPOP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_loveelf",
+      "game_type": 3,
+      "code": "LOVEELF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_lovekiana",
+      "game_type": 3,
+      "code": "LOVEKIANA",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_lovestan",
+      "game_type": 3,
+      "code": "LOVESTAN",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_luna888",
+      "game_type": 3,
+      "code": "LUNA888",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_m1xt0frzlc",
+      "game_type": 3,
+      "code": "M1XT0FRZLC",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_m5h9trij0d",
+      "game_type": 3,
+      "code": "M5H9TRIJ0D",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_magicalgirl",
+      "game_type": 3,
+      "code": "MAGICALGIRL",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_marsbonus",
+      "game_type": 3,
+      "code": "MARSBONUS",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_marswishes",
+      "game_type": 3,
+      "code": "MARSWISHES",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_masterchef",
+      "game_type": 3,
+      "code": "MASTERCHEF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_meonhonkaianni",
+      "game_type": 3,
+      "code": "MEONHONKAIANNI",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_meonhonkaianni2",
+      "game_type": 3,
+      "code": "MEONHONKAIANNI2",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_messenger",
+      "game_type": 3,
+      "code": "MESSENGER",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_mfv92r1onl",
+      "game_type": 3,
+      "code": "MFV92R1ONL",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_midnightcarnival",
+      "game_type": 3,
+      "code": "MIDNIGHTCARNIVAL",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_misspinkelf",
+      "game_type": 3,
+      "code": "MISSPINKELF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_mkfinal",
+      "game_type": 3,
+      "code": "MKFINAL",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_moontuna",
+      "game_type": 3,
+      "code": "MOONTUNA",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_moths10",
+      "game_type": 3,
+      "code": "MOTHS10",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_mspbjzblntr2",
+      "game_type": 3,
+      "code": "MSPBJZBLNTR2",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_mt6tgqb4jftt",
+      "game_type": 3,
+      "code": "MT6TGQB4JFTT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_mydelivery",
+      "game_type": 3,
+      "code": "MYDELIVERY",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_nabobess",
+      "game_type": 3,
+      "code": "NABOBESS",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ncu83wrbf2",
+      "game_type": 3,
+      "code": "NCU83WRBF2",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_newchap",
+      "game_type": 3,
+      "code": "NEWCHAP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_nightwalkers",
+      "game_type": 3,
+      "code": "NIGHTWALKERS",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ntnsh9s5kxmx",
+      "game_type": 3,
+      "code": "NTNSH9S5KXMX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_oohsummer",
+      "game_type": 3,
+      "code": "OOHSUMMER",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ouroboros",
+      "game_type": 3,
+      "code": "OUROBOROS",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_painttheworld",
+      "game_type": 3,
+      "code": "PAINTTHEWORLD",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_papaffjn29y7",
+      "game_type": 3,
+      "code": "PAPAFFJN29Y7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_pardofelis1",
+      "game_type": 3,
+      "code": "PARDOFELIS1",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_part2gift",
+      "game_type": 3,
+      "code": "PART2GIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_pb6by9blkxcb",
+      "game_type": 3,
+      "code": "PB6BY9BLKXCB",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_pleasure",
+      "game_type": 3,
+      "code": "PLEASURE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ptnahrblkwkp",
+      "game_type": 3,
+      "code": "PTNAHRBLKWKP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_q9mpenxj6n",
+      "game_type": 3,
+      "code": "Q9MPENXJ6N",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_qb6by964e34b",
+      "game_type": 3,
+      "code": "QB6BY964E34B",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_qb6shrsljzq3",
+      "game_type": 3,
+      "code": "QB6SHRSLJZQ3",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_qpas261qc8",
+      "game_type": 3,
+      "code": "QPAS261QC8",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_qsnsyqnlekg7",
+      "game_type": 3,
+      "code": "QSNSYQNLEKG7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_qubp3ncyi3",
+      "game_type": 3,
+      "code": "QUBP3NCYI3",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_reachforzenith",
+      "game_type": 3,
+      "code": "REACHFORZENITH",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_rebirth",
+      "game_type": 3,
+      "code": "REBIRTH",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_redmoon",
+      "game_type": 3,
+      "code": "REDMOON",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_rhythmoflife",
+      "game_type": 3,
+      "code": "RHYTHMOFLIFE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_rtpaz8a4kz7f",
+      "game_type": 3,
+      "code": "RTPAZ8A4KZ7F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_seelecute",
+      "game_type": 3,
+      "code": "SEELECUTE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_shadowshow",
+      "game_type": 3,
+      "code": "SHADOWSHOW",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_shigure",
+      "game_type": 3,
+      "code": "SHIGURE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_silverwing1",
+      "game_type": 3,
+      "code": "SILVERWING1",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_songquesgift",
+      "game_type": 3,
+      "code": "SONGQUESGIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_sparklegift",
+      "game_type": 3,
+      "code": "SPARKLEGIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_specialtreats",
+      "game_type": 3,
+      "code": "SPECIALTREATS",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ssntex9w8ujb",
+      "game_type": 3,
+      "code": "SSNTEX9W8UJB",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_st7sg8aljg87",
+      "game_type": 3,
+      "code": "ST7SG8ALJG87",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_starbound",
+      "game_type": 3,
+      "code": "STARBOUND",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_stardance",
+      "game_type": 3,
+      "code": "STARDANCE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_stargaterunner2022",
+      "game_type": 3,
+      "code": "STARGATERUNNER2022",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_summerwizvalks",
+      "game_type": 3,
+      "code": "SUMMERWIZVALKS",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_superai",
+      "game_type": 3,
+      "code": "SUPERAI",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_susannah",
+      "game_type": 3,
+      "code": "SUSANNAH",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_sweetgirl",
+      "game_type": 3,
+      "code": "SWEETGIRL",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_taixuan",
+      "game_type": 3,
+      "code": "TAIXUAN",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_tb6bzqt43yzt",
+      "game_type": 3,
+      "code": "TB6BZQT43YZT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_teririreturn",
+      "game_type": 3,
+      "code": "TERIRIRETURN",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_theperfect",
+      "game_type": 3,
+      "code": "THEPERFECT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_thirteen",
+      "game_type": 3,
+      "code": "THIRTEEN",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_tianyuan",
+      "game_type": 3,
+      "code": "TIANYUAN",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_timidoicicle",
+      "game_type": 3,
+      "code": "TIMIDOICICLE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_tothefuture",
+      "game_type": 3,
+      "code": "TOTHEFUTURE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_trip2mars",
+      "game_type": 3,
+      "code": "TRIP2MARS",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_truelove",
+      "game_type": 3,
+      "code": "TRUELOVE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_truth",
+      "game_type": 3,
+      "code": "TRUTH",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_truth63",
+      "game_type": 3,
+      "code": "TRUTH63",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_tt6sh8a5jwxf",
+      "game_type": 3,
+      "code": "TT6SH8A5JWXF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_utpahqplwk2b",
+      "game_type": 3,
+      "code": "UTPAHQPLWK2B",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_v75gift",
+      "game_type": 3,
+      "code": "V75GIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_vaptef37k9xp",
+      "game_type": 3,
+      "code": "VAPTEF37K9XP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ver71gift",
+      "game_type": 3,
+      "code": "VER71GIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ver72gift",
+      "game_type": 3,
+      "code": "VER72GIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_verkiana",
+      "game_type": 3,
+      "code": "VERKIANA",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_verseele",
+      "game_type": 3,
+      "code": "VERSEELE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_visitor",
+      "game_type": 3,
+      "code": "VISITOR",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
       "is_stream": false,
       "is_active": true
     },
@@ -464,6 +4672,1174 @@
       "status": "ACTIVE",
       "expires_at": "2026-11-20T23:59:59Z",
       "created_at": "2026-10-20T00:00:00Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_w1gpb7dgnh",
+      "game_type": 3,
+      "code": "W1GPB7DGNH",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wa7sxw3pjqgk",
+      "game_type": 3,
+      "code": "WA7SXW3PJQGK",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_warmcake",
+      "game_type": 3,
+      "code": "WARMCAKE",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_warmgift",
+      "game_type": 3,
+      "code": "WARMGIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_warmsoup",
+      "game_type": 3,
+      "code": "WARMSOUP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_warmsweet",
+      "game_type": 3,
+      "code": "WARMSWEET",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_warmtea",
+      "game_type": 3,
+      "code": "WARMTEA",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wb6awere8vzp",
+      "game_type": 3,
+      "code": "WB6AWERE8VZP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_withkiana",
+      "game_type": 3,
+      "code": "WITHKIANA",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wls8hgcw5p",
+      "game_type": 3,
+      "code": "WLS8HGCW5P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wlsn9g2sm7",
+      "game_type": 3,
+      "code": "WLSN9G2SM7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wlsrdsdp77",
+      "game_type": 3,
+      "code": "WLSRDSDP77",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wlughcmsmf",
+      "game_type": 3,
+      "code": "WLUGHCMSMF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wluh4w2x77",
+      "game_type": 3,
+      "code": "WLUH4W2X77",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wlyhcw4smp",
+      "game_type": 3,
+      "code": "WLYHCW4SMP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wlyw8atpkx",
+      "game_type": 3,
+      "code": "WLYW8ATPKX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wlyw9asn7f",
+      "game_type": 3,
+      "code": "WLYW9ASN7F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wms68cbt37",
+      "game_type": 3,
+      "code": "WMS68CBT37",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wmsr5sss77",
+      "game_type": 3,
+      "code": "WMSR5SSS77",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wmufdsvpmf",
+      "game_type": 3,
+      "code": "WMUFDSVPMF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wmughevnp7",
+      "game_type": 3,
+      "code": "WMUGHEVNP7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wmw69clw9p",
+      "game_type": 3,
+      "code": "WMW69CLW9P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wmw8ggdt57",
+      "game_type": 3,
+      "code": "WMW8GGDT57",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wmwq8clt37",
+      "game_type": 3,
+      "code": "WMWQ8CLT37",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wsnszra4jz3f",
+      "game_type": 3,
+      "code": "WSNSZRA4JZ3F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wuuehckwmx",
+      "game_type": 3,
+      "code": "WUUEHCKWMX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wvs68gtjkp",
+      "game_type": 3,
+      "code": "WVS68GTJKP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wvyfcs4k5x",
+      "game_type": 3,
+      "code": "WVYFCS4K5X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wvyg9etkpp",
+      "game_type": 3,
+      "code": "WVYG9ETKPP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wvyxdw2k3f",
+      "game_type": 3,
+      "code": "WVYXDW2K3F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wvyy9adj7h",
+      "game_type": 3,
+      "code": "WVYY9ADJ7H",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wvyygabpmx",
+      "game_type": 3,
+      "code": "WVYYGABPMX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wvyygets7r",
+      "game_type": 3,
+      "code": "WVYYGETS7R",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wvyzcsct9f",
+      "game_type": 3,
+      "code": "WVYZCSCT9F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_wvyzdsjtky",
+      "game_type": 3,
+      "code": "WVYZDSJTKY",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_xapagqsmkhj7",
+      "game_type": 3,
+      "code": "XAPAGQSMKHJ7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_y6kpu7clq0",
+      "game_type": 3,
+      "code": "Y6KPU7CLQ0",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yattasenti",
+      "game_type": 3,
+      "code": "YATTASENTI",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylgq8y2n37",
+      "game_type": 3,
+      "code": "YLGQ8Y2N37",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylsn8clw37",
+      "game_type": 3,
+      "code": "YLSN8CLW37",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylsrdwbp57",
+      "game_type": 3,
+      "code": "YLSRDWBP57",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylue8abw5x",
+      "game_type": 3,
+      "code": "YLUE8ABW5X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylughaawkx",
+      "game_type": 3,
+      "code": "YLUGHAAWKX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylughg3sp7",
+      "game_type": 3,
+      "code": "YLUGHG3SP7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylux5wakr7",
+      "game_type": 3,
+      "code": "YLUX5WAKR7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylw95sck5p",
+      "game_type": 3,
+      "code": "YLW95SCK5P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylwn9g2xrp",
+      "game_type": 3,
+      "code": "YLWN9G2XRP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylwrcsdnr7",
+      "game_type": 3,
+      "code": "YLWRCSDNR7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylyegc5n97",
+      "game_type": 3,
+      "code": "YLYEGC5N97",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ylyz4sbxpf",
+      "game_type": 3,
+      "code": "YLYZ4SBXPF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ymsnggbx5x",
+      "game_type": 3,
+      "code": "YMSNGGBX5X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ymuzcs2k7p",
+      "game_type": 3,
+      "code": "YMUZCS2K7P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ymwp4sbnrx",
+      "game_type": 3,
+      "code": "YMWP4SBNRX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ymwrcwvx7x",
+      "game_type": 3,
+      "code": "YMWRCWVX7X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ymyfcwujrx",
+      "game_type": 3,
+      "code": "YMYFCWUJRX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_youyunsgift",
+      "game_type": 3,
+      "code": "YOUYUNSGIFT",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yqengwvtpx",
+      "game_type": 3,
+      "code": "YQENGWVTPX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ysyp9nz7mg",
+      "game_type": 3,
+      "code": "YSYP9NZ7MG",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_ytpthqal3wlb",
+      "game_type": 3,
+      "code": "YTPTHQAL3WLB",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yuuy8avw7f",
+      "game_type": 3,
+      "code": "YUUY8AVW7F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yuye8c3k3p",
+      "game_type": 3,
+      "code": "YUYE8C3K3P",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yuyg8eutpf",
+      "game_type": 3,
+      "code": "YUYG8EUTPF",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yuyw8auw5x",
+      "game_type": 3,
+      "code": "YUYW8AUW5X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yuyx5stjr7",
+      "game_type": 3,
+      "code": "YUYX5STJR7",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yvs8hcbskx",
+      "game_type": 3,
+      "code": "YVS8HCBSKX",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yvs95wvpkp",
+      "game_type": 3,
+      "code": "YVS95WVPKP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yvsyhgcwpp",
+      "game_type": 3,
+      "code": "YVSYHGCWPP",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yvuggcjx9x",
+      "game_type": 3,
+      "code": "YVUGGCJX9X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yvuhdw3p9x",
+      "game_type": 3,
+      "code": "YVUHDW3P9X",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yvuz4ssk7f",
+      "game_type": 3,
+      "code": "YVUZ4SSK7F",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yvyfds2n98",
+      "game_type": 3,
+      "code": "YVYFDS2N98",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_yvyggglt37",
+      "game_type": 3,
+      "code": "YVYGGGLT37",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_3_zu1tnfwrx2",
+      "game_type": 3,
+      "code": "ZU1TNFWRX2",
+      "rewards_description": "Внутриигровые награды",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game Rewards",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-11-26T05:23:06Z",
+      "created_at": "2026-11-01T05:23:06Z",
       "is_stream": false,
       "is_active": true
     },
