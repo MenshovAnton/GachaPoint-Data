@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Fandom MediaWiki API Parser for HoYoverse Games (Genshin, HSR, ZZZ, HI3)
-Extracts active and stream promo codes without external dependencies.
+Extracts active, stream, and expired promo codes with resilient parsing
+and anchor-based expiration dates (preventing the sliding window bug).
 """
 
 import re
@@ -9,7 +10,7 @@ import json
 import urllib.request
 import urllib.parse
 from datetime import datetime, timezone, timedelta
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 
 GAMES_CONFIG = {
     0: {
@@ -51,7 +52,10 @@ DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 DISALLOWED_CODES = {
     "CODE", "PROMOCODE", "ITEM", "YES", "NO", "REWARDS", "GLOBAL",
     "ONLINE", "WEBSITE", "SERVER", "NOTES", "DURATION", "EXCHANGE",
-    "REDEMPTION", "DATE", "EXPIRY", "DISCOVERY", "UNKNOWN"
+    "REDEMPTION", "DATE", "EXPIRY", "DISCOVERY", "UNKNOWN", "VERSION",
+    "DETAILS", "REWARD", "STATUS", "STREAM", "ACTIVE", "EXPIRED",
+    "SPECIAL", "PROGRAM", "UPDATE", "COLLAB", "TWITTER", "DISCORD",
+    "YOUTUBE", "TWITCH", "TIKTOK", "REDDIT", "HOYOLAB", "OFFICIAL"
 }
 
 
@@ -67,7 +71,7 @@ def fetch_page_wikitext(wiki_name: str, page_title: str) -> Optional[str]:
     url = f"{api_url}?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(
         url,
-        headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) GachaPointDataHub/1.0"}
+        headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) GachaPointDataHub/2.0"}
     )
 
     try:
@@ -82,30 +86,32 @@ def fetch_page_wikitext(wiki_name: str, page_title: str) -> Optional[str]:
     return None
 
 
-def extract_active_wikitext(full_text: str, game_type: int) -> str:
-    """Isolates active codes section by trimming past expired headers and comments."""
-    if game_type == 0:
-        match = re.search(r'==+\s*(?:Expired|Past|Inactive|History|Previous)', full_text, re.IGNORECASE)
-        if match:
-            full_text = full_text[:match.start()]
-    elif game_type in (1, 2):
-        exp_match = re.search(r'<!--\s*expired\s*-->', full_text, re.IGNORECASE)
-        if exp_match:
-            full_text = full_text[:exp_match.start()]
-        h_match = re.search(r'==+\s*(?:Expired|Past|Inactive|History|Previous|Notes|References)', full_text, re.IGNORECASE)
-        if h_match:
-            full_text = full_text[:h_match.start()]
-    elif game_type == 3:
-        match = re.search(r'==+\s*(?:Legacy|Expired|Past|Inactive|History|Previous|Old)', full_text, re.IGNORECASE)
-        if match:
-            full_text = full_text[:match.start()]
+def split_active_and_expired(full_text: str, game_type: int) -> Tuple[str, str]:
+    """Splits full wikitext into active and expired sections cleanly."""
+    active_text = full_text
+    expired_text = ""
 
-    # Strip author instructions blocks
-    full_text = re.sub(r'<!--\s*To add to this list[\s\S]*?-->', '', full_text, flags=re.IGNORECASE)
-    return full_text
+    split_patterns = [
+        r'==+\s*(?:Expired|Past|Inactive|History|Previous|Legacy|Old)',
+        r'<!--\s*expired\s*-->'
+    ]
+
+    best_idx = -1
+    for pat in split_patterns:
+        m = re.search(pat, full_text, re.IGNORECASE)
+        if m and (best_idx == -1 or m.start() < best_idx):
+            best_idx = m.start()
+
+    if best_idx != -1:
+        active_text = full_text[:best_idx]
+        expired_text = full_text[best_idx:]
+
+    # Clean out comments and editorial instructions
+    active_text = re.sub(r'<!--\s*To add to this list[\s\S]*?-->', '', active_text, flags=re.IGNORECASE)
+    return active_text, expired_text
 
 
-def parse_rewards_from_text(row_text: str, game_type: int) -> tuple[str, str, str, list[str]]:
+def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[str, str, str, List[str]]:
     """Analyzes table row text to determine reward types, RU/EN descriptions."""
     config = GAMES_CONFIG[game_type]
     reward_types = []
@@ -175,115 +181,116 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> tuple[str, str, st
     return desc_ru, desc_ru, desc_en, reward_types
 
 
-def parse_game_promocodes(game_type: int) -> List[Dict[str, Any]]:
-    """Fetches and parses active codes for a specific game."""
-    config = GAMES_CONFIG.get(game_type)
-    if not config:
-        return []
+def extract_code_from_row(row: str) -> Optional[str]:
+    """Finds promo code candidate from a table row or template."""
+    # Pattern 1: Template parameter e.g. |CODE| or | CODE |
+    template_match = re.search(r'(?:^\s*(?:<!--.*?-->)?\s*\|\s*|\|(?:\'\'\')?)([A-Za-z0-9_-]{4,30})(?:\'\'\')?\s*\|', row)
+    if template_match:
+        candidate = template_match.group(1).strip().upper()
+        if CODE_RE.match(candidate) and not DATE_PATTERN.match(candidate) and candidate not in DISALLOWED_CODES:
+            return candidate
 
-    wikitext = fetch_page_wikitext(config["wiki"], config["page"])
-    if not wikitext:
-        return []
+    # Pattern 2: Bold code (e.g. HI3 tables: |'''CODE'''||)
+    bold_match = re.search(r"'''([A-Z0-9_-]{4,25})'''", row)
+    if bold_match:
+        candidate = bold_match.group(1).strip().upper()
+        if CODE_RE.match(candidate) and not DATE_PATTERN.match(candidate) and candidate not in DISALLOWED_CODES:
+            return candidate
 
-    active_text = extract_active_wikitext(wikitext, game_type)
-    now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    # Pattern 3: URL code fallback
+    url_match = re.search(r'(?:gift|redemption)\?(?:[^\s"\'<>]*&)?code=([A-Za-z0-9_-]{3,30})', row, re.IGNORECASE)
+    if url_match:
+        candidate = url_match.group(1).strip().upper()
+        if CODE_RE.match(candidate) and candidate not in DISALLOWED_CODES:
+            return candidate
 
-    # Split into entries
-    rows = re.split(r'\{\{(?:Code Row|Redemption Code Row)|\n\|-', active_text)
+    return None
+
+
+def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen_codes: set) -> List[Dict[str, Any]]:
+    """Parses individual rows from wikitext table, computing anchor-based dates."""
+    config = GAMES_CONFIG[game_type]
+    now = datetime.now(timezone.utc)
+    now_iso = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    rows = re.split(r'\{\{(?:Code Row|Redemption Code Row)|\n\|-', text)
     results = []
-    seen_codes = set()
 
     for row in rows:
-        found_code = None
-
-        # Pattern 1: Template first parameter |CODE| or |CODE\n
-        template_match = re.search(r'(?:^\s*(?:<!--.*?-->)?\s*\|\s*|\|(?:\'\'\')?)([A-Za-z0-9_-]{4,30})(?:\'\'\')?\s*\|', row)
-        if template_match:
-            candidate = template_match.group(1).strip().upper()
-            if CODE_RE.match(candidate) and not DATE_PATTERN.match(candidate) and candidate not in DISALLOWED_CODES:
-                found_code = candidate
-
-        # Pattern 2: Bold code (e.g. HI3 tables: |'''CODE'''||)
-        if not found_code:
-            bold_match = re.search(r"'''([A-Z0-9_-]{4,25})'''", row)
-            if bold_match:
-                candidate = bold_match.group(1).strip().upper()
-                if CODE_RE.match(candidate) and not DATE_PATTERN.match(candidate) and candidate not in DISALLOWED_CODES:
-                    found_code = candidate
-
-        # Pattern 3: URL code fallback
-        if not found_code:
-            url_match = re.search(r'(?:gift|redemption)\?(?:[^\s"\'<>]*&)?code=([A-Za-z0-9_-]{3,30})', row, re.IGNORECASE)
-            if url_match:
-                candidate = url_match.group(1).strip().upper()
-                if CODE_RE.match(candidate) and candidate not in DISALLOWED_CODES:
-                    found_code = candidate
-
+        found_code = extract_code_from_row(row)
         if not found_code or found_code in seen_codes:
             continue
 
         seen_codes.add(found_code)
-
         desc, desc_ru, desc_en, reward_types = parse_rewards_from_text(row, game_type)
 
-        # Check stream indicators
-        is_stream = False
-        if config["primary_reward"] in reward_types and ("100" in desc or "300" in desc):
-            is_stream = True
-        if "special_program" in row.lower() or "livestream" in row.lower() or "stream" in row.lower():
-            is_stream = True
-
-        # Extract dates from row
         dates = re.findall(r'\b(\d{4}-\d{2}-\d{2})\b', row)
-        expiry_date = None
-        if len(dates) >= 2:
-            expiry_date = dates[-1]
+        row_lower = row.lower()
+
+        # Stream detection: requires explicit stream indicators or 1-2 day lifespan
+        is_stream = False
+        if any(k in row_lower for k in ("special program", "livestream", "program code", "stream code", "preview stream")):
+            is_stream = True
+        elif len(dates) >= 2:
             try:
                 d_start = datetime.strptime(dates[0], "%Y-%m-%d")
                 d_end = datetime.strptime(dates[-1], "%Y-%m-%d")
-                if (d_end - d_start).days <= 3:
+                if 0 <= (d_end - d_start).days <= 2 and config["primary_reward"] in reward_types:
                     is_stream = True
             except Exception:
                 pass
-        elif len(dates) == 1 and "indef" not in row.lower() and "unknown" not in row.lower():
-            if is_stream:
-                expiry_date = dates[0]
 
-        if expiry_date:
-            expires_at = f"{expiry_date}T23:59:59Z"
-            try:
-                exp_dt = datetime.strptime(expiry_date, "%Y-%m-%d").replace(tzinfo=timezone.utc, hour=23, minute=59, second=59)
-                is_expired = exp_dt < datetime.now(timezone.utc)
-            except Exception:
-                is_expired = False
+        # Expiration determination
+        is_expired = is_section_expired
+        expires_at = None
+        created_at = f"{dates[0]}T12:00:00Z" if dates else now_iso
+
+        if is_section_expired:
+            is_expired = True
+            if len(dates) >= 2:
+                expires_at = f"{dates[-1]}T23:59:59Z"
+            elif dates:
+                expires_at = f"{dates[0]}T23:59:59Z"
+            else:
+                expires_at = now_iso
         else:
-            is_expired = False
-            expires_at = (
-                (datetime.now(timezone.utc) + timedelta(hours=16)).strftime("%Y-%m-%dT%H:%M:%SZ")
-                if is_stream
-                else (datetime.now(timezone.utc) + timedelta(days=25)).strftime("%Y-%m-%dT%H:%M:%SZ")
-            )
+            # Active section parsing
+            if len(dates) >= 2:
+                exp_date_str = dates[-1]
+                expires_at = f"{exp_date_str}T23:59:59Z"
+                try:
+                    exp_dt = datetime.strptime(exp_date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc, hour=23, minute=59, second=59)
+                    if now > exp_dt:
+                        is_expired = True
+                except Exception:
+                    pass
+            elif is_stream:
+                # Stream codes without explicit end date: expire 24h after discovery
+                if dates:
+                    try:
+                        disc_dt = datetime.strptime(dates[0], "%Y-%m-%d").replace(tzinfo=timezone.utc, hour=12)
+                        expires_at = (disc_dt + timedelta(hours=24)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                        if now > (disc_dt + timedelta(hours=30)):
+                            is_expired = True
+                    except Exception:
+                        expires_at = (now + timedelta(hours=16)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                else:
+                    expires_at = (now + timedelta(hours=16)).strftime("%Y-%m-%dT%H:%M:%SZ")
+            else:
+                # Normal codes: anchor expiry to discovery date + 35 days (NOT now + 25 days!)
+                if dates:
+                    try:
+                        disc_dt = datetime.strptime(dates[0], "%Y-%m-%d").replace(tzinfo=timezone.utc, hour=12)
+                        expires_at = (disc_dt + timedelta(days=35)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                        if "indef" not in row_lower and (now - disc_dt).days >= 45:
+                            is_expired = True
+                    except Exception:
+                        expires_at = (now + timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                else:
+                    expires_at = (now + timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        if is_stream and dates:
-            try:
-                disc_dt = datetime.strptime(dates[0], "%Y-%m-%d").replace(tzinfo=timezone.utc)
-                if (datetime.now(timezone.utc) - disc_dt).days >= 2:
-                    is_expired = True
-            except Exception:
-                pass
-        elif not is_stream and dates:
-            try:
-                disc_dt = datetime.strptime(dates[0], "%Y-%m-%d").replace(tzinfo=timezone.utc)
-                if "indef" not in row.lower() and (datetime.now(timezone.utc) - disc_dt).days >= 45:
-                    is_expired = True
-            except Exception:
-                pass
-
-        if is_expired:
-            continue
-
-        status = "STREAM" if is_stream else "ACTIVE"
-        is_active = True
+        status = "EXPIRED" if is_expired else ("STREAM" if is_stream else "ACTIVE")
+        is_active = not is_expired
 
         results.append({
             "id": f"scraped_{game_type}_{found_code.lower()}",
@@ -295,13 +302,33 @@ def parse_game_promocodes(game_type: int) -> List[Dict[str, Any]]:
             "reward_types": reward_types,
             "status": status,
             "expires_at": expires_at,
-            "created_at": f"{dates[0]}T12:00:00Z" if dates else now_iso,
+            "created_at": created_at,
             "is_stream": is_stream,
             "is_active": is_active
         })
 
-    print(f"[Parser] Extracted {len(results)} active codes for {config['name']}")
     return results
+
+
+def parse_game_promocodes(game_type: int) -> List[Dict[str, Any]]:
+    """Fetches and parses active & expired codes for a specific game."""
+    config = GAMES_CONFIG.get(game_type)
+    if not config:
+        return []
+
+    wikitext = fetch_page_wikitext(config["wiki"], config["page"])
+    if not wikitext:
+        return []
+
+    active_text, expired_text = split_active_and_expired(wikitext, game_type)
+    seen_codes = set()
+
+    active_items = parse_section_rows(active_text, game_type, is_section_expired=False, seen_codes=seen_codes)
+    expired_items = parse_section_rows(expired_text, game_type, is_section_expired=True, seen_codes=seen_codes)
+
+    total_items = active_items + expired_items
+    print(f"[Parser] Extracted {len(active_items)} active and {len(expired_items)} expired codes for {config['name']}")
+    return total_items
 
 
 def parse_all_games() -> List[Dict[str, Any]]:
@@ -318,6 +345,6 @@ def parse_all_games() -> List[Dict[str, Any]]:
 
 if __name__ == "__main__":
     codes = parse_all_games()
-    print(f"Total codes found: {len(codes)}")
-    for c in codes:
-        print(f"[{c['game_type']}] {c['code']} -> {c['rewards_description']}")
+    print(f"Total codes parsed: {len(codes)}")
+    for c in codes[:10]:
+        print(f"[{c['game_type']}] {c['code']} -> {c['status']} (expires: {c['expires_at']})")

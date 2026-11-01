@@ -66,6 +66,36 @@ PERMANENT_CODES = {
         "rewards_description_ru": "30 Кристаллов, 2 000 Монет",
         "rewards_description_en": "30 Crystals, 2,000 Coins",
         "reward_types": ["CRYSTAL"]
+    },
+    (1, "CREATIONNYMPH"): {
+        "rewards_description": "60 Звёздного нефрита, 1 Топливо",
+        "rewards_description_ru": "60 Звёздного нефрита, 1 Топливо",
+        "rewards_description_en": "60 Stellar Jade, 1 Fuel",
+        "reward_types": ["JADE"]
+    },
+    (1, "FAREWELL"): {
+        "rewards_description": "60 Звёздного нефрита, 1 Топливо",
+        "rewards_description_ru": "60 Звёздного нефрита, 1 Топливо",
+        "rewards_description_en": "60 Stellar Jade, 1 Fuel",
+        "reward_types": ["JADE"]
+    },
+    (1, "IFYOUAREREADINGTHIS"): {
+        "rewards_description": "60 Звёздного нефрита, 1 Топливо",
+        "rewards_description_ru": "60 Звёздного нефрита, 1 Топливо",
+        "rewards_description_en": "60 Stellar Jade, 1 Fuel",
+        "reward_types": ["JADE"]
+    },
+    (1, "OMEGA"): {
+        "rewards_description": "60 Звёздного нефрита, 1 Топливо",
+        "rewards_description_ru": "60 Звёздного нефрита, 1 Топливо",
+        "rewards_description_en": "60 Stellar Jade, 1 Fuel",
+        "reward_types": ["JADE"]
+    },
+    (3, "CheersCaptain"): {
+        "rewards_description": "100 Кристаллов",
+        "rewards_description_ru": "100 Кристаллов",
+        "rewards_description_en": "100 Crystals",
+        "reward_types": ["CRYSTAL"]
     }
 }
 
@@ -119,10 +149,16 @@ def validate_dataset_before_save(filepath: str, data: dict):
             raise ValueError(f"Safety abort: {filepath} code count ({len(codes)}) below minimum safe threshold")
 
         existing_perms = {(c.get("game_type"), c.get("code")) for c in codes if c.get("status") == "PERMANENT"}
-        required_perms = {(k[0], k[1]) for k in PERMANENT_CODES.keys()}
-        missing_perms = required_perms - existing_perms
+        mandatory_perms = {
+            (0, "GENSHINGIFT"),
+            (1, "STARRAILGIFT"),
+            (2, "ZENLESSGIFT"),
+            (2, "ZZZTVCM"),
+            (3, "HONKAIGIFT")
+        }
+        missing_perms = mandatory_perms - existing_perms
         if missing_perms:
-            raise ValueError(f"Safety abort: {filepath} is missing permanent codes: {missing_perms}")
+            raise ValueError(f"Safety abort: {filepath} is missing mandatory permanent codes: {missing_perms}")
 
 
 def save_json(filepath: str, data: dict):
@@ -210,7 +246,7 @@ def import_pending_codes(data: dict, pending_file: str = "pending_codes.json") -
 
 
 def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """Merges freshly scraped codes into dataset and returns newly discovered items."""
+    """Merges freshly scraped codes into dataset safely without sliding date corruption."""
     if not scraped_codes:
         return []
 
@@ -223,19 +259,25 @@ def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> Lis
         if not validate_code(code_str):
             continue
 
-        if (g_type, code_str) in existing_map:
-            existing_item = existing_map[(g_type, code_str)]
-            if item.get("is_stream"):
-                existing_item["is_stream"] = True
-            if item.get("expires_at"):
-                existing_item["expires_at"] = item["expires_at"]
-            if item.get("status") == "EXPIRED":
+        key = (g_type, code_str)
+        if key in existing_map:
+            existing_item = existing_map[key]
+            # If scraper confirms code is expired, sync expired status
+            if item.get("status") == "EXPIRED" or not item.get("is_active", True):
                 existing_item["status"] = "EXPIRED"
                 existing_item["is_active"] = False
+                if item.get("expires_at") and not existing_item.get("expires_at"):
+                    existing_item["expires_at"] = item["expires_at"]
+            if item.get("is_stream"):
+                existing_item["is_stream"] = True
+            # DO NOT overwrite expires_at on active existing codes with synthetic dates!
+            # Only fill in if existing_item had no expires_at
+            if not existing_item.get("expires_at") and item.get("expires_at"):
+                existing_item["expires_at"] = item["expires_at"]
             continue
 
         data.setdefault("codes", []).append(item)
-        existing_map[(g_type, code_str)] = item
+        existing_map[key] = item
         newly_added.append(item)
 
     if newly_added:
@@ -278,18 +320,10 @@ def moderate_promocodes(data: dict) -> dict:
             continue
 
         # 2. Identify livestream codes
-        primary_match_100 = False
-        r_desc = str(item.get("rewards_description", "")).lower()
-        if ("primogem" in r_desc or "камен" in r_desc or "нефрит" in r_desc or "jade" in r_desc) and "100" in r_desc:
-            primary_match_100 = True
-        elif ("polychrome" in r_desc or "полихром" in r_desc) and "300" in r_desc:
-            primary_match_100 = True
-
-        is_stream = (
-            bool(item.get("is_stream", False))
+        is_stream = bool(
+            item.get("is_stream", False)
             or item.get("status") == "STREAM"
             or "stream" in str(item.get("id", "")).lower()
-            or primary_match_100
         )
         item["is_stream"] = is_stream
 
@@ -298,15 +332,24 @@ def moderate_promocodes(data: dict) -> dict:
 
         # 3. Check expiration
         is_expired = False
-        if expires_at_dt is not None:
-            if now > expires_at_dt:
+        if is_stream:
+            # Stream codes invariant: only valid for <= 28 hours from broadcast/creation
+            if created_at_dt is not None and (now - created_at_dt) > timedelta(hours=28):
                 is_expired = True
-        elif is_stream:
-            # Livestream codes expire within 16-24 hours
-            if created_at_dt is not None and (now - created_at_dt) > timedelta(hours=20):
+            elif expires_at_dt is not None and now > expires_at_dt:
                 is_expired = True
-            elif created_at_dt is None:
+            elif created_at_dt is None and expires_at_dt is None:
                 is_expired = True
+        else:
+            # Regular codes
+            if expires_at_dt is not None and now > expires_at_dt:
+                is_expired = True
+            elif created_at_dt is not None and (now - created_at_dt).days >= 45:
+                # If discovered over 45 days ago without explicit verified future expiry
+                if expires_at_dt is not None and expires_at_dt > now and (expires_at_dt - created_at_dt).days <= 65:
+                    pass
+                else:
+                    is_expired = True
 
         if is_expired:
             item["is_active"] = False
@@ -333,19 +376,46 @@ def moderate_promocodes(data: dict) -> dict:
             expired_codes.append(item)
 
     def active_sort_key(x):
-        is_stream = 0 if (x.get("is_stream") or x.get("status") == "STREAM") else 1
-        is_perm = 2 if x.get("status") == "PERMANENT" else 0
-        return (x.get("game_type", 0), is_perm, is_stream, x.get("code", ""))
+        # Category priority:
+        # 0: Live Stream (urgent countdown) -> sorted by expires_at ASC
+        # 1: New codes (created <= 7 days ago) -> sorted by created_at DESC (newest first)
+        # 2: General active codes -> sorted by created_at DESC (newest first)
+        # 3: Permanent codes -> sorted by code at end
+        is_stream = bool(x.get("is_stream") or x.get("status") == "STREAM")
+        is_perm = (x.get("status") == "PERMANENT")
+        c_dt = parse_iso_datetime(x.get("created_at"))
+        c_ts = c_dt.timestamp() if c_dt else 0.0
+
+        if is_stream:
+            cat = 0
+            e_dt = parse_iso_datetime(x.get("expires_at"))
+            sub_sort = e_dt.timestamp() if e_dt else (c_ts + 86400)
+        elif is_perm:
+            cat = 3
+            sub_sort = x.get("code", "")
+        elif c_dt and (now - c_dt).days <= 7:
+            cat = 1
+            sub_sort = -c_ts
+        else:
+            cat = 2
+            sub_sort = -c_ts
+
+        return (x.get("game_type", 0), cat, sub_sort)
 
     active_codes.sort(key=active_sort_key)
 
-    expired_codes.sort(key=lambda x: x.get("expires_at") or x.get("created_at") or "", reverse=True)
+    def expired_sort_key(x):
+        dt = parse_iso_datetime(x.get("expires_at")) or parse_iso_datetime(x.get("created_at"))
+        return dt.timestamp() if dt else 0.0
+
+    expired_codes.sort(key=expired_sort_key, reverse=True)
+
     pruned_expired = []
     counts_by_game = {}
     for item in expired_codes:
         g = item.get("game_type", 0)
         c = counts_by_game.get(g, 0)
-        if c < 15:
+        if c < 20:
             pruned_expired.append(item)
             counts_by_game[g] = c + 1
 
