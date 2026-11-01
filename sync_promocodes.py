@@ -214,17 +214,28 @@ def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> Lis
     if not scraped_codes:
         return []
 
-    existing_codes = {(c.get("game_type", 0), c.get("code", "").strip().upper()) for c in data.get("codes", [])}
+    existing_map = {(c.get("game_type", 0), c.get("code", "").strip().upper()): c for c in data.get("codes", [])}
     newly_added = []
 
     for item in scraped_codes:
         g_type = item.get("game_type", 0)
         code_str = item.get("code", "").strip().upper()
-        if not validate_code(code_str) or (g_type, code_str) in existing_codes:
+        if not validate_code(code_str):
+            continue
+
+        if (g_type, code_str) in existing_map:
+            existing_item = existing_map[(g_type, code_str)]
+            if item.get("is_stream"):
+                existing_item["is_stream"] = True
+            if item.get("expires_at"):
+                existing_item["expires_at"] = item["expires_at"]
+            if item.get("status") == "EXPIRED":
+                existing_item["status"] = "EXPIRED"
+                existing_item["is_active"] = False
             continue
 
         data.setdefault("codes", []).append(item)
-        existing_codes.add((g_type, code_str))
+        existing_map[(g_type, code_str)] = item
         newly_added.append(item)
 
     if newly_added:
