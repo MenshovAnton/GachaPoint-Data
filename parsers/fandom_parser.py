@@ -35,6 +35,14 @@ GAMES_CONFIG = {
         "primary_reward": "POLYCHROME",
         "primary_name_ru": "Полихромов",
         "primary_name_en": "Polychromes"
+    },
+    3: {
+        "name": "Honkai Impact 3rd",
+        "wiki": "honkaiimpact3",
+        "page": "Exchange_Rewards",
+        "primary_reward": "CRYSTAL",
+        "primary_name_ru": "Кристаллов",
+        "primary_name_en": "Crystals"
     }
 }
 
@@ -87,10 +95,10 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> tuple[str, str, st
     ru_parts = []
     en_parts = []
 
-    # 1. Primary currency: Primogems / Stellar Jade / Polychromes
-    prim_match = re.search(r'(\d+)\s*(?:\[\[)?(?:Primogem|Stellar Jade|Polychrome)', row_text, re.IGNORECASE)
+    # 1. Primary currency: Primogems / Stellar Jade / Polychromes / Crystals
+    prim_match = re.search(r'(\d+)\s*(?:\[\[)?(?:Primogem|Stellar Jade|Polychrome|Crystal)', row_text, re.IGNORECASE)
     if not prim_match:
-        prim_match = re.search(r'{{(?:Item\|)?(?:Primogem|Stellar Jade|Polychrome)[^}]*?x\s*=\s*(\d+)', row_text, re.IGNORECASE)
+        prim_match = re.search(r'{{(?:Item\|)?(?:Primogem|Stellar Jade|Polychrome|Crystal)[^}]*?x\s*=\s*(\d+)', row_text, re.IGNORECASE)
 
     if prim_match:
         amount = prim_match.group(1)
@@ -98,23 +106,23 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> tuple[str, str, st
         ru_parts.append(f"{amount} {config['primary_name_ru']}")
         en_parts.append(f"{amount} {config['primary_name_en']}")
 
-    # 2. Secondary currency: Mora / Credits / Dennies
-    sec_match = re.search(r'(\d[\d\s,]*\d|\d+)\s*(?:\[\[)?(?:Mora|Credit|Dennie)', row_text, re.IGNORECASE)
+    # 2. Secondary currency: Mora / Credits / Dennies / Coins
+    sec_match = re.search(r'(\d[\d\s,]*\d|\d+)\s*(?:\[\[)?(?:Mora|Credit|Dennie|Coin)', row_text, re.IGNORECASE)
     if not sec_match:
-        sec_match = re.search(r'{{(?:Item\|)?(?:Mora|Credit|Dennie)[^}]*?x\s*=\s*(\d[\d\s,]*\d|\d+)', row_text, re.IGNORECASE)
+        sec_match = re.search(r'{{(?:Item\|)?(?:Mora|Credit|Dennie|Coin)[^}]*?x\s*=\s*(\d[\d\s,]*\d|\d+)', row_text, re.IGNORECASE)
 
     if sec_match:
         raw_num = sec_match.group(1).replace(" ", "").replace(",", "")
         if raw_num.isdigit():
             fmt_num = f"{int(raw_num):,}".replace(",", " ")
-            sec_type = "MORA" if game_type == 0 else "CREDIT" if game_type == 1 else "DENNY"
-            sec_name_ru = "Моры" if game_type == 0 else "Кредитов" if game_type == 1 else "Денни"
-            sec_name_en = "Mora" if game_type == 0 else "Credits" if game_type == 1 else "Dennies"
+            sec_type = "MORA" if game_type == 0 else "CREDIT" if game_type == 1 else "DENNY" if game_type == 2 else "COIN"
+            sec_name_ru = "Моры" if game_type == 0 else "Кредитов" if game_type == 1 else "Денни" if game_type == 2 else "Монет"
+            sec_name_en = "Mora" if game_type == 0 else "Credits" if game_type == 1 else "Dennies" if game_type == 2 else "Coins"
             reward_types.append(sec_type)
             ru_parts.append(f"{fmt_num} {sec_name_ru}")
             en_parts.append(f"{fmt_num} {sec_name_en}")
 
-    # 3. EXP (Hero's Wit / Traveler's Guide / Investigator Log / Adventurer's Experience)
+    # 3. EXP and Materials (Hero's Wit, Traveler's Guide, Investigator Log, Asterite)
     exp_match = re.search(r'(\d+)\s*(?:\[\[)?(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)', row_text, re.IGNORECASE)
     if not exp_match:
         exp_match = re.search(r'{{(?:Item\|)?(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)[^}]*?x\s*=\s*(\d+)', row_text, re.IGNORECASE)
@@ -123,10 +131,16 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> tuple[str, str, st
         amount = exp_match.group(1)
         reward_types.append("EXP")
         is_adv = "adventurer" in row_text.lower()
-        exp_ru = "Опыта искателя" if is_adv else "Опыта героя" if game_type == 0 else "Путеводителей" if game_type == 1 else "Журналов"
-        exp_en = "Adventurer's Exp" if is_adv else "Hero's Wit" if game_type == 0 else "Traveler's Guides" if game_type == 1 else "Investigator Logs"
+        exp_ru = "Опыта искателя" if is_adv else "Опыта героя" if game_type == 0 else "Путеводителей" if game_type == 1 else "Журналов" if game_type == 2 else "Опыта"
+        exp_en = "Adventurer's Exp" if is_adv else "Hero's Wit" if game_type == 0 else "Traveler's Guides" if game_type == 1 else "Investigator Logs" if game_type == 2 else "EXP"
         ru_parts.append(f"{amount} {exp_ru}")
         en_parts.append(f"{amount} {exp_en}")
+
+    ast_match = re.search(r'(\d[\d\s,]*\d|\d+)\s*(?:\[\[)?(?:Asterite)', row_text, re.IGNORECASE)
+    if ast_match:
+        amount = ast_match.group(1)
+        ru_parts.append(f"{amount} Астерита")
+        en_parts.append(f"{amount} Asterite")
 
     if not ru_parts:
         return "Внутриигровые награды", "Внутриигровые награды", "In-game Rewards", reward_types or [config["primary_reward"]]
@@ -206,9 +220,9 @@ def parse_game_promocodes(game_type: int) -> List[Dict[str, Any]]:
 
 
 def parse_all_games() -> List[Dict[str, Any]]:
-    """Runs scrapers for Genshin, HSR, and ZZZ with isolated exception safety."""
+    """Runs scrapers for Genshin, HSR, ZZZ, and HI3 with isolated exception safety."""
     all_codes = []
-    for g_type in [0, 1, 2]:
+    for g_type in [0, 1, 2, 3]:
         try:
             codes = parse_game_promocodes(g_type)
             all_codes.extend(codes)
