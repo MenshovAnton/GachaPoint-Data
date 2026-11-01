@@ -10,75 +10,42 @@ Official open data source for **GachaPoint**: active promo codes, character & we
 
 | File | Description | Localization |
 | :--- | :--- | :--- |
-| `promocodes.json` | Active promo codes for all 4 games, with expiry dates, status (`STREAM`, `NEW`, `PERMANENT`), and reward types | Bilingual (`rewards_description_ru`, `rewards_description_en`) |
-| `game_catalog.json` | Characters and weapons catalog, 5★ standard pool identification for automatic 50/50 recognition, and CDN avatar image URLs | Bilingual (`name_ru`, `name_en`), icon CDN |
+| `promocodes.json` | Active promo codes for all 4 games, with expiry dates, status (`STREAM`, `ACTIVE`, `PERMANENT`, `EXPIRED`), and reward types | Bilingual (`rewards_description_ru`, `rewards_description_en`) |
+| `game_catalog.json` | Characters and weapons catalog, 5★ standard pool identification for automatic 50/50 recognition, and CDN avatar image URLs | Bilingual (`name_ru`, `name_en`), aliases, icon CDN |
 | `banners_schedule.json` | Official current, past, and upcoming banner schedules with countdown timestamps and patch mapping | Bilingual (`featured_five_stars_ru`, `featured_five_stars_en`) |
-| `sync_promocodes.py` | Python automated verification & syncing script | Independent |
-| `.github/workflows/sync.yml` | GitHub Actions workflow running automated sync checks daily & on push | CI/CD |
+| `add_entity.py` | Autonomous CLI tool to fetch official avatar icons and register new entities | All 4 games |
+| `sync_promocodes.py` | Autonomous scraping, status moderation & synchronization script | Independent |
+| `lint_data.py` | Strict schema and cross-reference integrity linter | Independent |
+| `.github/workflows/sync.yml` | GitHub Actions workflow running automated sync checks every 3 hours | CI/CD |
 
 ---
 
-## 🛠️ Data Schemas
+## 🤖 Automation & Maintenance
 
-### 1. `promocodes.json`
-```json
-{
-  "id": "genshin_epic2026",
-  "game_type": 0,
-  "code": "EPIC2026",
-  "rewards_description_ru": "40 Камней Истока, 20 000 Моры, 3 Опыта героя",
-  "rewards_description_en": "40 Primogems, 20,000 Mora, 3 Hero's Wit",
-  "reward_types": ["PRIMOGEM", "MORA", "EXP"],
-  "status": "NEW",
-  "expires_at": "2026-11-15T00:00:00Z",
-  "is_stream": false,
-  "is_active": true
-}
-```
+### 1. Automated GitHub Actions Sync
+The repository automatically executes `.github/workflows/sync.yml` every 3 hours:
+- Scrapes Fandom MediaWiki APIs for active livestream and promotional codes.
+- Queries HoYoLAB News API for newly announced official event wishes and banners.
+- Moderates calendar expiration dates (`CURRENT`, `UPCOMING`, `ENDED`).
+- Runs `lint_data.py` to ensure zero errors and zero broken references.
 
-### 2. `game_catalog.json`
-```json
-{
-  "name": "Скирк",
-  "name_ru": "Скирк",
-  "name_en": "Skirk",
-  "rarity": "5★",
-  "type": "CHARACTER",
-  "is_standard": false,
-  "icon_url": "https://enka.network/ui/UI_AvatarIcon_Skirk.png"
-}
-```
-
-### 3. `banners_schedule.json`
-```json
-{
-  "id": "genshin_7_1_2",
-  "version": "7.1",
-  "phase": 2,
-  "start_date": "2026-10-14",
-  "end_date": "2026-11-03",
-  "status": "CURRENT",
-  "featured_five_stars_ru": ["Скирк", "Эскофье"],
-  "featured_five_stars_en": ["Skirk", "Escoffier"],
-  "featured_four_stars_ru": ["Мика", "Кандакия", "Далия"],
-  "featured_four_stars_en": ["Mika", "Candace", "Dahlia"]
-}
-```
-
----
-
-## 🚀 How to Sync / Push to GitHub
-
-In your terminal:
+### 2. Adding a New Character / Weapon
+When a new character or signature weapon is announced or released, run:
 ```bash
-cd "e:\Programming\Android Projects\HoyoSubsTrakcer\data-automation"
-git add .
-git commit -m "feat: bilingual schema, 2026 banners, active codes, and media"
-git push origin main
+python add_entity.py --game 0 --name-ru "Скирк" --name-en "Skirk" --rarity "5★" --type CHARACTER
 ```
+The script automatically:
+1. Queries Fandom MediaWiki for official square in-game icons/busts.
+2. Normalizes the image into 256×256 (or 512×512) RGBA PNG in `avatars/<game>/`.
+3. Registers the entity with canonical URLs and aliases in `game_catalog.json`.
+4. Validates repository integrity via `lint_data.py`.
 
-## ⚙️ Enabling Auto-Commit Permissions for GitHub Actions
-1. Navigate to your repository: `https://github.com/MenshovAnton/GachaPoint-Data`
-2. Open **Settings ➔ Actions ➔ General**.
-3. Under **Workflow permissions**, choose **Read and write permissions**.
-4. Click **Save**.
+---
+
+## ⚖️ Legal Disclaimer
+
+*GachaPoint Data Hub* is an open-source, non-commercial fan-made project created for educational and utility purposes.
+
+- This project is **not affiliated with, endorsed, sponsored, or approved by miHoYo / HoYoverse (COGNOSPHERE PTE. LTD.)**.
+- *Genshin Impact*, *Honkai: Star Rail*, *Zenless Zone Zero*, *Honkai Impact 3rd*, and all associated character names, weapon names, imagery, and intellectual properties are registered trademarks and copyrights of **COGNOSPHERE PTE. LTD.** / **miHoYo**.
+- All in-game assets and thumbnail crops stored in this repository are used under **Fair Use** guidelines for identification and cataloging purposes in a free community utility tool.
