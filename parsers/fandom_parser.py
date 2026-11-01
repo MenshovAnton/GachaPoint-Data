@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fandom MediaWiki API Parser for HoYoverse Games (Genshin, HSR, ZZZ)
+Fandom MediaWiki API Parser for HoYoverse Games (Genshin, HSR, ZZZ, HI3)
 Extracts active and stream promo codes without external dependencies.
 """
 
@@ -47,10 +47,12 @@ GAMES_CONFIG = {
 }
 
 CODE_RE = re.compile(r"^[A-Za-z0-9_-]{3,30}$")
-URL_CODE_RE = re.compile(r'(?:gift|redemption)\?(?:[^\s"\'<>]*&)?code=([A-Za-z0-9_-]{3,30})', re.IGNORECASE)
-TAG_CODE_RE = re.compile(r'<code>([A-Za-z0-9_-]{3,30})</code>', re.IGNORECASE)
-PARAM_CODE_RE = re.compile(r'\|\s*code\s*=\s*([A-Za-z0-9_-]{3,30})', re.IGNORECASE)
-BOLD_CODE_RE = re.compile(r"'''([A-Z0-9_-]{4,25})'''")
+DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+DISALLOWED_CODES = {
+    "CODE", "PROMOCODE", "ITEM", "YES", "NO", "REWARDS", "GLOBAL",
+    "ONLINE", "WEBSITE", "SERVER", "NOTES", "DURATION", "EXCHANGE",
+    "REDEMPTION", "DATE", "EXPIRY", "DISCOVERY", "UNKNOWN"
+}
 
 
 def fetch_page_wikitext(wiki_name: str, page_title: str) -> Optional[str]:
@@ -80,11 +82,26 @@ def fetch_page_wikitext(wiki_name: str, page_title: str) -> Optional[str]:
     return None
 
 
-def extract_active_wikitext(full_text: str) -> str:
-    """Isolates active codes section by trimming everything past the Expired header."""
-    split_match = re.search(r'==+\s*(?:Expired|Past|Inactive|History|Previous)', full_text, re.IGNORECASE)
-    if split_match:
-        return full_text[:split_match.start()]
+def extract_active_wikitext(full_text: str, game_type: int) -> str:
+    """Isolates active codes section by trimming past expired headers and comments."""
+    if game_type == 0:
+        match = re.search(r'==+\s*(?:Expired|Past|Inactive|History|Previous)', full_text, re.IGNORECASE)
+        if match:
+            full_text = full_text[:match.start()]
+    elif game_type in (1, 2):
+        exp_match = re.search(r'<!--\s*expired\s*-->', full_text, re.IGNORECASE)
+        if exp_match:
+            full_text = full_text[:exp_match.start()]
+        h_match = re.search(r'==+\s*(?:Expired|Past|Inactive|History|Previous|Notes|References)', full_text, re.IGNORECASE)
+        if h_match:
+            full_text = full_text[:h_match.start()]
+    elif game_type == 3:
+        match = re.search(r'==+\s*(?:Legacy|Expired|Past|Inactive|History|Previous|Old)', full_text, re.IGNORECASE)
+        if match:
+            full_text = full_text[:match.start()]
+
+    # Strip author instructions blocks
+    full_text = re.sub(r'<!--\s*To add to this list[\s\S]*?-->', '', full_text, flags=re.IGNORECASE)
     return full_text
 
 
@@ -96,9 +113,11 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> tuple[str, str, st
     en_parts = []
 
     # 1. Primary currency: Primogems / Stellar Jade / Polychromes / Crystals
-    prim_match = re.search(r'(\d+)\s*(?:\[\[)?(?:Primogem|Stellar Jade|Polychrome|Crystal)', row_text, re.IGNORECASE)
+    prim_match = re.search(r'(?:Primogem|Stellar Jade|Polychrome|Crystal)s?\s*(?:x|\*)\s*(\d+)', row_text, re.IGNORECASE)
     if not prim_match:
-        prim_match = re.search(r'{{(?:Item\|)?(?:Primogem|Stellar Jade|Polychrome|Crystal)[^}]*?x\s*=\s*(\d+)', row_text, re.IGNORECASE)
+        prim_match = re.search(r'(\d+)\s*(?:\[\[)?(?:Primogem|Stellar Jade|Polychrome|Crystal)', row_text, re.IGNORECASE)
+    if not prim_match:
+        prim_match = re.search(r'{{(?:Item\|)?(?:Primogem|Stellar Jade|Polychrome|Crystal)[^}]*?(?:quantity|x)\s*=\s*(\d+)', row_text, re.IGNORECASE)
 
     if prim_match:
         amount = prim_match.group(1)
@@ -107,9 +126,11 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> tuple[str, str, st
         en_parts.append(f"{amount} {config['primary_name_en']}")
 
     # 2. Secondary currency: Mora / Credits / Dennies / Coins
-    sec_match = re.search(r'(\d[\d\s,]*\d|\d+)\s*(?:\[\[)?(?:Mora|Credit|Dennie|Coin)', row_text, re.IGNORECASE)
+    sec_match = re.search(r'(?:Mora|Credit|Dennie|Denny|Coin)s?\s*(?:x|\*)\s*([\d,]+)', row_text, re.IGNORECASE)
     if not sec_match:
-        sec_match = re.search(r'{{(?:Item\|)?(?:Mora|Credit|Dennie|Coin)[^}]*?x\s*=\s*(\d[\d\s,]*\d|\d+)', row_text, re.IGNORECASE)
+        sec_match = re.search(r'([\d,]+)\s*(?:\[\[)?(?:Mora|Credit|Dennie|Denny|Coin)', row_text, re.IGNORECASE)
+    if not sec_match:
+        sec_match = re.search(r'{{(?:Item\|)?(?:Mora|Credit|Dennie|Denny|Coin)[^}]*?(?:quantity|x)\s*=\s*([\d,]+)', row_text, re.IGNORECASE)
 
     if sec_match:
         raw_num = sec_match.group(1).replace(" ", "").replace(",", "")
@@ -122,10 +143,10 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> tuple[str, str, st
             ru_parts.append(f"{fmt_num} {sec_name_ru}")
             en_parts.append(f"{fmt_num} {sec_name_en}")
 
-    # 3. EXP and Materials (Hero's Wit, Traveler's Guide, Investigator Log, Asterite)
-    exp_match = re.search(r'(\d+)\s*(?:\[\[)?(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)', row_text, re.IGNORECASE)
+    # 3. EXP
+    exp_match = re.search(r'(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)\s*(?:x|\*)\s*(\d+)', row_text, re.IGNORECASE)
     if not exp_match:
-        exp_match = re.search(r'{{(?:Item\|)?(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)[^}]*?x\s*=\s*(\d+)', row_text, re.IGNORECASE)
+        exp_match = re.search(r'(\d+)\s*(?:\[\[)?(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)', row_text, re.IGNORECASE)
 
     if exp_match:
         amount = exp_match.group(1)
@@ -136,9 +157,13 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> tuple[str, str, st
         ru_parts.append(f"{amount} {exp_ru}")
         en_parts.append(f"{amount} {exp_en}")
 
-    ast_match = re.search(r'(\d[\d\s,]*\d|\d+)\s*(?:\[\[)?(?:Asterite)', row_text, re.IGNORECASE)
+    # 4. Asterite (HI3)
+    ast_match = re.search(r'{{Item\|Asterite[^}]*?quantity\s*=\s*([\d,]+)', row_text, re.IGNORECASE)
+    if not ast_match:
+        ast_match = re.search(r'Asterite\s*(?:x|\*)\s*([\d,]+)', row_text, re.IGNORECASE)
     if ast_match:
-        amount = ast_match.group(1)
+        amount = ast_match.group(1).replace(",", "")
+        reward_types.append("ASTERITE")
         ru_parts.append(f"{amount} Астерита")
         en_parts.append(f"{amount} Asterite")
 
@@ -160,30 +185,41 @@ def parse_game_promocodes(game_type: int) -> List[Dict[str, Any]]:
     if not wikitext:
         return []
 
-    active_text = extract_active_wikitext(wikitext)
+    active_text = extract_active_wikitext(wikitext, game_type)
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    # Split into rows/entries
-    rows = re.split(r'\n\|-|\n\n', active_text)
+    # Split into entries
+    rows = re.split(r'\{\{(?:Code Row|Redemption Code Row)|\n\|-', active_text)
     results = []
     seen_codes = set()
 
     for row in rows:
-        # Find candidate code
         found_code = None
-        for pattern in [URL_CODE_RE, TAG_CODE_RE, PARAM_CODE_RE, BOLD_CODE_RE]:
-            match = pattern.search(row)
-            if match:
-                candidate = match.group(1).strip().upper()
-                if CODE_RE.match(candidate):
+
+        # Pattern 1: Template first parameter |CODE| or |CODE\n
+        template_match = re.search(r'(?:^\s*(?:<!--.*?-->)?\s*\|\s*|\|(?:\'\'\')?)([A-Za-z0-9_-]{4,30})(?:\'\'\')?\s*\|', row)
+        if template_match:
+            candidate = template_match.group(1).strip().upper()
+            if CODE_RE.match(candidate) and not DATE_PATTERN.match(candidate) and candidate not in DISALLOWED_CODES:
+                found_code = candidate
+
+        # Pattern 2: Bold code (e.g. HI3 tables: |'''CODE'''||)
+        if not found_code:
+            bold_match = re.search(r"'''([A-Z0-9_-]{4,25})'''", row)
+            if bold_match:
+                candidate = bold_match.group(1).strip().upper()
+                if CODE_RE.match(candidate) and not DATE_PATTERN.match(candidate) and candidate not in DISALLOWED_CODES:
                     found_code = candidate
-                    break
+
+        # Pattern 3: URL code fallback
+        if not found_code:
+            url_match = re.search(r'(?:gift|redemption)\?(?:[^\s"\'<>]*&)?code=([A-Za-z0-9_-]{3,30})', row, re.IGNORECASE)
+            if url_match:
+                candidate = url_match.group(1).strip().upper()
+                if CODE_RE.match(candidate) and candidate not in DISALLOWED_CODES:
+                    found_code = candidate
 
         if not found_code or found_code in seen_codes:
-            continue
-
-        # Ignore template header titles or obvious false positives
-        if found_code in {"CODE", "PROMOCODE", "REDEMPTION", "REWARDS", "DURATION", "ITEM", "YES", "NO"}:
             continue
 
         seen_codes.add(found_code)
@@ -192,13 +228,16 @@ def parse_game_promocodes(game_type: int) -> List[Dict[str, Any]]:
 
         # Check stream indicators
         is_stream = False
-        if "stream" in row.lower() or "special program" in row.lower() or "100" in desc:
-            # 100 primary currency is characteristic of livestream codes
+        if "special_program" in row.lower() or "livestream" in row.lower() or "stream" in row.lower():
             if config["primary_reward"] in reward_types and "100" in desc:
                 is_stream = True
 
         status = "STREAM" if is_stream else "ACTIVE"
-        expires_at = (datetime.now(timezone.utc) + timedelta(hours=16)).strftime("%Y-%m-%dT%H:%M:%SZ") if is_stream else (datetime.now(timezone.utc) + timedelta(days=25)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        expires_at = (
+            (datetime.now(timezone.utc) + timedelta(hours=16)).strftime("%Y-%m-%dT%H:%M:%SZ")
+            if is_stream
+            else (datetime.now(timezone.utc) + timedelta(days=25)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        )
 
         results.append({
             "id": f"scraped_{game_type}_{found_code.lower()}",
