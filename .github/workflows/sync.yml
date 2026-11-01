@@ -2,7 +2,7 @@ name: Sync Promocodes and Schedule
 
 on:
   schedule:
-    # Запуск каждые 3 часа
+    # Run every 3 hours
     - cron: '0 */3 * * *'
   workflow_dispatch:
 
@@ -21,9 +21,20 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run sync script
+      - name: Run sync and scraping script
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python sync_promocodes.py
+
+      - name: Notify Telegram on Failure
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python notify.py --failure "GitHub Actions sync workflow execution failed on runner. Run ID: $GITHUB_RUN_ID"
 
       - name: Commit and push changes
         run: |

@@ -3,9 +3,11 @@
 GachaPoint Data Hub — Autonomous Validation, Moderation & Sync Script
 
 Provides automated data maintenance:
-1. Auto-import new promo codes from pending_codes.json or CLI.
-2. Maintain strict categorization: PERMANENT, STREAM, ACTIVE, EXPIRED.
-3. Banner schedule moderation with calendar-based status updates.
+1. Automated web scraping from Fandom MediaWiki API for Genshin, HSR, and ZZZ.
+2. Auto-import new promo codes from pending_codes.json or CLI.
+3. Strict categorization: PERMANENT, STREAM, ACTIVE, EXPIRED.
+4. Banner schedule moderation with calendar-based status updates.
+5. Fault tolerance with atomic file writes and Telegram alert notifications.
 """
 
 import json
@@ -13,7 +15,24 @@ import os
 import re
 import sys
 import argparse
+import traceback
 from datetime import datetime, timezone, timedelta
+from typing import List, Dict, Any, Tuple
+
+# Safe imports for alerts and parsers
+try:
+    from notify import notify_failure, notify_new_codes
+except ImportError:
+    def notify_failure(summary, details=None):
+        print(f"[Alert] Failure: {summary} - {details}")
+    def notify_new_codes(new_codes):
+        print(f"[Alert] New codes found: {len(new_codes)}")
+
+try:
+    from parsers.fandom_parser import parse_all_games
+except ImportError:
+    def parse_all_games():
+        return []
 
 CODE_REGEX = re.compile(r"^[A-Za-z0-9_-]{3,30}$")
 
@@ -89,25 +108,71 @@ def load_json(filepath: str, default: dict) -> dict:
     return default
 
 
+def validate_dataset_before_save(filepath: str, data: dict):
+    """Enforces strict safety checks to prevent data loss or corruption."""
+    if not isinstance(data, dict):
+        raise ValueError(f"Validation failed for {filepath}: data root is not a dictionary")
+
+    if "promocodes" in filepath or "codes" in data:
+        codes = data.get("codes", [])
+        if not codes or len(codes) < 4:
+            raise ValueError(f"Safety abort: {filepath} code count ({len(codes)}) below minimum safe threshold")
+
+        existing_perms = {(c.get("game_type"), c.get("code")) for c in codes if c.get("status") == "PERMANENT"}
+        required_perms = {(k[0], k[1]) for k in PERMANENT_CODES.keys()}
+        missing_perms = required_perms - existing_perms
+        if missing_perms:
+            raise ValueError(f"Safety abort: {filepath} is missing permanent codes: {missing_perms}")
+
+
 def save_json(filepath: str, data: dict):
+    """Saves JSON atomically via temp file with validation."""
+    validate_dataset_before_save(filepath, data)
+
     data["updated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"Saved {filepath} (updated_at: {data['updated_at']})")
+    tmp_path = filepath + ".tmp"
+
+    try:
+        with open(tmp_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+
+        # Verify temp file is non-empty and parses cleanly
+        with open(tmp_path, "r", encoding="utf-8") as f:
+            json.load(f)
+
+        os.replace(tmp_path, filepath)
+        print(f"Atomically saved {filepath} (updated_at: {data['updated_at']})")
+
+        # Mirror to Android app assets directory if accessible
+        filename = os.path.basename(filepath)
+        assets_target = os.path.join(os.path.dirname(__file__), "..", "app", "src", "main", "assets", "data", filename)
+        if os.path.exists(os.path.dirname(assets_target)):
+            with open(assets_target, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+                f.write("\n")
+            print(f"Mirrored {filename} to Android app assets.")
+    except Exception as e:
+        if os.path.exists(tmp_path):
+            try:
+                os.remove(tmp_path)
+            except Exception:
+                pass
+        raise e
 
 
-def import_pending_codes(data: dict, pending_file: str = "pending_codes.json") -> int:
-    """Автоматически подхватывает новые промокоды из буферного файла pending_codes.json без ручного вмешательства."""
+def import_pending_codes(data: dict, pending_file: str = "pending_codes.json") -> Tuple[int, List[Dict[str, Any]]]:
+    """Auto-imports new promo codes from buffer file pending_codes.json."""
     if not os.path.exists(pending_file):
-        return 0
+        return 0, []
 
     pending = load_json(pending_file, {})
     new_items = pending.get("codes", []) if isinstance(pending, dict) else pending
     if not isinstance(new_items, list) or not new_items:
-        return 0
+        return 0, []
 
     existing_codes = {(c.get("game_type", 0), c.get("code", "").strip().upper()) for c in data.get("codes", [])}
-    added_count = 0
+    added_list = []
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     for item in new_items:
@@ -133,16 +198,38 @@ def import_pending_codes(data: dict, pending_file: str = "pending_codes.json") -
 
         data.setdefault("codes", []).append(item)
         existing_codes.add((game_type, code_str))
-        added_count += 1
+        added_list.append(item)
 
-    # Clean up pending queue
     try:
         os.remove(pending_file)
-        print(f"Imported {added_count} new codes from {pending_file} and cleared pending queue.")
+        print(f"Imported {len(added_list)} new codes from {pending_file} and cleared pending queue.")
     except Exception as e:
         print(f"Warning: could not remove {pending_file}: {e}")
 
-    return added_count
+    return len(added_list), added_list
+
+
+def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Merges freshly scraped codes into dataset and returns newly discovered items."""
+    if not scraped_codes:
+        return []
+
+    existing_codes = {(c.get("game_type", 0), c.get("code", "").strip().upper()) for c in data.get("codes", [])}
+    newly_added = []
+
+    for item in scraped_codes:
+        g_type = item.get("game_type", 0)
+        code_str = item.get("code", "").strip().upper()
+        if not validate_code(code_str) or (g_type, code_str) in existing_codes:
+            continue
+
+        data.setdefault("codes", []).append(item)
+        existing_codes.add((g_type, code_str))
+        newly_added.append(item)
+
+    if newly_added:
+        print(f"Merged {len(newly_added)} newly discovered promo codes from web scraper.")
+    return newly_added
 
 
 def moderate_promocodes(data: dict) -> dict:
@@ -213,7 +300,6 @@ def moderate_promocodes(data: dict) -> dict:
 
         deduped[key] = item
 
-    # 4. Separate active and expired codes
     active_codes = []
     expired_codes = []
 
@@ -230,7 +316,6 @@ def moderate_promocodes(data: dict) -> dict:
 
     active_codes.sort(key=active_sort_key)
 
-    # Sort expired by expiration/creation date and prune to limit
     expired_codes.sort(key=lambda x: x.get("expires_at") or x.get("created_at") or "", reverse=True)
     pruned_expired = []
     counts_by_game = {}
@@ -242,9 +327,11 @@ def moderate_promocodes(data: dict) -> dict:
             counts_by_game[g] = c + 1
 
     final_list = active_codes + pruned_expired
-    print(f"Moderation summary: {len(active_codes)} active codes, {len(pruned_expired)} archived expired codes.")
-    data["codes"] = final_list
-    return data
+    return {
+        "version": data.get("version", 1),
+        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "codes": final_list
+    }
 
 
 def moderate_banners(data: dict) -> dict:
@@ -254,18 +341,19 @@ def moderate_banners(data: dict) -> dict:
     updated_statuses = 0
 
     for game in games:
-        for banner in game.get("banners", []):
+        banners = game.get("banners", [])
+        for banner in banners:
             total_banners += 1
             start = parse_date(banner.get("start_date"))
             end = parse_date(banner.get("end_date"))
             if not start or not end:
                 continue
 
-            old_status = banner.get("status")
-            if today > end:
-                new_status = "ENDED"
-            elif start <= today <= end:
+            old_status = banner.get("status", "")
+            if start <= today <= end:
                 new_status = "CURRENT"
+            elif today > end:
+                new_status = "EXPIRED"
             else:
                 new_status = "ANNOUNCED"
 
@@ -282,48 +370,79 @@ def main():
     parser.add_argument("--add-code", nargs=4, metavar=("GAME_TYPE", "CODE", "REWARDS", "STATUS"),
                         help="Add new promo code: --add-code 0 PJ2KEBRAYSRM '60 Primogems' ACTIVE")
     parser.add_argument("--stream", action="store_true", help="Flag code as livestream reward")
+    parser.add_argument("--no-scrape", action="store_true", help="Skip web scraping step")
     args = parser.parse_args()
 
-    promocodes_file = "promocodes.json"
-    banners_file = "banners_schedule.json"
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    promocodes_file = os.path.join(base_dir, "promocodes.json")
+    banners_file = os.path.join(base_dir, "banners_schedule.json")
+    pending_file = os.path.join(base_dir, "pending_codes.json")
 
-    promo_data = load_json(promocodes_file, {"version": 1, "codes": []})
+    try:
+        promo_data = load_json(promocodes_file, {"version": 1, "codes": []})
+        all_new_codes = []
 
-    # Auto-import from pending_codes.json queue
-    import_pending_codes(promo_data)
+        # 1. Automated scraping from Fandom MediaWiki
+        if not args.no_scrape:
+            try:
+                print("Running automated web scraping for Genshin, HSR and ZZZ...")
+                scraped = parse_all_games()
+                new_scraped = import_scraped_codes(promo_data, scraped)
+                all_new_codes.extend(new_scraped)
+            except Exception as e:
+                print(f"[Warning] Automated scraper encountered non-fatal error: {e}")
 
-    # Manual addition via CLI
-    if args.add_code:
-        g_type = int(args.add_code[0])
-        raw_code = args.add_code[1].strip().upper()
-        rewards = args.add_code[2]
-        status = args.add_code[3].upper()
-        now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        # 2. Auto-import from pending_codes.json queue
+        _, pending_added = import_pending_codes(promo_data, pending_file)
+        all_new_codes.extend(pending_added)
 
-        new_entry = {
-            "id": f"manual_{g_type}_{raw_code.lower()}",
-            "game_type": g_type,
-            "code": raw_code,
-            "rewards_description": rewards,
-            "rewards_description_ru": rewards,
-            "rewards_description_en": rewards,
-            "reward_types": ["PRIMOGEM"] if g_type == 0 else ["JADE"] if g_type == 1 else ["POLYCHROME"] if g_type == 2 else ["CRYSTAL"],
-            "status": "STREAM" if args.stream else status,
-            "expires_at": (datetime.now(timezone.utc) + timedelta(hours=16)).strftime("%Y-%m-%dT%H:%M:%SZ") if args.stream else None,
-            "created_at": now_iso,
-            "is_stream": args.stream,
-            "is_active": True
-        }
-        promo_data.setdefault("codes", []).append(new_entry)
-        print(f"Manually added code {raw_code} for game {g_type}")
+        # 3. Manual addition via CLI
+        if args.add_code:
+            g_type = int(args.add_code[0])
+            raw_code = args.add_code[1].strip().upper()
+            rewards = args.add_code[2]
+            status = args.add_code[3].upper()
+            now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    promo_data = moderate_promocodes(promo_data)
-    save_json(promocodes_file, promo_data)
+            new_entry = {
+                "id": f"manual_{g_type}_{raw_code.lower()}",
+                "game_type": g_type,
+                "code": raw_code,
+                "rewards_description": rewards,
+                "rewards_description_ru": rewards,
+                "rewards_description_en": rewards,
+                "reward_types": ["PRIMOGEM"] if g_type == 0 else ["JADE"] if g_type == 1 else ["POLYCHROME"] if g_type == 2 else ["CRYSTAL"],
+                "status": "STREAM" if args.stream else status,
+                "expires_at": (datetime.now(timezone.utc) + timedelta(hours=16)).strftime("%Y-%m-%dT%H:%M:%SZ") if args.stream else None,
+                "created_at": now_iso,
+                "is_stream": args.stream,
+                "is_active": True
+            }
+            promo_data.setdefault("codes", []).append(new_entry)
+            all_new_codes.append(new_entry)
+            print(f"Manually added code {raw_code} for game {g_type}")
 
-    if os.path.exists(banners_file):
-        banner_data = load_json(banners_file, {"version": 1, "games": []})
-        banner_data = moderate_banners(banner_data)
-        save_json(banners_file, banner_data)
+        # 4. Moderation & deduplication
+        promo_data = moderate_promocodes(promo_data)
+        save_json(promocodes_file, promo_data)
+
+        # 5. Banner calendar moderation
+        if os.path.exists(banners_file):
+            banner_data = load_json(banners_file, {"version": 1, "games": []})
+            banner_data = moderate_banners(banner_data)
+            save_json(banners_file, banner_data)
+
+        # 6. Telegram notification on new codes
+        if all_new_codes:
+            notify_new_codes(all_new_codes)
+
+        print("Sync completed successfully.")
+
+    except Exception as e:
+        tb = traceback.format_exc()
+        print(f"[CRITICAL ERROR] Sync failed: {e}\n{tb}", file=sys.stderr)
+        notify_failure("Data Hub Sync Failed", str(e))
+        sys.exit(1)
 
 
 if __name__ == "__main__":
