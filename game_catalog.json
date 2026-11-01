@@ -12,7 +12,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skirk.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skirk.png",
+          "aliases": []
         },
         {
           "name": "Эскофье",
@@ -21,7 +22,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/escoffier.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/escoffier.png",
+          "aliases": []
         },
         {
           "name": "Митя",
@@ -30,7 +32,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mitya.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mitya.png",
+          "aliases": []
         },
         {
           "name": "Фурина",
@@ -39,7 +42,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/furina.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/furina.png",
+          "aliases": []
         },
         {
           "name": "Мавуика",
@@ -48,7 +52,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mavuika.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mavuika.png",
+          "aliases": []
         },
         {
           "name": "Ситлали",
@@ -57,7 +62,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/citlali.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/citlali.png",
+          "aliases": []
         },
         {
           "name": "Часка",
@@ -66,7 +72,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/chasca.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/chasca.png",
+          "aliases": []
         },
         {
           "name": "Шилонен",
@@ -75,7 +82,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xilonen.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xilonen.png",
+          "aliases": []
         },
         {
           "name": "Кинич",
@@ -84,7 +92,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kinich.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kinich.png",
+          "aliases": []
         },
         {
           "name": "Муалани",
@@ -93,7 +102,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mualani.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mualani.png",
+          "aliases": []
         },
         {
           "name": "Невиллет",
@@ -102,7 +112,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/neuvillette.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/neuvillette.png",
+          "aliases": []
         },
         {
           "name": "Чжун Ли",
@@ -111,7 +122,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/zhongli.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/zhongli.png",
+          "aliases": []
         },
         {
           "name": "Райдэн",
@@ -120,7 +132,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/raiden_shogun.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/raiden_shogun.png",
+          "aliases": []
         },
         {
           "name": "Нахида",
@@ -129,7 +142,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/nahida.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/nahida.png",
+          "aliases": []
         },
         {
           "name": "Кадзуха",
@@ -138,7 +152,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kaedehara_kazuha.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kaedehara_kazuha.png",
+          "aliases": []
         },
         {
           "name": "Ху Тао",
@@ -147,7 +162,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/hu_tao.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/hu_tao.png",
+          "aliases": []
         },
         {
           "name": "Тиори",
@@ -156,7 +172,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/chiori.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/chiori.png",
+          "aliases": []
         },
         {
           "name": "Лини",
@@ -165,7 +182,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lyney.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lyney.png",
+          "aliases": []
         },
         {
           "name": "Арлекино",
@@ -174,7 +192,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/arlecchino.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/arlecchino.png",
+          "aliases": []
         },
         {
           "name": "Клоринда",
@@ -183,7 +202,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/clorinde.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/clorinde.png",
+          "aliases": []
         },
         {
           "name": "Эмилия",
@@ -192,7 +212,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/emilie.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/emilie.png",
+          "aliases": []
         },
         {
           "name": "Сяо",
@@ -201,7 +222,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xiao.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xiao.png",
+          "aliases": []
         },
         {
           "name": "Елань",
@@ -210,7 +232,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/yelan.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/yelan.png",
+          "aliases": []
         },
         {
           "name": "Венти",
@@ -219,7 +242,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/venti.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/venti.png",
+          "aliases": []
         },
         {
           "name": "Гань Юй",
@@ -228,7 +252,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/ganyu.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/ganyu.png",
+          "aliases": []
         },
         {
           "name": "Аяка",
@@ -237,7 +262,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kamisato_ayaka.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kamisato_ayaka.png",
+          "aliases": []
         },
         {
           "name": "Аято",
@@ -246,7 +272,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kamisato_ayato.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kamisato_ayato.png",
+          "aliases": []
         },
         {
           "name": "Джинн",
@@ -255,7 +282,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/jean.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/jean.png",
+          "aliases": []
         },
         {
           "name": "Дилюк",
@@ -264,7 +292,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/diluc.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/diluc.png",
+          "aliases": []
         },
         {
           "name": "Мона",
@@ -273,7 +302,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mona.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mona.png",
+          "aliases": []
         },
         {
           "name": "Кэ Цин",
@@ -282,7 +312,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/keqing.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/keqing.png",
+          "aliases": []
         },
         {
           "name": "Ци Ци",
@@ -291,7 +322,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/qiqi.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/qiqi.png",
+          "aliases": []
         },
         {
           "name": "Тигнари",
@@ -300,7 +332,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/tighnari.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/tighnari.png",
+          "aliases": []
         },
         {
           "name": "Дэхья",
@@ -309,7 +342,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/dehya.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/dehya.png",
+          "aliases": []
         },
         {
           "name": "Мика",
@@ -318,7 +352,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mika.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mika.png",
+          "aliases": []
         },
         {
           "name": "Кандакия",
@@ -327,7 +362,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/candace.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/candace.png",
+          "aliases": []
         },
         {
           "name": "Далия",
@@ -336,7 +372,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/dahlia.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/dahlia.png",
+          "aliases": []
         },
         {
           "name": "Качина",
@@ -345,7 +382,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kachina.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kachina.png",
+          "aliases": []
         },
         {
           "name": "Оророн",
@@ -354,7 +392,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/ororon.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/ororon.png",
+          "aliases": []
         },
         {
           "name": "Лань Янь",
@@ -363,7 +402,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lan_yan.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lan_yan.png",
+          "aliases": []
         },
         {
           "name": "Беннет",
@@ -372,7 +412,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/bennett.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/bennett.png",
+          "aliases": []
         },
         {
           "name": "Сян Лин",
@@ -381,7 +422,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xiangling.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xiangling.png",
+          "aliases": []
         },
         {
           "name": "Син Цю",
@@ -390,7 +432,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xingqiu.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xingqiu.png",
+          "aliases": []
         },
         {
           "name": "Куки Синобу",
@@ -399,7 +442,12 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kuki_shinobu.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kuki_shinobu.png",
+          "aliases": [
+            "Синобу",
+            "Shinobu",
+            "Kuki"
+          ]
         },
         {
           "name": "Небесный меч",
@@ -408,7 +456,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skyward_blade.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skyward_blade.png",
+          "aliases": []
         },
         {
           "name": "Небесное величие",
@@ -417,7 +466,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skyward_pride.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skyward_pride.png",
+          "aliases": []
         },
         {
           "name": "Небесная ось",
@@ -426,7 +476,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skyward_spine.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skyward_spine.png",
+          "aliases": []
         },
         {
           "name": "Небесный атлас",
@@ -435,7 +486,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skyward_atlas.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skyward_atlas.png",
+          "aliases": []
         },
         {
           "name": "Небесное крыло",
@@ -444,7 +496,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skyward_harp.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/skyward_harp.png",
+          "aliases": []
         },
         {
           "name": "Лук Амоса",
@@ -453,7 +506,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/amos_bow.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/amos_bow.png",
+          "aliases": []
         },
         {
           "name": "Молитва святым ветрам",
@@ -462,7 +516,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lost_prayer_to_the_sacred_winds.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lost_prayer_to_the_sacred_winds.png",
+          "aliases": []
         },
         {
           "name": "Волчья погибель",
@@ -471,7 +526,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/wolfs_gravestone.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/wolfs_gravestone.png",
+          "aliases": []
         },
         {
           "name": "Нефритовый коршун",
@@ -480,7 +536,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/primordial_jade_winged_spear.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/primordial_jade_winged_spear.png",
+          "aliases": []
         },
         {
           "name": "Меч Сокола",
@@ -489,7 +546,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/aquila_favonia.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/aquila_favonia.png",
+          "aliases": []
         },
         {
           "name": "Кли",
@@ -498,7 +556,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/klee.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/klee.png",
+          "aliases": []
         },
         {
           "name": "Тарталья",
@@ -507,7 +566,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/tartaglia.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/tartaglia.png",
+          "aliases": []
         },
         {
           "name": "Альбедо",
@@ -516,7 +576,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/albedo.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/albedo.png",
+          "aliases": []
         },
         {
           "name": "Эола",
@@ -525,7 +586,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/eula.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/eula.png",
+          "aliases": []
         },
         {
           "name": "Ёимия",
@@ -534,7 +596,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/yoimiya.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/yoimiya.png",
+          "aliases": []
         },
         {
           "name": "Кокоми",
@@ -543,7 +606,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sangonomiya_kokomi.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sangonomiya_kokomi.png",
+          "aliases": []
         },
         {
           "name": "Итто",
@@ -552,7 +616,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/arataki_itto.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/arataki_itto.png",
+          "aliases": []
         },
         {
           "name": "Шэнь Хэ",
@@ -561,7 +626,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/shenhe.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/shenhe.png",
+          "aliases": []
         },
         {
           "name": "Яэ Мико",
@@ -570,7 +636,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/yae_miko.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/yae_miko.png",
+          "aliases": []
         },
         {
           "name": "Сайно",
@@ -579,7 +646,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/cyno.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/cyno.png",
+          "aliases": []
         },
         {
           "name": "Нилу",
@@ -588,7 +656,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/nilou.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/nilou.png",
+          "aliases": []
         },
         {
           "name": "Странник",
@@ -597,7 +666,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/wanderer.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/wanderer.png",
+          "aliases": []
         },
         {
           "name": "Аль-Хайтам",
@@ -606,7 +676,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/alhaitham.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/alhaitham.png",
+          "aliases": []
         },
         {
           "name": "Бай Чжу",
@@ -615,7 +686,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/baizhu.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/baizhu.png",
+          "aliases": []
         },
         {
           "name": "Ризли",
@@ -624,7 +696,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/wriothesley.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/wriothesley.png",
+          "aliases": []
         },
         {
           "name": "Навия",
@@ -633,7 +706,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/navia.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/navia.png",
+          "aliases": []
         },
         {
           "name": "Сянь Юнь",
@@ -642,7 +716,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xianyun.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xianyun.png",
+          "aliases": []
         },
         {
           "name": "Сиджвин",
@@ -651,7 +726,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sigewinne.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sigewinne.png",
+          "aliases": []
         },
         {
           "name": "Фишль",
@@ -660,7 +736,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/fischl.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/fischl.png",
+          "aliases": []
         },
         {
           "name": "Сахароза",
@@ -669,7 +746,8 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sucrose.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sucrose.png",
+          "aliases": []
         },
         {
           "name": "Варка",
@@ -678,7 +756,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/varka.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/varka.png",
+          "aliases": []
         },
         {
           "name": "Коломбина",
@@ -687,7 +766,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/columbina.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/columbina.png",
+          "aliases": []
         },
         {
           "name": "Сандроне",
@@ -696,7 +776,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sandrone.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sandrone.png",
+          "aliases": []
         },
         {
           "name": "Дурин",
@@ -705,7 +786,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/durin.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/durin.png",
+          "aliases": []
         },
         {
           "name": "Одетта",
@@ -714,7 +796,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/odette.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/odette.png",
+          "aliases": []
         },
         {
           "name": "Линнея",
@@ -723,7 +806,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/linnea.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/linnea.png",
+          "aliases": []
         },
         {
           "name": "Нефер",
@@ -732,7 +816,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/nefer.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/nefer.png",
+          "aliases": []
         },
         {
           "name": "Флинс",
@@ -741,7 +826,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/flins.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/flins.png",
+          "aliases": []
         },
         {
           "name": "Николь Рейн",
@@ -750,7 +836,12 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/nicole.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/nicole.png",
+          "aliases": [
+            "Nicole Reeyn",
+            "Nicole",
+            "Николь"
+          ]
         },
         {
           "name": "Лоэн",
@@ -759,7 +850,11 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lohen.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lohen.png",
+          "aliases": [
+            "Lohen",
+            "Loen"
+          ]
         },
         {
           "name": "Инеффа",
@@ -768,7 +863,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/ineffa.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/ineffa.png",
+          "aliases": []
         },
         {
           "name": "Весна",
@@ -777,7 +873,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/vesna.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/vesna.png",
+          "aliases": []
         },
         {
           "name": "Водяница",
@@ -786,7 +883,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/vodyanitsa.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/vodyanitsa.png",
+          "aliases": []
         },
         {
           "name": "Лаума",
@@ -795,7 +893,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lauma.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lauma.png",
+          "aliases": []
         },
         {
           "name": "Вареса",
@@ -804,7 +903,8 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/varesa.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/varesa.png",
+          "aliases": []
         },
         {
           "name": "Цзы Бай",
@@ -813,7 +913,11 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/zibai.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/zibai.png",
+          "aliases": [
+            "Zi Bai",
+            "Zibai"
+          ]
         },
         {
           "name": "Рассекающий туман",
@@ -822,7 +926,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mistsplitter_reforged.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/mistsplitter_reforged.png",
+          "aliases": []
         },
         {
           "name": "Посох Хомы",
@@ -831,7 +936,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/staff_of_homa.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/staff_of_homa.png",
+          "aliases": []
         },
         {
           "name": "Сияющая жатва",
@@ -840,7 +946,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/engulfing_lightning.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/engulfing_lightning.png",
+          "aliases": []
         },
         {
           "name": "Аква симулякрум",
@@ -849,7 +956,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/aqua_simulacra.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/aqua_simulacra.png",
+          "aliases": []
         },
         {
           "name": "Громовой пульс",
@@ -858,7 +966,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/thundering_pulse.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/thundering_pulse.png",
+          "aliases": []
         },
         {
           "name": "Краснорогий камнеруб",
@@ -867,7 +976,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/redhorn_stonethresher.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/redhorn_stonethresher.png",
+          "aliases": []
         },
         {
           "name": "Обряд вечного течения",
@@ -876,7 +986,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/tome_of_the_eternal_flow.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/tome_of_the_eternal_flow.png",
+          "aliases": []
         },
         {
           "name": "Блеск тихих вод",
@@ -885,7 +996,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/splendor_of_tranquil_waters.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/splendor_of_tranquil_waters.png",
+          "aliases": []
         },
         {
           "name": "Очертания алой луны",
@@ -894,7 +1006,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/crimson_moons_semblance.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/crimson_moons_semblance.png",
+          "aliases": []
         },
         {
           "name": "Отпущение грехов",
@@ -903,7 +1016,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/absolution.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/absolution.png",
+          "aliases": []
         },
         {
           "name": "Лови волну",
@@ -912,7 +1026,8 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/surfs_up.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/surfs_up.png",
+          "aliases": []
         },
         {
           "name": "Песнь патруля пиков",
@@ -921,7 +1036,535 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/peak_patrol_song.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/peak_patrol_song.png",
+          "aliases": []
+        },
+        {
+          "name": "Барбара",
+          "name_ru": "Барбара",
+          "name_en": "Barbara",
+          "aliases": [
+            "Барбара",
+            "Barbara"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/barbara.png"
+        },
+        {
+          "name": "Ноэлль",
+          "name_ru": "Ноэлль",
+          "name_en": "Noelle",
+          "aliases": [
+            "Ноэлль",
+            "Noelle"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/noelle.png"
+        },
+        {
+          "name": "Диона",
+          "name_ru": "Диона",
+          "name_en": "Diona",
+          "aliases": [
+            "Диона",
+            "Diona"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/diona.png"
+        },
+        {
+          "name": "Бэй Доу",
+          "name_ru": "Бэй Доу",
+          "name_en": "Beidou",
+          "aliases": [
+            "Бэй Доу",
+            "Бэйдоу",
+            "Beidou"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/beidou.png"
+        },
+        {
+          "name": "Нин Гуан",
+          "name_ru": "Нин Гуан",
+          "name_en": "Ningguang",
+          "aliases": [
+            "Нин Гуан",
+            "Нингуан",
+            "Ningguang"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/ningguang.png"
+        },
+        {
+          "name": "Синь Янь",
+          "name_ru": "Синь Янь",
+          "name_en": "Xinyan",
+          "aliases": [
+            "Синь Янь",
+            "Синьянь",
+            "Xinyan"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/xinyan.png"
+        },
+        {
+          "name": "Чун Юнь",
+          "name_ru": "Чун Юнь",
+          "name_en": "Chongyun",
+          "aliases": [
+            "Чун Юнь",
+            "Чунъюнь",
+            "Chongyun"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/chongyun.png"
+        },
+        {
+          "name": "Рэйзор",
+          "name_ru": "Рэйзор",
+          "name_en": "Razor",
+          "aliases": [
+            "Рэйзор",
+            "Рейзор",
+            "Razor"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/razor.png"
+        },
+        {
+          "name": "Розария",
+          "name_ru": "Розария",
+          "name_en": "Rosaria",
+          "aliases": [
+            "Розария",
+            "Rosaria"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/rosaria.png"
+        },
+        {
+          "name": "Янь Фэй",
+          "name_ru": "Янь Фэй",
+          "name_en": "Yanfei",
+          "aliases": [
+            "Янь Фэй",
+            "Яньфэй",
+            "Yanfei"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/yanfei.png"
+        },
+        {
+          "name": "Саю",
+          "name_ru": "Саю",
+          "name_en": "Sayu",
+          "aliases": [
+            "Саю",
+            "Sayu"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sayu.png"
+        },
+        {
+          "name": "Кудзё Сара",
+          "name_ru": "Кудзё Сара",
+          "name_en": "Kujou Sara",
+          "aliases": [
+            "Кудзё Сара",
+            "Сара",
+            "Kujou Sara",
+            "Sara"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kujou_sara.png"
+        },
+        {
+          "name": "Тома",
+          "name_ru": "Тома",
+          "name_en": "Thoma",
+          "aliases": [
+            "Тома",
+            "Thoma"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/thoma.png"
+        },
+        {
+          "name": "Горо",
+          "name_ru": "Горо",
+          "name_en": "Gorou",
+          "aliases": [
+            "Горо",
+            "Gorou"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/gorou.png"
+        },
+        {
+          "name": "Юнь Цзинь",
+          "name_ru": "Юнь Цзинь",
+          "name_en": "Yun Jin",
+          "aliases": [
+            "Юнь Цзинь",
+            "Юньцзинь",
+            "Yun Jin",
+            "Yunjin"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/yun_jin.png"
+        },
+        {
+          "name": "Сиканоин Хэйдзо",
+          "name_ru": "Сиканоин Хэйдзо",
+          "name_en": "Shikanoin Heizou",
+          "aliases": [
+            "Сиканоин Хэйдзо",
+            "Хэйдзо",
+            "Shikanoin Heizou",
+            "Heizou"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/shikanoin_heizou.png"
+        },
+        {
+          "name": "Коллеи",
+          "name_ru": "Коллеи",
+          "name_en": "Collei",
+          "aliases": [
+            "Коллеи",
+            "Collei"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/collei.png"
+        },
+        {
+          "name": "Дори",
+          "name_ru": "Дори",
+          "name_en": "Dori",
+          "aliases": [
+            "Дори",
+            "Dori"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/dori.png"
+        },
+        {
+          "name": "Лайла",
+          "name_ru": "Лайла",
+          "name_en": "Layla",
+          "aliases": [
+            "Лайла",
+            "Layla"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/layla.png"
+        },
+        {
+          "name": "Фарузан",
+          "name_ru": "Фарузан",
+          "name_en": "Faruzan",
+          "aliases": [
+            "Фарузан",
+            "Фаризан",
+            "Faruzan"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/faruzan.png"
+        },
+        {
+          "name": "Яо Яо",
+          "name_ru": "Яо Яо",
+          "name_en": "Yaoyao",
+          "aliases": [
+            "Яо Яо",
+            "Яояо",
+            "Yaoyao"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/yaoyao.png"
+        },
+        {
+          "name": "Кавех",
+          "name_ru": "Кавех",
+          "name_en": "Kaveh",
+          "aliases": [
+            "Кавех",
+            "Kaveh"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kaveh.png"
+        },
+        {
+          "name": "Кирара",
+          "name_ru": "Кирара",
+          "name_en": "Kirara",
+          "aliases": [
+            "Кирара",
+            "Kirara"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kirara.png"
+        },
+        {
+          "name": "Линетт",
+          "name_ru": "Линетт",
+          "name_en": "Lynette",
+          "aliases": [
+            "Линетт",
+            "Линнетт",
+            "Lynette"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lynette.png"
+        },
+        {
+          "name": "Фремине",
+          "name_ru": "Фремине",
+          "name_en": "Freminet",
+          "aliases": [
+            "Фремине",
+            "Freminet"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/freminet.png"
+        },
+        {
+          "name": "Шарлотта",
+          "name_ru": "Шарлотта",
+          "name_en": "Charlotte",
+          "aliases": [
+            "Шарлотта",
+            "Charlotte"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/charlotte.png"
+        },
+        {
+          "name": "Шеврёз",
+          "name_ru": "Шеврёз",
+          "name_en": "Chevreuse",
+          "aliases": [
+            "Шеврёз",
+            "Шеврез",
+            "Chevreuse"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/chevreuse.png"
+        },
+        {
+          "name": "Ка Мин",
+          "name_ru": "Ка Мин",
+          "name_en": "Gaming",
+          "aliases": [
+            "Ка Мин",
+            "Камин",
+            "Gaming"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/gaming.png"
+        },
+        {
+          "name": "Сетос",
+          "name_ru": "Сетос",
+          "name_en": "Sethos",
+          "aliases": [
+            "Сетос",
+            "Сетхос",
+            "Sethos"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sethos.png"
+        },
+        {
+          "name": "Эмбер",
+          "name_ru": "Эмбер",
+          "name_en": "Amber",
+          "aliases": [
+            "Эмбер",
+            "Amber"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/amber.png"
+        },
+        {
+          "name": "Кэйа",
+          "name_ru": "Кэйа",
+          "name_en": "Kaeya",
+          "aliases": [
+            "Кэйа",
+            "Кейа",
+            "Kaeya"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kaeya.png"
+        },
+        {
+          "name": "Лиза",
+          "name_ru": "Лиза",
+          "name_en": "Lisa",
+          "aliases": [
+            "Лиза",
+            "Lisa"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/lisa.png"
+        },
+        {
+          "name": "Элой",
+          "name_ru": "Элой",
+          "name_en": "Aloy",
+          "aliases": [
+            "Элой",
+            "Aloy"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/aloy.png"
+        },
+        {
+          "name": "Иансан",
+          "name_ru": "Иансан",
+          "name_en": "Iansan",
+          "aliases": [
+            "Иансан",
+            "Iansan"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/iansan.png"
+        },
+        {
+          "name": "Ифа",
+          "name_ru": "Ифа",
+          "name_en": "Ifa",
+          "aliases": [
+            "Ифа",
+            "Ifa"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/ifa.png"
+        },
+        {
+          "name": "Айно",
+          "name_ru": "Айно",
+          "name_en": "Aino",
+          "aliases": [
+            "Айно",
+            "Aino"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/aino.png"
+        },
+        {
+          "name": "Ягода",
+          "name_ru": "Ягода",
+          "name_en": "Jahoda",
+          "aliases": [
+            "Ягода",
+            "Jahoda"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/jahoda.png"
+        },
+        {
+          "name": "Иллуга",
+          "name_ru": "Иллуга",
+          "name_en": "Illuga",
+          "aliases": [
+            "Иллуга",
+            "Illuga"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/illuga.png"
+        },
+        {
+          "name": "Алёша",
+          "name_ru": "Алёша",
+          "name_en": "Alyosha",
+          "aliases": [
+            "Алёша",
+            "Алеша",
+            "Alyosha"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/alyosha.png"
         }
       ]
     },
@@ -1061,7 +1704,14 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/dan_heng_imbibitor_lunae.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/dan_heng_imbibitor_lunae.png",
+          "aliases": [
+            "Dan Heng IL",
+            "Dan Heng Imbibitor Lunae",
+            "Dan Heng - Imbibitor Lunae",
+            "IL",
+            "Пожиратель Луны"
+          ]
         },
         {
           "name": "Кафка",
@@ -1269,15 +1919,6 @@
           "type": "CHARACTER",
           "is_standard": false,
           "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/luocha.png"
-        },
-        {
-          "name": "Пожиратель Луны",
-          "name_ru": "Пожиратель Луны",
-          "name_en": "Dan Heng - Imbibitor Lunae",
-          "rarity": "5★",
-          "type": "CHARACTER",
-          "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/dan_heng_imbibitor_lunae.png"
         },
         {
           "name": "Фу Сюань",
@@ -1584,6 +2225,219 @@
           "type": "WEAPON",
           "is_standard": false,
           "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/long_road_leads_home.png"
+        },
+        {
+          "name": "Наташа",
+          "name_ru": "Наташа",
+          "name_en": "Natasha",
+          "aliases": [
+            "Наташа",
+            "Natasha"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/natasha.png"
+        },
+        {
+          "name": "Аста",
+          "name_ru": "Аста",
+          "name_en": "Asta",
+          "aliases": [
+            "Аста",
+            "Asta"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/asta.png"
+        },
+        {
+          "name": "Сервал",
+          "name_ru": "Сервал",
+          "name_en": "Serval",
+          "aliases": [
+            "Сервал",
+            "Serval"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/serval.png"
+        },
+        {
+          "name": "Сампо",
+          "name_ru": "Сампо",
+          "name_en": "Sampo",
+          "aliases": [
+            "Сампо",
+            "Sampo",
+            "Sampo Koski"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/sampo.png"
+        },
+        {
+          "name": "Хук",
+          "name_ru": "Хук",
+          "name_en": "Hook",
+          "aliases": [
+            "Хук",
+            "Hook"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/hook.png"
+        },
+        {
+          "name": "Сушан",
+          "name_ru": "Сушан",
+          "name_en": "Sushang",
+          "aliases": [
+            "Сушан",
+            "Sushang"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/sushang.png"
+        },
+        {
+          "name": "Цинцюэ",
+          "name_ru": "Цинцюэ",
+          "name_en": "Qingque",
+          "aliases": [
+            "Цинцюэ",
+            "Цинцюе",
+            "Qingque"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/qingque.png"
+        },
+        {
+          "name": "Юйкун",
+          "name_ru": "Юйкун",
+          "name_en": "Yukong",
+          "aliases": [
+            "Юйкун",
+            "Yukong"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/yukong.png"
+        },
+        {
+          "name": "Лука",
+          "name_ru": "Лука",
+          "name_en": "Luka",
+          "aliases": [
+            "Лука",
+            "Luka"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/luka.png"
+        },
+        {
+          "name": "Рысь",
+          "name_ru": "Рысь",
+          "name_en": "Lynx",
+          "aliases": [
+            "Рысь",
+            "Lynx",
+            "Lynx Landau"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/lynx.png"
+        },
+        {
+          "name": "Гуйнайфэнь",
+          "name_ru": "Гуйнайфэнь",
+          "name_en": "Guinaifen",
+          "aliases": [
+            "Гуйнайфэнь",
+            "Гуйнайфен",
+            "Guinaifen"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/guinaifen.png"
+        },
+        {
+          "name": "Ханья",
+          "name_ru": "Ханья",
+          "name_en": "Hanya",
+          "aliases": [
+            "Ханья",
+            "Hanya"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/hanya.png"
+        },
+        {
+          "name": "Сюэи",
+          "name_ru": "Сюэи",
+          "name_en": "Xueyi",
+          "aliases": [
+            "Сюэи",
+            "Xueyi"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/xueyi.png"
+        },
+        {
+          "name": "Миша",
+          "name_ru": "Миша",
+          "name_en": "Misha",
+          "aliases": [
+            "Миша",
+            "Misha"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/misha.png"
+        },
+        {
+          "name": "Моцзэ",
+          "name_ru": "Моцзэ",
+          "name_en": "Moze",
+          "aliases": [
+            "Моцзэ",
+            "Модзе",
+            "Moze"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/moze.png"
+        },
+        {
+          "name": "Арлан",
+          "name_ru": "Арлан",
+          "name_en": "Arlan",
+          "aliases": [
+            "Арлан",
+            "Arlan"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/arlan.png"
         }
       ]
     },
@@ -1597,7 +2451,12 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/ellen_joe.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/ellen_joe.png",
+          "aliases": [
+            "Эллен",
+            "Ellen",
+            "Ellen Joe"
+          ]
         },
         {
           "name": "Лайтер",
@@ -1705,7 +2564,12 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/anby_demara.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/anby_demara.png",
+          "aliases": [
+            "Анби",
+            "Anby",
+            "Anby Demara"
+          ]
         },
         {
           "name": "Николь",
@@ -1714,7 +2578,11 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/nicole_demara.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/nicole_demara.png",
+          "aliases": [
+            "Nicole",
+            "Nicole Demara"
+          ]
         },
         {
           "name": "Билли",
@@ -1723,7 +2591,11 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/billy_kid.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/billy_kid.png",
+          "aliases": [
+            "Billy",
+            "Billy Kid"
+          ]
         },
         {
           "name": "Стальная лапа",
@@ -1786,7 +2658,12 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/caesar_king.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/caesar_king.png",
+          "aliases": [
+            "Цезарь",
+            "Caesar",
+            "Caesar King"
+          ]
         },
         {
           "name": "Бернис Уайт",
@@ -1795,7 +2672,12 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/burnice_white.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/burnice_white.png",
+          "aliases": [
+            "Бернис",
+            "Burnice",
+            "Burnice White"
+          ]
         },
         {
           "name": "Хосими Мияби",
@@ -1804,7 +2686,12 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/hoshimi_miyabi.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/hoshimi_miyabi.png",
+          "aliases": [
+            "Мияби",
+            "Miyabi",
+            "Hoshimi Miyabi"
+          ]
         },
         {
           "name": "Харумаса",
@@ -1840,7 +2727,11 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/corin_wickes.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/corin_wickes.png",
+          "aliases": [
+            "Corin",
+            "Corin Wickes"
+          ]
         },
         {
           "name": "Люси",
@@ -1849,7 +2740,12 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/luciana_de_montefio.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/luciana_de_montefio.png",
+          "aliases": [
+            "Lucy",
+            "Luciana",
+            "Luciana de Montefio"
+          ]
         },
         {
           "name": "Пайпер",
@@ -1858,7 +2754,11 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/piper_wheel.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/piper_wheel.png",
+          "aliases": [
+            "Piper",
+            "Piper Wheel"
+          ]
         },
         {
           "name": "Сет",
@@ -1867,7 +2767,11 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/seth_lowell.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/seth_lowell.png",
+          "aliases": [
+            "Seth",
+            "Seth Lowell"
+          ]
         },
         {
           "name": "Антон",
@@ -1876,7 +2780,12 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/anton_ivanov.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/anton_ivanov.png",
+          "aliases": [
+            "Антон",
+            "Anton",
+            "Anton Ivanov"
+          ]
         },
         {
           "name": "Бен",
@@ -1885,7 +2794,12 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/ben_bigger.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/ben_bigger.png",
+          "aliases": [
+            "Бен",
+            "Ben",
+            "Ben Bigger"
+          ]
         },
         {
           "name": "Сокаку",
@@ -2169,7 +3083,11 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/senadina_deepspace_anchor_first_light.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/senadina_deepspace_anchor_first_light.png",
+          "aliases": [
+            "Senadina",
+            "Deepspace Anchor: First Light"
+          ]
         },
         {
           "name": "Валькирия Стрела",
@@ -2178,7 +3096,13 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/valkyrie_boltstorm_helia.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/valkyrie_boltstorm_helia.png",
+          "aliases": [
+            "Helia",
+            "Хелия",
+            "Valkyrie Boltstorm",
+            "Valkyrie Boltstorm (Helia)"
+          ]
         },
         {
           "name": "Телема",
@@ -2187,7 +3111,11 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/thelema_mad_pleasure_shadowbringer.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/thelema_mad_pleasure_shadowbringer.png",
+          "aliases": [
+            "Thelema",
+            "Mad Pleasure: Shadowbringer"
+          ]
         },
         {
           "name": "Лантерн",
@@ -2196,7 +3124,11 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/lantern_lone_destruction_shadowchaser.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/lantern_lone_destruction_shadowchaser.png",
+          "aliases": [
+            "Lantern",
+            "Lone Destruction: Shadowchaser"
+          ]
         },
         {
           "name": "Сонквэ",
@@ -2205,7 +3137,12 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/songque_jovial_deception_shadowdimmer.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/songque_jovial_deception_shadowdimmer.png",
+          "aliases": [
+            "Songque",
+            "Сунцюэ",
+            "Jovial Deception: Shadowdimmer"
+          ]
         },
         {
           "name": "Серапеум",
@@ -2214,7 +3151,11 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/serapeum_morning_dawn.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/serapeum_morning_dawn.png",
+          "aliases": [
+            "Serapeum",
+            "Morning Dawn"
+          ]
         },
         {
           "name": "Вита",
@@ -2223,7 +3164,12 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/vita_lone_planetfarer.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/vita_lone_planetfarer.png",
+          "aliases": [
+            "Vita",
+            "Vita (Lone Planetfarer)",
+            "Lone Planetfarer"
+          ]
         },
         {
           "name": "Киана: Судья Финала",
@@ -2232,7 +3178,12 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/herrscher_of_finality.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/herrscher_of_finality.png",
+          "aliases": [
+            "Kiana (Finality)",
+            "Herrscher of Finality",
+            "Finality"
+          ]
         },
         {
           "name": "Киана: Судья Пламени",
@@ -2322,7 +3273,13 @@
           "rarity": "5★",
           "type": "CHARACTER",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/miss_pink_elf.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/miss_pink_elf.png",
+          "aliases": [
+            "Miss Pink Elf♪",
+            "Miss Pink Elf",
+            "Розовая эльфийка",
+            "Elysia"
+          ]
         },
         {
           "name": "Мебиус: Бесконечный Уроборос",
@@ -2394,7 +3351,13 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/valkyrie_blastmetal_coralie.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/valkyrie_blastmetal_coralie.png",
+          "aliases": [
+            "Coralie",
+            "Корали",
+            "Valkyrie Blastmetal",
+            "Valkyrie Blastmetal (Coralie)"
+          ]
         },
         {
           "name": "Пардофелис",
@@ -2412,7 +3375,13 @@
           "rarity": "4★",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/starry_impression.png"
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/starry_impression.png",
+          "aliases": [
+            "Звездная импрессионистка",
+            "Starry Impression",
+            "Звездный рисунок",
+            "Griseo"
+          ]
         },
         {
           "name": "Шигурэ Кира",
@@ -2467,6 +3436,865 @@
           "type": "WEAPON",
           "is_standard": false,
           "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/redstar_anchor.png"
+        },
+        {
+          "name": "Ночной оруженосец",
+          "name_ru": "Ночной оруженосец",
+          "name_en": "Night Squire",
+          "aliases": [
+            "Ночной оруженосец",
+            "Night Squire"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/night_squire.png"
+        },
+        {
+          "name": "Валькирия Рейнджер",
+          "name_ru": "Валькирия Рейнджер",
+          "name_en": "Valkyrie Ranger",
+          "aliases": [
+            "Валькирия Рейнджер",
+            "Valkyrie Ranger"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/valkyrie_ranger.png"
+        },
+        {
+          "name": "Грешная Сакитама",
+          "name_ru": "Грешная Сакитама",
+          "name_en": "Flame Sakitama",
+          "aliases": [
+            "Грешная Сакитама",
+            "Flame Sakitama"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/flame_sakitama.png"
+        },
+        {
+          "name": "Валькирия Глория",
+          "name_ru": "Валькирия Глория",
+          "name_en": "Valkyrie Gloria",
+          "aliases": [
+            "Валькирия Глория",
+            "Valkyrie Gloria"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/valkyrie_gloria.png"
+        },
+        {
+          "name": "Полуночная Полынь",
+          "name_ru": "Полуночная Полынь",
+          "name_en": "Midnight Absinthe",
+          "aliases": [
+            "Полуночная Полынь",
+            "Midnight Absinthe"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/midnight_absinthe.png"
+        },
+        {
+          "name": "Сладкая и Пряная",
+          "name_ru": "Сладкая и Пряная",
+          "name_en": "Sweet 'n' Spicy",
+          "aliases": [
+            "Сладкая и Пряная",
+            "Sweet 'n' Spicy",
+            "Carole"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/sweet_n_spicy.png"
+        },
+        {
+          "name": "Спина Астера",
+          "name_ru": "Спина Астера",
+          "name_en": "Spina Astera",
+          "aliases": [
+            "Спина Астера",
+            "Spina Astera",
+            "Rita"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/spina_astera.png"
+        },
+        {
+          "name": "Золотая Дива",
+          "name_ru": "Золотая Дива",
+          "name_en": "Golden Diva",
+          "aliases": [
+            "Золотая Дива",
+            "Golden Diva",
+            "Eden"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/golden_diva.png"
+        },
+        {
+          "name": "Ночная Роза",
+          "name_ru": "Ночная Роза",
+          "name_en": "Umbrall Rose",
+          "aliases": [
+            "Ночная Роза",
+            "Umbrall Rose"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/umbrall_rose.png"
+        },
+        {
+          "name": "Гельвеция",
+          "name_ru": "Гельвеция",
+          "name_en": "Helvetia",
+          "aliases": [
+            "Гельвеция",
+            "Helvetia"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/helvetia.png"
+        },
+        {
+          "name": "Фу Хуа: Лазурная Эмпирея",
+          "name_ru": "Фу Хуа: Лазурная Эмпирея",
+          "name_en": "Azure Empyrea",
+          "aliases": [
+            "AE",
+            "Azure Empyrea",
+            "Fu Hua (AE)",
+            "Лазурная Эмпирея"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/azure_empyrea.png"
+        },
+        {
+          "name": "Дюрандаль: Деа Анхора",
+          "name_ru": "Дюрандаль: Деа Анхора",
+          "name_en": "Dea Anchora",
+          "aliases": [
+            "DA",
+            "Dea Anchora",
+            "Durandal (DA)",
+            "Деа Анхора"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/dea_anchora.png"
+        },
+        {
+          "name": "Дюрандаль: Светлый рыцарь",
+          "name_ru": "Дюрандаль: Светлый рыцарь",
+          "name_en": "Bright Knight: Excelsis",
+          "aliases": [
+            "BK",
+            "BKE",
+            "Bright Knight - Excelsis",
+            "Bright Knight: Excelsis",
+            "Светлый рыцарь"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/bright_knight_excelsis.png"
+        },
+        {
+          "name": "Зеле: Стигийская Нимфа",
+          "name_ru": "Зеле: Стигийская Нимфа",
+          "name_en": "Stygian Nymph",
+          "aliases": [
+            "SN",
+            "Seele (SN)",
+            "Stygian Nymph",
+            "Стигийская Нимфа"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/stygian_nymph.png"
+        },
+        {
+          "name": "Зеле: Звёздная Никта",
+          "name_ru": "Зеле: Звёздная Никта",
+          "name_en": "Starchasm Nyx",
+          "aliases": [
+            "Nyx",
+            "Starchasm Nyx",
+            "Звёздная Никта",
+            "Никта"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/starchasm_nyx.png"
+        },
+        {
+          "name": "Сирин: Чудесная волшебница",
+          "name_ru": "Сирин: Чудесная волшебница",
+          "name_en": "Miracle ☆ Magical Girl",
+          "aliases": [
+            "Miracle Magical Girl",
+            "Miracle ☆ Magical Girl",
+            "Sirin",
+            "Сирин"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/miracle_magical_girl.png"
+        },
+        {
+          "name": "Тереза: Лунная клятва",
+          "name_ru": "Тереза: Лунная клятва",
+          "name_en": "Lunar Vow: Crimson Love",
+          "aliases": [
+            "Luna",
+            "Lunar Vow",
+            "Lunar Vow: Crimson Love",
+            "Луна",
+            "Лунная клятва"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/lunar_vow_crimson_love.png"
+        },
+        {
+          "name": "Грисео: Космическое выражение",
+          "name_ru": "Грисео: Космическое выражение",
+          "name_en": "Cosmic Expression",
+          "aliases": [
+            "CE",
+            "Cosmic Expression",
+            "Griseo (Cosmic)",
+            "Космическое выражение"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/cosmic_expression.png"
+        },
+        {
+          "name": "Рита: Падший Розмарин",
+          "name_ru": "Рита: Падший Розмарин",
+          "name_en": "Fallen Rosemary",
+          "aliases": [
+            "FR",
+            "Fallen Rosemary",
+            "Rita (FR)",
+            "Падший Розмарин"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/fallen_rosemary.png"
+        },
+        {
+          "name": "Фу Хуа: Теневой рыцарь",
+          "name_ru": "Фу Хуа: Теневой рыцарь",
+          "name_en": "Shadow Knight",
+          "aliases": [
+            "SK",
+            "Shadow Knight",
+            "Теневой рыцарь"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/shadow_knight.png"
+        },
+        {
+          "name": "Тереза: Небесный гимн",
+          "name_ru": "Тереза: Небесный гимн",
+          "name_en": "Celestial Hymn",
+          "aliases": [
+            "CH",
+            "Celestial Hymn",
+            "Небесный гимн"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/celestial_hymn.png"
+        },
+        {
+          "name": "Химеко: Кровавая Роза",
+          "name_ru": "Химеко: Кровавая Роза",
+          "name_en": "Blood Rose",
+          "aliases": [
+            "BR",
+            "Blood Rose",
+            "Кровавая Роза"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/blood_rose.png"
+        },
+        {
+          "name": "Химеко: Алый рыцарь",
+          "name_ru": "Химеко: Алый рыцарь",
+          "name_en": "Vermilion Knight: Eclipse",
+          "aliases": [
+            "VK",
+            "Vermilion Knight - Eclipse",
+            "Vermilion Knight: Eclipse",
+            "Алый рыцарь"
+          ],
+          "rarity": "5★",
+          "type": "CHARACTER",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/vermilion_knight_eclipse.png"
+        },
+        {
+          "name": "Ай: Хроно Нави",
+          "name_ru": "Ай: Хроно Нави",
+          "name_en": "Chrono Navi",
+          "aliases": [
+            "Ai Hyperion",
+            "CN",
+            "Chrono Navi",
+            "Ай Гиперион",
+            "Хроно Нави"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/chrono_navi.png"
+        },
+        {
+          "name": "Брони: Хаксор Банни",
+          "name_ru": "Брони: Хаксор Банни",
+          "name_en": "Haxxor Bunny",
+          "aliases": [
+            "Bronie",
+            "HB",
+            "Haxxor Bunny",
+            "Брони",
+            "Хаксор Банни"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/haxxor_bunny.png"
+        },
+        {
+          "name": "Фишль: Принцесса осуждения",
+          "name_ru": "Фишль: Принцесса осуждения",
+          "name_en": "Prinzessin der Verurteilung",
+          "aliases": [
+            "Fischl",
+            "Prinzessin der Verurteilung",
+            "Принцесса осуждения",
+            "Фишль"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/prinzessin_der_verurteilung.png"
+        },
+        {
+          "name": "Зеле: Призрачный хвост",
+          "name_ru": "Зеле: Призрачный хвост",
+          "name_en": "Swallowtail Phantasm",
+          "aliases": [
+            "SP",
+            "Seele (SP)",
+            "Swallowtail Phantasm",
+            "Призрачный ласточкин хвост"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/swallowtail_phantasm.png"
+        },
+        {
+          "name": "Фу Хуа: Ястреб в тумане",
+          "name_ru": "Фу Хуа: Ястреб в тумане",
+          "name_en": "Hawk of the Fog",
+          "aliases": [
+            "Hawk of the Fog",
+            "HotF",
+            "Ястреб в тумане"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/hawk_of_the_fog.png"
+        },
+        {
+          "name": "Броня: Комета Драйв",
+          "name_ru": "Броня: Комета Драйв",
+          "name_en": "Drive Kometa",
+          "aliases": [
+            "DK",
+            "Drive Kometa",
+            "Yamabuki Armor",
+            "Комета Драйв"
+          ],
+          "rarity": "4★",
+          "type": "CHARACTER",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/drive_kometa.png"
+        },
+        {
+          "name": "Оператор: Сонквэ",
+          "name_ru": "Оператор: Сонквэ",
+          "name_en": "Songque (AstralOp)",
+          "aliases": [
+            "Songque (AstralOp)",
+            "Songque AstralOp",
+            "Астральный оператор Сонквэ",
+            "Оператор Сонквэ"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/songque_astralop.png"
+        },
+        {
+          "name": "Оператор: Серапеум",
+          "name_ru": "Оператор: Серапеум",
+          "name_en": "Serapeum (AstralOp)",
+          "aliases": [
+            "Serapeum (AstralOp)",
+            "Serapeum AstralOp",
+            "Астральный оператор Серапеум",
+            "Оператор Серапеум"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/serapeum_astralop.png"
+        },
+        {
+          "name": "Оператор: Тереза",
+          "name_ru": "Оператор: Тереза",
+          "name_en": "Theresa Apocalypse (AstralOp)",
+          "aliases": [
+            "Theresa Apocalypse (AstralOp)",
+            "Theresa AstralOp",
+            "Оператор Тереза"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/theresa_apocalypse_astralop.png"
+        },
+        {
+          "name": "Оператор: Искатель грёз",
+          "name_ru": "Оператор: Искатель грёз",
+          "name_en": "Dreamseeker (AstralOp)",
+          "aliases": [
+            "Dreamseeker",
+            "Dreamseeker (AstralOp)",
+            "Искатель грёз",
+            "Оператор Искатель грёз"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/dreamseeker_astralop.png"
+        },
+        {
+          "name": "Оператор: Чэньсюэ",
+          "name_ru": "Оператор: Чэньсюэ",
+          "name_en": "Chenxue (AstralOp)",
+          "aliases": [
+            "Chenxue",
+            "Chenxue (AstralOp)",
+            "Чэньсюэ"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/chenxue_astralop.png"
+        },
+        {
+          "name": "Оператор: Байлу Ююнь",
+          "name_ru": "Оператор: Байлу Ююнь",
+          "name_en": "Bailu Youyun (AstralOp)",
+          "aliases": [
+            "Bailu Youyun",
+            "Bailu Youyun (AstralOp)",
+            "Байлу Ююнь"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/bailu_youyun_astralop.png"
+        },
+        {
+          "name": "Эльф: Проект Зайчик",
+          "name_ru": "Эльф: Проект Зайчик",
+          "name_en": "Project Bunny (ELF)",
+          "aliases": [
+            "Project Bunny",
+            "Project Bunny (ELF)",
+            "Проект Зайчик",
+            "Эльф Проект Зайчик"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/project_bunny.png"
+        },
+        {
+          "name": "Эльф: Киана Каслана",
+          "name_ru": "Эльф: Киана Каслана",
+          "name_en": "Kiana Kaslana (ELF)",
+          "aliases": [
+            "Kiana ELF",
+            "Kiana Kaslana (ELF)",
+            "Эльф Киана"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/kiana_kaslana_elf.png"
+        },
+        {
+          "name": "Эльф: Элизия",
+          "name_ru": "Эльф: Элизия",
+          "name_en": "Elf Elysia",
+          "aliases": [
+            "Elf Elysia",
+            "Elysia ELF",
+            "Эльф Элизия"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/elf_elysia.png"
+        },
+        {
+          "name": "Эльф: Клинок Дюрандаль",
+          "name_ru": "Эльф: Клинок Дюрандаль",
+          "name_en": "Blade Durandal (ELF)",
+          "aliases": [
+            "Blade Durandal",
+            "Blade Durandal (ELF)",
+            "Клинок Дюрандаль"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/blade_durandal.png"
+        },
+        {
+          "name": "Эльф: Кляйн",
+          "name_ru": "Эльф: Кляйн",
+          "name_en": "Klein (ELF)",
+          "aliases": [
+            "Klein",
+            "Klein (ELF)",
+            "Кляйн"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/klein.png"
+        },
+        {
+          "name": "Эльф: Сирин",
+          "name_ru": "Эльф: Сирин",
+          "name_en": "Sirin (ELF)",
+          "aliases": [
+            "Sirin (ELF)",
+            "Sirin ELF",
+            "Эльф Сирин"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/sirin_elf.png"
+        },
+        {
+          "name": "Эльф: Край Вод",
+          "name_ru": "Эльф: Край Вод",
+          "name_en": "Water's Edge",
+          "aliases": [
+            "Water's Edge",
+            "Water's Edge (ELF)",
+            "Край Вод"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/waters_edge.png"
+        },
+        {
+          "name": "Эльф: Белла",
+          "name_ru": "Эльф: Белла",
+          "name_en": "Bella (ELF)",
+          "aliases": [
+            "Bella",
+            "Bella (ELF)",
+            "Белла"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/bella_elf.png"
+        },
+        {
+          "name": "Эльф: Тесла ЗЕРО",
+          "name_ru": "Эльф: Тесла ЗЕРО",
+          "name_en": "Tesla ZERO",
+          "aliases": [
+            "Tesla ZERO",
+            "Tesla ZERO (ELF)",
+            "Тесла ЗЕРО"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/tesla_zero.png"
+        },
+        {
+          "name": "Эльф: Селун",
+          "name_ru": "Эльф: Селун",
+          "name_en": "Selune's Elegy",
+          "aliases": [
+            "Selune",
+            "Selune's Elegy",
+            "Элегия Селун"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/selunes_elegy.png"
+        },
+        {
+          "name": "Эльф: Книга Фуси",
+          "name_ru": "Эльф: Книга Фуси",
+          "name_en": "Book of Fuxi",
+          "aliases": [
+            "Book of Fuxi",
+            "Fuxi",
+            "Книга Фуси"
+          ],
+          "rarity": "5★",
+          "type": "BANGBOO",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/book_of_fuxi.png"
+        },
+        {
+          "name": "Эльф: Крылья Цзинвэй",
+          "name_ru": "Эльф: Крылья Цзинвэй",
+          "name_en": "Jingwei's Wings",
+          "aliases": [
+            "Jingwei",
+            "Jingwei's Wings",
+            "Крылья Цзинвэй"
+          ],
+          "rarity": "4★",
+          "type": "BANGBOO",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/jingweis_wings.png"
+        },
+        {
+          "name": "Эльф: Кровавые объятия",
+          "name_ru": "Эльф: Кровавые объятия",
+          "name_en": "Blood Embrace (ELF)",
+          "aliases": [
+            "Blood Embrace",
+            "Blood Embrace (ELF)",
+            "Кровавые объятия"
+          ],
+          "rarity": "4★",
+          "type": "BANGBOO",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/blood_embrace.png"
+        },
+        {
+          "name": "Домен Чувств",
+          "name_ru": "Домен Чувств",
+          "name_en": "Domain of Sentience",
+          "aliases": [
+            "Domain of Sentience",
+            "Key of Sentience",
+            "Домен Чувств",
+            "Ключ Чувств"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/domain_of_sentience.png"
+        },
+        {
+          "name": "Домен Эго",
+          "name_ru": "Домен Эго",
+          "name_en": "Domain of Ego: Flawless Return",
+          "aliases": [
+            "Domain of Ego",
+            "Domain of Ego: Flawless Return",
+            "Key of Ego",
+            "Домен Эго"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/domain_of_ego.png"
+        },
+        {
+          "name": "Домен Кары",
+          "name_ru": "Домен Кары",
+          "name_en": "Domain of Sanction",
+          "aliases": [
+            "Domain of Sanction",
+            "Key of Castigation",
+            "Домен Кары",
+            "Ключ Кары"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/domain_of_sanction.png"
+        },
+        {
+          "name": "Домен Пустоты",
+          "name_ru": "Домен Пустоты",
+          "name_en": "Domain of the Void",
+          "aliases": [
+            "Domain of the Void",
+            "Keys of the Void",
+            "Домен Пустоты",
+            "Ключи Пустоты"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/domain_of_the_void.png"
+        },
+        {
+          "name": "Домен Откровения",
+          "name_ru": "Домен Откровения",
+          "name_en": "Domain of Revelation",
+          "aliases": [
+            "Domain of Revelation",
+            "Key of Reason",
+            "Домен Откровения",
+            "Ключ Разума"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": true,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/domain_of_revelation.png"
+        },
+        {
+          "name": "Домен Накала",
+          "name_ru": "Домен Накала",
+          "name_en": "Domain of Incandescence",
+          "aliases": [
+            "Domain of Incandescence",
+            "Key of Radiance",
+            "Домен Накала",
+            "Ключ Сияния"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/domain_of_incandescence.png"
+        },
+        {
+          "name": "Полуночная Атаэгина",
+          "name_ru": "Полуночная Атаэгина",
+          "name_en": "Midnight Ataegina",
+          "aliases": [
+            "Midnight Ataegina",
+            "Midnight Eclipse",
+            "Полуночная Атаэгина"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/midnight_ataegina.png"
+        },
+        {
+          "name": "Башня прошлого",
+          "name_ru": "Башня прошлого",
+          "name_en": "Tower of the Past: Silk Ladder",
+          "aliases": [
+            "Tower of the Past",
+            "Tower of the Past: Silk Ladder",
+            "Башня прошлого"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/tower_of_the_past.png"
+        },
+        {
+          "name": "Банкетная роза",
+          "name_ru": "Банкетная роза",
+          "name_en": "Banquet Rose: Crown",
+          "aliases": [
+            "Banquet Rose",
+            "Banquet Rose: Crown",
+            "Банкетная роза"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/banquet_rose.png"
+        },
+        {
+          "name": "Лук одинокого факела",
+          "name_ru": "Лук одинокого факела",
+          "name_en": "Bow of the Lone Torch: Flame Chaser",
+          "aliases": [
+            "Bow of the Lone Torch",
+            "Лук одинокого факела"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/bow_of_the_lone_torch.png"
+        },
+        {
+          "name": "Очищающие крылья",
+          "name_ru": "Очищающие крылья",
+          "name_en": "Purifying Wings",
+          "aliases": [
+            "Purifying Wings",
+            "Очищающие крылья"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/purifying_wings.png"
+        },
+        {
+          "name": "Перо рассвета",
+          "name_ru": "Перо рассвета",
+          "name_en": "Feather of Daybreak",
+          "aliases": [
+            "Feather of Daybreak",
+            "Перо рассвета"
+          ],
+          "rarity": "5★",
+          "type": "WEAPON",
+          "is_standard": false,
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/feather_of_daybreak.png"
         }
       ]
     }

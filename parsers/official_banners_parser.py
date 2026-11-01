@@ -114,6 +114,9 @@ def load_catalog_lookup(catalog_path: str) -> Dict[int, Dict[str, Dict[str, Any]
                         lookup[gt][name_ru] = item
                     if name_en:
                         lookup[gt][name_en] = item
+                    for alias in item.get("aliases", []):
+                        if alias:
+                            lookup[gt][alias.strip().lower()] = item
     except Exception as e:
         print(f"[Parser] Error reading catalog {catalog_path}: {e}")
 
