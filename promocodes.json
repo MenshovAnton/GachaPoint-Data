@@ -3,23 +3,6 @@
   "updated_at": "2026-11-01T06:58:41Z",
   "codes": [
     {
-      "id": "genshin_pj2kebraysrm",
-      "game_type": 0,
-      "code": "PJ2KEBRAYSRM",
-      "rewards_description": "60 Камней Истока, 5 Опыта искателя приключений",
-      "rewards_description_ru": "60 Камней Истока, 5 Опыта искателя приключений",
-      "rewards_description_en": "60 Primogems, 5 Adventurer's Experience",
-      "reward_types": [
-        "PRIMOGEM",
-        "EXP"
-      ],
-      "status": "ACTIVE",
-      "expires_at": "2026-11-26T06:32:47Z",
-      "created_at": "2026-10-23T12:00:00Z",
-      "is_stream": false,
-      "is_active": true
-    },
-    {
       "id": "genshin_oktcv81f9h8d",
       "game_type": 0,
       "code": "OKTCV81F9H8D",
@@ -135,39 +118,6 @@
       "status": "PERMANENT",
       "expires_at": null,
       "created_at": "2020-09-28T00:00:00Z",
-      "is_stream": false,
-      "is_active": true
-    },
-    {
-      "id": "hsr_dslspnbreasp",
-      "game_type": 1,
-      "code": "DSLSPNBREASP",
-      "rewards_description": "50 Звёздного нефрита, 10 000 Кредитов",
-      "rewards_description_ru": "50 Звёздного нефрита, 10 000 Кредитов",
-      "rewards_description_en": "50 Stellar Jade, 10,000 Credits",
-      "reward_types": [
-        "JADE",
-        "CREDIT"
-      ],
-      "status": "NEW",
-      "expires_at": "2026-11-28T23:59:59Z",
-      "created_at": "2026-10-28T12:00:00Z",
-      "is_stream": false,
-      "is_active": true
-    },
-    {
-      "id": "hsr_pearlappraise",
-      "game_type": 1,
-      "code": "PEARLAPPRAISE",
-      "rewards_description": "3 Путеводителя, 2 Холодные шутки",
-      "rewards_description_ru": "3 Путеводителя, 2 Холодные шутки",
-      "rewards_description_en": "3 Traveler's Guides, 2 Cold Jokes",
-      "reward_types": [
-        "EXP"
-      ],
-      "status": "NEW",
-      "expires_at": "2026-11-28T23:59:59Z",
-      "created_at": "2026-10-28T12:00:00Z",
       "is_stream": false,
       "is_active": true
     },
@@ -298,39 +248,6 @@
       "status": "PERMANENT",
       "expires_at": null,
       "created_at": "2023-04-26T00:00:00Z",
-      "is_stream": false,
-      "is_active": true
-    },
-    {
-      "id": "zzz_zzzseason3",
-      "game_type": 2,
-      "code": "ZZZSEASON3",
-      "rewards_description": "50 Полихромов",
-      "rewards_description_ru": "50 Полихромов",
-      "rewards_description_en": "50 Polychromes",
-      "reward_types": [
-        "POLYCHROME"
-      ],
-      "status": "NEW",
-      "expires_at": "2026-11-30T23:59:59Z",
-      "created_at": "2026-10-30T12:00:00Z",
-      "is_stream": false,
-      "is_active": true
-    },
-    {
-      "id": "zzz_zzz30bangboo",
-      "game_type": 2,
-      "code": "ZZZ30BANGBOO",
-      "rewards_description": "60 Полихромов, 6 666 Денни",
-      "rewards_description_ru": "60 Полихромов, 6 666 Денни",
-      "rewards_description_en": "60 Polychromes, 6,666 Dennies",
-      "reward_types": [
-        "POLYCHROME",
-        "DENNY"
-      ],
-      "status": "NEW",
-      "expires_at": "2026-11-30T23:59:59Z",
-      "created_at": "2026-10-29T12:00:00Z",
       "is_stream": false,
       "is_active": true
     },
@@ -608,22 +525,6 @@
       "status": "ACTIVE",
       "expires_at": "2026-11-26T06:32:49Z",
       "created_at": "2026-10-10T12:00:00Z",
-      "is_stream": false,
-      "is_active": true
-    },
-    {
-      "id": "hi3_cheerscaptain",
-      "game_type": 3,
-      "code": "CHEERSCAPTAIN",
-      "rewards_description": "100 Кристаллов",
-      "rewards_description_ru": "100 Кристаллов",
-      "rewards_description_en": "100 Crystals",
-      "reward_types": [
-        "CRYSTAL"
-      ],
-      "status": "PERMANENT",
-      "expires_at": null,
-      "created_at": "2026-10-01T12:00:00Z",
       "is_stream": false,
       "is_active": true
     },
