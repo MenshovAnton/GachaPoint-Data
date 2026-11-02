@@ -16,7 +16,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 **GachaPoint Data Hub** is the central, open repository that powers the live data services in the [GachaPoint](https://github.com/MenshovAnton/GachaPoint) mobile app. It aggregates, validates, and serves verified game data:
 - **Active & Livestream Promo Codes:** with automatic expiration countdowns and localized rewards.
@@ -25,7 +25,7 @@
 
 ---
 
-## 📁 Repository Structure & Data Schemas
+## Repository Structure & Data Schemas
 
 | File | Purpose | Localization & Structure |
 | :--- | :--- | :--- |
@@ -37,7 +37,7 @@
 
 ---
 
-## 🎮 Game Ranks & Entity Types
+## Game Ranks & Entity Types
 
 Each game uses native, authentic terminology:
 
@@ -50,7 +50,7 @@ Each game uses native, authentic terminology:
 
 ---
 
-## 🤖 Automation Pipeline
+## Automation Pipeline
 
 ### 1. Scheduled GitHub Actions Sync (`.github/workflows/sync.yml`)
 Runs every 3 hours:
@@ -68,7 +68,7 @@ The tool queries official API endpoints, fetches the official in-game square ico
 
 ---
 
-## ⚖️ Legal & Fair Use Disclaimer
+## Legal & Fair Use Disclaimer
 
 *GachaPoint Data Hub* is an open-source, non-commercial fan-made repository created for informational and utility purposes.
 - This project is **not affiliated with, endorsed, sponsored, or approved by miHoYo / HoYoverse (COGNOSPHERE PTE. LTD.)**.
