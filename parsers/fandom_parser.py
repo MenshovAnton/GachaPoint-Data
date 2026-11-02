@@ -166,15 +166,28 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[str, str, st
     # 4. Asterite (HI3)
     ast_match = re.search(r'{{Item\|Asterite[^}]*?quantity\s*=\s*([\d,]+)', row_text, re.IGNORECASE)
     if not ast_match:
-        ast_match = re.search(r'Asterite\s*(?:x|\*)\s*([\d,]+)', row_text, re.IGNORECASE)
+        ast_match = re.search(r'(?:Asterite|Астерит)s?\s*(?:x|\*|\:)?\s*([\d,]+)', row_text, re.IGNORECASE)
+    if not ast_match:
+        ast_match = re.search(r'([\d,]+)\s*(?:Asterite|Астерит)', row_text, re.IGNORECASE)
     if ast_match:
-        amount = ast_match.group(1).replace(",", "")
-        reward_types.append("ASTERITE")
-        ru_parts.append(f"{amount} Астерита")
-        en_parts.append(f"{amount} Asterite")
+        amount = ast_match.group(1).replace(",", "").replace(" ", "")
+        if amount.isdigit():
+            reward_types.append("ASTERITE")
+            ru_parts.append(f"{amount} Астерита")
+            en_parts.append(f"{amount} Asterite")
+
+    # 5. Coins / Gold (HI3)
+    coin_match = re.search(r'([\d,]+)\s*(?:Coins?|Монет)', row_text, re.IGNORECASE)
+    if coin_match and "COIN" not in reward_types:
+        raw_num = coin_match.group(1).replace(",", "").replace(" ", "")
+        if raw_num.isdigit():
+            fmt_num = f"{int(raw_num):,}".replace(",", " ")
+            reward_types.append("COIN")
+            ru_parts.append(f"{fmt_num} Монет")
+            en_parts.append(f"{fmt_num} Coins")
 
     if not ru_parts:
-        return "Внутриигровые награды", "Внутриигровые награды", "In-game Rewards", reward_types or [config["primary_reward"]]
+        return None, None, None, reward_types or [config["primary_reward"]]
 
     desc_ru = ", ".join(ru_parts)
     desc_en = ", ".join(en_parts)
@@ -243,7 +256,7 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
         # Expiration determination
         is_expired = is_section_expired
         expires_at = None
-        created_at = f"{dates[0]}T12:00:00Z" if dates else now_iso
+        created_at = f"{dates[0]}T12:00:00Z" if dates else (None if is_section_expired else now_iso)
 
         if is_section_expired:
             is_expired = True
@@ -252,7 +265,7 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
             elif dates:
                 expires_at = f"{dates[0]}T23:59:59Z"
             else:
-                expires_at = now_iso
+                expires_at = None
         else:
             # Active section parsing
             if len(dates) >= 2:

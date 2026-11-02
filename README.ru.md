@@ -1,51 +1,76 @@
-# GachaPoint Data Hub
+[English](README.md) | [Русский](README.ru.md)
 
-[🇬🇧 Read in English](README.md)
+<h1 align="center">GachaPoint Data Hub</h1>
 
-Официальный открытый источник данных для приложения **GachaPoint**: актуальные промокоды, каталог персонажей и оружия, а также расписание баннеров игр HoYoverse (Genshin Impact, Honkai: Star Rail, Zenless Zone Zero и Honkai Impact 3rd).
+<p align="center">
+  Автономный пайплайн верификации и открытая база данных для <b>GachaPoint</b><br>
+  Поддерживает <b>Genshin Impact</b>, <b>Honkai: Star Rail</b>, <b>Zenless Zone Zero</b> и <b>Honkai Impact 3rd</b>.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/пайплайн-автономный-brightgreen?style=flat-square" alt="Pipeline Status">
+  <img src="https://img.shields.io/badge/валидация-строгий_линтер-blue?style=flat-square" alt="Validation">
+  <img src="https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="CI">
+  <a href="https://t.me/GachaPoint_official"><img src="https://img.shields.io/badge/Telegram-@GachaPoint__official-2CA5E0?style=flat-square&logo=telegram&logoColor=white" alt="Telegram"></a>
+</p>
+
+---
+
+## 📖 Обзор
+
+**GachaPoint Data Hub** — это открытый центральный репозиторий данных для мобильного приложения [GachaPoint](https://github.com/MenshovAnton/GachaPoint). Он собирает, валидирует и предоставляет проверенные игровые данные:
+- **Действующие промокоды и коды со стримов:** с автоматическим таймером истечения и переведенными наградами.
+- **Каталог игровых сущностей:** полные списки персонажей, оружия, световых конусов, амплификаторов и помощников с разметкой стандартного пула 50/50 и ссылками на официальные квадратные иконки.
+- **Расписание баннеров и хроника реранов:** полная хронология версий и актуальные молитвы/прыжки событий.
 
 ---
 
 ## 📁 Структура репозитория
 
-| Файл | Описание | Локализация |
+| Файл | Назначение | Формат и локализация |
 | :--- | :--- | :--- |
-| `promocodes.json` | Актуальные промокоды для 4-х игр со сроками действия, статусами (`STREAM`, `ACTIVE`, `PERMANENT`, `EXPIRED`) и типами наград | Билингвальный (`rewards_description_ru`, `rewards_description_en`) |
-| `game_catalog.json` | База персонажей и оружия, признаки стандартного пула 5★ для распознавания гаранта 50/50 и прямые URL аватаров | Билингвальный (`name_ru`, `name_en`), псевдонимы (aliases), CDN |
-| `banners_schedule.json` | Расписание текущих, прошедших и анонсированных баннеров с таймстампами и версиями | Билингвальный (`featured_five_stars_ru`, `featured_five_stars_en`) |
-| `add_entity.py` | Автоматический CLI-инструмент для скачивания официальных иконок и добавления сущностей | Для всех 4-х игр |
-| `sync_promocodes.py` | Скрипт автоматического парсинга, модерации статусов и синхронизации | Автономный |
-| `lint_data.py` | Строгий линтер целостности данных и перекрёстных ссылок | Автономный |
-| `.github/workflows/sync.yml` | GitHub Actions workflow, запускающийся каждые 3 часа | CI/CD |
+| [`promocodes.json`](promocodes.json) | Активные, стрим, постоянные и архивные промокоды | `rewards_description_ru`, `rewards_description_en`, `reward_types` |
+| [`game_catalog.json`](game_catalog.json) | Каталог персонажей, оружия и спутников | `name_ru`, `name_en`, `rarity`, `type`, `icon_url`, `is_standard`, `aliases` |
+| [`banners_schedule.json`](banners_schedule.json) | Прошедшие, текущие и анонсированные баннеры | `version`, `phase`, `start_date`, `end_date`, `featured_five_stars_ru/en` |
+| [`lint_data.py`](lint_data.py) | Строгий валидатор целостности и схем | Сквозная проверка баннеров, аватарок и алиасов каталога |
+| [`sync_promocodes.py`](sync_promocodes.py) | Автономная модерация, парсер Fandom MediaWiki и HoYoLAB | Запускается каждые 3 часа через GitHub Actions |
 
 ---
 
-## 🤖 Автоматизация и поддержка
+## 🎮 Редкости и типы сущностей по играм
 
-### 1. Автоматическая синхронизация через GitHub Actions
-Репозиторий каждые 3 часа запускает `.github/workflows/sync.yml`:
-- Парсит Fandom MediaWiki API на предмет свежих промокодов со стримов разработчиков.
-- Опрашивает официальный API новостей HoYoLAB на предмет анонсов молитв и прыжков.
-- Модерирует календарные статусы баннеров (`CURRENT`, `UPCOMING`, `ENDED`).
-- Прогоняет `lint_data.py` для гарантии 0 ошибок и отсутствия битых ссылок.
+Каждая игра использует аутентичную терминологию:
 
-### 2. Добавление нового персонажа или оружия
-При выходе или анонсе нового персонажа/оружия достаточно запустить одну команду:
+| Game Type | Игра | Высшая редкость | Эпическая редкость | Дополнительные типы |
+| :---: | :--- | :---: | :---: | :--- |
+| `0` | **Genshin Impact** | `5★` | `4★` | `CHARACTER`, `WEAPON` |
+| `1` | **Honkai: Star Rail** | `5★` | `4★` | `CHARACTER`, `WEAPON` (Световые конусы) |
+| `2` | **Zenless Zone Zero** | `S` (S-ранг) | `A` (A-ранг) | `CHARACTER`, `WEAPON` (Амплификаторы), `BANGBOO` |
+| `3` | **Honkai Impact 3rd** | `S` (S-ранг) | `A` (A-ранг) | `CHARACTER` (Баттлсьюты), `WEAPON`, `ASTRAL_OP`, `ELF` |
+
+---
+
+## 🤖 Автоматизация
+
+### 1. Расписание GitHub Actions (`.github/workflows/sync.yml`)
+Выполняется каждые 3 часа:
+- Скрейпит MediaWiki API Fandom на наличие новых кодов и трансляций.
+- Модерирует статусы баннеров (`CURRENT`, `ANNOUNCED`, `EXPIRED`) по календарю.
+- Запускает `lint_data.py` для предотвращения битых ссылок и некорректных схем перед коммитом.
+- Отправляет уведомления в Telegram-канал при появлении новых кодов.
+
+### 2. Добавление персонажа или оружия
+Через CLI-утилиту `add_entity.py`:
 ```bash
 python add_entity.py --game 0 --name-ru "Скирк" --name-en "Skirk" --rarity "5★" --type CHARACTER
 ```
-Скрипт автономно:
-1. Находит официальный внутриигровой квадратный значок/бюст на Fandom MediaWiki.
-2. Скачивает и конвертирует изображение в 256×256 (или 512×512) RGBA PNG в папку `avatars/<game>/`.
-3. Регистрирует сущность в `game_catalog.json` с каноничным URL и алиасами.
-4. Проверяет репозиторий через `lint_data.py`.
+Утилита находит официальную квадратную иконку, сохраняет в `avatars/<game>/` и регистрирует алиасы в `game_catalog.json`.
 
 ---
 
-## ⚖️ Юридический дисклеймер (Legal Disclaimer)
+## ⚖️ Правовая информация (Fair Use)
 
-*GachaPoint Data Hub* является некоммерческим фанатским проектом с открытым исходным кодом, созданным в информационных и служебных целях.
-
-- Данный проект **не связан, не спонсируется и не одобрен компанией miHoYo / HoYoverse (COGNOSPHERE PTE. LTD.)**.
-- *Genshin Impact*, *Honkai: Star Rail*, *Zenless Zone Zero*, *Honkai Impact 3rd*, а также все сопутствующие имена персонажей, названия оружия, изображения и товарные знаки являются интеллектуальной собственностью **COGNOSPHERE PTE. LTD.** / **miHoYo**.
-- Все графические ассеты и миниатюры (thumbnails), размещённые в данном репозитории, используются в рамках принципа **Fair Use (Добросовестное использование)** исключительно для визуальной идентификации в бесплатном пользовательском приложении.
+*GachaPoint Data Hub* — некоммерческий фанатский проект с открытым исходным кодом.
+- Проект **не связан с компанией miHoYo / HoYoverse (COGNOSPHERE PTE. LTD.)**, не спонсируется и не утверждается ею.
+- Все торговые марки, названия персонажей и графические материалы принадлежат компании **COGNOSPHERE PTE. LTD.** / **miHoYo**.
+- Все миниатюры и изображения в репозитории используются в справочных целях в бесплатном приложении на основе принципов **Fair Use** (добросовестного использования).

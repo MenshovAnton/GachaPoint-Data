@@ -82,10 +82,10 @@ def lint_catalog(base_dir: str) -> Tuple[Dict[int, Dict[str, Any]], List[str], L
                 if not os.path.exists(local_avatar):
                     warnings.append(f"Game {gt} item '{name}': avatar file not found locally: avatars/{gt}/{avatar_leaf}")
 
-            if not rarity or not any(s in rarity for s in ["3★", "4★", "5★"]):
+            if not rarity or not any(s in rarity for s in ["3★", "4★", "5★", "S", "A", "B"]):
                 warnings.append(f"Game {gt} item '{name}': unexpected rarity '{rarity}'")
 
-            if item_type not in ["CHARACTER", "WEAPON", "BANGBOO"]:
+            if item_type not in ["CHARACTER", "WEAPON", "BANGBOO", "ASTRAL_OP", "ELF"]:
                 warnings.append(f"Game {gt} item '{name}': unknown type '{item_type}'")
 
             # Register in lookup for banner validation

@@ -280,11 +280,26 @@ def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> Lis
                     existing_item["expires_at"] = item["expires_at"]
             if item.get("is_stream"):
                 existing_item["is_stream"] = True
-            # DO NOT overwrite expires_at on active existing codes with synthetic dates!
-            # Only fill in if existing_item had no expires_at
-            if not existing_item.get("expires_at") and item.get("expires_at"):
-                existing_item["expires_at"] = item["expires_at"]
+            # Never overwrite existing informative description with generic placeholders
+            if (not existing_item.get("rewards_description")
+                    or "внутриигровые" in existing_item.get("rewards_description", "").lower()):
+                if item.get("rewards_description") and "внутриигровые" not in item.get("rewards_description", "").lower():
+                    existing_item["rewards_description"] = item["rewards_description"]
+                    existing_item["rewards_description_ru"] = item.get("rewards_description_ru", item["rewards_description"])
+                    existing_item["rewards_description_en"] = item.get("rewards_description_en", item["rewards_description"])
             continue
+
+        # For newly discovered codes: skip ancient expired codes without known dates
+        if item.get("status") == "EXPIRED" and not item.get("expires_at") and not item.get("created_at"):
+            continue
+
+        # If rewards description is missing, assign game primary reward
+        if not item.get("rewards_description"):
+            def_cur = "Камни Истока" if g_type == 0 else "Звёздный нефрит" if g_type == 1 else "Полихромы" if g_type == 2 else "Кристаллы"
+            def_cur_en = "Primogems" if g_type == 0 else "Stellar Jade" if g_type == 1 else "Polychromes" if g_type == 2 else "Crystals"
+            item["rewards_description"] = def_cur
+            item["rewards_description_ru"] = def_cur
+            item["rewards_description_en"] = def_cur_en
 
         data.setdefault("codes", []).append(item)
         existing_map[key] = item

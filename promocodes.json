@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T17:13:33Z",
+  "updated_at": "2026-11-02T13:28:22Z",
   "codes": [
     {
       "id": "scraped_0_pj2kebraysrm",
@@ -630,326 +630,6 @@
       "is_active": false
     },
     {
-      "id": "scraped_3_godentropy",
-      "game_type": 3,
-      "code": "GODENTROPY",
-      "rewards_description": "350 Кристаллов",
-      "rewards_description_ru": "350 Кристаллов",
-      "rewards_description_en": "350 Crystals",
-      "reward_types": [
-        "CRYSTAL"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_bv8fvtzx6k",
-      "game_type": 3,
-      "code": "BV8FVTZX6K",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_qubp3ncyi3",
-      "game_type": 3,
-      "code": "QUBP3NCYI3",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_tosenadina",
-      "game_type": 3,
-      "code": "TOSENADINA",
-      "rewards_description": "100 Кристаллов",
-      "rewards_description_ru": "100 Кристаллов",
-      "rewards_description_en": "100 Crystals",
-      "reward_types": [
-        "CRYSTAL"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_zu1tnfwrx2",
-      "game_type": 3,
-      "code": "ZU1TNFWRX2",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_w1gpb7dgnh",
-      "game_type": 3,
-      "code": "W1GPB7DGNH",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_g5mponnqut",
-      "game_type": 3,
-      "code": "G5MPONNQUT",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_mydelivery",
-      "game_type": 3,
-      "code": "MYDELIVERY",
-      "rewards_description": "100 Кристаллов",
-      "rewards_description_ru": "100 Кристаллов",
-      "rewards_description_en": "100 Crystals",
-      "reward_types": [
-        "CRYSTAL"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_chiefmedic",
-      "game_type": 3,
-      "code": "CHIEFMEDIC",
-      "rewards_description": "350 Кристаллов",
-      "rewards_description_ru": "350 Кристаллов",
-      "rewards_description_en": "350 Crystals",
-      "reward_types": [
-        "CRYSTAL"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_q9mpenxj6n",
-      "game_type": 3,
-      "code": "Q9MPENXJ6N",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_timealbum",
-      "game_type": 3,
-      "code": "TIMEALBUM",
-      "rewards_description": "100 Кристаллов",
-      "rewards_description_ru": "100 Кристаллов",
-      "rewards_description_en": "100 Crystals",
-      "reward_types": [
-        "CRYSTAL"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_m1xt0frzlc",
-      "game_type": 3,
-      "code": "M1XT0FRZLC",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_5t8nupyuc2",
-      "game_type": 3,
-      "code": "5T8NUPYUC2",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_39mtmfmmsp",
-      "game_type": 3,
-      "code": "39MTMFMMSP",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_youyunsgift",
-      "game_type": 3,
-      "code": "YOUYUNSGIFT",
-      "rewards_description": "100 Кристаллов",
-      "rewards_description_ru": "100 Кристаллов",
-      "rewards_description_en": "100 Crystals",
-      "reward_types": [
-        "CRYSTAL"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_gt8penfn5i",
-      "game_type": 3,
-      "code": "GT8PENFN5I",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_79vnqp4wqv",
-      "game_type": 3,
-      "code": "79VNQP4WQV",
-      "rewards_description": "30 Кристаллов",
-      "rewards_description_ru": "30 Кристаллов",
-      "rewards_description_en": "30 Crystals",
-      "reward_types": [
-        "CRYSTAL"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_1n6pu7w6fl",
-      "game_type": 3,
-      "code": "1N6PU7W6FL",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_cheerscaptain",
-      "game_type": 3,
-      "code": "CHEERSCAPTAIN",
-      "rewards_description": "100 Кристаллов",
-      "rewards_description_ru": "100 Кристаллов",
-      "rewards_description_en": "100 Crystals",
-      "reward_types": [
-        "CRYSTAL"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
-      "id": "scraped_3_6tztqfars7",
-      "game_type": 3,
-      "code": "6TZTQFARS7",
-      "rewards_description": "500 Астерита",
-      "rewards_description_ru": "500 Астерита",
-      "rewards_description_en": "500 Asterite",
-      "reward_types": [
-        "ASTERITE"
-      ],
-      "status": "EXPIRED",
-      "expires_at": "2026-11-01T17:13:33Z",
-      "created_at": "2026-11-01T17:13:33Z",
-      "is_stream": false,
-      "is_active": false
-    },
-    {
       "id": "genshin_hourofruin",
       "game_type": 0,
       "code": "HOUROFRUIN",
@@ -1487,6 +1167,326 @@
       "status": "EXPIRED",
       "expires_at": "2026-03-19T23:59:59Z",
       "created_at": "2026-02-13T12:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_godentropy",
+      "game_type": 3,
+      "code": "GODENTROPY",
+      "rewards_description": "350 Кристаллов",
+      "rewards_description_ru": "350 Кристаллов",
+      "rewards_description_en": "350 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_bv8fvtzx6k",
+      "game_type": 3,
+      "code": "BV8FVTZX6K",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_qubp3ncyi3",
+      "game_type": 3,
+      "code": "QUBP3NCYI3",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_tosenadina",
+      "game_type": 3,
+      "code": "TOSENADINA",
+      "rewards_description": "100 Кристаллов",
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_zu1tnfwrx2",
+      "game_type": 3,
+      "code": "ZU1TNFWRX2",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_w1gpb7dgnh",
+      "game_type": 3,
+      "code": "W1GPB7DGNH",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_g5mponnqut",
+      "game_type": 3,
+      "code": "G5MPONNQUT",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_mydelivery",
+      "game_type": 3,
+      "code": "MYDELIVERY",
+      "rewards_description": "100 Кристаллов",
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_chiefmedic",
+      "game_type": 3,
+      "code": "CHIEFMEDIC",
+      "rewards_description": "350 Кристаллов",
+      "rewards_description_ru": "350 Кристаллов",
+      "rewards_description_en": "350 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_q9mpenxj6n",
+      "game_type": 3,
+      "code": "Q9MPENXJ6N",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_timealbum",
+      "game_type": 3,
+      "code": "TIMEALBUM",
+      "rewards_description": "100 Кристаллов",
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_m1xt0frzlc",
+      "game_type": 3,
+      "code": "M1XT0FRZLC",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_5t8nupyuc2",
+      "game_type": 3,
+      "code": "5T8NUPYUC2",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_39mtmfmmsp",
+      "game_type": 3,
+      "code": "39MTMFMMSP",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_youyunsgift",
+      "game_type": 3,
+      "code": "YOUYUNSGIFT",
+      "rewards_description": "100 Кристаллов",
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_gt8penfn5i",
+      "game_type": 3,
+      "code": "GT8PENFN5I",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_79vnqp4wqv",
+      "game_type": 3,
+      "code": "79VNQP4WQV",
+      "rewards_description": "30 Кристаллов",
+      "rewards_description_ru": "30 Кристаллов",
+      "rewards_description_en": "30 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_1n6pu7w6fl",
+      "game_type": 3,
+      "code": "1N6PU7W6FL",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_cheerscaptain",
+      "game_type": 3,
+      "code": "CHEERSCAPTAIN",
+      "rewards_description": "100 Кристаллов",
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
+      "is_stream": false,
+      "is_active": false
+    },
+    {
+      "id": "scraped_3_6tztqfars7",
+      "game_type": 3,
+      "code": "6TZTQFARS7",
+      "rewards_description": "500 Астерита",
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "status": "EXPIRED",
+      "expires_at": "2023-01-31T23:59:59Z",
+      "created_at": "2023-01-01T00:00:00Z",
       "is_stream": false,
       "is_active": false
     }
