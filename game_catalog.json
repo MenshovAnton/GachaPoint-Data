@@ -3075,7 +3075,7 @@
           "rarity": "5★",
           "type": "WEAPON",
           "is_standard": false,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/worrisome,_blissful.png",
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/worrisome_blissful.png",
           "aliases": [
             "Topaz LC"
           ]
@@ -4198,7 +4198,7 @@
           "rarity": "A",
           "type": "WEAPON",
           "is_standard": true,
-          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/drill_rig___red_axis.png",
+          "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/2/drill_rig_red_axis.png",
           "aliases": [
             "Drill Rig"
           ]

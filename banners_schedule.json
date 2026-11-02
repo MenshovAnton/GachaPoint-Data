@@ -2095,6 +2095,66 @@
           ]
         },
         {
+          "id": "genshin_4_5_chronicled",
+          "name": "Молитва хроник: Стихи утреннего ветра",
+          "name_ru": "Молитва хроник: Стихи утреннего ветра",
+          "name_en": "Chronicled Wish: Ode to the Dawn Breeze",
+          "type": "CHRONICLED",
+          "version": "4.5",
+          "phase": 1,
+          "start_date": "2024-03-13",
+          "end_date": "2024-04-02",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Альбедо",
+            "Кли",
+            "Эола",
+            "Мона",
+            "Дилюк",
+            "Джинн"
+          ],
+          "featured_five_stars_ru": [
+            "Альбедо",
+            "Кли",
+            "Эола",
+            "Мона",
+            "Дилюк",
+            "Джинн"
+          ],
+          "featured_five_stars_en": [
+            "Albedo",
+            "Klee",
+            "Eula",
+            "Mona",
+            "Diluc",
+            "Jean"
+          ],
+          "featured_four_stars": [
+            "Беннет",
+            "Диона",
+            "Фишль",
+            "Сахароза",
+            "Розария",
+            "Мика"
+          ],
+          "featured_four_stars_ru": [
+            "Беннет",
+            "Диона",
+            "Фишль",
+            "Сахароза",
+            "Розария",
+            "Мика"
+          ],
+          "featured_four_stars_en": [
+            "Bennett",
+            "Diona",
+            "Fischl",
+            "Sucrose",
+            "Rosaria",
+            "Mika"
+          ]
+        },
+        {
           "id": "genshin_4_5_2",
           "version": "4.5",
           "phase": 2,
@@ -2594,6 +2654,66 @@
           ]
         },
         {
+          "id": "genshin_5_3_chronicled",
+          "name": "Молитва хроник: Шепот золотых скал",
+          "name_ru": "Молитва хроник: Шепот золотых скал",
+          "name_en": "Chronicled Wish: Whispers of the Golden Crag",
+          "type": "CHRONICLED",
+          "version": "5.3",
+          "phase": 1,
+          "start_date": "2025-01-01",
+          "end_date": "2025-01-21",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Гань Юй",
+            "Шэнь Хэ",
+            "Бай Чжу",
+            "Тарталья",
+            "Кэ Цин",
+            "Ци Ци"
+          ],
+          "featured_five_stars_ru": [
+            "Гань Юй",
+            "Шэнь Хэ",
+            "Бай Чжу",
+            "Тарталья",
+            "Кэ Цин",
+            "Ци Ци"
+          ],
+          "featured_five_stars_en": [
+            "Ganyu",
+            "Shenhe",
+            "Baizhu",
+            "Tartaglia",
+            "Keqing",
+            "Qiqi"
+          ],
+          "featured_four_stars": [
+            "Син Цю",
+            "Сян Лин",
+            "Чун Юнь",
+            "Янь Фэй",
+            "Юнь Цзинь",
+            "Бэй Доу"
+          ],
+          "featured_four_stars_ru": [
+            "Син Цю",
+            "Сян Лин",
+            "Чун Юнь",
+            "Янь Фэй",
+            "Юнь Цзинь",
+            "Бэй Доу"
+          ],
+          "featured_four_stars_en": [
+            "Xingqiu",
+            "Xiangling",
+            "Chongyun",
+            "Yanfei",
+            "Yun Jin",
+            "Beidou"
+          ]
+        },
+        {
           "id": "genshin_5_3_2",
           "game_type": 0,
           "version": "5.3",
@@ -2735,6 +2855,66 @@
             "Яо Яо",
             "Гейминг",
             "Сян Лин"
+          ]
+        },
+        {
+          "id": "genshin_5_5_chronicled",
+          "name": "Молитва хроник: Сад вечной вишни",
+          "name_ru": "Молитва хроник: Сад вечной вишни",
+          "name_en": "Chronicled Wish: Garden of Eternal Cherry",
+          "type": "CHRONICLED",
+          "version": "5.5",
+          "phase": 1,
+          "start_date": "2025-03-26",
+          "end_date": "2025-04-15",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Аяка",
+            "Ёимия",
+            "Аято",
+            "Итто",
+            "Кокоми",
+            "Тиори"
+          ],
+          "featured_five_stars_ru": [
+            "Аяка",
+            "Ёимия",
+            "Аято",
+            "Итто",
+            "Кокоми",
+            "Тиори"
+          ],
+          "featured_five_stars_en": [
+            "Kamisato Ayaka",
+            "Yoimiya",
+            "Kamisato Ayato",
+            "Arataki Itto",
+            "Sangonomiya Kokomi",
+            "Chiori"
+          ],
+          "featured_four_stars": [
+            "Куки Синобу",
+            "Тома",
+            "Горо",
+            "Сара",
+            "Саю",
+            "Кирара"
+          ],
+          "featured_four_stars_ru": [
+            "Куки Синобу",
+            "Тома",
+            "Горо",
+            "Сара",
+            "Саю",
+            "Кирара"
+          ],
+          "featured_four_stars_en": [
+            "Kuki Shinobu",
+            "Thoma",
+            "Gorou",
+            "Kujou Sara",
+            "Sayu",
+            "Kirara"
           ]
         },
         {
@@ -2989,6 +3169,66 @@
           ]
         },
         {
+          "id": "genshin_5_8_chronicled",
+          "name": "Молитва хроник: Отзвуки тропического леса",
+          "name_ru": "Молитва хроник: Отзвуки тропического леса",
+          "name_en": "Chronicled Wish: Echoes of the Rainforest",
+          "type": "CHRONICLED",
+          "version": "5.8",
+          "phase": 1,
+          "start_date": "2025-07-30",
+          "end_date": "2025-08-19",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Сайно",
+            "Аль-Хайтам",
+            "Странник",
+            "Нилу",
+            "Тигнари",
+            "Дэхья"
+          ],
+          "featured_five_stars_ru": [
+            "Сайно",
+            "Аль-Хайтам",
+            "Странник",
+            "Нилу",
+            "Тигнари",
+            "Дэхья"
+          ],
+          "featured_five_stars_en": [
+            "Cyno",
+            "Alhaitham",
+            "Wanderer",
+            "Nilou",
+            "Tighnari",
+            "Dehya"
+          ],
+          "featured_four_stars": [
+            "Коллеи",
+            "Дори",
+            "Кандакия",
+            "Лайла",
+            "Фаризан",
+            "Кавех"
+          ],
+          "featured_four_stars_ru": [
+            "Коллеи",
+            "Дори",
+            "Кандакия",
+            "Лайла",
+            "Фаризан",
+            "Кавех"
+          ],
+          "featured_four_stars_en": [
+            "Collei",
+            "Dori",
+            "Candace",
+            "Layla",
+            "Faruzan",
+            "Kaveh"
+          ]
+        },
+        {
           "id": "genshin_5_8_2",
           "game_type": 0,
           "version": "5.8",
@@ -3111,16 +3351,19 @@
           "phase": 2,
           "featured_five_stars_ru": [
             "Арлекино",
-            "Чжун Ли"
+            "Чжун Ли",
+            "Ху Тао"
           ],
           "featured_five_stars": [
             "Арлекино",
-            "Чжун Ли"
+            "Чжун Ли",
+            "Ху Тао"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Arlecchino",
-            "Zhongli"
+            "Zhongli",
+            "Hu Tao"
           ],
           "end_date": "2025-10-21",
           "featured_four_stars_en": [
@@ -3216,16 +3459,19 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Коломбина",
-            "Невиллет"
+            "Невиллет",
+            "Кадзуха"
           ],
           "featured_five_stars": [
             "Коломбина",
-            "Невиллет"
+            "Невиллет",
+            "Кадзуха"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Columbina",
-            "Neuvillette"
+            "Neuvillette",
+            "Kaedehara Kazuha"
           ],
           "end_date": "2025-12-23",
           "featured_four_stars_en": [
@@ -3305,6 +3551,66 @@
           ]
         },
         {
+          "id": "genshin_6_4_chronicled",
+          "name": "Молитва хроник: Ветры и волны",
+          "name_ru": "Молитва хроник: Ветры и волны",
+          "name_en": "Chronicled Wish: Winds and Tides",
+          "type": "CHRONICLED",
+          "version": "6.4",
+          "phase": 1,
+          "start_date": "2026-01-14",
+          "end_date": "2026-02-04",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Альбедо",
+            "Кли",
+            "Эола",
+            "Ризли",
+            "Эмилия",
+            "Навия"
+          ],
+          "featured_five_stars_ru": [
+            "Альбедо",
+            "Кли",
+            "Эола",
+            "Ризли",
+            "Эмилия",
+            "Навия"
+          ],
+          "featured_five_stars_en": [
+            "Albedo",
+            "Klee",
+            "Eula",
+            "Wriothesley",
+            "Emilie",
+            "Navia"
+          ],
+          "featured_four_stars": [
+            "Шеврёз",
+            "Фремине",
+            "Линетт",
+            "Шарлотта",
+            "Розария",
+            "Мика"
+          ],
+          "featured_four_stars_ru": [
+            "Шеврёз",
+            "Фремине",
+            "Линетт",
+            "Шарлотта",
+            "Розария",
+            "Мика"
+          ],
+          "featured_four_stars_en": [
+            "Chevreuse",
+            "Freminet",
+            "Lynette",
+            "Charlotte",
+            "Rosaria",
+            "Mika"
+          ]
+        },
+        {
           "start_date": "2026-02-04",
           "id": "genshin_6_4_2",
           "version": "6.4",
@@ -3356,16 +3662,22 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Линнея",
-            "Часка"
+            "Часка",
+            "Яэ Мико",
+            "Лини"
           ],
           "featured_five_stars": [
             "Линнея",
-            "Часка"
+            "Часка",
+            "Яэ Мико",
+            "Лини"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Linnea",
-            "Chasca"
+            "Chasca",
+            "Yae Miko",
+            "Lyney"
           ],
           "end_date": "2026-03-17",
           "featured_four_stars_en": [
@@ -3391,16 +3703,22 @@
           "phase": 2,
           "featured_five_stars_ru": [
             "Нефер",
-            "Лаума"
+            "Лаума",
+            "Клоринда",
+            "Сиджвин"
           ],
           "featured_five_stars": [
             "Нефер",
-            "Лаума"
+            "Лаума",
+            "Клоринда",
+            "Сиджвин"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Nefer",
-            "Lauma"
+            "Lauma",
+            "Clorinde",
+            "Sigewinne"
           ],
           "end_date": "2026-04-07",
           "featured_four_stars_en": [
@@ -3442,6 +3760,66 @@
             "Noelle",
             "Razor",
             "Sucrose"
+          ]
+        },
+        {
+          "id": "genshin_6_6_chronicled",
+          "name": "Молитва хроник: Цветущие земли",
+          "name_ru": "Молитва хроник: Цветущие земли",
+          "name_en": "Chronicled Wish: Blossoming Lands",
+          "type": "CHRONICLED",
+          "version": "6.6",
+          "phase": 1,
+          "start_date": "2026-04-08",
+          "end_date": "2026-04-29",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Гань Юй",
+            "Шэнь Хэ",
+            "Кокоми",
+            "Аято",
+            "Бай Чжу",
+            "Сянь Юнь"
+          ],
+          "featured_five_stars_ru": [
+            "Гань Юй",
+            "Шэнь Хэ",
+            "Кокоми",
+            "Аято",
+            "Бай Чжу",
+            "Сянь Юнь"
+          ],
+          "featured_five_stars_en": [
+            "Ganyu",
+            "Shenhe",
+            "Sangonomiya Kokomi",
+            "Kamisato Ayato",
+            "Baizhu",
+            "Xianyun"
+          ],
+          "featured_four_stars": [
+            "Камин",
+            "Яо Яо",
+            "Кирара",
+            "Куки Синобу",
+            "Хэйдзо",
+            "Син Цю"
+          ],
+          "featured_four_stars_ru": [
+            "Камин",
+            "Яо Яо",
+            "Кирара",
+            "Куки Синобу",
+            "Хэйдзо",
+            "Син Цю"
+          ],
+          "featured_four_stars_en": [
+            "Gaming",
+            "Yaoyao",
+            "Kirara",
+            "Kuki Shinobu",
+            "Shikanoin Heizou",
+            "Xingqiu"
           ]
         },
         {
@@ -3496,16 +3874,22 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Сандроне",
-            "Коломбина"
+            "Коломбина",
+            "Кадзуха",
+            "Юмэмидзуки Мидзуки"
           ],
           "featured_five_stars": [
             "Сандроне",
-            "Коломбина"
+            "Коломбина",
+            "Кадзуха",
+            "Юмэмидзуки Мидзуки"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Sandrone",
-            "Columbina"
+            "Columbina",
+            "Kaedehara Kazuha",
+            "Yumemizuki Mizuki"
           ],
           "end_date": "2026-07-21",
           "featured_four_stars_en": [
@@ -3566,16 +3950,19 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Одетта",
-            "Арлекино"
+            "Арлекино",
+            "Ху Тао"
           ],
           "featured_five_stars": [
             "Одетта",
-            "Арлекино"
+            "Арлекино",
+            "Ху Тао"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Odette",
-            "Arlecchino"
+            "Arlecchino",
+            "Hu Tao"
           ],
           "end_date": "2026-09-01",
           "featured_four_stars_en": [
@@ -3636,16 +4023,22 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Весна",
-            "Водяница"
+            "Водяница",
+            "Яэ Мико",
+            "Ёимия"
           ],
           "featured_five_stars": [
             "Весна",
-            "Водяница"
+            "Водяница",
+            "Яэ Мико",
+            "Ёимия"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Vesna",
-            "Vodyanitsa"
+            "Vodyanitsa",
+            "Yae Miko",
+            "Yoimiya"
           ],
           "end_date": "2026-10-13",
           "featured_four_stars_en": [
@@ -4716,15 +5109,21 @@
           "status": "EXPIRED",
           "featured_five_stars": [
             "Раппа",
-            "Пожиратель Луны"
+            "Пожиратель Луны",
+            "Лоча",
+            "Ахерон"
           ],
           "featured_five_stars_ru": [
             "Раппа",
-            "Пожиратель Луны"
+            "Пожиратель Луны",
+            "Лоча",
+            "Ахерон"
           ],
           "featured_five_stars_en": [
             "Rappa",
-            "Dan Heng - Imbibitor Lunae"
+            "Dan Heng - Imbibitor Lunae",
+            "Luocha",
+            "Acheron"
           ],
           "featured_four_stars": [
             "Рысь",
@@ -4786,15 +5185,21 @@
           "status": "EXPIRED",
           "featured_five_stars": [
             "Фуга",
-            "Светлячок"
+            "Светлячок",
+            "Блейд",
+            "Цзинлю"
           ],
           "featured_five_stars_ru": [
             "Фуга",
-            "Светлячок"
+            "Светлячок",
+            "Блейд",
+            "Цзинлю"
           ],
           "featured_five_stars_en": [
             "Fugue",
-            "Firefly"
+            "Firefly",
+            "Blade",
+            "Jingliu"
           ],
           "featured_four_stars": [
             "Моцзэ",
@@ -4821,15 +5226,21 @@
           "status": "EXPIRED",
           "featured_five_stars": [
             "Аглая",
-            "Фэйсяо"
+            "Фэйсяо",
+            "Зеле",
+            "Серебряный Волк"
           ],
           "featured_five_stars_ru": [
             "Аглая",
-            "Фэйсяо"
+            "Фэйсяо",
+            "Зеле",
+            "Серебряный Волк"
           ],
           "featured_five_stars_en": [
             "Aglaea",
-            "Feixiao"
+            "Feixiao",
+            "Seele",
+            "Silver Wolf"
           ],
           "featured_four_stars": [
             "Март 7",
@@ -4856,15 +5267,18 @@
           "status": "EXPIRED",
           "featured_five_stars": [
             "Церейдра",
-            "Бутхилл"
+            "Бутхилл",
+            "Фу Сюань"
           ],
           "featured_five_stars_ru": [
             "Мидей",
-            "Бутхилл"
+            "Бутхилл",
+            "Фу Сюань"
           ],
           "featured_five_stars_en": [
             "Mydei",
-            "Boothill"
+            "Boothill",
+            "Fu Xuan"
           ],
           "featured_four_stars": [
             "Галлахер",
@@ -4926,15 +5340,21 @@
           "status": "EXPIRED",
           "featured_five_stars": [
             "Мидей",
-            "Линша"
+            "Линша",
+            "Аргенти",
+            "Хохо"
           ],
           "featured_five_stars_ru": [
             "Мидей",
-            "Линша"
+            "Линша",
+            "Аргенти",
+            "Хохо"
           ],
           "featured_five_stars_en": [
             "Mydei",
-            "Lingsha"
+            "Lingsha",
+            "Argenti",
+            "Huohuo"
           ],
           "featured_four_stars": [
             "Сюэи",
@@ -4998,11 +5418,15 @@
           "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Анакса",
-            "Доктор Рацио"
+            "Доктор Рацио",
+            "Нефрит",
+            "Топаз и Счетовод"
           ],
           "featured_five_stars_en": [
             "Anaxa",
-            "Dr. Ratio"
+            "Dr. Ratio",
+            "Jade",
+            "Topaz & Numby"
           ],
           "featured_four_stars_ru": [
             "Тинъюнь",
@@ -5016,7 +5440,9 @@
           ],
           "featured_five_stars": [
             "Анакса",
-            "Доктор Рацио"
+            "Доктор Рацио",
+            "Нефрит",
+            "Топаз и Счетовод"
           ],
           "featured_four_stars": [
             "Тинъюнь",
@@ -5034,11 +5460,15 @@
           "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Гиацина",
-            "Великая Герта"
+            "Великая Герта",
+            "Юньли",
+            "Цзяоцю"
           ],
           "featured_five_stars_en": [
             "Hyacine",
-            "The Herta"
+            "The Herta",
+            "Yunli",
+            "Jiaoqiu"
           ],
           "featured_four_stars_ru": [
             "Модзе",
@@ -5052,7 +5482,9 @@
           ],
           "featured_five_stars": [
             "Гиацина",
-            "Великая Герта"
+            "Великая Герта",
+            "Юньли",
+            "Цзяоцю"
           ],
           "featured_four_stars": [
             "Модзе",
@@ -5070,11 +5502,15 @@
           "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Сайфер",
-            "Аглая"
+            "Аглая",
+            "Пожиратель Луны",
+            "Черный Лебедь"
           ],
           "featured_five_stars_en": [
             "Cipher",
-            "Aglaea"
+            "Aglaea",
+            "Dan Heng Imbibitor Lunae",
+            "Black Swan"
           ],
           "featured_four_stars_ru": [
             "Сампо",
@@ -5088,7 +5524,9 @@
           ],
           "featured_five_stars": [
             "Сайфер",
-            "Аглая"
+            "Аглая",
+            "Пожиратель Луны",
+            "Черный Лебедь"
           ],
           "featured_four_stars": [
             "Сампо",
@@ -5253,11 +5691,15 @@
           "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Эвернайт",
-            "Великая Герта"
+            "Великая Герта",
+            "Зеле",
+            "Лоча"
           ],
           "featured_five_stars_en": [
             "Evernight",
-            "The Herta"
+            "The Herta",
+            "Seele",
+            "Luocha"
           ],
           "featured_four_stars_ru": [
             "Модзе",
@@ -5271,7 +5713,9 @@
           ],
           "featured_five_stars": [
             "Эвернайт",
-            "Великая Герта"
+            "Великая Герта",
+            "Зеле",
+            "Лоча"
           ],
           "featured_four_stars": [
             "Модзе",
@@ -5361,11 +5805,17 @@
           "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Фаэнон",
-            "Сайфер"
+            "Сайфер",
+            "Блейд",
+            "Цзинлю",
+            "Фу Сюань"
           ],
           "featured_five_stars_en": [
             "Phainon",
-            "Cipher"
+            "Cipher",
+            "Blade",
+            "Jingliu",
+            "Fu Xuan"
           ],
           "featured_four_stars_ru": [
             "Модзе",
@@ -5379,7 +5829,10 @@
           ],
           "featured_five_stars": [
             "Фаэнон",
-            "Сайфер"
+            "Сайфер",
+            "Блейд",
+            "Цзинлю",
+            "Фу Сюань"
           ],
           "featured_four_stars": [
             "Модзе",
@@ -5433,11 +5886,17 @@
           "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Фуга",
-            "Линша"
+            "Линша",
+            "Нефрит",
+            "Аргенти",
+            "Хохо"
           ],
           "featured_five_stars_en": [
             "Fugue",
-            "Lingsha"
+            "Lingsha",
+            "Jade",
+            "Argenti",
+            "Huohuo"
           ],
           "featured_four_stars_ru": [
             "Тинъюнь",
@@ -5451,7 +5910,10 @@
           ],
           "featured_five_stars": [
             "Фуга",
-            "Линша"
+            "Линша",
+            "Нефрит",
+            "Аргенти",
+            "Хохо"
           ],
           "featured_four_stars": [
             "Тинъюнь",
@@ -5469,11 +5931,15 @@
           "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Яо Гуан",
-            "Эвернайт"
+            "Эвернайт",
+            "Раппа",
+            "Цзин Юань"
           ],
           "featured_five_stars_en": [
             "Yao Guang",
-            "Evernight"
+            "Evernight",
+            "Rappa",
+            "Jing Yuan"
           ],
           "featured_four_stars_ru": [
             "Пела",
@@ -5487,7 +5953,9 @@
           ],
           "featured_five_stars": [
             "Яо Гуан",
-            "Эвернайт"
+            "Эвернайт",
+            "Раппа",
+            "Цзин Юань"
           ],
           "featured_four_stars": [
             "Пела",
@@ -5548,16 +6016,22 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Зарянка",
-            "Светлячок"
+            "Светлячок",
+            "Топаз и Счетовод",
+            "Чёрный Лебедь"
           ],
           "featured_five_stars": [
             "Зарянка",
-            "Светлячок"
+            "Светлячок",
+            "Топаз и Счетовод",
+            "Чёрный Лебедь"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Robin",
-            "Firefly"
+            "Firefly",
+            "Topaz & Numby",
+            "Black Swan"
           ],
           "end_date": "2026-07-22",
           "featured_four_stars_en": [
@@ -5583,16 +6057,22 @@
           "phase": 2,
           "featured_five_stars_ru": [
             "Великая Герта",
-            "Авантюрин"
+            "Авантюрин",
+            "Юньли",
+            "Цзяоцю"
           ],
           "featured_five_stars": [
             "Великая Герта",
-            "Авантюрин"
+            "Авантюрин",
+            "Юньли",
+            "Цзяоцю"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "The Herta",
-            "Aventurine"
+            "Aventurine",
+            "Yunli",
+            "Jiaoqiu"
           ],
           "end_date": "2026-08-12",
           "featured_four_stars_en": [
@@ -5618,16 +6098,22 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Линша",
-            "Фэйсяо"
+            "Фэйсяо",
+            "Пожиратель Луны",
+            "Кафка"
           ],
           "featured_five_stars": [
             "Линша",
-            "Фэйсяо"
+            "Фэйсяо",
+            "Пожиратель Луны",
+            "Кафка"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Lingsha",
-            "Feixiao"
+            "Feixiao",
+            "Dan Heng Imbibitor Lunae",
+            "Kafka"
           ],
           "end_date": "2026-09-02",
           "featured_four_stars_en": [
@@ -5653,16 +6139,22 @@
           "phase": 2,
           "featured_five_stars_ru": [
             "Аглая",
-            "Ахерон"
+            "Ахерон",
+            "Бутхилл",
+            "Доктор Рацио"
           ],
           "featured_five_stars": [
             "Аглая",
-            "Ахерон"
+            "Ахерон",
+            "Бутхилл",
+            "Доктор Рацио"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Aglaea",
-            "Acheron"
+            "Acheron",
+            "Boothill",
+            "Dr. Ratio"
           ],
           "end_date": "2026-09-23",
           "featured_four_stars_en": [
@@ -5688,16 +6180,22 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Воскресенье",
-            "Фуга"
+            "Фуга",
+            "Серебряный Волк",
+            "Лоча"
           ],
           "featured_five_stars": [
             "Воскресенье",
-            "Фуга"
+            "Фуга",
+            "Серебряный Волк",
+            "Лоча"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Sunday",
-            "Fugue"
+            "Fugue",
+            "Silver Wolf",
+            "Luocha"
           ],
           "end_date": "2026-10-14",
           "featured_four_stars_en": [
@@ -5723,16 +6221,22 @@
           "phase": 2,
           "featured_five_stars_ru": [
             "Касторис",
-            "Искорка"
+            "Искорка",
+            "Зеле",
+            "Блейд"
           ],
           "featured_five_stars": [
             "Касторис",
-            "Искорка"
+            "Искорка",
+            "Зеле",
+            "Блейд"
           ],
           "status": "CURRENT",
           "featured_five_stars_en": [
             "Castorice",
-            "Sparkle"
+            "Sparkle",
+            "Seele",
+            "Blade"
           ],
           "end_date": "2026-11-04",
           "featured_four_stars_en": [
@@ -6459,11 +6963,13 @@
           "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Люсия",
-            "Вивиан"
+            "Вивиан",
+            "Харумаса"
           ],
           "featured_five_stars_en": [
             "Lucia",
-            "Vivian"
+            "Vivian",
+            "Asahina Harumasa"
           ],
           "featured_four_stars_ru": [
             "Пульхра",
@@ -6477,7 +6983,8 @@
           ],
           "featured_five_stars": [
             "Люсия",
-            "Вивиан"
+            "Вивиан",
+            "Харумаса"
           ],
           "featured_four_stars": [
             "Пульхра",
@@ -6495,11 +7002,13 @@
           "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Идхари",
-            "Джу Фуфу"
+            "Джу Фуфу",
+            "Энби: Солдат 0"
           ],
           "featured_five_stars_en": [
             "Yidhari",
-            "Ju Fufu"
+            "Ju Fufu",
+            "Anby (Soldier 0)"
           ],
           "featured_four_stars_ru": [
             "Энби",
@@ -6513,7 +7022,8 @@
           ],
           "featured_five_stars": [
             "Идхари",
-            "Джу Фуфу"
+            "Джу Фуфу",
+            "Энби: Солдат 0"
           ],
           "featured_four_stars": [
             "Энби",
@@ -6538,16 +7048,22 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Чжу Юань",
-            "Хосими Мияби"
+            "Хосими Мияби",
+            "Астра Яо",
+            "И Сюань"
           ],
           "featured_five_stars": [
             "Чжу Юань",
-            "Хосими Мияби"
+            "Хосими Мияби",
+            "Астра Яо",
+            "И Сюань"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Zhu Yuan",
-            "Miyabi"
+            "Miyabi",
+            "Astra Yao",
+            "Yi Xuan"
           ],
           "end_date": "2026-09-03",
           "featured_four_stars_en": [
@@ -6608,16 +7124,22 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Бернис Уайт",
-            "Джейн Доу"
+            "Джейн Доу",
+            "Юзуха",
+            "Элис Таймфилд"
           ],
           "featured_five_stars": [
             "Бернис Уайт",
-            "Джейн Доу"
+            "Джейн Доу",
+            "Юзуха",
+            "Элис Таймфилд"
           ],
           "status": "EXPIRED",
           "featured_five_stars_en": [
             "Burnice",
-            "Jane Doe"
+            "Jane Doe",
+            "Yuzuha",
+            "Alice Thymefield"
           ],
           "end_date": "2026-10-15",
           "featured_four_stars_en": [
@@ -6800,6 +7322,30 @@
           ]
         },
         {
+          "id": "hi3_4_4_1",
+          "name": "Экспансия: Дюрандаль: Деа Анхора",
+          "name_ru": "Экспансия: Дюрандаль: Деа Анхора",
+          "name_en": "Expansion: Dea Anchora",
+          "type": "EXPANSION",
+          "version": "4.4",
+          "phase": 1,
+          "start_date": "2020-12-17",
+          "end_date": "2021-01-08",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Дюрандаль: Деа Анхора"
+          ],
+          "featured_five_stars_ru": [
+            "Дюрандаль: Деа Анхора"
+          ],
+          "featured_five_stars_en": [
+            "Dea Anchora"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
+        },
+        {
           "id": "hi3_4_6_1",
           "version": "4.6",
           "phase": 1,
@@ -6824,6 +7370,30 @@
           "featured_four_stars_en": [
             "Night Squire"
           ]
+        },
+        {
+          "id": "hi3_4_8_1",
+          "name": "Экспансия: Зеле: Звёздная Никта",
+          "name_ru": "Экспансия: Зеле: Звёздная Никта",
+          "name_en": "Expansion: Starchasm Nyx",
+          "type": "EXPANSION",
+          "version": "4.8",
+          "phase": 1,
+          "start_date": "2021-05-27",
+          "end_date": "2021-06-18",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Зеле: Звёздная Никта"
+          ],
+          "featured_five_stars_ru": [
+            "Зеле: Звёздная Никта"
+          ],
+          "featured_five_stars_en": [
+            "Starchasm Nyx"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
         },
         {
           "id": "hi3_5_0_1",
@@ -6954,6 +7524,30 @@
           "featured_four_stars_en": [
             "Spina Astera"
           ]
+        },
+        {
+          "id": "hi3_5_5_2",
+          "name": "Экспансия: Спина Астера",
+          "name_ru": "Экспансия: Спина Астера",
+          "name_en": "Expansion: Spina Astera",
+          "type": "EXPANSION",
+          "version": "5.5",
+          "phase": 2,
+          "start_date": "2022-03-03",
+          "end_date": "2022-03-24",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Спина Астера"
+          ],
+          "featured_five_stars_ru": [
+            "Спина Астера"
+          ],
+          "featured_five_stars_en": [
+            "Spina Astera"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
         },
         {
           "id": "hi3_5_7_1",
@@ -7127,6 +7721,78 @@
           ]
         },
         {
+          "id": "hi3_6_9_1",
+          "name": "Экспансия: Сирин: Чудесная волшебница",
+          "name_ru": "Экспансия: Сирин: Чудесная волшебница",
+          "name_en": "Expansion: Miracle Magical Girl",
+          "type": "EXPANSION",
+          "version": "6.9",
+          "phase": 1,
+          "start_date": "2023-09-21",
+          "end_date": "2023-10-12",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Сирин: Чудесная волшебница"
+          ],
+          "featured_five_stars_ru": [
+            "Сирин: Чудесная волшебница"
+          ],
+          "featured_five_stars_en": [
+            "Miracle Magical Girl"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
+        },
+        {
+          "id": "hi3_7_0_1",
+          "name": "Экспансия: Тереза: Лунная клятва",
+          "name_ru": "Экспансия: Тереза: Лунная клятва",
+          "name_en": "Expansion: Lunar Vow: Crimson Love",
+          "type": "EXPANSION",
+          "version": "7.0",
+          "phase": 1,
+          "start_date": "2023-10-26",
+          "end_date": "2023-11-16",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Тереза: Лунная клятва"
+          ],
+          "featured_five_stars_ru": [
+            "Тереза: Лунная клятва"
+          ],
+          "featured_five_stars_en": [
+            "Lunar Vow: Crimson Love"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
+        },
+        {
+          "id": "hi3_7_1_1",
+          "name": "Экспансия: Грисео: Космическое выражение",
+          "name_ru": "Экспансия: Грисео: Космическое выражение",
+          "name_en": "Expansion: Cosmic Expression",
+          "type": "EXPANSION",
+          "version": "7.1",
+          "phase": 1,
+          "start_date": "2023-12-07",
+          "end_date": "2023-12-28",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Грисео: Космическое выражение"
+          ],
+          "featured_five_stars_ru": [
+            "Грисео: Космическое выражение"
+          ],
+          "featured_five_stars_en": [
+            "Cosmic Expression"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
+        },
+        {
           "id": "hi3_7_2_1",
           "version": "7.2",
           "phase": 1,
@@ -7212,6 +7878,42 @@
             "Valkyrie Boltstorm",
             "Valkyrie Blastmetal"
           ]
+        },
+        {
+          "id": "hi3_7_4_expa",
+          "name": "EXPA Select: Весенний фестиваль",
+          "name_ru": "EXPA Select: Весенний фестиваль",
+          "name_en": "EXPA Select: Spring Festival",
+          "type": "EXPA_SELECT",
+          "version": "7.4",
+          "phase": 2,
+          "start_date": "2024-05-09",
+          "end_date": "2024-05-30",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Спина Астера",
+            "Сирин: Чудесная волшебница",
+            "Тереза: Лунная клятва",
+            "Грисео: Космическое выражение",
+            "Дюрандаль: Палатинус"
+          ],
+          "featured_five_stars_ru": [
+            "Спина Астера",
+            "Сирин: Чудесная волшебница",
+            "Тереза: Лунная клятва",
+            "Грисео: Космическое выражение",
+            "Дюрандаль: Палатинус"
+          ],
+          "featured_five_stars_en": [
+            "Spina Astera",
+            "Miracle Magical Girl",
+            "Lunar Vow: Crimson Love",
+            "Cosmic Expression",
+            "Palatinus Equinox"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
         },
         {
           "id": "hi3_7_5_1",
@@ -7328,6 +8030,42 @@
             "Valkyrie Boltstorm",
             "Valkyrie Blastmetal"
           ]
+        },
+        {
+          "id": "hi3_7_8_expa",
+          "name": "EXPA Select: Осенняя годовщина",
+          "name_ru": "EXPA Select: Осенняя годовщина",
+          "name_en": "EXPA Select: Autumn Carnival",
+          "type": "EXPA_SELECT",
+          "version": "7.8",
+          "phase": 2,
+          "start_date": "2024-11-07",
+          "end_date": "2024-11-28",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Апония: Дисциплина",
+            "Вилл-Ви: Спираль",
+            "Зеле: Звёздная Никта",
+            "Мебиус: Бесконечный Уроборос",
+            "Киана: Судья Пламени"
+          ],
+          "featured_five_stars_ru": [
+            "Апония: Дисциплина",
+            "Вилл-Ви: Спираль",
+            "Зеле: Звёздная Никта",
+            "Мебиус: Бесконечный Уроборос",
+            "Киана: Судья Пламени"
+          ],
+          "featured_five_stars_en": [
+            "Disciplinary Perdition",
+            "Vill-V (Helix)",
+            "Starchasm Nyx",
+            "Infinite Ouroboros",
+            "Herrscher of Flamescion"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
         },
         {
           "id": "hi3_7_9_1",
@@ -7449,6 +8187,42 @@
           ]
         },
         {
+          "id": "hi3_8_2_expa",
+          "name": "EXPA Select: Праздничная ротация",
+          "name_ru": "EXPA Select: Праздничная ротация",
+          "name_en": "EXPA Select: Gala Rotation",
+          "type": "EXPA_SELECT",
+          "version": "8.2",
+          "phase": 2,
+          "start_date": "2025-04-24",
+          "end_date": "2025-05-15",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Спина Астера",
+            "Сирин: Чудесная волшебница",
+            "Тереза: Лунная клятва",
+            "Грисео: Космическое выражение",
+            "Дюрандаль: Деа Анхора"
+          ],
+          "featured_five_stars_ru": [
+            "Спина Астера",
+            "Сирин: Чудесная волшебница",
+            "Тереза: Лунная клятва",
+            "Грисео: Космическое выражение",
+            "Дюрандаль: Деа Анхора"
+          ],
+          "featured_five_stars_en": [
+            "Spina Astera",
+            "Miracle Magical Girl",
+            "Lunar Vow: Crimson Love",
+            "Cosmic Expression",
+            "Dea Anchora"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
+        },
+        {
           "id": "hi3_8_3_1",
           "version": "8.3",
           "phase": 1,
@@ -7541,6 +8315,42 @@
           ]
         },
         {
+          "id": "hi3_8_5_expa",
+          "name": "EXPA Select: Летний фестиваль",
+          "name_ru": "EXPA Select: Летний фестиваль",
+          "name_en": "EXPA Select: Summer Festival",
+          "type": "EXPA_SELECT",
+          "version": "8.5",
+          "phase": 2,
+          "start_date": "2025-08-28",
+          "end_date": "2025-09-18",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Апония: Дисциплина",
+            "Вилл-Ви: Спираль",
+            "Киана: Судья Пламени",
+            "Мебиус: Бесконечный Уроборос",
+            "Броня: Серебряное крыло"
+          ],
+          "featured_five_stars_ru": [
+            "Апония: Дисциплина",
+            "Вилл-Ви: Спираль",
+            "Киана: Судья Пламени",
+            "Мебиус: Бесконечный Уроборос",
+            "Броня: Серебряное крыло"
+          ],
+          "featured_five_stars_en": [
+            "Disciplinary Perdition",
+            "Vill-V (Helix)",
+            "Herrscher of Flamescion",
+            "Infinite Ouroboros",
+            "Silverwing: N-EX"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
+        },
+        {
           "start_date": "2026-09-26",
           "id": "hi3_8_6_1",
           "version": "8.6",
@@ -7576,6 +8386,51 @@
           ]
         },
         {
+          "id": "hi3_8_6_expa",
+          "name": "EXPA Select: Золотая осень",
+          "name_ru": "EXPA Select: Золотая осень",
+          "name_en": "EXPA Select: Golden Autumn",
+          "type": "EXPA_SELECT",
+          "version": "8.6",
+          "phase": 2,
+          "start_date": "2026-10-08",
+          "end_date": "2026-10-29",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Тереза: Лунная клятва",
+            "Сирин: Чудесная волшебница",
+            "Спина Астера",
+            "Грисео: Космическое выражение",
+            "Дюрандаль: Деа Анхора",
+            "Зеле: Звёздная Никта",
+            "Апония: Дисциплина",
+            "Вилл-Ви: Спираль"
+          ],
+          "featured_five_stars_ru": [
+            "Тереза: Лунная клятва",
+            "Сирин: Чудесная волшебница",
+            "Спина Астера",
+            "Грисео: Космическое выражение",
+            "Дюрандаль: Деа Анхора",
+            "Зеле: Звёздная Никта",
+            "Апония: Дисциплина",
+            "Вилл-Ви: Спираль"
+          ],
+          "featured_five_stars_en": [
+            "Lunar Vow: Crimson Love",
+            "Miracle Magical Girl",
+            "Spina Astera",
+            "Cosmic Expression",
+            "Dea Anchora",
+            "Starchasm Nyx",
+            "Disciplinary Perdition",
+            "Vill-V (Helix)"
+          ],
+          "featured_four_stars": [],
+          "featured_four_stars_ru": [],
+          "featured_four_stars_en": []
+        },
+        {
           "start_date": "2026-10-17",
           "id": "hi3_8_6_2",
           "version": "8.6",
@@ -7592,16 +8447,22 @@
           "phase": 2,
           "featured_five_stars_ru": [
             "Вита",
-            "Сонквэ"
+            "Сонквэ",
+            "Дюрандаль: Палатинус",
+            "Спаркл: Тысяча масок"
           ],
           "featured_five_stars": [
             "Вита",
-            "Сонквэ"
+            "Сонквэ",
+            "Дюрандаль: Палатинус",
+            "Спаркл: Тысяча масок"
           ],
           "status": "CURRENT",
           "featured_five_stars_en": [
             "Vita (Lone Planetfarer)",
-            "Songque"
+            "Songque",
+            "Palatinus Equinox",
+            "Sparkle (Thousand-Faced Maestro)"
           ],
           "end_date": "2026-11-06",
           "featured_four_stars_en": [
@@ -7627,16 +8488,22 @@
           "phase": 1,
           "featured_five_stars_ru": [
             "Киана: Судья Финала",
-            "Сенадина"
+            "Сенадина",
+            "Серапеум",
+            "Ли Сушан: Меч странника"
           ],
           "featured_five_stars": [
             "Киана: Судья Финала",
-            "Сенадина"
+            "Сенадина",
+            "Серапеум",
+            "Ли Сушан: Меч странника"
           ],
           "status": "ANNOUNCED",
           "featured_five_stars_en": [
             "Kiana (Finality)",
-            "Senadina"
+            "Senadina",
+            "Serapeum",
+            "Peregrine Sword (Li Sushang)"
           ],
           "end_date": "2026-11-27",
           "featured_four_stars_en": [
