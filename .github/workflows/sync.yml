@@ -30,7 +30,7 @@ jobs:
 
       - name: Run lint and integrity validation
         run: |
-          python lint_data.py
+          python lint_data.py --strict
 
       - name: Notify Telegram on Failure
         if: failure()

@@ -453,7 +453,7 @@ def moderate_promocodes(data: dict) -> dict:
 
 
 def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """Merges freshly parsed official banners safely into banners_schedule.json without duplicates."""
+    """Merges parsed official banners into the schedule using version/phase upsert."""
     if not scraped_banners:
         return []
 
@@ -462,7 +462,7 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
     for g in games:
         game_dict[g.get("game_type", 0)] = g
 
-    newly_added = []
+    touched = []
 
     for b in scraped_banners:
         gt = b.get("game_type", 0)
@@ -472,24 +472,58 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
             game_dict[gt] = new_g
 
         existing_banners = game_dict[gt].setdefault("banners", [])
-        existing_ids = {ex.get("id") for ex in existing_banners}
-        # Also check existing versions and 5 stars to prevent duplicate phases
-        existing_keys = {
-            (ex.get("version"), ex.get("phase"), tuple(sorted(ex.get("featured_five_stars_en", []))))
-            for ex in existing_banners
-        }
+        match = None
+        for ex in existing_banners:
+            if ex.get("version") == b.get("version") and int(ex.get("phase", 0)) == int(b.get("phase", 0)):
+                match = ex
+                break
 
-        b_key = (b.get("version"), b.get("phase"), tuple(sorted(b.get("featured_five_stars_en", []))))
-
-        if b.get("id") in existing_ids or b_key in existing_keys:
+        if match is None:
+            existing_banners.append(b)
+            touched.append(b)
             continue
 
-        existing_banners.insert(0, b)
-        newly_added.append(b)
+        changed = False
+        pairs = [
+            ("featured_five_stars_ru", "featured_five_stars_en", "featured_five_stars"),
+            ("featured_four_stars_ru", "featured_four_stars_en", "featured_four_stars"),
+        ]
+        for ru_key, en_key, base_key in pairs:
+            ru_list = match.setdefault(ru_key, [])
+            en_list = match.setdefault(en_key, [])
+            base_list = match.setdefault(base_key, [])
+            for ru, en in zip(b.get(ru_key, []), b.get(en_key, [])):
+                if ru not in ru_list:
+                    ru_list.append(ru)
+                    changed = True
+                if en not in en_list:
+                    en_list.append(en)
+                    changed = True
+                if ru not in base_list:
+                    base_list.append(ru)
+                    changed = True
 
-    if newly_added:
-        print(f"Merged {len(newly_added)} newly discovered official banners.")
-    return newly_added
+        if b.get("source_url") and not match.get("source_url"):
+            match["source_url"] = b["source_url"]
+            changed = True
+
+        if changed:
+            touched.append(match)
+
+    for g in games:
+        g["banners"] = sorted(
+            g.get("banners", []),
+            key=lambda x: (
+                x.get("start_date", ""),
+                0 if (x.get("type") or "CHARACTER").upper() == "CHARACTER" else 1,
+                x.get("phase", 1),
+                x.get("id", "")
+            )
+        )
+
+    if touched:
+        print(f"Merged {len(touched)} official banner updates.")
+    return touched
 
 
 def moderate_banners(data: dict) -> dict:
