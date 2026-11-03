@@ -119,7 +119,7 @@ def load_catalog_lookup(catalog_path: str) -> Dict[int, Dict[str, Dict[str, Any]
             for g in data.get("games", []):
                 gt = int(g.get("game_type", 0))
                 for item in g.get("items", []):
-                    name_ru = item.get("name_ru", item.get("name", "")).strip().lower().replace("ё", "е")
+                    name_ru = item.get("name_ru", "").strip().lower().replace("ё", "е")
                     name_en = item.get("name_en", "").strip().lower()
                     if name_ru:
                         lookup[gt][name_ru] = item
@@ -183,7 +183,7 @@ def extract_names(content: str, game_lookup: Dict[str, Dict[str, Any]]) -> Tuple
     for raw in FIVE_RU_RE.findall(content):
         item = resolve_name(raw, game_lookup)
         if item:
-            name = item.get("name_ru") or item.get("name")
+            name = item.get("name_ru") or item.get("name_en")
             if name not in fives:
                 fives.append(name)
         else:
@@ -194,7 +194,7 @@ def extract_names(content: str, game_lookup: Dict[str, Dict[str, Any]]) -> Tuple
         for raw in FOUR_NAME_RU_RE.findall(block):
             item = resolve_name(raw, game_lookup)
             if item:
-                name = item.get("name_ru") or item.get("name")
+                name = item.get("name_ru") or item.get("name_en")
                 if name not in fours:
                     fours.append(name)
             else:
@@ -204,7 +204,7 @@ def extract_names(content: str, game_lookup: Dict[str, Dict[str, Any]]) -> Tuple
         for raw in FIVE_EN_RE.findall(content):
             item = resolve_name(raw, game_lookup)
             if item:
-                name = item.get("name_ru") or item.get("name")
+                name = item.get("name_ru") or item.get("name_en")
                 if name not in fives:
                     fives.append(name)
             else:
@@ -214,7 +214,7 @@ def extract_names(content: str, game_lookup: Dict[str, Dict[str, Any]]) -> Tuple
             for raw in FOUR_NAME_EN_RE.findall(block):
                 item = resolve_name(raw, game_lookup)
                 if item:
-                    name = item.get("name_ru") or item.get("name")
+                    name = item.get("name_ru") or item.get("name_en")
                     if name not in fours:
                         fours.append(name)
                 else:
@@ -302,6 +302,7 @@ def parse_hoyolab_post_banner(
 
     return {
         "id": banner_id,
+        "type": "CHARACTER",
         "game_type": game_type,
         "version": version,
         "phase": phase,
@@ -310,10 +311,8 @@ def parse_hoyolab_post_banner(
         "status": "ANNOUNCED",
         "featured_five_stars_ru": fives_ru,
         "featured_five_stars_en": fives_en,
-        "featured_five_stars": fives_ru,
         "featured_four_stars_ru": fours_ru,
         "featured_four_stars_en": fours_en,
-        "featured_four_stars": fours_ru,
         "source_url": post_url
     }
 

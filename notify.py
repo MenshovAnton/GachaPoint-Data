@@ -103,7 +103,7 @@ def notify_new_codes(new_codes: list[dict]):
     for c in new_codes:
         g_name = game_names.get(c.get("game_type", 0), "Gacha")
         code = c.get("code", "")
-        rewards = c.get("rewards_description_ru") or c.get("rewards_description") or "Награды"
+        rewards = c.get("rewards_description_ru") or c.get("rewards_description_en") or "Награды"
         is_stream = "🔥 [STREAM]" if c.get("is_stream") else "✨"
         msg += f"• <b>{g_name}</b> {is_stream} <code>{code}</code>\n  {rewards}\n"
 
@@ -134,7 +134,7 @@ def notify_new_banners(new_banners: list[dict]):
         g_name = game_names.get(b.get("game_type", 0), "Gacha")
         ver = b.get("version", "?")
         phase = b.get("phase", "?")
-        fives = ", ".join(b.get("featured_five_stars_ru") or b.get("featured_five_stars") or [])
+        fives = ", ".join(b.get("featured_five_stars_ru") or b.get("featured_five_stars_en") or [])
         dates = f"{b.get('start_date', '?')} — {b.get('end_date', '?')}"
         msg += f"• <b>{g_name} v{ver} (Фаза {phase})</b>\n  5★: {fives}\n  Сроки: {dates}\n"
     send_telegram_message(msg)

@@ -30,10 +30,12 @@
 | Файл | Назначение | Формат и локализация |
 | :--- | :--- | :--- |
 | [`promocodes.json`](promocodes.json) | Активные, стрим, постоянные и архивные промокоды | `rewards_description_ru`, `rewards_description_en`, `reward_types` |
-| [`game_catalog.json`](game_catalog.json) | Каталог персонажей, оружия и спутников | `name_ru`, `name_en`, `rarity`, `type`, `icon_url`, `is_standard`, `aliases` |
+| [`game_catalog.json`](game_catalog.json) | Каталог персонажей, оружия и спутников | `name_ru`, `name_en`, `rarity`, `type`, `icon_path`, `is_standard`, `aliases` |
 | [`banners_schedule.json`](banners_schedule.json) | Прошедшие, текущие и анонсированные баннеры | `version`, `phase`, `start_date`, `end_date`, `featured_five_stars_ru/en` |
 | [`lint_data.py`](lint_data.py) | Строгий валидатор целостности и схем | Сквозная проверка баннеров, аватарок и алиасов каталога |
 | [`sync_promocodes.py`](sync_promocodes.py) | Автономная модерация, парсер Fandom MediaWiki и HoYoLAB | Запускается каждые 3 часа через GitHub Actions |
+
+Все датасеты объявляют `schema_version` и используют относительные `icon_path` вместо абсолютных URL. Android-клиент собирает полный URL из базового адреса репозитория.
 
 ---
 

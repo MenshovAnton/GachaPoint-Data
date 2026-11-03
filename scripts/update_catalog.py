@@ -125,14 +125,13 @@ def update_game_catalog():
             for new_c in GENSHIN_NEW_CHARACTERS:
                 if new_c["name_ru"].lower() not in existing_names:
                     items.append({
-                        "name": new_c["name_ru"],
                         "name_ru": new_c["name_ru"],
                         "name_en": new_c["name_en"],
                         "aliases": new_c["aliases"],
                         "rarity": new_c["rarity"],
                         "type": "CHARACTER",
                         "is_standard": new_c["is_standard"],
-                        "icon_url": f"https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/{new_c['icon']}"
+                        "icon_path": f"avatars/0/{new_c['icon']}"
                     })
                     existing_names.add(new_c["name_ru"].lower())
                     print(f"Added Genshin character: {new_c['name_ru']} ({new_c['name_en']})")
@@ -143,7 +142,7 @@ def update_game_catalog():
             cleaned_items = []
             seen_dh_il = False
             for it in items:
-                if it.get("name") == "Пожиратель Луны":
+                if it.get("name_ru") == "Пожиратель Луны":
                     if seen_dh_il:
                         print("Removed duplicate 'Пожиратель Луны' from HSR")
                         continue
@@ -157,14 +156,13 @@ def update_game_catalog():
             for new_c in HSR_NEW_CHARACTERS:
                 if new_c["name_ru"].lower() not in existing_names:
                     items.append({
-                        "name": new_c["name_ru"],
                         "name_ru": new_c["name_ru"],
                         "name_en": new_c["name_en"],
                         "aliases": new_c["aliases"],
                         "rarity": new_c["rarity"],
                         "type": "CHARACTER",
                         "is_standard": new_c["is_standard"],
-                        "icon_url": f"https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/1/{new_c['icon']}"
+                        "icon_path": f"avatars/1/{new_c['icon']}"
                     })
                     existing_names.add(new_c["name_ru"].lower())
                     print(f"Added HSR character: {new_c['name_ru']} ({new_c['name_en']})")
@@ -215,14 +213,13 @@ def update_game_catalog():
             for new_c in HI3_NEW_CHARACTERS:
                 if new_c["name_ru"].lower() not in existing_names:
                     items.append({
-                        "name": new_c["name_ru"],
                         "name_ru": new_c["name_ru"],
                         "name_en": new_c["name_en"],
                         "aliases": new_c["aliases"],
                         "rarity": new_c["rarity"],
                         "type": "CHARACTER",
                         "is_standard": new_c["is_standard"],
-                        "icon_url": f"https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/3/{new_c['icon']}"
+                        "icon_path": f"avatars/3/{new_c['icon']}"
                     })
                     existing_names.add(new_c["name_ru"].lower())
                     print(f"Added HI3 battlesuit: {new_c['name_ru']} ({new_c['name_en']})")

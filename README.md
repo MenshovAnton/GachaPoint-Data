@@ -20,7 +20,7 @@
 
 **GachaPoint Data Hub** is the central, open repository that powers the live data services in the [GachaPoint](https://github.com/MenshovAnton/GachaPoint) mobile app. It aggregates, validates, and serves verified game data:
 - **Active & Livestream Promo Codes:** with automatic expiration countdowns and localized rewards.
-- **Game Entities Catalog:** complete rosters of characters, weapons, light cones, W-Engines, and companions with standard 50/50 pool classification and square official avatar CDN URLs.
+- **Game Entities Catalog:** complete rosters of characters, weapons, light cones, W-Engines, and companions with standard 50/50 pool classification and repository-relative image paths.
 - **Banner Schedules & Rerun Chronicle:** chronological patch archives and current/upcoming event wishes.
 
 ---
@@ -30,10 +30,12 @@
 | File | Purpose | Localization & Structure |
 | :--- | :--- | :--- |
 | [`promocodes.json`](promocodes.json) | Active, stream, permanent, and recent archive promo codes | `rewards_description_ru`, `rewards_description_en`, `reward_types` |
-| [`game_catalog.json`](game_catalog.json) | Characters, weapons, and companion catalog | `name_ru`, `name_en`, `rarity`, `type`, `icon_url`, `is_standard`, `aliases` |
+| [`game_catalog.json`](game_catalog.json) | Characters, weapons, and companion catalog | `name_ru`, `name_en`, `rarity`, `type`, `icon_path`, `is_standard`, `aliases` |
 | [`banners_schedule.json`](banners_schedule.json) | Past, current, and announced banner schedules | `version`, `phase`, `start_date`, `end_date`, `featured_five_stars_ru/en` |
 | [`lint_data.py`](lint_data.py) | Zero-tolerance integrity & schema validator | Cross-references banners, avatars, and catalog aliases |
 | [`sync_promocodes.py`](sync_promocodes.py) | Autonomous moderation, Fandom scraper & HoYoLAB parser | Runs every 3 hours via GitHub Actions |
+
+All datasets declare `schema_version` and use relative `icon_path` values instead of absolute CDN URLs. The Android client resolves them against the repository base URL.
 
 ---
 

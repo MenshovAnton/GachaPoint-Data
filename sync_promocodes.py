@@ -48,61 +48,51 @@ CODE_REGEX = re.compile(r"^[A-Za-z0-9_-]{3,30}$")
 
 PERMANENT_CODES = {
     (0, "GENSHINGIFT"): {
-        "rewards_description": "50 Камней Истока, 3 Опыта героя",
         "rewards_description_ru": "50 Камней Истока, 3 Опыта героя",
         "rewards_description_en": "50 Primogems, 3 Hero's Wit",
         "reward_types": ["PRIMOGEM", "EXP"]
     },
     (1, "STARRAILGIFT"): {
-        "rewards_description": "50 Звёздного нефрита, 2 Путеводителя, 10 000 Кредитов",
         "rewards_description_ru": "50 Звёздного нефрита, 2 Путеводителя, 10 000 Кредитов",
         "rewards_description_en": "50 Stellar Jade, 2 Traveler's Guide, 10,000 Credits",
         "reward_types": ["JADE", "EXP", "CREDIT"]
     },
     (2, "ZENLESSGIFT"): {
-        "rewards_description": "50 Полихромов, 2 Журнала специалиста, 3 Источника питания",
         "rewards_description_ru": "50 Полихромов, 2 Журнала специалиста, 3 Источника питания",
         "rewards_description_en": "50 Polychromes, 2 Official Investigator Logs, 3 W-Engine Power Supplies",
         "reward_types": ["POLYCHROME", "EXP"]
     },
     (2, "ZZZTVCM"): {
-        "rewards_description": "50 Полихромов, 1 Бустер",
         "rewards_description_ru": "50 Полихромов, 1 Бустер",
         "rewards_description_en": "50 Polychromes, 1 Booster",
         "reward_types": ["POLYCHROME"]
     },
     (3, "HONKAIGIFT"): {
-        "rewards_description": "30 Кристаллов, 2 000 Монет",
         "rewards_description_ru": "30 Кристаллов, 2 000 Монет",
         "rewards_description_en": "30 Crystals, 2,000 Coins",
         "reward_types": ["CRYSTAL"]
     },
     (1, "CREATIONNYMPH"): {
-        "rewards_description": "60 Звёздного нефрита, 1 Топливо",
         "rewards_description_ru": "60 Звёздного нефрита, 1 Топливо",
         "rewards_description_en": "60 Stellar Jade, 1 Fuel",
         "reward_types": ["JADE"]
     },
     (1, "FAREWELL"): {
-        "rewards_description": "60 Звёздного нефрита, 1 Топливо",
         "rewards_description_ru": "60 Звёздного нефрита, 1 Топливо",
         "rewards_description_en": "60 Stellar Jade, 1 Fuel",
         "reward_types": ["JADE"]
     },
     (1, "IFYOUAREREADINGTHIS"): {
-        "rewards_description": "60 Звёздного нефрита, 1 Топливо",
         "rewards_description_ru": "60 Звёздного нефрита, 1 Топливо",
         "rewards_description_en": "60 Stellar Jade, 1 Fuel",
         "reward_types": ["JADE"]
     },
     (1, "OMEGA"): {
-        "rewards_description": "60 Звёздного нефрита, 1 Топливо",
         "rewards_description_ru": "60 Звёздного нефрита, 1 Топливо",
         "rewards_description_en": "60 Stellar Jade, 1 Fuel",
         "reward_types": ["JADE"]
     },
     (3, "CheersCaptain"): {
-        "rewards_description": "100 Кристаллов",
         "rewards_description_ru": "100 Кристаллов",
         "rewards_description_en": "100 Crystals",
         "reward_types": ["CRYSTAL"]
@@ -281,12 +271,11 @@ def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> Lis
             if item.get("is_stream"):
                 existing_item["is_stream"] = True
             # Never overwrite existing informative description with generic placeholders
-            if (not existing_item.get("rewards_description")
-                    or "внутриигровые" in existing_item.get("rewards_description", "").lower()):
-                if item.get("rewards_description") and "внутриигровые" not in item.get("rewards_description", "").lower():
-                    existing_item["rewards_description"] = item["rewards_description"]
-                    existing_item["rewards_description_ru"] = item.get("rewards_description_ru", item["rewards_description"])
-                    existing_item["rewards_description_en"] = item.get("rewards_description_en", item["rewards_description"])
+            if (not existing_item.get("rewards_description_ru")
+                    or "внутриигровые" in existing_item.get("rewards_description_ru", "").lower()):
+                if item.get("rewards_description_ru") and "внутриигровые" not in item.get("rewards_description_ru", "").lower():
+                    existing_item["rewards_description_ru"] = item["rewards_description_ru"]
+                    existing_item["rewards_description_en"] = item.get("rewards_description_en", item["rewards_description_ru"])
             continue
 
         # For newly discovered codes: skip ancient expired codes without known dates
@@ -294,12 +283,11 @@ def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> Lis
             continue
 
         # If rewards description is missing, assign game primary reward
-        if not item.get("rewards_description"):
+        if not item.get("rewards_description_ru") or not item.get("rewards_description_en"):
             def_cur = "Камни Истока" if g_type == 0 else "Звёздный нефрит" if g_type == 1 else "Полихромы" if g_type == 2 else "Кристаллы"
             def_cur_en = "Primogems" if g_type == 0 else "Stellar Jade" if g_type == 1 else "Polychromes" if g_type == 2 else "Crystals"
-            item["rewards_description"] = def_cur
-            item["rewards_description_ru"] = def_cur
-            item["rewards_description_en"] = def_cur_en
+            item["rewards_description_ru"] = item.get("rewards_description_ru") or def_cur
+            item["rewards_description_en"] = item.get("rewards_description_en") or def_cur_en
 
         data.setdefault("codes", []).append(item)
         existing_map[key] = item
@@ -335,8 +323,6 @@ def moderate_promocodes(data: dict) -> dict:
             item["is_stream"] = False
             item["is_active"] = True
             item["expires_at"] = None
-            if not item.get("rewards_description") and "rewards_description" in perm_meta:
-                item["rewards_description"] = perm_meta["rewards_description"]
             if not item.get("rewards_description_ru") and "rewards_description_ru" in perm_meta:
                 item["rewards_description_ru"] = perm_meta["rewards_description_ru"]
             if not item.get("rewards_description_en") and "rewards_description_en" in perm_meta:
@@ -446,7 +432,7 @@ def moderate_promocodes(data: dict) -> dict:
 
     final_list = active_codes + pruned_expired
     return {
-        "version": data.get("version", 1),
+        "schema_version": data.get("schema_version", 1),
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "codes": final_list
     }
@@ -466,6 +452,7 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
 
     for b in scraped_banners:
         gt = b.get("game_type", 0)
+        payload = {k: v for k, v in b.items() if k != "game_type"}
         if gt not in game_dict:
             new_g = {"game_type": gt, "banners": []}
             games.append(new_g)
@@ -474,24 +461,23 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
         existing_banners = game_dict[gt].setdefault("banners", [])
         match = None
         for ex in existing_banners:
-            if ex.get("version") == b.get("version") and int(ex.get("phase", 0)) == int(b.get("phase", 0)):
+            if ex.get("version") == payload.get("version") and int(ex.get("phase", 0)) == int(payload.get("phase", 0)):
                 match = ex
                 break
 
         if match is None:
-            existing_banners.append(b)
+            existing_banners.append(payload)
             touched.append(b)
             continue
 
         changed = False
         pairs = [
-            ("featured_five_stars_ru", "featured_five_stars_en", "featured_five_stars"),
-            ("featured_four_stars_ru", "featured_four_stars_en", "featured_four_stars"),
+            ("featured_five_stars_ru", "featured_five_stars_en"),
+            ("featured_four_stars_ru", "featured_four_stars_en"),
         ]
-        for ru_key, en_key, base_key in pairs:
+        for ru_key, en_key in pairs:
             ru_list = match.setdefault(ru_key, [])
             en_list = match.setdefault(en_key, [])
-            base_list = match.setdefault(base_key, [])
             for ru, en in zip(b.get(ru_key, []), b.get(en_key, [])):
                 if ru not in ru_list:
                     ru_list.append(ru)
@@ -499,16 +485,13 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
                 if en not in en_list:
                     en_list.append(en)
                     changed = True
-                if ru not in base_list:
-                    base_list.append(ru)
-                    changed = True
 
         if b.get("source_url") and not match.get("source_url"):
             match["source_url"] = b["source_url"]
             changed = True
 
         if changed:
-            touched.append(match)
+            touched.append({**match, "game_type": gt})
 
     for g in games:
         g["banners"] = sorted(
@@ -600,7 +583,6 @@ def main():
                 "id": f"manual_{g_type}_{raw_code.lower()}",
                 "game_type": g_type,
                 "code": raw_code,
-                "rewards_description": rewards,
                 "rewards_description_ru": rewards,
                 "rewards_description_en": rewards,
                 "reward_types": ["PRIMOGEM"] if g_type == 0 else ["JADE"] if g_type == 1 else ["POLYCHROME"] if g_type == 2 else ["CRYSTAL"],

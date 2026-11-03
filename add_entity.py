@@ -127,7 +127,7 @@ def add_catalog_entity(game_type: int, name_ru: str, name_en: str, rarity: str, 
     with open(CATALOG_PATH, "r", encoding="utf-8-sig") as f:
         catalog = json.load(f)
         
-    icon_url = f"https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/{cfg['subdir']}/{file_stem}"
+    icon_path = f"avatars/{cfg['subdir']}/{file_stem}"
     all_aliases = list(set([name_ru, name_en] + (aliases or [])))
     
     target_game = None
@@ -143,13 +143,12 @@ def add_catalog_entity(game_type: int, name_ru: str, name_en: str, rarity: str, 
     updated = False
     for it in target_game.get("items", []):
         if it.get("name_en") == name_en or it.get("name_ru") == name_ru:
-            it["name"] = name_ru
             it["name_ru"] = name_ru
             it["name_en"] = name_en
             it["rarity"] = rarity
             it["type"] = item_type
             it["is_standard"] = is_standard
-            it["icon_url"] = icon_url
+            it["icon_path"] = icon_path
             it["aliases"] = all_aliases
             updated = True
             print(f"Updated existing item '{name_ru}' in catalog.")
@@ -157,13 +156,12 @@ def add_catalog_entity(game_type: int, name_ru: str, name_en: str, rarity: str, 
             
     if not updated:
         new_item = {
-            "name": name_ru,
             "name_ru": name_ru,
             "name_en": name_en,
             "rarity": rarity,
             "type": item_type,
             "is_standard": is_standard,
-            "icon_url": icon_url,
+            "icon_path": icon_path,
             "aliases": all_aliases
         }
         target_game["items"].append(new_item)

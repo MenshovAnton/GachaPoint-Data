@@ -19,6 +19,7 @@ from typing import Dict, Any, List
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CATALOG_PATH = os.path.join(BASE_DIR, "game_catalog.json")
 AVATARS_DIR = os.path.join(BASE_DIR, "avatars")
+REMOTE_BASE = "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/"
 
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) GachaPointAssetSync/2.0"
 
@@ -52,12 +53,13 @@ def sync_catalog_avatars(dry_run: bool = False):
 
         for item in g.get("items", []):
             total += 1
-            icon_url = item.get("icon_url", "")
-            if not icon_url:
+            icon_path = item.get("icon_path", "")
+            if not icon_path:
                 continue
 
-            filename = os.path.basename(icon_url)
+            filename = os.path.basename(icon_path)
             local_path = os.path.join(target_dir, filename)
+            icon_url = REMOTE_BASE + icon_path
 
             # If already exists and size > 2KB, skip
             if os.path.exists(local_path) and os.path.getsize(local_path) > 2048:

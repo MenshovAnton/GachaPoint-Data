@@ -38,6 +38,11 @@ def lint_catalog(base_dir: str) -> Tuple[Dict[int, Dict[str, Any]], List[str], L
     except Exception as e:
         return lookup, [f"Failed to load game_catalog.json: {e}"], []
 
+    if data.get("schema_version") != 1:
+        errors.append("game_catalog.json: 'schema_version' must be 1")
+    if "version" in data:
+        errors.append("game_catalog.json: deprecated top-level 'version' must be replaced by 'schema_version'")
+
     games = data.get("games", [])
     if not games:
         errors.append("game_catalog.json: 'games' list is empty or missing")
@@ -55,48 +60,51 @@ def lint_catalog(base_dir: str) -> Tuple[Dict[int, Dict[str, Any]], List[str], L
         seen_icons = set()
 
         for idx, item in enumerate(items):
-            name = item.get("name")
-            name_ru = item.get("name_ru") or name
-            name_en = item.get("name_en") or name
-            icon_url = item.get("icon_url", "")
+            name_ru = item.get("name_ru")
+            name_en = item.get("name_en")
+            display_name = name_ru or name_en
+            icon_path = item.get("icon_path", "")
             rarity = item.get("rarity")
             item_type = item.get("type")
             aliases = item.get("aliases", [])
 
-            if not name:
-                errors.append(f"Game {gt} item #{idx}: missing 'name'")
+            if not name_ru or not name_en:
+                errors.append(f"Game {gt} item #{idx}: missing 'name_ru' or 'name_en'")
                 continue
 
-            norm_name = normalize_name(name)
+            if "name" in item:
+                errors.append(f"Game {gt} item '{display_name}': deprecated field 'name' must be removed")
+
+            if "icon_url" in item:
+                errors.append(f"Game {gt} item '{display_name}': deprecated field 'icon_url' must be replaced by 'icon_path'")
+
+            norm_name = normalize_name(name_ru)
             if norm_name in seen_names:
-                errors.append(f"Game {gt}: duplicate item name '{name}'")
+                errors.append(f"Game {gt}: duplicate name_ru '{name_ru}'")
             seen_names.add(norm_name)
 
-            if name_en:
-                norm_en = normalize_name(name_en)
-                if norm_en in seen_en:
-                    warnings.append(f"Game {gt}: duplicate name_en '{name_en}'")
-                seen_en.add(norm_en)
+            norm_en = normalize_name(name_en)
+            if norm_en in seen_en:
+                warnings.append(f"Game {gt}: duplicate name_en '{name_en}'")
+            seen_en.add(norm_en)
 
-            if icon_url:
-                if icon_url in seen_icons:
-                    warnings.append(f"Game {gt}: duplicate icon_url '{icon_url}' for '{name}'")
-                seen_icons.add(icon_url)
+            if icon_path:
+                if icon_path in seen_icons:
+                    warnings.append(f"Game {gt}: duplicate icon_path '{icon_path}' for '{display_name}'")
+                seen_icons.add(icon_path)
 
-                # Check if file exists locally in avatars/{gt}/
-                avatar_leaf = os.path.basename(icon_url)
-                local_avatar = os.path.join(base_dir, "avatars", str(gt), avatar_leaf)
+                local_avatar = os.path.join(base_dir, icon_path.replace("/", os.sep))
                 if not os.path.exists(local_avatar):
-                    warnings.append(f"Game {gt} item '{name}': avatar file not found locally: avatars/{gt}/{avatar_leaf}")
+                    warnings.append(f"Game {gt} item '{display_name}': avatar file not found locally: {icon_path}")
 
             if not rarity or not any(s in rarity for s in ["3★", "4★", "5★", "S", "A", "B"]):
-                warnings.append(f"Game {gt} item '{name}': unexpected rarity '{rarity}'")
+                warnings.append(f"Game {gt} item '{display_name}': unexpected rarity '{rarity}'")
 
             if item_type not in ["CHARACTER", "WEAPON", "BANGBOO", "ASTRAL_OP", "ELF"]:
-                warnings.append(f"Game {gt} item '{name}': unknown type '{item_type}'")
+                warnings.append(f"Game {gt} item '{display_name}': unknown type '{item_type}'")
 
             # Register in lookup for banner validation
-            keys = [name, name_ru, name_en] + aliases
+            keys = [name_ru, name_en] + aliases
             for k in keys:
                 if k:
                     lookup[gt][normalize_name(k)] = item
@@ -112,6 +120,11 @@ def lint_banners(base_dir: str, catalog_lookup: Dict[int, Dict[str, Any]]) -> Tu
         data = load_json(banners_path)
     except Exception as e:
         return [f"Failed to load banners_schedule.json: {e}"], []
+
+    if data.get("schema_version") != 1:
+        errors.append("banners_schedule.json: 'schema_version' must be 1")
+    if "version" in data:
+        errors.append("banners_schedule.json: deprecated top-level 'version' must be replaced by 'schema_version'")
 
     today = date.today()
     special_types = {"CHRONICLED", "LIGHTRACE", "COLLAB", "EXPANSION", "EXPA_SELECT"}
@@ -168,15 +181,16 @@ def lint_banners(base_dir: str, catalog_lookup: Dict[int, Dict[str, Any]]) -> Tu
             fours_ru = b.get("featured_four_stars_ru", [])
             fours_en = b.get("featured_four_stars_en", [])
 
-            if not fives_ru and not fives_en:
-                warnings.append(f"Game {gt} banner '{b_id}': no featured 5★ characters")
-
-            base_fives = {normalize_name(x) for x in b.get("featured_five_stars", []) if x}
-            ru_fives = {normalize_name(x) for x in fives_ru if x}
-            if base_fives and ru_fives and base_fives != ru_fives:
-                warnings.append(
-                    f"Game {gt} banner '{b_id}': featured_five_stars does not match featured_five_stars_ru"
+            if "featured_five_stars" in b or "featured_four_stars" in b:
+                errors.append(
+                    f"Game {gt} banner '{b_id}': deprecated base fields 'featured_five_stars'/'featured_four_stars' must be removed"
                 )
+
+            if not fives_ru or not fives_en:
+                errors.append(f"Game {gt} banner '{b_id}': both 'featured_five_stars_ru' and 'featured_five_stars_en' are required")
+
+            if "type" not in b:
+                errors.append(f"Game {gt} banner '{b_id}': missing 'type'")
 
             if version in patch_by_version and phase == 1 and s_date:
                 patch_start = patch_by_version[version].get("start_date")
@@ -239,6 +253,11 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
     except Exception as e:
         return [f"Failed to load promocodes.json: {e}"], []
 
+    if data.get("schema_version") != 1:
+        errors.append("promocodes.json: 'schema_version' must be 1")
+    if "version" in data:
+        errors.append("promocodes.json: deprecated top-level 'version' must be replaced by 'schema_version'")
+
     codes = data.get("codes", [])
     if not codes or len(codes) < 5:
         errors.append("promocodes.json: codes list is too short or empty")
@@ -272,8 +291,11 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
         if status == "PERMANENT":
             found_perms.add(pair)
 
-        if not c.get("rewards_description_ru") and not c.get("rewards_description"):
-            warnings.append(f"promocodes.json code '{code_str}': missing rewards description")
+        if "rewards_description" in c:
+            errors.append(f"promocodes.json code '{code_str}': deprecated field 'rewards_description' must be removed")
+
+        if not c.get("rewards_description_ru") or not c.get("rewards_description_en"):
+            errors.append(f"promocodes.json code '{code_str}': both RU and EN rewards descriptions are required")
 
     missing_perms = mandatory_perms - found_perms
     if missing_perms:

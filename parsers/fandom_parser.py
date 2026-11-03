@@ -187,11 +187,11 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[str, str, st
             en_parts.append(f"{fmt_num} Coins")
 
     if not ru_parts:
-        return None, None, None, reward_types or [config["primary_reward"]]
+        return None, None, reward_types or [config["primary_reward"]]
 
     desc_ru = ", ".join(ru_parts)
     desc_en = ", ".join(en_parts)
-    return desc_ru, desc_ru, desc_en, reward_types
+    return desc_ru, desc_en, reward_types
 
 
 def extract_code_from_row(row: str) -> Optional[str]:
@@ -235,7 +235,7 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
             continue
 
         seen_codes.add(found_code)
-        desc, desc_ru, desc_en, reward_types = parse_rewards_from_text(row, game_type)
+        desc_ru, desc_en, reward_types = parse_rewards_from_text(row, game_type)
 
         dates = re.findall(r'\b(\d{4}-\d{2}-\d{2})\b', row)
         row_lower = row.lower()
@@ -309,7 +309,6 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
             "id": f"scraped_{game_type}_{found_code.lower()}",
             "game_type": game_type,
             "code": found_code,
-            "rewards_description": desc,
             "rewards_description_ru": desc_ru,
             "rewards_description_en": desc_en,
             "reward_types": reward_types,
