@@ -26,11 +26,11 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python sync_promocodes.py
+          python -m scripts.sync.sync_promocodes
 
       - name: Run lint and integrity validation
         run: |
-          python lint_data.py --strict
+          python -m scripts.tools.lint_data --strict
 
       - name: Notify Telegram on Failure
         if: failure()
@@ -38,7 +38,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python notify.py --failure "GitHub Actions sync workflow execution failed on runner. Run ID: $GITHUB_RUN_ID"
+          python -m scripts.lib.notify --failure "GitHub Actions sync workflow execution failed on runner. Run ID: $GITHUB_RUN_ID"
 
       - name: Commit and push changes
         run: |
