@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-31T12:00:00Z",
+  "updated_at": "2026-11-03T09:07:49Z",
   "games": [
     {
       "game_type": 0,
@@ -156,7 +156,9 @@
           "type": "CHARACTER",
           "is_standard": false,
           "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kaedehara_kazuha.png",
-          "aliases": []
+          "aliases": [
+            "Каэдэхара Кадзуха"
+          ]
         },
         {
           "name": "Ху Тао",
@@ -266,7 +268,9 @@
           "type": "CHARACTER",
           "is_standard": false,
           "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kamisato_ayaka.png",
-          "aliases": []
+          "aliases": [
+            "Камисато Аяка"
+          ]
         },
         {
           "name": "Аято",
@@ -276,7 +280,9 @@
           "type": "CHARACTER",
           "is_standard": false,
           "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/kamisato_ayato.png",
-          "aliases": []
+          "aliases": [
+            "Камисато Аято"
+          ]
         },
         {
           "name": "Джинн",
@@ -610,7 +616,9 @@
           "type": "CHARACTER",
           "is_standard": false,
           "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/sangonomiya_kokomi.png",
-          "aliases": []
+          "aliases": [
+            "Сангономия Кокоми"
+          ]
         },
         {
           "name": "Итто",
@@ -620,7 +628,9 @@
           "type": "CHARACTER",
           "is_standard": false,
           "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/arataki_itto.png",
-          "aliases": []
+          "aliases": [
+            "Аратаки Итто"
+          ]
         },
         {
           "name": "Шэнь Хэ",
@@ -1545,8 +1555,8 @@
           "icon_url": "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/avatars/0/jahoda.png"
         },
         {
-          "name": "Иллуга",
-          "name_ru": "Иллуга",
+          "name": "Иллуги",
+          "name_ru": "Иллуги",
           "name_en": "Illuga",
           "aliases": [
             "Иллуга",
@@ -1968,8 +1978,8 @@
           ]
         },
         {
-          "name": "Прун",
-          "name_ru": "Прун",
+          "name": "Прюн",
+          "name_ru": "Прюн",
           "name_en": "Prune",
           "aliases": [
             "Прун",

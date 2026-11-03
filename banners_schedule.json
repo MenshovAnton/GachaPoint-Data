@@ -2526,23 +2526,23 @@
             "Hu Tao"
           ],
           "featured_four_stars_ru": [
-            "Куки Синобу",
+            "Сетос",
             "Син Цю",
-            "Диона"
+            "Куки Синобу"
           ],
           "featured_four_stars_en": [
-            "Kuki Shinobu",
+            "Sethos",
             "Xingqiu",
-            "Diona"
+            "Kuki Shinobu"
           ],
           "featured_five_stars": [
             "Нахида",
             "Ху Тао"
           ],
           "featured_four_stars": [
-            "Куки Синобу",
+            "Сетос",
             "Син Цю",
-            "Диона"
+            "Куки Синобу"
           ]
         },
         {
@@ -2634,83 +2634,23 @@
             "Citlali"
           ],
           "featured_four_stars_ru": [
+            "Качина",
             "Беннет",
-            "Шеврёз",
-            "Качина"
+            "Диона"
           ],
           "featured_four_stars_en": [
+            "Kachina",
             "Bennett",
-            "Chevreuse",
-            "Kachina"
+            "Diona"
           ],
           "featured_five_stars": [
             "Мавуика",
             "Ситлали"
           ],
           "featured_four_stars": [
+            "Качина",
             "Беннет",
-            "Шеврёз",
-            "Качина"
-          ]
-        },
-        {
-          "id": "genshin_5_3_chronicled",
-          "name": "Молитва хроник: Шепот золотых скал",
-          "name_ru": "Молитва хроник: Шепот золотых скал",
-          "name_en": "Chronicled Wish: Whispers of the Golden Crag",
-          "type": "CHRONICLED",
-          "version": "5.3",
-          "phase": 1,
-          "start_date": "2025-01-01",
-          "end_date": "2025-01-21",
-          "status": "EXPIRED",
-          "featured_five_stars": [
-            "Гань Юй",
-            "Шэнь Хэ",
-            "Бай Чжу",
-            "Тарталья",
-            "Кэ Цин",
-            "Ци Ци"
-          ],
-          "featured_five_stars_ru": [
-            "Гань Юй",
-            "Шэнь Хэ",
-            "Бай Чжу",
-            "Тарталья",
-            "Кэ Цин",
-            "Ци Ци"
-          ],
-          "featured_five_stars_en": [
-            "Ganyu",
-            "Shenhe",
-            "Baizhu",
-            "Tartaglia",
-            "Keqing",
-            "Qiqi"
-          ],
-          "featured_four_stars": [
-            "Син Цю",
-            "Сян Лин",
-            "Чун Юнь",
-            "Янь Фэй",
-            "Юнь Цзинь",
-            "Бэй Доу"
-          ],
-          "featured_four_stars_ru": [
-            "Син Цю",
-            "Сян Лин",
-            "Чун Юнь",
-            "Янь Фэй",
-            "Юнь Цзинь",
-            "Бэй Доу"
-          ],
-          "featured_four_stars_en": [
-            "Xingqiu",
-            "Xiangling",
-            "Chongyun",
-            "Yanfei",
-            "Yun Jin",
-            "Beidou"
+            "Диона"
           ]
         },
         {
@@ -2730,13 +2670,13 @@
             "Clorinde"
           ],
           "featured_four_stars_ru": [
-            "Линнетт",
-            "Тома",
+            "Лань Янь",
+            "Шеврёз",
             "Розария"
           ],
           "featured_four_stars_en": [
-            "Lynette",
-            "Thoma",
+            "Lan Yan",
+            "Chevreuse",
             "Rosaria"
           ],
           "featured_five_stars": [
@@ -2744,9 +2684,84 @@
             "Клоринда"
           ],
           "featured_four_stars": [
-            "Линнетт",
-            "Тома",
+            "Лань Янь",
+            "Шеврёз",
             "Розария"
+          ]
+        },
+        {
+          "id": "genshin_5_3_chronicled",
+          "name": "Молитва хроник: Шепот золотых скал",
+          "name_ru": "Молитва хроник: Шепот золотых скал",
+          "name_en": "Chronicled Wish: Whispers of the Golden Crag",
+          "type": "CHRONICLED",
+          "version": "5.3",
+          "phase": 2,
+          "start_date": "2025-01-21",
+          "end_date": "2025-02-11",
+          "status": "EXPIRED",
+          "featured_five_stars": [
+            "Бай Чжу",
+            "Шэнь Хэ",
+            "Кэ Цин",
+            "Гань Юй",
+            "Ци Ци",
+            "Тарталья",
+            "Сяо"
+          ],
+          "featured_five_stars_ru": [
+            "Бай Чжу",
+            "Шэнь Хэ",
+            "Кэ Цин",
+            "Гань Юй",
+            "Ци Ци",
+            "Тарталья",
+            "Сяо"
+          ],
+          "featured_five_stars_en": [
+            "Baizhu",
+            "Shenhe",
+            "Keqing",
+            "Ganyu",
+            "Qiqi",
+            "Tartaglia",
+            "Xiao"
+          ],
+          "featured_four_stars": [
+            "Ка Мин",
+            "Яо Яо",
+            "Юнь Цзинь",
+            "Янь Фэй",
+            "Синь Янь",
+            "Чун Юнь",
+            "Нин Гуан",
+            "Син Цю",
+            "Бэй Доу",
+            "Сян Лин"
+          ],
+          "featured_four_stars_ru": [
+            "Ка Мин",
+            "Яо Яо",
+            "Юнь Цзинь",
+            "Янь Фэй",
+            "Синь Янь",
+            "Чун Юнь",
+            "Нин Гуан",
+            "Син Цю",
+            "Бэй Доу",
+            "Сян Лин"
+          ],
+          "featured_four_stars_en": [
+            "Gaming",
+            "Yaoyao",
+            "Yun Jin",
+            "Yanfei",
+            "Xinyan",
+            "Chongyun",
+            "Ningguang",
+            "Xingqiu",
+            "Beidou",
+            "Xiangling"
           ]
         },
         {
@@ -2766,23 +2781,23 @@
             "Sigewinne"
           ],
           "featured_four_stars_ru": [
-            "Син Цю",
-            "Диона",
-            "Саю"
+            "Горо",
+            "Саю",
+            "Сян Лин"
           ],
           "featured_four_stars_en": [
-            "Xingqiu",
-            "Diona",
-            "Sayu"
+            "Gorou",
+            "Sayu",
+            "Xiangling"
           ],
           "featured_five_stars": [
             "Юмэмидзуки Мидзуки",
             "Сиджвин"
           ],
           "featured_four_stars": [
-            "Син Цю",
-            "Диона",
-            "Саю"
+            "Горо",
+            "Саю",
+            "Сян Лин"
           ]
         },
         {
@@ -2803,13 +2818,13 @@
           ],
           "featured_four_stars_ru": [
             "Шарлотта",
-            "Фремине",
-            "Чун Юнь"
+            "Чун Юнь",
+            "Мика"
           ],
           "featured_four_stars_en": [
             "Charlotte",
-            "Freminet",
-            "Chongyun"
+            "Chongyun",
+            "Mika"
           ],
           "featured_five_stars": [
             "Фурина",
@@ -2817,8 +2832,8 @@
           ],
           "featured_four_stars": [
             "Шарлотта",
-            "Фремине",
-            "Чун Юнь"
+            "Чун Юнь",
+            "Мика"
           ]
         },
         {
@@ -2838,83 +2853,23 @@
             "Xianyun"
           ],
           "featured_four_stars_ru": [
-            "Яо Яо",
-            "Гейминг",
-            "Сян Лин"
+            "Иансан",
+            "Шеврёз",
+            "Ка Мин"
           ],
           "featured_four_stars_en": [
-            "Yaoyao",
-            "Gaming",
-            "Xiangling"
+            "Iansan",
+            "Chevreuse",
+            "Gaming"
           ],
           "featured_five_stars": [
             "Вареса",
             "Сянь Юнь"
           ],
           "featured_four_stars": [
-            "Яо Яо",
-            "Гейминг",
-            "Сян Лин"
-          ]
-        },
-        {
-          "id": "genshin_5_5_chronicled",
-          "name": "Молитва хроник: Сад вечной вишни",
-          "name_ru": "Молитва хроник: Сад вечной вишни",
-          "name_en": "Chronicled Wish: Garden of Eternal Cherry",
-          "type": "CHRONICLED",
-          "version": "5.5",
-          "phase": 1,
-          "start_date": "2025-03-26",
-          "end_date": "2025-04-15",
-          "status": "EXPIRED",
-          "featured_five_stars": [
-            "Аяка",
-            "Ёимия",
-            "Аято",
-            "Итто",
-            "Кокоми",
-            "Тиори"
-          ],
-          "featured_five_stars_ru": [
-            "Аяка",
-            "Ёимия",
-            "Аято",
-            "Итто",
-            "Кокоми",
-            "Тиори"
-          ],
-          "featured_five_stars_en": [
-            "Kamisato Ayaka",
-            "Yoimiya",
-            "Kamisato Ayato",
-            "Arataki Itto",
-            "Sangonomiya Kokomi",
-            "Chiori"
-          ],
-          "featured_four_stars": [
-            "Куки Синобу",
-            "Тома",
-            "Горо",
-            "Сара",
-            "Саю",
-            "Кирара"
-          ],
-          "featured_four_stars_ru": [
-            "Куки Синобу",
-            "Тома",
-            "Горо",
-            "Сара",
-            "Саю",
-            "Кирара"
-          ],
-          "featured_four_stars_en": [
-            "Kuki Shinobu",
-            "Thoma",
-            "Gorou",
-            "Kujou Sara",
-            "Sayu",
-            "Kirara"
+            "Иансан",
+            "Шеврёз",
+            "Ка Мин"
           ]
         },
         {
@@ -2935,13 +2890,13 @@
           ],
           "featured_four_stars_ru": [
             "Фарузан",
-            "Горо",
-            "Нин Гуан"
+            "Бэй Доу",
+            "Янь Фэй"
           ],
           "featured_four_stars_en": [
             "Faruzan",
-            "Gorou",
-            "Ningguang"
+            "Beidou",
+            "Yanfei"
           ],
           "featured_five_stars": [
             "Шилонен",
@@ -2949,8 +2904,8 @@
           ],
           "featured_four_stars": [
             "Фарузан",
-            "Горо",
-            "Нин Гуан"
+            "Бэй Доу",
+            "Янь Фэй"
           ]
         },
         {
@@ -2971,12 +2926,12 @@
           ],
           "featured_four_stars_ru": [
             "Ифа",
-            "Качина",
+            "Оророн",
             "Лайла"
           ],
           "featured_four_stars_en": [
             "Ifa",
-            "Kachina",
+            "Ororon",
             "Layla"
           ],
           "featured_five_stars": [
@@ -2985,7 +2940,7 @@
           ],
           "featured_four_stars": [
             "Ифа",
-            "Качина",
+            "Оророн",
             "Лайла"
           ]
         },
@@ -3006,23 +2961,89 @@
             "Raiden Shogun"
           ],
           "featured_four_stars_ru": [
-            "Шеврёз",
-            "Куки Синобу",
-            "Оророн"
+            "Тома",
+            "Кудзё Сара",
+            "Линетт"
           ],
           "featured_four_stars_en": [
-            "Chevreuse",
-            "Kuki Shinobu",
-            "Ororon"
+            "Thoma",
+            "Kujou Sara",
+            "Lynette"
           ],
           "featured_five_stars": [
             "Кинич",
             "Райдэн"
           ],
           "featured_four_stars": [
-            "Шеврёз",
+            "Тома",
+            "Кудзё Сара",
+            "Линетт"
+          ]
+        },
+        {
+          "id": "genshin_5_6_chronicled",
+          "type": "CHRONICLED",
+          "version": "5.6",
+          "phase": 2,
+          "start_date": "2025-05-27",
+          "end_date": "2025-06-17",
+          "status": "EXPIRED",
+          "featured_five_stars_ru": [
+            "Камисато Аяка",
+            "Камисато Аято",
+            "Ёимия",
+            "Тиори",
+            "Яэ Мико",
+            "Аратаки Итто",
+            "Сангономия Кокоми",
+            "Каэдэхара Кадзуха"
+          ],
+          "featured_five_stars_en": [
+            "Kamisato Ayaka",
+            "Kamisato Ayato",
+            "Yoimiya",
+            "Chiori",
+            "Yae Miko",
+            "Arataki Itto",
+            "Sangonomiya Kokomi",
+            "Kaedehara Kazuha"
+          ],
+          "featured_five_stars": [
+            "Камисато Аяка",
+            "Камисато Аято",
+            "Ёимия",
+            "Тиори",
+            "Яэ Мико",
+            "Аратаки Итто",
+            "Сангономия Кокоми",
+            "Каэдэхара Кадзуха"
+          ],
+          "featured_four_stars_ru": [
             "Куки Синобу",
-            "Оророн"
+            "Кирара",
+            "Сиканоин Хэйдзо",
+            "Кудзё Сара",
+            "Горо",
+            "Саю",
+            "Тома"
+          ],
+          "featured_four_stars_en": [
+            "Kuki Shinobu",
+            "Kirara",
+            "Shikanoin Heizou",
+            "Kujou Sara",
+            "Gorou",
+            "Sayu",
+            "Thoma"
+          ],
+          "featured_four_stars": [
+            "Куки Синобу",
+            "Кирара",
+            "Сиканоин Хэйдзо",
+            "Кудзё Сара",
+            "Горо",
+            "Саю",
+            "Тома"
           ]
         },
         {
@@ -3034,31 +3055,31 @@
           "end_date": "2025-07-08",
           "status": "EXPIRED",
           "featured_five_stars_ru": [
-            "Аль-Хайтам",
-            "Сяо"
+            "Скирк",
+            "Шэнь Хэ"
           ],
           "featured_five_stars_en": [
-            "Alhaitham",
-            "Xiao"
+            "Skirk",
+            "Shenhe"
           ],
           "featured_four_stars_ru": [
-            "Кавех",
-            "Фарузан",
-            "Яо Яо"
+            "Далия",
+            "Кандакия",
+            "Диона"
           ],
           "featured_four_stars_en": [
-            "Kaveh",
-            "Faruzan",
-            "Yaoyao"
+            "Dahlia",
+            "Candace",
+            "Diona"
           ],
           "featured_five_stars": [
-            "Аль-Хайтам",
-            "Сяо"
+            "Скирк",
+            "Шэнь Хэ"
           ],
           "featured_four_stars": [
-            "Кавех",
-            "Фарузан",
-            "Яо Яо"
+            "Далия",
+            "Кандакия",
+            "Диона"
           ]
         },
         {
@@ -3070,31 +3091,31 @@
           "end_date": "2025-07-29",
           "status": "EXPIRED",
           "featured_five_stars_ru": [
-            "Тарталья",
-            "Елань"
+            "Мавуика",
+            "Эмилия"
           ],
           "featured_five_stars_en": [
-            "Tartaglia",
-            "Yelan"
+            "Mavuika",
+            "Emilie"
           ],
           "featured_four_stars_ru": [
-            "Синь Янь",
-            "Бэй Доу",
-            "Барбара"
+            "Иансан",
+            "Яо Яо",
+            "Сян Лин"
           ],
           "featured_four_stars_en": [
-            "Xinyan",
-            "Beidou",
-            "Barbara"
+            "Iansan",
+            "Yaoyao",
+            "Xiangling"
           ],
           "featured_five_stars": [
-            "Тарталья",
-            "Елань"
+            "Мавуика",
+            "Эмилия"
           ],
           "featured_four_stars": [
-            "Синь Янь",
-            "Бэй Доу",
-            "Барбара"
+            "Иансан",
+            "Яо Яо",
+            "Сян Лин"
           ]
         },
         {
@@ -3114,23 +3135,23 @@
             "Citlali"
           ],
           "featured_four_stars_ru": [
-            "Ифа",
-            "Качина",
-            "Кирара"
+            "Сетос",
+            "Син Цю",
+            "Фишль"
           ],
           "featured_four_stars_en": [
-            "Ifa",
-            "Kachina",
-            "Kirara"
+            "Sethos",
+            "Xingqiu",
+            "Fischl"
           ],
           "featured_five_stars": [
             "Инеффа",
             "Ситлали"
           ],
           "featured_four_stars": [
-            "Ифа",
-            "Качина",
-            "Кирара"
+            "Сетос",
+            "Син Цю",
+            "Фишль"
           ]
         },
         {
@@ -3150,23 +3171,23 @@
             "Chasca"
           ],
           "featured_four_stars_ru": [
+            "Ифа",
             "Оророн",
-            "Сетос",
-            "Кандакия"
+            "Беннет"
           ],
           "featured_four_stars_en": [
+            "Ifa",
             "Ororon",
-            "Sethos",
-            "Candace"
+            "Bennett"
           ],
           "featured_five_stars": [
             "Муалани",
             "Часка"
           ],
           "featured_four_stars": [
+            "Ифа",
             "Оророн",
-            "Сетос",
-            "Кандакия"
+            "Беннет"
           ]
         },
         {
@@ -3473,12 +3494,12 @@
             "Neuvillette"
           ],
           "featured_four_stars": [
-            "Иллуга",
+            "Иллуги",
             "Айно",
             "Горо"
           ],
           "featured_four_stars_ru": [
-            "Иллуга",
+            "Иллуги",
             "Айно",
             "Горо"
           ],
@@ -3617,12 +3638,12 @@
             "Chasca"
           ],
           "featured_four_stars": [
-            "Иллуга",
+            "Иллуги",
             "Айно",
             "Ноэлль"
           ],
           "featured_four_stars_ru": [
-            "Иллуга",
+            "Иллуги",
             "Айно",
             "Ноэлль"
           ],
@@ -3711,11 +3732,11 @@
           "end_date": "2026-06-09",
           "status": "EXPIRED",
           "featured_five_stars": [
-            "Nicole",
+            "Николь",
             "Дурин"
           ],
           "featured_five_stars_ru": [
-            "Nicole",
+            "Николь",
             "Дурин"
           ],
           "featured_five_stars_en": [
@@ -3723,12 +3744,12 @@
             "Durin"
           ],
           "featured_four_stars": [
-            "Прун",
+            "Прюн",
             "Рэйзор",
             "Фишль"
           ],
           "featured_four_stars_ru": [
-            "Прун",
+            "Прюн",
             "Рэйзор",
             "Фишль"
           ],
@@ -3746,11 +3767,11 @@
           "end_date": "2026-06-30",
           "status": "EXPIRED",
           "featured_five_stars": [
-            "Lohen",
+            "Лоэн",
             "Мавуика"
           ],
           "featured_five_stars_ru": [
-            "Lohen",
+            "Лоэн",
             "Мавуика"
           ],
           "featured_five_stars_en": [
@@ -4024,7 +4045,7 @@
           "version": "7.2",
           "phase": 1,
           "start_date": "2026-11-04",
-          "end_date": "2026-12-15",
+          "end_date": "2026-11-24",
           "status": "ANNOUNCED",
           "featured_five_stars": [
             "Митя",
@@ -9949,6 +9970,6 @@
       ]
     }
   ],
-  "updated_at": "2026-11-03T04:45:13Z",
+  "updated_at": "2026-11-03T09:07:49Z",
   "version": 1
 }
