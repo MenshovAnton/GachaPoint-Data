@@ -1,7 +1,54 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T05:58:21Z",
+  "updated_at": "2026-11-08T03:38:54Z",
   "codes": [
+    {
+      "id": "scraped_0_keepupwithmitya",
+      "game_type": 0,
+      "code": "KEEPUPWITHMITYA",
+      "rewards_description_ru": "Камни Истока",
+      "rewards_description_en": "Primogems",
+      "reward_types": [
+        "PRIMOGEM"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-12-09T12:00:00Z",
+      "created_at": "2026-11-04T12:00:00Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_0_mijiq23v2437",
+      "game_type": 0,
+      "code": "MIJIQ23V2437",
+      "rewards_description_ru": "10 000 Моры, 10 Опыта искателя",
+      "rewards_description_en": "10 000 Mora, 10 Adventurer's Exp",
+      "reward_types": [
+        "MORA",
+        "EXP"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-12-09T12:00:00Z",
+      "created_at": "2026-11-04T12:00:00Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_0_cdof4x83h7x2",
+      "game_type": 0,
+      "code": "CDOF4X83H7X2",
+      "rewards_description_ru": "10 000 Моры, 10 Опыта искателя",
+      "rewards_description_en": "10 000 Mora, 10 Adventurer's Exp",
+      "reward_types": [
+        "MORA",
+        "EXP"
+      ],
+      "status": "ACTIVE",
+      "expires_at": "2026-12-09T12:00:00Z",
+      "created_at": "2026-11-04T12:00:00Z",
+      "is_stream": false,
+      "is_active": true
+    },
     {
       "id": "scraped_0_pj2kebraysrm",
       "game_type": 0,
