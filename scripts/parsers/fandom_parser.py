@@ -119,11 +119,13 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[str, str, st
     en_parts = []
 
     # 1. Primary currency: Primogems / Stellar Jade / Polychromes / Crystals
-    prim_match = re.search(r'(?:Primogem|Stellar Jade|Polychrome|Crystal)s?\s*(?:x|\*)\s*(\d+)', row_text, re.IGNORECASE)
+    prim_match = re.search(r'(?:Primogem|Stellar Jade|Polychrome|Crystal)s?\s*(?:x|\*|×)\s*(\d+)', row_text, re.IGNORECASE)
     if not prim_match:
-        prim_match = re.search(r'(\d+)\s*(?:\[\[)?(?:Primogem|Stellar Jade|Polychrome|Crystal)', row_text, re.IGNORECASE)
+        prim_match = re.search(r'(\d+)\s*(?:x|\*|×)?\s*(?:\[\[)?(?:Primogem|Stellar Jade|Polychrome|Crystal)', row_text, re.IGNORECASE)
     if not prim_match:
-        prim_match = re.search(r'{{(?:Item\|)?(?:Primogem|Stellar Jade|Polychrome|Crystal)[^}]*?(?:quantity|x)\s*=\s*(\d+)', row_text, re.IGNORECASE)
+        prim_match = re.search(r'{{(?:Item\|)?(?:Primogem|Stellar Jade|Polychrome|Crystal)[^}]*?(?:quantity|x|count)\s*=\s*(\d+)', row_text, re.IGNORECASE)
+    if not prim_match:
+        prim_match = re.search(r'{{Item\|(?:Primogem|Stellar Jade|Polychrome|Crystal)\|(\d+)', row_text, re.IGNORECASE)
 
     if prim_match:
         amount = prim_match.group(1)
@@ -132,11 +134,13 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[str, str, st
         en_parts.append(f"{amount} {config['primary_name_en']}")
 
     # 2. Secondary currency: Mora / Credits / Dennies / Coins
-    sec_match = re.search(r'(?:Mora|Credit|Dennie|Denny|Coin)s?\s*(?:x|\*)\s*([\d,]+)', row_text, re.IGNORECASE)
+    sec_match = re.search(r'(?:Mora|Credit|Dennie|Denny|Coin)s?\s*(?:x|\*|×)\s*([\d,]+)', row_text, re.IGNORECASE)
     if not sec_match:
-        sec_match = re.search(r'([\d,]+)\s*(?:\[\[)?(?:Mora|Credit|Dennie|Denny|Coin)', row_text, re.IGNORECASE)
+        sec_match = re.search(r'([\d,]+)\s*(?:x|\*|×)?\s*(?:\[\[)?(?:Mora|Credit|Dennie|Denny|Coin)', row_text, re.IGNORECASE)
     if not sec_match:
-        sec_match = re.search(r'{{(?:Item\|)?(?:Mora|Credit|Dennie|Denny|Coin)[^}]*?(?:quantity|x)\s*=\s*([\d,]+)', row_text, re.IGNORECASE)
+        sec_match = re.search(r'{{(?:Item\|)?(?:Mora|Credit|Dennie|Denny|Coin)[^}]*?(?:quantity|x|count)\s*=\s*([\d,]+)', row_text, re.IGNORECASE)
+    if not sec_match:
+        sec_match = re.search(r'{{Item\|(?:Mora|Credit|Dennie|Denny|Coin)\|([\d,]+)', row_text, re.IGNORECASE)
 
     if sec_match:
         raw_num = sec_match.group(1).replace(" ", "").replace(",", "")
@@ -150,9 +154,13 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[str, str, st
             en_parts.append(f"{fmt_num} {sec_name_en}")
 
     # 3. EXP
-    exp_match = re.search(r'(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)\s*(?:x|\*)\s*(\d+)', row_text, re.IGNORECASE)
+    exp_match = re.search(r'(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)\s*(?:x|\*|×)\s*(\d+)', row_text, re.IGNORECASE)
     if not exp_match:
-        exp_match = re.search(r'(\d+)\s*(?:\[\[)?(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)', row_text, re.IGNORECASE)
+        exp_match = re.search(r'(\d+)\s*(?:x|\*|×)?\s*(?:\[\[)?(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)', row_text, re.IGNORECASE)
+    if not exp_match:
+        exp_match = re.search(r'{{(?:Item\|)?(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)[^}]*?(?:quantity|x|count)\s*=\s*(\d+)', row_text, re.IGNORECASE)
+    if not exp_match:
+        exp_match = re.search(r'{{Item\|(?:Hero\'s Wit|Traveler\'s Guide|Investigator Log|Adventurer\'s Experience)\|(\d+)', row_text, re.IGNORECASE)
 
     if exp_match:
         amount = exp_match.group(1)

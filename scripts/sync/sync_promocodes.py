@@ -284,12 +284,18 @@ def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> Lis
         if item.get("status") == "EXPIRED" and not item.get("expires_at") and not item.get("created_at"):
             continue
 
-        # If rewards description is missing, assign game primary reward
-        if not item.get("rewards_description_ru") or not item.get("rewards_description_en"):
-            def_cur = "Камни Истока" if g_type == 0 else "Звёздный нефрит" if g_type == 1 else "Полихромы" if g_type == 2 else "Кристаллы"
-            def_cur_en = "Primogems" if g_type == 0 else "Stellar Jade" if g_type == 1 else "Polychromes" if g_type == 2 else "Crystals"
-            item["rewards_description_ru"] = item.get("rewards_description_ru") or def_cur
-            item["rewards_description_en"] = item.get("rewards_description_en") or def_cur_en
+        # If rewards description is missing or lacks quantity, do not invent bare currency placeholders
+        desc_ru = item.get("rewards_description_ru") or ""
+        desc_en = item.get("rewards_description_en") or ""
+        has_number = any(ch.isdigit() for ch in desc_ru) or any(ch.isdigit() for ch in desc_en)
+
+        if not desc_ru or not desc_en or not has_number:
+            game_names = {0: "Genshin Impact", 1: "Honkai: Star Rail", 2: "Zenless Zone Zero", 3: "Honkai Impact 3rd"}
+            g_name = game_names.get(g_type, f"Game {g_type}")
+            print(f"[Warning] Scraped code {code_str} for {g_name} has no verified reward quantities: '{desc_ru}'")
+            notify_suspicious_announcement(g_name, code_str, f"Promo code discovered without verified reward quantities: '{desc_ru}'")
+            item["rewards_description_ru"] = desc_ru if desc_ru else "Внутриигровые награды"
+            item["rewards_description_en"] = desc_en if desc_en else "In-game rewards"
 
         data.setdefault("codes", []).append(item)
         existing_map[key] = item

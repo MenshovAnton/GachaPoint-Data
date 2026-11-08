@@ -294,8 +294,17 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
         if "rewards_description" in c:
             errors.append(f"promocodes.json code '{code_str}': deprecated field 'rewards_description' must be removed")
 
-        if not c.get("rewards_description_ru") or not c.get("rewards_description_en"):
+        desc_ru = (c.get("rewards_description_ru") or "").strip()
+        desc_en = (c.get("rewards_description_en") or "").strip()
+        if not desc_ru or not desc_en:
             errors.append(f"promocodes.json code '{code_str}': both RU and EN rewards descriptions are required")
+
+        bare_placeholders = {
+            "камни истока", "звёздный нефрит", "звездный нефрит", "полихромы", "кристаллы",
+            "primogems", "stellar jade", "polychromes", "crystals"
+        }
+        if desc_ru.lower() in bare_placeholders or desc_en.lower() in bare_placeholders:
+            errors.append(f"promocodes.json code '{code_str}': rewards description cannot be bare currency name without quantity ('{desc_ru}')")
 
     missing_perms = mandatory_perms - found_perms
     if missing_perms:
