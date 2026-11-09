@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
-Comprehensive Catalog Expansion & Normalization Script
-- Removes duplicates (e.g. Dan Heng IL in HSR)
-- Injects comprehensive aliases for ZZZ, HI3, Genshin, HSR
-- Adds missing 4★ and standard roster characters for all 4 games
-- Normalizes naming across banners_schedule.json and game_catalog.json
+Legacy one-off catalog expansion and normalization script.
+
+This script is not executed by the scheduled workflow. It contains historical
+hard-coded roster data and must not be treated as an official source. Use
+scripts/tools/add_entity.py or official data updates instead.
 """
 
 import json
 import os
+import sys
 from typing import Dict, List, Any
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -265,5 +266,12 @@ def fix_banner_schedule_typos():
     print(f"Fixed {modified_count} banner typos in banners_schedule.json")
 
 if __name__ == "__main__":
+    if "--force" not in sys.argv:
+        print(
+            "This legacy catalog script is disabled. "
+            "Use scripts/tools/add_entity.py or official data updates. "
+            "Pass --force to run it anyway."
+        )
+        sys.exit(1)
     update_game_catalog()
     fix_banner_schedule_typos()

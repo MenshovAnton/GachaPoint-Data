@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-09T11:48:45Z",
+  "banners": [
+    {
+      "id": "hsr_4_7_1",
+      "type": "CHARACTER",
+      "version": "4.7",
+      "phase": 1,
+      "start_date": "2026-11-11",
+      "end_date": "2026-12-02",
+      "status": "ANNOUNCED",
+      "featured_five_stars_ru": [
+        "Эон ★ Аха",
+        "Серебряный Волк LV.999",
+        "Спаркси",
+        "Яо Гуан"
+      ],
+      "featured_five_stars_en": [
+        "Aeon ★ Aha",
+        "Silver Wolf LV.999",
+        "Sparxie",
+        "Yao Guang"
+      ],
+      "featured_four_stars_ru": [
+        "Аста",
+        "Рысь",
+        "Юйкун"
+      ],
+      "featured_four_stars_en": [
+        "Asta",
+        "Lynx",
+        "Yukong"
+      ],
+      "game_type": 1,
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "hsr_4_7_2",
+      "type": "CHARACTER",
+      "version": "4.7",
+      "phase": 2,
+      "start_date": "2026-12-02",
+      "end_date": "2026-12-22",
+      "status": "ANNOUNCED",
+      "featured_five_stars_ru": [
+        "Ахерон",
+        "Пожиратель Луны",
+        "Цзин Юань"
+      ],
+      "featured_five_stars_en": [
+        "Acheron",
+        "Dan Heng • Imbibitor Lunae",
+        "Jing Yuan"
+      ],
+      "featured_four_stars_ru": [
+        "Аста",
+        "Рысь",
+        "Юйкун"
+      ],
+      "featured_four_stars_en": [
+        "Asta",
+        "Lynx",
+        "Yukong"
+      ],
+      "game_type": 1,
+      "quarantine_reason": "official_source_required"
+    }
+  ]
+}

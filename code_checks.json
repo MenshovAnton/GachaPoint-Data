@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-09T12:37:47Z",
+  "instructions": "Set result to ok, expired, or invalid. Set expires_at (ISO-8601) if the in-game screen shows it.",
+  "results": [
+    {
+      "game_type": 0,
+      "code": "6LS3F3LS5K87",
+      "rewards_ru": "20 Камней Истока, 160 Репликационных геод",
+      "community_date": "2026-10-02",
+      "result": "expired",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 0,
+      "code": "CDOF4X83H7X2",
+      "rewards_ru": "10 000 Моры, 10 Опыта искателя",
+      "community_date": "2026-11-04",
+      "result": "ok",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 0,
+      "code": "DATG5HG1PL89",
+      "rewards_ru": "10 000 Моры, 10 Опыта искателя приключений",
+      "community_date": "2026-10-02",
+      "result": "expired",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 0,
+      "code": "EPIC2026",
+      "rewards_ru": "40 Камней Истока, 20 000 Моры, 5 Опыта героя",
+      "community_date": "2026-09-23",
+      "result": "expired",
+      "expires_at": null,
+      "note": "Максимальное число использований"
+    },
+    {
+      "game_type": 0,
+      "code": "MIJIQ23V2437",
+      "rewards_ru": "10 000 Моры, 10 Опыта искателя",
+      "community_date": "2026-11-04",
+      "result": "ok",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 0,
+      "code": "OKTCV81F9H8D",
+      "rewards_ru": "10 000 Моры, 10 Опыта искателя приключений, 5 Руды",
+      "community_date": "2026-10-14",
+      "result": "expired",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 0,
+      "code": "OPERACOLLAB",
+      "rewards_ru": "30 Камней Истока, 20 000 Моры, 2 Опыта героя",
+      "community_date": "2026-09-28",
+      "result": "expired",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 0,
+      "code": "PJ2KEBRAYSRM",
+      "rewards_ru": "60 Камней Истока, 5 Опыта искателя",
+      "community_date": "2026-10-23",
+      "result": "ok",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 0,
+      "code": "PNKZ3WLNN8G6",
+      "rewards_ru": "Указания о «Благодеянии» x5, Указания о «Стойкости» x5, Указания о «Славе» x5",
+      "community_date": "2026-10-01",
+      "result": "ok",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 1,
+      "code": "BESTCOFFEEEVER",
+      "rewards_ru": "3 Путеводителя путешественника, 2 Особых кофе",
+      "community_date": "2026-10-10",
+      "result": "expired",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 1,
+      "code": "NSJR3B97ZZ5X",
+      "rewards_ru": "50 Звёздного нефрита, 10 000 Кредитов",
+      "community_date": "2026-10-15",
+      "result": "expired",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 1,
+      "code": "STARRAILFATE2026",
+      "rewards_ru": "3 Путеводителя путешественника, 2 Светящиеся палочки",
+      "community_date": "2026-10-10",
+      "result": "expired",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 2,
+      "code": "HOLLOWRUN33",
+      "rewards_ru": "20 Полихромов, 2 222 Денни",
+      "community_date": "2026-10-25",
+      "result": "ok",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 2,
+      "code": "INKSHIFT33",
+      "rewards_ru": "20 Полихромов, 2 222 Денни",
+      "community_date": "2026-10-25",
+      "result": "ok",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 2,
+      "code": "LEVELUP33",
+      "rewards_ru": "20 Полихромов, 2 222 Денни",
+      "community_date": "2026-10-25",
+      "result": "ok",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 2,
+      "code": "ZZZ2YEAR",
+      "rewards_ru": "50 Полихромов",
+      "community_date": "2026-10-15",
+      "result": "expired",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 2,
+      "code": "ZZZGFN24",
+      "rewards_ru": "20 000 Денни, 3 Журнала специалиста, 3 Источника питания",
+      "community_date": "2026-10-01",
+      "result": "expired",
+      "expires_at": null,
+      "note": ""
+    },
+    {
+      "game_type": 3,
+      "code": "LBWY2YI5V4",
+      "rewards_ru": "30 Кристаллов",
+      "community_date": "2026-10-15",
+      "result": null,
+      "expires_at": null,
+      "note": "Нет аккаунта, потом кину на проверку людям в тгк"
+    }
+  ]
+}

@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 """
-GachaPoint Data Hub — High-Res Asset Synchronizer
-Defensively pulls, validates, and normalizes character and weapon avatars
-from authorized/official community CDNs:
-- Genshin Impact: Enka.Network / Dimbreath GenshinData
-- Honkai: Star Rail: Mar-7th/StarRailRes
-- Zenless Zone Zero: Hakush.in / ZZZData
-- Honkai Impact 3rd: Fandom MediaWiki / Battlesuit Icons
+GachaPoint Data Hub — Avatar cache synchronizer.
+
+Re-downloads missing or truncated avatar files from the published data hub.
+Items without icon_path are reported but not guessed.
 """
 
 import os
@@ -22,10 +19,6 @@ AVATARS_DIR = os.path.join(BASE_DIR, "avatars")
 REMOTE_BASE = "https://raw.githubusercontent.com/menshovanton/GachaPoint-Data/main/"
 
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) GachaPointAssetSync/2.0"
-
-# Mapping of known clean upstream sources
-ENKA_GENSHIN_BASE = "https://enka.network/ui"
-STARRAILRES_BASE = "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master"
 
 def fetch_image_bytes(url: str, timeout: int = 15) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -45,6 +38,7 @@ def sync_catalog_avatars(dry_run: bool = False):
     total = 0
     synced = 0
     failed = 0
+    missing_icons = 0
 
     for g in catalog.get("games", []):
         gt = g.get("game_type", 0)
@@ -55,6 +49,7 @@ def sync_catalog_avatars(dry_run: bool = False):
             total += 1
             icon_path = item.get("icon_path", "")
             if not icon_path:
+                missing_icons += 1
                 continue
 
             filename = os.path.basename(icon_path)
@@ -94,7 +89,10 @@ def sync_catalog_avatars(dry_run: bool = False):
             if not success:
                 failed += 1
 
-    print(f"\n[Sync Complete] Total: {total}, Downloaded: {synced}, Skipped/Failed: {failed}")
+    print(
+        f"\n[Sync Complete] Total: {total}, Downloaded: {synced}, "
+        f"Skipped/Failed: {failed}, Missing icon_path: {missing_icons}"
+    )
 
 if __name__ == "__main__":
     is_dry = "--dry-run" in sys.argv

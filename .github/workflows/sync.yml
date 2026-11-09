@@ -2,34 +2,63 @@ name: Sync Promocodes and Schedule
 
 on:
   schedule:
-    # Run every 3 hours with random offset to prevent GitHub Actions runner congestion
+    # Run every 3 hours at a fixed off-peak minute
     - cron: '23 */3 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: data-sync
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
+      - name: Run parser tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests
+
+      - name: Validate standard pools
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.tools.apply_standard_pools --check
+
+      - name: Validate committed datasets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.tools.lint_data --strict
+
       - name: Run sync and scraping script
+        shell: bash
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
+          set -euo pipefail
           python -m scripts.sync.sync_promocodes
 
       - name: Run lint and integrity validation
+        shell: bash
         run: |
+          set -euo pipefail
           python -m scripts.tools.lint_data --strict
 
       - name: Notify Telegram on Failure
@@ -41,13 +70,21 @@ jobs:
           python -m scripts.lib.notify --failure "GitHub Actions sync workflow execution failed on runner. Run ID: $GITHUB_RUN_ID"
 
       - name: Commit and push changes
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add promocodes.json banners_schedule.json game_catalog.json avatars/
+          for file in standard_pools.json pending_banners.json quarantine_codes.json code_checks.json; do
+            if [ -f "$file" ]; then
+              git add "$file"
+            fi
+          done
           if git diff --staged --quiet; then
             echo "No changes detected."
           else
             git commit -m "chore(data): auto-clean & sync promocodes, banners and catalog [skip ci]"
+            git pull --rebase origin main
             git push
           fi

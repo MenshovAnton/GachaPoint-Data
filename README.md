@@ -1,4 +1,4 @@
-[English](README.md) | [Русский](README.ru.md)
+[English](README.md) | [Русский](README.ru.md) | [Audit report](AUDIT.md)
 
 <h1 align="center">GachaPoint Data Hub</h1>
 
@@ -32,8 +32,9 @@
 | [`promocodes.json`](promocodes.json) | Active, stream, permanent, and recent archive promo codes | `rewards_description_ru`, `rewards_description_en`, `reward_types` |
 | [`game_catalog.json`](game_catalog.json) | Characters, weapons, and companion catalog | `name_ru`, `name_en`, `rarity`, `type`, `icon_path`, `is_standard`, `aliases` |
 | [`banners_schedule.json`](banners_schedule.json) | Past, current, and announced banner schedules | `version`, `phase`, `start_date`, `end_date`, `featured_five_stars_ru/en` |
-| [`lint_data.py`](lint_data.py) | Zero-tolerance integrity & schema validator | Cross-references banners, avatars, and catalog aliases |
-| [`sync_promocodes.py`](sync_promocodes.py) | Autonomous moderation, Fandom scraper & HoYoLAB parser | Runs every 3 hours via GitHub Actions |
+| [`standard_pools.json`](standard_pools.json) | Expected standard wish/channel/supply pools | Enforced by `scripts/tools/apply_standard_pools.py --check` |
+| [`scripts/tools/lint_data.py`](scripts/tools/lint_data.py) | Zero-tolerance integrity & schema validator | Cross-references banners, avatars, and catalog aliases |
+| [`scripts/sync/sync_promocodes.py`](scripts/sync/sync_promocodes.py) | Moderation, official-source verification & Fandom discovery | Runs every 3 hours via GitHub Actions |
 
 All datasets declare `schema_version` and use relative `icon_path` values instead of absolute CDN URLs. The Android client resolves them against the repository base URL.
 
@@ -56,17 +57,28 @@ Each game uses native, authentic terminology:
 
 ### 1. Scheduled GitHub Actions Sync (`.github/workflows/sync.yml`)
 Runs every 3 hours:
-- Scrapes Fandom MediaWiki APIs for active livestream codes and promo drops.
+- Reads official Genshin in-game announcements (Event Wish posts).
+- Reads official ZZZ news (`Limited-Time Channels`) and HI3 update announcements.
+- Uses Fandom MediaWiki only for discovery; unverified candidates are written to
+  `quarantine_codes.json` instead of the published dataset.
+- Scans official Genshin announcements, HSR/ZZZ/HI3 website news and HoYoLAB
+  news for candidate codes. A code is published automatically only when the
+  exact value is found in an official text and its reward quantities can be
+  extracted.
+- Sends ambiguous or unconfirmed codes to Telegram for manual review. Results
+  are applied with `apply_code_checks.py` or the `Verify Promo Code` workflow.
+- Quarantines unverified `CURRENT`/`ANNOUNCED` banners to `pending_banners.json`.
 - Performs calendar moderation (`CURRENT`, `ANNOUNCED`, `EXPIRED`) for banner phases.
-- Runs `lint_data.py` to guarantee zero broken references and schema compliance before commits.
-- Dispatches Telegram notifications to community channels on new code discoveries.
+- Runs parser tests and `scripts/tools/lint_data.py --strict` before commits.
+- Dispatches Telegram notifications for verified discoveries and failures.
 
 ### 2. Adding New Characters or Weapons
-Run `add_entity.py` CLI:
+Run `scripts/tools/add_entity.py` CLI:
 ```bash
-python add_entity.py --game 0 --name-ru "Скирк" --name-en "Skirk" --rarity "5★" --type CHARACTER
+python -m scripts.tools.add_entity --game 0 --name-ru "Скирк" --name-en "Skirk" --rarity "5★" --type CHARACTER
 ```
-The tool queries official API endpoints, fetches the official in-game square icon, and registers aliases in `game_catalog.json`.
+The tool fetches the square icon, registers aliases in `game_catalog.json`, mirrors the
+catalog to the Android assets, and runs the strict linter.
 
 ---
 

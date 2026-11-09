@@ -1,305 +1,210 @@
 #!/usr/bin/env python3
 """
-Official HoYoLAB News API Banner Parser for HoYoverse Games
-Strictly official announcements only — zero leaks or speculative banners.
-Cross-references all parsed entities with game_catalog.json and alerts via Telegram
-on ambiguous entities requiring manual verification.
+Official banner parser for HoYoverse games.
+
+Sources:
+- Genshin Impact: official in-game announcement API (Event Wish posts).
+- Zenless Zone Zero: official website news API (Limited-Time Channels).
+- Honkai Impact 3rd: official website news API (version update announcements).
+- Honkai: Star Rail: official website news API (version update details).
+
+Only data confirmed by these official sources is emitted. News that cannot be
+resolved against the catalog is returned as a pending item instead of being
+published.
 """
 
+import json
 import os
 import re
-import json
-import urllib.request
+import sys
+import time
 import urllib.parse
-from datetime import datetime, timezone
-from typing import List, Dict, Any, Tuple, Optional
+import urllib.request
+from datetime import datetime, timezone, timedelta
+from typing import Any, Dict, List, Optional, Tuple
 
-try:
-    from scripts.lib.notify import notify_suspicious_announcement
-except ImportError:
-    def notify_suspicious_announcement(game_name, title, reason, post_url=None):
-        print(f"[Alert] Suspicious announcement in {game_name}: {title} ({reason})")
 
-HOYOLAB_GAMES = {
-    0: {"name": "Genshin Impact", "gid": 2, "wiki": "genshin-impact"},
-    1: {"name": "Honkai: Star Rail", "gid": 6, "wiki": "honkai-star-rail"},
-    2: {"name": "Zenless Zone Zero", "gid": 8, "wiki": "zenless-zone-zero"},
-    3: {"name": "Honkai Impact 3rd", "gid": 1, "wiki": "honkaiimpact3"}
+GAME_NAMES = {
+    0: "Genshin Impact",
+    1: "Honkai: Star Rail",
+    2: "Zenless Zone Zero",
+    3: "Honkai Impact 3rd",
 }
 
-BANNER_SUBJECT_MARKERS_RU = [
-    "события молитв", "молитва версии", "молитвы версии", "молитва события",
-    "прыжок события", "прыжка события", "прыжок версии", "прыжки версии",
-    "выделенный канал", "выделенного канала", "поиск сигнала",
-    "поставка расширения", "поставка экипировки", "поставки версии"
-]
-BANNER_SUBJECT_MARKERS_EN = [
-    "event wishes", "event warp", "character event warp", "signal search",
-    "expansion supply", "focused supply"
-]
+HOYOLAB_WIKI = {
+    0: "genshin-impact",
+    1: "honkai-star-rail",
+    2: "zenless-zone-zero",
+    3: "honkaiimpact3",
+}
 
-VERSION_RE = re.compile(r"(?:версии|version)\s*(\d+\.\d+)", re.IGNORECASE)
-PHASE_RE = re.compile(r"(?:Выпуск|Phase)\s*(III|II|I)\b", re.IGNORECASE)
-DATE_RANGE_RE = re.compile(
-    r"(\d{4})/(\d{1,2})/(\d{1,2})\s+\d{1,2}:\d{2}\s*[-–—]\s*"
-    r"(\d{4})/(\d{1,2})/(\d{1,2})"
+GENSHIN_ANN_URL = (
+    "https://sg-hk4e-api.hoyoverse.com/common/hk4e_global/announcement/api/getAnnContent"
+    "?game=hk4e&game_biz=hk4e_global&lang=en&bundle_id=hk4e_global"
+    "&platform=pc&region=os_usa&level=60&uid=100000000"
 )
-AFTER_UPDATE_RE = re.compile(
-    r"(?:После выхода обновления|After the Version Update).*?"
-    r"(\d{4})/(\d{1,2})/(\d{1,2})\s+\d{1,2}:\d{2}",
-    re.IGNORECASE | re.DOTALL
+GENSHIN_ANN_LIST_URL = (
+    "https://sg-hk4e-api.hoyoverse.com/common/hk4e_global/announcement/api/getAnnList"
+    "?game=hk4e&game_biz=hk4e_global&lang=en&bundle_id=hk4e_global"
+    "&platform=pc&region=os_usa&level=60&uid=100000000"
 )
-FIVE_RU_RE = re.compile(r"(?:эксклюзивного персонажа\s*5★|персонажа\s*5★|агента\s*(?:S-ранга|ранга\s*S)|боевого костюма\s*(?:S-ранга|ранга\s*S))\s*(?:«[^»]*»)?\s*([^()\n]{2,40}?)\s*\(")
-FOUR_RU_RE = re.compile(r"(?:персонажей\s*4★|персонажа\s*4★|агентов\s*(?:A-ранга|ранга\s*A)|агента\s*(?:A-ранга|ранга\s*A))\s*((?:(?:«[^»]*»)?\s*[^,()\n]{2,40}\s*\([^)]*\)(?:\s*(?:,|и)\s*)?)+)")
-FOUR_NAME_RU_RE = re.compile(r"(?:«[^»]*»)?\s*([^,()\n]{2,40}?)\s*\(")
-FIVE_EN_RE = re.compile(r"(?:5-star character|S-rank Agent|S-rank Battlesuit)\s*(?:\"[^\"]*\")?\s*([^()\n]{2,40}?)\s*\(", re.IGNORECASE)
-FOUR_EN_RE = re.compile(r"(?:4-star characters?|A-rank Agents?|A-rank Battlesuits?)\s*((?:(?:\"[^\"]*\")?\s*[^,()\n]{2,40}\s*\([^)]*\)(?:\s*(?:,|and)\s*)?)+)", re.IGNORECASE)
-FOUR_NAME_EN_RE = re.compile(r"(?:\"[^\"]*\")?\s*([^,()\n]{2,40}?)\s*\(", re.IGNORECASE)
+
+CONTENT_API = "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/{app}/getContentList"
+CONTENT_DETAIL_API = "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/{app}/getContent"
+
+ZZZ_APP = "3e9196a4b9274bd7"
+ZZZ_CHANNEL = "288"
+ZZZ_SITE = "https://zenless.hoyoverse.com/en-us/news/detail/{id}"
+
+HSR_APP = "113fe6d3b4514cdd"
+HSR_CHANNEL = "250"
+HSR_SITE = "https://hsr.hoyoverse.com/en-us/news/detail/{id}"
+HSR_HOYOLAB_LIST = (
+    "https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsList"
+    "?gids=6&type=1&page_size=50&client_type=4"
+)
+HSR_HOYOLAB_POST = "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull"
+HSR_ARTICLE = "https://www.hoyolab.com/article/{id}"
+
+HI3_APP = "5fcd2aa439ca4aea"
+HI3_CHANNEL = "514"
+HI3_SITE = "https://honkaiimpact3.hoyoverse.com/global/en/news/detail/{id}"
+
+GENSHIN_SITE = "https://genshin.hoyoverse.com/en/news"
+GENSHIN_DETAIL = "https://genshin.hoyoverse.com/en/news/detail/{id}"
+
+MONTHS = {
+    "JAN": 1, "FEB": 2, "MAR": 3, "APR": 4, "MAY": 5, "JUN": 6,
+    "JUL": 7, "AUG": 8, "SEP": 9, "OCT": 10, "NOV": 11, "DEC": 12,
+}
+
 TAG_RE = re.compile(r"<[^>]+>")
+DATE_RE = re.compile(r"(\d{4})[/-](\d{1,2})[/-](\d{1,2})")
+VERSION_RE = re.compile(r"(?:Version|версии)\s*(\d+\.\d+)", re.IGNORECASE)
+GS_CHAR_RE = re.compile(
+    r'"([^"]+)"\s+([A-Z][A-Za-z\' -]+?)\s+\((Anemo|Geo|Electro|Dendro|Hydro|Pyro|Cryo)\)'
+)
+ZZZ_AGENT_RE = re.compile(r"limited S-Rank Agent\s+([A-Z][A-Za-z' -]+?)\s+\(", re.IGNORECASE)
+HI3_SUIT_RE = re.compile(
+    r"New (?:IMG-type )?S-rank Battlesuit\s+([A-Z][A-Za-z' -]{2,40}?)"
+    r"(?=\s+(?:is|who|debuts|and|coming)\b|[.,(])",
+    re.IGNORECASE,
+)
+HSR_FIVE_RE = re.compile(r"5-Star\s+([A-Z][A-Za-z' -]+?)\s+\(")
+HSR_FIVE_RU_RE = re.compile(r"эксклюзивного персонажа\s+5★\s+([^(]+?)\s*\(", re.IGNORECASE)
+HSR_FOUR_RU_BLOCK_RE = re.compile(
+    r"персонажей\s+4★:\s*(.+?)(?:\s+и\s+Световых конусов|\s+Световых конусов|\.)",
+    re.IGNORECASE,
+)
+HSR_NAME_RU_RE = re.compile(r"([А-ЯЁA-Z][^,()]+?)\s*\(")
+HSR_DATE_RANGE_RE = re.compile(
+    r"(?:с выхода версии\s+\d+\.\d+\s+)?"
+    r"(\d{4}/\d{1,2}/\d{1,2})(?:\s+\d{1,2}:\d{2})?\s*(?:до|[-–—])\s*"
+    r"(\d{4}/\d{1,2}/\d{1,2})(?:\s+\d{1,2}:\d{2})?",
+    re.IGNORECASE,
+)
 
 
-def fetch_hoyolab_news(gid: int, lang: str = "ru-ru", page_size: int = 30) -> List[Dict[str, Any]]:
-    url = "https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsList"
-    params = {
-        "gids": gid,
-        "type": 3,
-        "page_size": page_size,
-        "client_type": 4
+def fetch_json(url: str, lang: Optional[str] = None, timeout: int = 40) -> Any:
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) GachaPointOfficialParser/4.0",
+        "Accept": "application/json",
     }
-    full_url = f"{url}?{urllib.parse.urlencode(params)}"
-    req = urllib.request.Request(
-        full_url,
-        headers={
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) GachaPointOfficialParser/3.0",
-            "Accept": "application/json",
-            "x-rpc-language": lang
-        }
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=15) as response:
-            if response.status == 200:
-                data = json.loads(response.read().decode("utf-8"))
-                if data.get("retcode") == 0 and "data" in data and "list" in data["data"]:
-                    return data["data"]["list"]
-    except Exception as e:
-        print(f"[HoYoLAB] Warning: failed to fetch news for gid {gid} ({lang}): {e}")
-    return []
+    if lang:
+        headers["x-rpc-language"] = lang
+    last_error: Optional[Exception] = None
+    for attempt in range(3):
+        try:
+            request = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except Exception as error:
+            last_error = error
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))
+    raise last_error or RuntimeError(f"Failed to fetch {url}")
 
 
-def fetch_hoyolab_post_full(post_id: str, lang: str = "ru-ru") -> Optional[Dict[str, Any]]:
-    url = "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull"
-    params = {"post_id": post_id}
-    full_url = f"{url}?{urllib.parse.urlencode(params)}"
-    req = urllib.request.Request(
-        full_url,
-        headers={
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) GachaPointOfficialParser/3.0",
-            "Accept": "application/json",
-            "x-rpc-language": lang
-        }
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=15) as response:
-            if response.status == 200:
-                data = json.loads(response.read().decode("utf-8"))
-                if data.get("retcode") == 0:
-                    post = data.get("data", {}).get("post", {}).get("post", {})
-                    return post
-    except Exception as e:
-        print(f"[HoYoLAB] Warning: failed to fetch post {post_id}: {e}")
-    return None
+def strip_html(value: str) -> str:
+    text = TAG_RE.sub(" ", value or "")
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def normalize_name(value: str) -> str:
+    text = (value or "").lower().replace("ё", "е")
+    text = re.sub(r"[«»\"'’()`.,:;!?★•·\-–—]", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def load_catalog_lookup(catalog_path: str) -> Dict[int, Dict[str, Dict[str, Any]]]:
     lookup = {0: {}, 1: {}, 2: {}, 3: {}}
     if not os.path.exists(catalog_path):
         return lookup
-    try:
-        with open(catalog_path, "r", encoding="utf-8-sig") as f:
-            data = json.load(f)
-            for g in data.get("games", []):
-                gt = int(g.get("game_type", 0))
-                for item in g.get("items", []):
-                    name_ru = item.get("name_ru", "").strip().lower().replace("ё", "е")
-                    name_en = item.get("name_en", "").strip().lower()
-                    if name_ru:
-                        lookup[gt][name_ru] = item
-                    if name_en:
-                        lookup[gt][name_en] = item
-                    for alias in item.get("aliases", []):
-                        if alias:
-                            lookup[gt][alias.strip().lower().replace("ё", "е")] = item
-    except Exception as e:
-        print(f"[Parser] Error reading catalog {catalog_path}: {e}")
+    with open(catalog_path, "r", encoding="utf-8-sig") as file:
+        data = json.load(file)
+    for game in data.get("games", []):
+        game_type = int(game.get("game_type", 0))
+        for item in game.get("items", []):
+            keys = [item.get("name_ru", ""), item.get("name_en", "")]
+            keys.extend(item.get("aliases", []))
+            for key in keys:
+                if key:
+                    lookup[game_type][normalize_name(key)] = item
     return lookup
 
 
-def load_patch_dates(banners_path: str) -> Dict[int, Dict[str, Dict[str, str]]]:
-    result = {0: {}, 1: {}, 2: {}, 3: {}}
-    if not os.path.exists(banners_path):
-        return result
-    try:
-        with open(banners_path, "r", encoding="utf-8-sig") as f:
-            data = json.load(f)
-            for g in data.get("games", []):
-                gt = int(g.get("game_type", 0))
-                for patch in g.get("patches", []):
-                    version = str(patch.get("version", "")).strip()
-                    if version:
-                        result[gt][version] = {
-                            "start_date": patch.get("start_date", ""),
-                            "end_date": patch.get("end_date", "")
-                        }
-    except Exception as e:
-        print(f"[Parser] Error reading patches {banners_path}: {e}")
-    return result
-
-
-def normalize_date(y: str, m: str, d: str) -> Optional[str]:
-    try:
-        return f"{int(y):04d}-{int(m):02d}-{int(d):02d}"
-    except ValueError:
+def resolve_item(name: str, game_lookup: Dict[str, Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    key = normalize_name(name)
+    if not key:
         return None
-
-
-def strip_html(content: str) -> str:
-    return TAG_RE.sub(" ", content or "").replace("&nbsp;", " ")
-
-
-def resolve_name(raw: str, game_lookup: Dict[str, Dict[str, Any]]) -> Optional[Dict[str, Any]]:
-    key = raw.strip().lower().replace("ё", "е")
     if key in game_lookup:
         return game_lookup[key]
+    candidates = []
     for alias, item in game_lookup.items():
-        if len(alias) >= 3 and (key == alias or key in alias or alias in key):
-            return item
-    return None
+        if len(key) >= 3 and (key in alias or alias in key):
+            if item not in candidates:
+                candidates.append(item)
+    return candidates[0] if len(candidates) == 1 else None
 
 
-def extract_names(content: str, game_lookup: Dict[str, Dict[str, Any]]) -> Tuple[List[str], List[str], List[str]]:
-    fives: List[str] = []
-    fours: List[str] = []
-    unresolved: List[str] = []
-
-    for raw in FIVE_RU_RE.findall(content):
-        item = resolve_name(raw, game_lookup)
-        if item:
-            name = item.get("name_ru") or item.get("name_en")
-            if name not in fives:
-                fives.append(name)
-        else:
-            unresolved.append(raw.strip())
-
-    blocks = FOUR_RU_RE.findall(content)
-    for block in blocks:
-        for raw in FOUR_NAME_RU_RE.findall(block):
-            item = resolve_name(raw, game_lookup)
-            if item:
-                name = item.get("name_ru") or item.get("name_en")
-                if name not in fours:
-                    fours.append(name)
-            else:
-                unresolved.append(raw.strip())
-
-    if not fives:
-        for raw in FIVE_EN_RE.findall(content):
-            item = resolve_name(raw, game_lookup)
-            if item:
-                name = item.get("name_ru") or item.get("name_en")
-                if name not in fives:
-                    fives.append(name)
-            else:
-                unresolved.append(raw.strip())
-    if not fours:
-        for block in FOUR_EN_RE.findall(content):
-            for raw in FOUR_NAME_EN_RE.findall(block):
-                item = resolve_name(raw, game_lookup)
-                if item:
-                    name = item.get("name_ru") or item.get("name_en")
-                    if name not in fours:
-                        fours.append(name)
-                else:
-                    unresolved.append(raw.strip())
-
-    return fives, fours, unresolved
-
-
-def parse_hoyolab_post_banner(
-    post_item: Dict[str, Any],
+def make_banner(
     game_type: int,
+    version: str,
+    phase: int,
+    start_date: str,
+    end_date: str,
+    five_names: List[str],
+    four_names: List[str],
+    source_url: str,
+    source_id: str,
     catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]],
-    patch_dates: Dict[int, Dict[str, Dict[str, str]]]
 ) -> Optional[Dict[str, Any]]:
-    post = post_item.get("post", {})
-    subject = (post.get("subject") or "").strip()
-    content = strip_html(post.get("content") or "")
-    subject_lower = subject.lower()
-
-    is_banner = any(k in subject_lower for k in BANNER_SUBJECT_MARKERS_RU) or \
-                any(k in subject_lower for k in BANNER_SUBJECT_MARKERS_EN)
-    if not is_banner:
-        return None
-
-    if len(content) < 250:
-        full_post = fetch_hoyolab_post_full(str(post.get("post_id", "")), "ru-ru")
-        if full_post:
-            content = strip_html(full_post.get("content") or content)
-
-    version_match = VERSION_RE.search(subject) or VERSION_RE.search(content[:400])
-    version = version_match.group(1) if version_match else None
-    if not version:
-        return None
-
-    phase_match = PHASE_RE.search(subject)
-    phase = 1
-    if phase_match:
-        phase = {"I": 1, "II": 2, "III": 3}.get(phase_match.group(1).upper(), 1)
-
-    start_date = None
-    end_date = None
-    date_match = DATE_RANGE_RE.search(content)
-    if date_match:
-        start_date = normalize_date(date_match.group(1), date_match.group(2), date_match.group(3))
-        end_date = normalize_date(date_match.group(4), date_match.group(5), date_match.group(6))
-    else:
-        after_match = AFTER_UPDATE_RE.search(content)
-        if after_match:
-            end_date = normalize_date(after_match.group(1), after_match.group(2), after_match.group(3))
-            patch = patch_dates.get(game_type, {}).get(version, {})
-            start_date = patch.get("start_date") or None
-
-    if not start_date or not end_date:
-        return None
-
     game_lookup = catalog_lookup.get(game_type, {})
-    fives_ru, fours_ru, unresolved = extract_names(content, game_lookup)
+    five_ru: List[str] = []
+    five_en: List[str] = []
+    four_ru: List[str] = []
+    four_en: List[str] = []
 
-    game_name = HOYOLAB_GAMES.get(game_type, {}).get("name", "Gacha")
-    post_id = str(post.get("post_id", ""))
-    post_url = f"https://www.hoyolab.com/article/{post_id}" if post_id else ""
+    for name in five_names:
+        item = resolve_item(name, game_lookup)
+        if not item:
+            print(f"[OfficialParser] Unresolved 5-star '{name}' for {GAME_NAMES[game_type]}; banner skipped")
+            return None
+        five_ru.append(item.get("name_ru") or item.get("name_en") or name)
+        five_en.append(item.get("name_en") or name)
+    for name in four_names:
+        item = resolve_item(name, game_lookup)
+        if not item:
+            print(f"[OfficialParser] Unresolved 4-star '{name}' for {GAME_NAMES[game_type]}; banner skipped")
+            return None
+        four_ru.append(item.get("name_ru") or item.get("name_en") or name)
+        four_en.append(item.get("name_en") or name)
 
-    if unresolved:
-        notify_suspicious_announcement(
-            game_name=game_name,
-            title=subject,
-            reason=f"Нераспознанные сущности: {', '.join(unresolved[:8])}. Возможно, их нет в game_catalog.json.",
-            post_url=post_url
-        )
-
-    if not fives_ru:
+    if not five_ru:
         return None
 
-    fives_en = []
-    fours_en = []
-    for name in fives_ru:
-        item = resolve_name(name, game_lookup)
-        fives_en.append(item.get("name_en", name) if item else name)
-    for name in fours_ru:
-        item = resolve_name(name, game_lookup)
-        fours_en.append(item.get("name_en", name) if item else name)
-
-    slug = re.sub(r"[^a-z0-9]+", "_", fives_en[0].lower()).strip("_") if fives_en else "banner"
-    banner_id = f"official_{HOYOLAB_GAMES[game_type]['wiki']}_{version.replace('.', '_')}_{phase}_{slug}"
+    prefix = {0: "genshin", 1: "hsr", 2: "zzz", 3: "hi3"}[game_type]
+    banner_id = f"{prefix}_{version.replace('.', '_')}_{phase}"
 
     return {
         "id": banner_id,
@@ -310,38 +215,419 @@ def parse_hoyolab_post_banner(
         "start_date": start_date,
         "end_date": end_date,
         "status": "ANNOUNCED",
-        "featured_five_stars_ru": fives_ru,
-        "featured_five_stars_en": fives_en,
-        "featured_four_stars_ru": fours_ru,
-        "featured_four_stars_en": fours_en,
-        "source_url": post_url
+        "featured_five_stars_ru": five_ru,
+        "featured_five_stars_en": five_en,
+        "featured_four_stars_ru": four_ru,
+        "featured_four_stars_en": four_en,
+        "source_url": source_url,
+        "source_id": source_id,
+        "source_type": "official",
+        "verification_status": "verified",
+        "verified_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
 
 
-def parse_all_official_banners(catalog_path: str) -> List[Dict[str, Any]]:
+def parse_date(value: str) -> Optional[str]:
+    match = DATE_RE.search(value or "")
+    if not match:
+        return None
+    year, month, day = (int(part) for part in match.groups())
+    try:
+        return datetime(year, month, day).strftime("%Y-%m-%d")
+    except ValueError:
+        return None
+
+
+def parse_month_day(month: str, day: str, year: int) -> Optional[str]:
+    try:
+        return datetime(year, MONTHS[month.upper()], int(day)).strftime("%Y-%m-%d")
+    except (KeyError, ValueError):
+        return None
+
+
+def parse_genshin_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
+    payload = fetch_json(GENSHIN_ANN_URL, lang="en-us")
+    announcements = payload.get("data", {}).get("list", [])
+    list_payload = fetch_json(GENSHIN_ANN_LIST_URL, lang="en-us")
+    metadata: Dict[int, Dict[str, Any]] = {}
+    for group in list_payload.get("data", {}).get("list", []):
+        for item in group.get("list", []):
+            metadata[int(item.get("ann_id", 0))] = item
+
+    patches: Dict[str, Dict[str, str]] = {}
+    for item in metadata.values():
+        title = item.get("title", "") or ""
+        match = re.search(r"Version\s+(\d+\.\d+)\s+Update Details", title, re.IGNORECASE)
+        if not match:
+            continue
+        version = match.group(1)
+        start = parse_date(str(item.get("start_time", "")))
+        end = parse_date(str(item.get("end_time", "")))
+        if start and end:
+            patches[version] = {"start_date": start, "end_date": end}
+
+    candidates: List[Dict[str, Any]] = []
+    for item in announcements:
+        title = item.get("title", "") or ""
+        if "Event Wish" not in title:
+            continue
+        if "Epitome Invocation" in title:
+            continue
+        content = strip_html(item.get("content", "") or "")
+        version_match = VERSION_RE.search(content) or VERSION_RE.search(title)
+        if not version_match:
+            continue
+        version = version_match.group(1)
+        patch = patches.get(version)
+        if not patch:
+            continue
+        dates = DATE_RE.findall(content)
+        if not dates:
+            continue
+        end_date = parse_date("/".join(dates[-1]))
+        if not end_date:
+            continue
+        names = GS_CHAR_RE.findall(content)
+        if not names:
+            continue
+        five_names = [names[0][1]]
+        four_names = []
+        for entry in names[1:]:
+            name = entry[1]
+            if name not in five_names and name not in four_names:
+                four_names.append(name)
+        candidates.append({
+            "version": version,
+            "start_date": patch["start_date"],
+            "end_date": end_date,
+            "five_names": five_names,
+            "four_names": four_names,
+            "source_id": str(item.get("ann_id", "")),
+        })
+
+    grouped: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    for candidate in candidates:
+        key = (candidate["version"], candidate["start_date"])
+        target = grouped.setdefault(key, {
+            "version": candidate["version"],
+            "start_date": candidate["start_date"],
+            "end_date": candidate["end_date"],
+            "five_names": [],
+            "four_names": [],
+            "source_ids": [],
+        })
+        for name in candidate["five_names"]:
+            if name not in target["five_names"]:
+                target["five_names"].append(name)
+        for name in candidate["four_names"]:
+            if name not in target["four_names"]:
+                target["four_names"].append(name)
+        target["source_ids"].append(candidate["source_id"])
+
+    starts_by_version: Dict[str, List[str]] = {}
+    for version, start_date in grouped:
+        starts_by_version.setdefault(version, []).append(start_date)
+    for version in starts_by_version:
+        starts_by_version[version] = sorted(set(starts_by_version[version]))
+
+    banners: List[Dict[str, Any]] = []
+    for (version, start_date), data in grouped.items():
+        phase = starts_by_version[version].index(start_date) + 1
+        source_ids = data["source_ids"]
+        source_url = GENSHIN_DETAIL.format(id=source_ids[0]) if source_ids else GENSHIN_SITE
+        banner = make_banner(
+            0, version, phase, start_date, data["end_date"],
+            data["five_names"], data["four_names"],
+            source_url, ",".join(source_ids), catalog_lookup,
+        )
+        if banner:
+            banners.append(banner)
+
+    return banners, patches
+
+
+def fetch_content_list(app: str, channel: str, lang: str) -> List[Dict[str, Any]]:
+    url = CONTENT_API.format(app=app)
+    query = urllib.parse.urlencode({
+        "iPage": 1,
+        "iPageSize": 50,
+        "sLangKey": lang,
+        "isPreview": 0,
+        "iChanId": channel,
+    })
+    payload = fetch_json(f"{url}?{query}")
+    return payload.get("data", {}).get("list", [])
+
+
+def fetch_content_detail(app: str, content_id: str, lang: str) -> Dict[str, Any]:
+    url = CONTENT_DETAIL_API.format(app=app)
+    query = urllib.parse.urlencode({
+        "iPage": 1,
+        "iPageSize": 10,
+        "sLangKey": lang,
+        "isPreview": 0,
+        "iInfoId": content_id,
+    })
+    payload = fetch_json(f"{url}?{query}")
+    return payload.get("data", {}) or {}
+
+
+def parse_zzz_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
+    items = fetch_content_list(ZZZ_APP, ZZZ_CHANNEL, "en-us")
+    patch_starts: Dict[str, str] = {}
+    for item in items:
+        title = item.get("sTitle", "") or ""
+        match = re.search(r"Version\s+(\d+\.\d+).*Update Announcement", title, re.IGNORECASE)
+        if match:
+            start = parse_date(str(item.get("dtStartTime", "")))
+            if start:
+                patch_starts[match.group(1)] = start
+
+    banners: List[Dict[str, Any]] = []
+    patches: Dict[str, Dict[str, str]] = {}
+    for item in items:
+        title = item.get("sTitle", "") or ""
+        match = re.search(r"V(\d+\.\d+) Limited-Time Channels \(Phase (I|II)\)", title, re.IGNORECASE)
+        if not match:
+            continue
+        version = match.group(1)
+        phase = 1 if match.group(2).upper() == "I" else 2
+        content_id = str(item.get("iInfoId", ""))
+        detail = fetch_content_detail(ZZZ_APP, content_id, "en-us")
+        content = strip_html(detail.get("sContent", "") or "")
+        if not content:
+            continue
+
+        after_update = re.search(
+            r"After the Version\s+\d+\.\d+\s+Update\s*[–-]\s*"
+            r"(\d{4}/\d{1,2}/\d{1,2})\s+\d{1,2}:\d{2}",
+            content,
+        )
+        if after_update:
+            start_date = patch_starts.get(version)
+            end_date = parse_date(after_update.group(1))
+        else:
+            period = re.search(
+                r"(\d{4}/\d{1,2}/\d{1,2})\s+\d{1,2}:\d{2}.*?[–-]\s*"
+                r"(\d{4}/\d{1,2}/\d{1,2})\s+\d{1,2}:\d{2}",
+                content,
+            )
+            start_date = parse_date(period.group(1)) if period else None
+            end_date = parse_date(period.group(2)) if period else None
+        if not start_date or not end_date:
+            continue
+
+        agents = []
+        for name in ZZZ_AGENT_RE.findall(content):
+            if name not in agents:
+                agents.append(name)
+        if not agents:
+            continue
+
+        banner = make_banner(
+            2, version, phase, start_date, end_date,
+            agents, [],
+            ZZZ_SITE.format(id=content_id), content_id, catalog_lookup,
+        )
+        if banner:
+            banners.append(banner)
+            existing_patch = patches.get(version)
+            if not existing_patch:
+                patches[version] = {"start_date": start_date, "end_date": end_date}
+            else:
+                existing_patch["start_date"] = min(existing_patch["start_date"], start_date)
+                existing_patch["end_date"] = max(existing_patch["end_date"], end_date)
+
+    return banners, patches
+
+
+def parse_hi3_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
+    items = fetch_content_list(HI3_APP, HI3_CHANNEL, "en-us")
+    banners: List[Dict[str, Any]] = []
+    patches: Dict[str, Dict[str, str]] = {}
+
+    for item in items:
+        title = item.get("sTitle", "") or ""
+        match = re.search(r"v(\d+\.\d+)\s+.*Update Announcement", title, re.IGNORECASE)
+        if not match:
+            continue
+        version = match.group(1)
+        content_id = str(item.get("iInfoId", ""))
+        detail = fetch_content_detail(HI3_APP, content_id, "en-us")
+        raw_content = detail.get("sContent", "") or ""
+        content = strip_html(raw_content)
+        if not content:
+            continue
+
+        year = datetime.now(timezone.utc).year
+        start_time = str(detail.get("dtStartTime", "") or item.get("dtStartTime", ""))
+        start_year = parse_date(start_time)
+        if start_year:
+            year = int(start_year[:4])
+
+        period = re.search(r"\(([A-Z]{3})\s+(\d{1,2})\s*~\s*([A-Z]{3})\s+(\d{1,2})\)", content)
+        start_date = parse_month_day(period.group(1), period.group(2), year) if period else None
+        end_date = parse_month_day(period.group(3), period.group(4), year) if period else None
+        if not start_date or not end_date:
+            continue
+
+        suits = []
+        for name in re.findall(
+            r"New (?:IMG-type )?S-rank Battlesuit\s+([^<]+)",
+            raw_content,
+            re.IGNORECASE,
+        ):
+            clean_name = strip_html(name).strip()
+            if clean_name and clean_name not in suits:
+                suits.append(clean_name)
+        if not suits:
+            for name in HI3_SUIT_RE.findall(content):
+                words = name.split()
+                half = len(words) // 2
+                if half and words[:half] == words[half:]:
+                    name = " ".join(words[:half])
+                if name not in suits:
+                    suits.append(name)
+        if not suits:
+            continue
+
+        banner = make_banner(
+            3, version, 1, start_date, end_date,
+            suits, [],
+            HI3_SITE.format(id=content_id), content_id, catalog_lookup,
+        )
+        if banner:
+            banners.append(banner)
+            patches[version] = {"start_date": start_date, "end_date": end_date}
+            break
+
+    return banners, patches
+
+
+def parse_hsr_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
+    banners: List[Dict[str, Any]] = []
+    patches: Dict[str, Dict[str, str]] = {}
+
+    items = fetch_content_list(HSR_APP, HSR_CHANNEL, "en-us")
+    for item in items:
+        title = item.get("sTitle", "") or ""
+        match = re.search(r"Version\s+(\d+\.\d+).*Update Details", title, re.IGNORECASE)
+        if not match:
+            continue
+        version = match.group(1)
+        content_id = str(item.get("iInfoId", ""))
+        detail = fetch_content_detail(HSR_APP, content_id, "en-us")
+        content = strip_html(detail.get("sContent", "") or "")
+        if not content:
+            continue
+        start_date = parse_date(str(detail.get("dtStartTime", "") or item.get("dtStartTime", "")))
+        end_match = re.search(
+            r"Version\s+\d+\.\d+\s+will run from after the Version\s+\d+\.\d+\s+update until\s+"
+            r"(\d{4}/\d{1,2}/\d{1,2})",
+            content,
+        )
+        end_date = parse_date(end_match.group(1)) if end_match else None
+        if start_date and end_date:
+            patches[version] = {"start_date": start_date, "end_date": end_date}
+            break
+
+    try:
+        news = fetch_json(HSR_HOYOLAB_LIST, lang="ru-ru")
+        posts = news.get("data", {}).get("list", [])
+    except Exception as error:
+        print(f"[OfficialParser] HSR HoYoLAB list failed: {error}")
+        return banners, patches
+
+    today = datetime.now(timezone.utc).date()
+    for entry in posts:
+        post = entry.get("post", {}) or {}
+        subject = post.get("subject", "") or ""
+        match = re.search(
+            r"(?:Version\s+(\d+\.\d+)\s+Event Warp:\s+Phase\s+(I|II)|"
+            r"Прыжок события версии\s+(\d+\.\d+):\s*(первая|вторая)\s+фаза)",
+            subject,
+            re.IGNORECASE,
+        )
+        if not match:
+            continue
+        version = match.group(1) or match.group(3)
+        phase_text = match.group(2) or match.group(4) or "I"
+        phase = 2 if phase_text.upper() in ("II", "ВТОРАЯ") else 1
+        post_id = str(post.get("post_id", ""))
+        try:
+            detail = fetch_json(
+                f"{HSR_HOYOLAB_POST}?{urllib.parse.urlencode({'post_id': post_id})}",
+                lang="ru-ru",
+            )
+            content = strip_html(
+                detail.get("data", {}).get("post", {}).get("post", {}).get("content", "") or ""
+            )
+        except Exception as error:
+            print(f"[OfficialParser] HSR post {post_id} failed: {error}")
+            continue
+        if not content:
+            continue
+
+        ranges = HSR_DATE_RANGE_RE.findall(content)
+        if not ranges:
+            continue
+        start_date = parse_date(ranges[-1][0])
+        end_date = parse_date(ranges[-1][1])
+        if not start_date or not end_date:
+            continue
+        if datetime.strptime(end_date, "%Y-%m-%d").date() < today - timedelta(days=45):
+            continue
+
+        five_names = []
+        for name in HSR_FIVE_RU_RE.findall(content):
+            clean_name = name.strip()
+            if clean_name and clean_name not in five_names:
+                five_names.append(clean_name)
+
+        four_names = []
+        block = HSR_FOUR_RU_BLOCK_RE.search(content)
+        if block:
+            for name in HSR_NAME_RU_RE.findall(block.group(1)):
+                clean_name = name.strip()
+                if clean_name and clean_name not in five_names and clean_name not in four_names:
+                    four_names.append(clean_name)
+
+        banner = make_banner(
+            1, version, phase, start_date, end_date,
+            five_names, four_names,
+            HSR_ARTICLE.format(id=post_id), post_id, catalog_lookup,
+        )
+        if banner:
+            banners.append(banner)
+
+    return banners, patches
+
+
+def parse_all_official_data(catalog_path: str) -> Dict[str, Any]:
     catalog_lookup = load_catalog_lookup(catalog_path)
-    banners_path = os.path.join(os.path.dirname(catalog_path), "banners_schedule.json")
-    patch_dates = load_patch_dates(banners_path)
-    discovered_banners = []
+    banners: List[Dict[str, Any]] = []
+    patches: Dict[int, Dict[str, Dict[str, str]]] = {0: {}, 1: {}, 2: {}, 3: {}}
+    errors: Dict[int, str] = {}
 
-    for game_type, config in HOYOLAB_GAMES.items():
-        print(f"[HoYoLAB] Checking official news for {config['name']} (gid {config['gid']})...")
-        posts = fetch_hoyolab_news(gid=config["gid"], lang="ru-ru", page_size=30)
-        for post in posts:
-            try:
-                banner_data = parse_hoyolab_post_banner(post, game_type, catalog_lookup, patch_dates)
-                if banner_data:
-                    discovered_banners.append(banner_data)
-            except Exception as e:
-                print(f"[HoYoLAB] Error parsing post in {config['name']}: {e}")
+    parsers = [(0, parse_genshin_data), (2, parse_zzz_data), (3, parse_hi3_data), (1, parse_hsr_data)]
+    for game_type, parser in parsers:
+        try:
+            game_banners, game_patches = parser(catalog_lookup)
+            banners.extend(game_banners)
+            patches[game_type].update(game_patches)
+        except Exception as error:
+            errors[game_type] = str(error)
+            print(f"[OfficialParser] {GAME_NAMES[game_type]} failed: {error}")
 
-    return discovered_banners
+    return {"banners": banners, "patches": patches, "errors": errors}
+
+
+def parse_all_official_banners(catalog_path: str) -> List[Dict[str, Any]]:
+    return parse_all_official_data(catalog_path)["banners"]
 
 
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    cat_file = os.path.join(base_dir, "game_catalog.json")
-    banners = parse_all_official_banners(cat_file)
-    print(f"Discovered {len(banners)} official banners from HoYoLAB:")
-    for b in banners:
-        print(json.dumps(b, ensure_ascii=False, indent=2))
+    catalog_file = os.path.join(base_dir, "game_catalog.json")
+    result = parse_all_official_data(catalog_file)
+    print(json.dumps(result, ensure_ascii=False, indent=2))

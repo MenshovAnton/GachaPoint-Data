@@ -10,11 +10,64 @@ import os
 import sys
 import json
 import re
-from datetime import datetime, date
+import urllib.parse
+from datetime import datetime, date, timezone
 from typing import Dict, List, Set, Tuple, Any
 
 BANNER_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 CODE_RE = re.compile(r"^[A-Za-z0-9_-]{3,30}$")
+REPLACEMENT_RE = re.compile(r"\?{2,}|\ufffd")
+OFFICIAL_HOSTS = ("hoyoverse.com", "hoyolab.com", "x.com", "twitter.com")
+VERIFICATION_VALUES = {"verified", "legacy", "unverified"}
+EXPIRY_CONFIDENCE_VALUES = {"official", "estimated", "unknown"}
+SOURCE_TYPES = {"official", "manual_in_game", "community"}
+PERMANENT_ALLOWLIST = {
+    (0, "GENSHINGIFT"),
+    (1, "STARRAILGIFT"),
+    (2, "ZENLESSGIFT"),
+    (3, "HONKAIGIFT"),
+    (1, "CREATIONNYMPH"),
+    (1, "FAREWELL"),
+    (1, "IFYOUAREREADINGTHIS"),
+    (1, "OMEGA"),
+}
+ALLOWED_RARITIES = {
+    0: {"4★", "5★"},
+    1: {"4★", "5★"},
+    2: {"A", "S"},
+    3: {"A", "B", "S"},
+}
+
+
+def is_official_url(value: str) -> bool:
+    try:
+        host = urllib.parse.urlparse(value).hostname or ""
+    except Exception:
+        return False
+    return any(host == domain or host.endswith("." + domain) for domain in OFFICIAL_HOSTS)
+
+
+def is_detail_url(value: str) -> bool:
+    try:
+        path = (urllib.parse.urlparse(value).path or "").rstrip("/")
+    except Exception:
+        return False
+    if not path:
+        return False
+    generic = {"/en/news", "/ru/news", "/en-us/news", "/global/en/news"}
+    return path not in generic and not path.endswith("/news")
+
+
+def parse_iso(value: str) -> Any:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except Exception:
+        try:
+            return datetime.strptime(value[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        except Exception:
+            return None
 
 def normalize_name(s: str) -> str:
     if not s:
@@ -68,6 +121,10 @@ def lint_catalog(base_dir: str) -> Tuple[Dict[int, Dict[str, Any]], List[str], L
             item_type = item.get("type")
             aliases = item.get("aliases", [])
 
+            if REPLACEMENT_RE.search(name_ru or "") or REPLACEMENT_RE.search(name_en or ""):
+                errors.append(f"Game {gt} item #{idx}: broken characters in localized name")
+                continue
+
             if not name_ru or not name_en:
                 errors.append(f"Game {gt} item #{idx}: missing 'name_ru' or 'name_en'")
                 continue
@@ -97,11 +154,16 @@ def lint_catalog(base_dir: str) -> Tuple[Dict[int, Dict[str, Any]], List[str], L
                 if not os.path.exists(local_avatar):
                     warnings.append(f"Game {gt} item '{display_name}': avatar file not found locally: {icon_path}")
 
-            if not rarity or not any(s in rarity for s in ["3★", "4★", "5★", "S", "A", "B"]):
-                warnings.append(f"Game {gt} item '{display_name}': unexpected rarity '{rarity}'")
+            if rarity not in ALLOWED_RARITIES.get(gt, set()):
+                errors.append(f"Game {gt} item '{display_name}': unexpected rarity '{rarity}'")
 
             if item_type not in ["CHARACTER", "WEAPON", "BANGBOO", "ASTRAL_OP", "ELF"]:
                 warnings.append(f"Game {gt} item '{display_name}': unknown type '{item_type}'")
+
+            if not isinstance(item.get("is_standard"), bool):
+                errors.append(f"Game {gt} item '{display_name}': 'is_standard' must be a boolean")
+
+
 
             # Register in lookup for banner validation
             keys = [name_ru, name_en] + aliases
@@ -167,19 +229,74 @@ def lint_banners(base_dir: str, catalog_lookup: Dict[int, Dict[str, Any]]) -> Tu
             if s_date and e_date and s_date > e_date:
                 errors.append(f"Game {gt} banner '{b_id}': start_date '{s_date}' is after end_date '{e_date}'")
 
+            expected = None
             if s_date and e_date and BANNER_DATE_RE.match(s_date) and BANNER_DATE_RE.match(e_date):
-                start = date.fromisoformat(s_date)
-                end = date.fromisoformat(e_date)
-                expected = "ANNOUNCED" if today < start else ("CURRENT" if start <= today <= end else "EXPIRED")
-                if b.get("status") != expected:
+                try:
+                    start = date.fromisoformat(s_date)
+                    end = date.fromisoformat(e_date)
+                except ValueError:
                     errors.append(
-                        f"Game {gt} banner '{b_id}': status '{b.get('status')}' does not match dates (expected {expected})"
+                        f"Game {gt} banner '{b_id}': invalid calendar date '{s_date}'/'{e_date}'"
+                    )
+                else:
+                    expected = "ANNOUNCED" if today < start else ("CURRENT" if start <= today <= end else "EXPIRED")
+                    if b.get("status") != expected:
+                        errors.append(
+                            f"Game {gt} banner '{b_id}': status '{b.get('status')}' does not match dates (expected {expected})"
+                        )
+
+            if b.get("verification_status") is not None and b.get("verification_status") not in VERIFICATION_VALUES:
+                errors.append(
+                    f"Game {gt} banner '{b_id}': invalid verification_status '{b.get('verification_status')}'"
+                )
+
+            if b.get("source_url") and not is_official_url(b["source_url"]):
+                errors.append(
+                    f"Game {gt} banner '{b_id}': source_url is not an official HoYoverse source"
+                )
+
+            if b.get("source_type") is not None and b.get("source_type") not in SOURCE_TYPES:
+                errors.append(
+                    f"Game {gt} banner '{b_id}': invalid source_type '{b.get('source_type')}'"
+                )
+
+            if expected in ("CURRENT", "ANNOUNCED"):
+                if not b.get("source_url"):
+                    errors.append(
+                        f"Game {gt} banner '{b_id}': CURRENT/ANNOUNCED banner requires an official source_url"
+                    )
+                elif not is_detail_url(b["source_url"]):
+                    errors.append(
+                        f"Game {gt} banner '{b_id}': source_url must point to a specific post, not a news index"
+                    )
+                if not b.get("source_id"):
+                    errors.append(
+                        f"Game {gt} banner '{b_id}': CURRENT/ANNOUNCED banner requires 'source_id'"
+                    )
+                if b.get("verification_status") != "verified":
+                    errors.append(
+                        f"Game {gt} banner '{b_id}': CURRENT/ANNOUNCED banner must have verification_status 'verified'"
+                    )
+                if not b.get("verified_at"):
+                    errors.append(
+                        f"Game {gt} banner '{b_id}': verified banner requires 'verified_at'"
                     )
 
             fives_ru = b.get("featured_five_stars_ru", [])
             fives_en = b.get("featured_five_stars_en", [])
             fours_ru = b.get("featured_four_stars_ru", [])
             fours_en = b.get("featured_four_stars_en", [])
+
+            for names in (fives_ru, fives_en, fours_ru, fours_en):
+                for name in names:
+                    if REPLACEMENT_RE.search(name or ""):
+                        errors.append(
+                            f"Game {gt} banner '{b_id}': broken characters in featured name '{name}'"
+                        )
+            if len(fives_ru) != len(fives_en):
+                errors.append(f"Game {gt} banner '{b_id}': 5-star RU/EN lists have different lengths")
+            if len(fours_ru) != len(fours_en):
+                errors.append(f"Game {gt} banner '{b_id}': 4-star RU/EN lists have different lengths")
 
             if "featured_five_stars" in b or "featured_four_stars" in b:
                 errors.append(
@@ -247,6 +364,7 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
     promo_path = os.path.join(base_dir, "promocodes.json")
     errors = []
     warnings = []
+    now = datetime.now(timezone.utc)
 
     try:
         data = load_json(promo_path)
@@ -268,7 +386,6 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
         (0, "GENSHINGIFT"),
         (1, "STARRAILGIFT"),
         (2, "ZENLESSGIFT"),
-        (2, "ZZZTVCM"),
         (3, "HONKAIGIFT")
     }
 
@@ -288,8 +405,56 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
             errors.append(f"promocodes.json: duplicate code '{code_str}' for game {gt}")
         seen_codes.add(pair)
 
+        status_upper = (status or "").upper()
+        expires_at = parse_iso(c.get("expires_at"))
+
+        if status_upper == "PERMANENT":
+            if pair not in PERMANENT_ALLOWLIST:
+                errors.append(f"promocodes.json code '{code_str}': unexpected PERMANENT status")
+            if c.get("expires_at"):
+                errors.append(f"promocodes.json code '{code_str}': PERMANENT code must not have expires_at")
+
+        if status_upper in ("ACTIVE", "STREAM", "NEW"):
+            if expires_at is not None and expires_at < now:
+                errors.append(f"promocodes.json code '{code_str}': active code has a past expires_at")
+            if not c.get("source_url") and c.get("source_type") != "manual_in_game":
+                errors.append(
+                    f"promocodes.json code '{code_str}': active code requires source_url or source_type 'manual_in_game'"
+                )
+            if c.get("source_type") == "manual_in_game" and not c.get("verified_at"):
+                errors.append(
+                    f"promocodes.json code '{code_str}': manual_in_game code requires 'verified_at'"
+                )
+
+        if status_upper == "EXPIRED" and expires_at is not None and expires_at > now:
+            errors.append(f"promocodes.json code '{code_str}': expired code has a future expires_at")
+
+        if c.get("source_type") is not None and c.get("source_type") not in SOURCE_TYPES:
+            errors.append(f"promocodes.json code '{code_str}': invalid source_type '{c.get('source_type')}'")
+
+        if c.get("source_url") and not is_detail_url(c["source_url"]):
+            errors.append(f"promocodes.json code '{code_str}': source_url must point to a specific post")
+
         if status == "PERMANENT":
             found_perms.add(pair)
+
+        if status in ("ACTIVE", "STREAM", "NEW") and c.get("verification_status") != "verified":
+            errors.append(f"promocodes.json code '{code_str}': active/stream code must be verified")
+
+        if status in ("ACTIVE", "STREAM", "NEW") and c.get("expiry_confidence") == "estimated":
+            errors.append(f"promocodes.json code '{code_str}': active code cannot use an estimated expiry")
+
+        if c.get("expiry_confidence") == "unknown" and c.get("expires_at"):
+            errors.append(f"promocodes.json code '{code_str}': unknown expiry must not have expires_at")
+
+        if c.get("verification_status") is not None and c.get("verification_status") not in VERIFICATION_VALUES:
+            errors.append(f"promocodes.json code '{code_str}': invalid verification_status '{c.get('verification_status')}'")
+
+        if c.get("source_url") and not is_official_url(c["source_url"]):
+            errors.append(f"promocodes.json code '{code_str}': source_url is not an official HoYoverse source")
+
+        if c.get("expiry_confidence") is not None and c.get("expiry_confidence") not in EXPIRY_CONFIDENCE_VALUES:
+            errors.append(f"promocodes.json code '{code_str}': invalid expiry_confidence '{c.get('expiry_confidence')}'")
 
         if "rewards_description" in c:
             errors.append(f"promocodes.json code '{code_str}': deprecated field 'rewards_description' must be removed")
@@ -298,6 +463,8 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
         desc_en = (c.get("rewards_description_en") or "").strip()
         if not desc_ru or not desc_en:
             errors.append(f"promocodes.json code '{code_str}': both RU and EN rewards descriptions are required")
+        if REPLACEMENT_RE.search(desc_ru) or REPLACEMENT_RE.search(desc_en):
+            errors.append(f"promocodes.json code '{code_str}': broken characters in rewards description")
 
         bare_placeholders = {
             "камни истока", "звёздный нефрит", "звездный нефрит", "полихромы", "кристаллы",
@@ -312,6 +479,58 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
 
     return errors, warnings
 
+def lint_quarantine(base_dir: str) -> Tuple[List[str], List[str]]:
+    errors = []
+    warnings = []
+
+    try:
+        promo = load_json(os.path.join(base_dir, "promocodes.json"))
+    except Exception:
+        return errors, warnings
+    published_codes = {
+        (code.get("game_type", 0), (code.get("code") or "").strip().upper())
+        for code in promo.get("codes", [])
+    }
+
+    quarantine_path = os.path.join(base_dir, "quarantine_codes.json")
+    if os.path.exists(quarantine_path):
+        try:
+            quarantine = load_json(quarantine_path)
+            for entry in quarantine.get("codes", []):
+                code = (entry.get("code") or "").strip().upper()
+                game_type = entry.get("game_type", 0)
+                if not code or not CODE_RE.match(code):
+                    errors.append(f"quarantine_codes.json: invalid code '{code}'")
+                if (game_type, code) in published_codes:
+                    errors.append(
+                        f"quarantine_codes.json: code '{code}' is already published in promocodes.json"
+                    )
+        except Exception as e:
+            errors.append(f"Failed to load quarantine_codes.json: {e}")
+
+    pending_path = os.path.join(base_dir, "pending_banners.json")
+    banners_path = os.path.join(base_dir, "banners_schedule.json")
+    if os.path.exists(pending_path) and os.path.exists(banners_path):
+        try:
+            pending = load_json(pending_path)
+            banners = load_json(banners_path)
+            published_ids = {
+                (game.get("game_type", 0), banner.get("id", ""))
+                for game in banners.get("games", [])
+                for banner in game.get("banners", [])
+            }
+            for entry in pending.get("banners", []):
+                key = (entry.get("game_type", 0), entry.get("id", ""))
+                if key in published_ids:
+                    errors.append(
+                        f"pending_banners.json: banner '{key[1]}' is already published in banners_schedule.json"
+                    )
+        except Exception as e:
+            errors.append(f"Failed to load pending_banners.json: {e}")
+
+    return errors, warnings
+
+
 def main():
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     strict = "--strict" in sys.argv
@@ -320,9 +539,10 @@ def main():
     catalog_lookup, cat_errors, cat_warnings = lint_catalog(base_dir)
     banner_errors, banner_warnings = lint_banners(base_dir, catalog_lookup)
     promo_errors, promo_warnings = lint_promocodes(base_dir)
+    quarantine_errors, quarantine_warnings = lint_quarantine(base_dir)
 
-    all_errors = cat_errors + banner_errors + promo_errors
-    all_warnings = cat_warnings + banner_warnings + promo_warnings
+    all_errors = cat_errors + banner_errors + promo_errors + quarantine_errors
+    all_warnings = cat_warnings + banner_warnings + promo_warnings + quarantine_warnings
 
     print(f"\n[CATALOG] {sum(len(v) for v in catalog_lookup.values())} indexed lookup names across 4 games.")
     print(f"[RESULTS] Errors: {len(all_errors)}, Warnings: {len(all_warnings)}")

@@ -124,6 +124,49 @@ def notify_suspicious_announcement(game_name: str, title: str, reason: str, post
     send_telegram_message(msg)
 
 
+def notify_code_review(items: list[dict]):
+    """Sends a digest of promo codes that need manual verification."""
+    if not items:
+        return
+
+    game_names = {0: "Genshin Impact", 1: "Honkai: Star Rail", 2: "Zenless Zone Zero", 3: "Honkai Impact 3rd"}
+    redeem_urls = {
+        0: "https://genshin.hoyoverse.com/ru/gift?code={code}",
+        1: "https://hsr.hoyoverse.com/gift?code={code}",
+        2: "https://zenless.hoyoverse.com/redemption?code={code}",
+        3: "https://act.hoyoverse.com/puzzle/bh3/pz_u6h7mQo34g/index.html?cdkey={code}",
+    }
+
+    server_url = os.environ.get("GITHUB_SERVER_URL", "https://github.com")
+    repo = os.environ.get("GITHUB_REPOSITORY", "MenshovAnton/GachaPoint-Data")
+    verify_url = f"{server_url}/{repo}/actions/workflows/verify-code.yml"
+
+    msg = "🔎 <b>[GachaPoint: коды требуют проверки]</b>\n\n"
+    for item in items[:10]:
+        game_type = int(item.get("game_type", 0))
+        code = item.get("code", "")
+        rewards = item.get("rewards_description_ru") or item.get("rewards_description_en") or "Награды не распознаны"
+        source = item.get("source_url") or "официальный источник не найден"
+        template = redeem_urls.get(game_type, "")
+        redeem = template.format(code=code) if template else ""
+        msg += (
+            f"• <b>{game_names.get(game_type, 'Gacha')}</b> <code>{code}</code>\n"
+            f"  {rewards}\n"
+            f"  Источник: {source}\n"
+        )
+        if redeem:
+            msg += f"  Проверить: <a href=\"{redeem}\">открыть страницу активации</a>\n"
+
+    if len(items) > 10:
+        msg += f"\n…и ещё {len(items) - 10} код(ов) в quarantine_codes.json."
+
+    msg += (
+        f"\n🔗 <a href=\"{verify_url}\">Подтвердить в GitHub Actions</a>\n"
+        "<i>Или локально: python -m scripts.tools.apply_code_checks --set GAME CODE ok</i>"
+    )
+    send_telegram_message(msg)
+
+
 def notify_new_banners(new_banners: list[dict]):
     """Sends an alert when new verified official banners are scheduled."""
     if not new_banners:

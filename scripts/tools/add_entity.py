@@ -49,7 +49,7 @@ def fetch_fandom_image_url(wiki: str, candidate_titles: list) -> tuple:
         headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     )
     
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=30) as resp:
         res = json.loads(resp.read().decode("utf-8"))
         pages = res.get("query", {}).get("pages", {})
         for page in pages.values():
@@ -61,15 +61,17 @@ def fetch_fandom_image_url(wiki: str, candidate_titles: list) -> tuple:
 
 def download_and_format_avatar(wiki: str, url: str, dest_path: str, target_size: tuple):
     temp_file = dest_path + ".tmp"
-    cmd = [
-        "curl.exe", "-s", "-L",
-        "-A", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "-e", f"https://{wiki}.fandom.com/",
+    request = urllib.request.Request(
         url,
-        "-o", temp_file
-    ]
-    subprocess.run(cmd, check=True)
-    
+        headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Referer": f"https://{wiki}.fandom.com/",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        with open(temp_file, "wb") as file:
+            file.write(response.read())
+
     try:
         im = Image.open(temp_file).convert("RGBA")
         if im.size != target_size:
@@ -183,25 +185,27 @@ def add_catalog_entity(game_type: int, name_ru: str, name_en: str, rarity: str, 
 
     # 4. Run lint_data.py
     print("\nRunning linter verification...")
-    subprocess.run([sys.executable, "-m", "scripts.tools.lint_data"], cwd=BASE_DIR, check=True)
+    subprocess.run([sys.executable, "-m", "scripts.tools.lint_data", "--strict"], cwd=BASE_DIR, check=True)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Add or update a character/weapon entity in GachaPoint")
     parser.add_argument("--game", type=int, required=True, choices=[0, 1, 2, 3], help="Game ID (0: Genshin, 1: HSR, 2: ZZZ, 3: HI3)")
     parser.add_argument("--name-ru", type=str, required=True, help="Russian name (e.g. 'Скирк')")
     parser.add_argument("--name-en", type=str, required=True, help="English name (e.g. 'Skirk')")
-    parser.add_argument("--rarity", type=str, default="5★", choices=["3★", "4★", "5★"], help="Rarity (default 5★)")
-    parser.add_argument("--type", type=str, default="CHARACTER", choices=["CHARACTER", "WEAPON", "BANGBOO"], help="Item type")
+    parser.add_argument("--rarity", type=str, default=None, choices=["3★", "4★", "5★", "S", "A", "B"], help="Rarity (default 5★ for Genshin/HSR, S for ZZZ/HI3)")
+    parser.add_argument("--type", type=str, default="CHARACTER", choices=["CHARACTER", "WEAPON", "BANGBOO", "ELF", "ASTRAL_OP"], help="Item type")
     parser.add_argument("--standard", action="store_true", help="Is standard banner item")
     parser.add_argument("--aliases", nargs="*", default=[], help="Additional search aliases")
     parser.add_argument("--file", type=str, default=None, help="Custom icon filename")
     
     args = parser.parse_args()
+    rarity = args.rarity or ("5★" if args.game in (0, 1) else "S")
+
     add_catalog_entity(
         game_type=args.game,
         name_ru=args.name_ru,
         name_en=args.name_en,
-        rarity=args.rarity,
+        rarity=rarity,
         item_type=args.type,
         is_standard=args.standard,
         aliases=args.aliases,

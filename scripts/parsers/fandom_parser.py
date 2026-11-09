@@ -49,6 +49,8 @@ GAMES_CONFIG = {
 
 CODE_RE = re.compile(r"^[A-Za-z0-9_-]{3,30}$")
 DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+SOURCE_URL_RE = re.compile(r"https?://[^\s\]<>|\"']+")
+OFFICIAL_SOURCE_HOSTS = ("hoyoverse.com", "hoyolab.com", "x.com", "twitter.com")
 DISALLOWED_CODES = {
     "CODE", "PROMOCODE", "ITEM", "YES", "NO", "REWARDS", "GLOBAL",
     "ONLINE", "WEBSITE", "SERVER", "NOTES", "DURATION", "EXCHANGE",
@@ -111,7 +113,58 @@ def split_active_and_expired(full_text: str, game_type: int) -> Tuple[str, str]:
     return active_text, expired_text
 
 
-def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[str, str, str, List[str]]:
+GENERIC_ITEM_ALIASES = {
+    "guide to charity": ("Указания о «Милосердии»", "Guide to Charity", "TALENT_BOOK"),
+    "kristallfold": ("Кристаллический гриб-зонтик", "Kristallfold", "MATERIAL"),
+    "energy-replenishing meal": ("Энергетический обед", "Energy-Replenishing Meal", "FOOD"),
+}
+
+CURRENCY_ITEM_KEYS = {
+    "primogem", "primogems", "stellar jade", "polychrome", "polychromes",
+    "crystal", "crystals", "mora", "credit", "credits", "denny", "dennies",
+    "coin", "coins", "asterite"
+}
+
+
+def normalize_item_key(name: str) -> str:
+    return name.strip().strip('"').strip("“”").lower().replace("’", "'")
+
+
+def parse_generic_items(row_text: str) -> List[Tuple[str, str, str, int]]:
+    items = []
+    seen = set()
+
+    def add(raw_name: str, raw_quantity: str):
+        name = raw_name.strip().strip('"').strip("“”")
+        quantity = raw_quantity.replace(",", "").replace(" ", "")
+        key = normalize_item_key(name)
+        if not name or not quantity.isdigit() or key in seen or key in CURRENCY_ITEM_KEYS:
+            return
+        seen.add(key)
+        ru_name, en_name, reward_type = GENERIC_ITEM_ALIASES.get(key, (name, name, "ITEM"))
+        items.append((ru_name, en_name, reward_type, int(quantity)))
+
+    for block in re.findall(r"\{\{Item List\|([^}]+)\}\}", row_text, re.IGNORECASE):
+        for part in block.split(";"):
+            match = re.match(r'\s*"?([^"*x×]+?)"?\s*[*x×]\s*([\d,]+)', part, re.IGNORECASE)
+            if match:
+                add(match.group(1), match.group(2))
+
+    for match in re.finditer(r"\{\{Item\|([^|}]+)\|([^}]*)\}\}", row_text, re.IGNORECASE):
+        quantity = re.search(r"quantity\s*=\s*([\d,]+)", match.group(2), re.IGNORECASE)
+        if quantity:
+            add(match.group(1), quantity.group(1))
+
+    for match in re.finditer(r'"([^"]+)"\s*[*x×]\s*([\d,]+)', row_text):
+        add(match.group(1), match.group(2))
+
+    for match in re.finditer(r'(?<![\w])([A-Z][A-Za-z\'’\- ]{2,40}?)\s*[*x×]\s*([\d,]+)', row_text):
+        add(match.group(1), match.group(2))
+
+    return items
+
+
+def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[Optional[str], Optional[str], List[str]]:
     """Analyzes table row text to determine reward types, RU/EN descriptions."""
     config = GAMES_CONFIG[game_type]
     reward_types = []
@@ -195,7 +248,14 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[str, str, st
             en_parts.append(f"{fmt_num} Coins")
 
     if not ru_parts:
-        return None, None, reward_types or [config["primary_reward"]]
+        for ru_name, en_name, reward_type, quantity in parse_generic_items(row_text):
+            if reward_type not in reward_types:
+                reward_types.append(reward_type)
+            ru_parts.append(f"{quantity} {ru_name}")
+            en_parts.append(f"{quantity} {en_name}")
+
+    if not ru_parts:
+        return None, None, []
 
     desc_ru = ", ".join(ru_parts)
     desc_en = ", ".join(en_parts)
@@ -225,6 +285,14 @@ def extract_code_from_row(row: str) -> Optional[str]:
         if CODE_RE.match(candidate) and candidate not in DISALLOWED_CODES:
             return candidate
 
+    return None
+
+
+def extract_source_url(row: str) -> Optional[str]:
+    for url in SOURCE_URL_RE.findall(row):
+        host = urllib.parse.urlparse(url).hostname or ""
+        if any(host == domain or host.endswith("." + domain) for domain in OFFICIAL_SOURCE_HOSTS):
+            return url.rstrip(".,;)")
     return None
 
 
@@ -286,29 +354,21 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
                 except Exception:
                     pass
             elif is_stream:
-                # Stream codes without explicit end date: expire 24h after discovery
                 if dates:
                     try:
                         disc_dt = datetime.strptime(dates[0], "%Y-%m-%d").replace(tzinfo=timezone.utc, hour=12)
-                        expires_at = (disc_dt + timedelta(hours=24)).strftime("%Y-%m-%dT%H:%M:%SZ")
                         if now > (disc_dt + timedelta(hours=30)):
                             is_expired = True
                     except Exception:
-                        expires_at = (now + timedelta(hours=16)).strftime("%Y-%m-%dT%H:%M:%SZ")
-                else:
-                    expires_at = (now + timedelta(hours=16)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                        pass
             else:
-                # Normal codes: anchor expiry to discovery date + 35 days (NOT now + 25 days!)
                 if dates:
                     try:
                         disc_dt = datetime.strptime(dates[0], "%Y-%m-%d").replace(tzinfo=timezone.utc, hour=12)
-                        expires_at = (disc_dt + timedelta(days=35)).strftime("%Y-%m-%dT%H:%M:%SZ")
                         if "indef" not in row_lower and (now - disc_dt).days >= 45:
                             is_expired = True
                     except Exception:
-                        expires_at = (now + timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
-                else:
-                    expires_at = (now + timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%SZ")
+                        pass
 
         status = "EXPIRED" if is_expired else ("STREAM" if is_stream else "ACTIVE")
         is_active = not is_expired
@@ -322,7 +382,9 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
             "reward_types": reward_types,
             "status": status,
             "expires_at": expires_at,
+            "expiry_confidence": "estimated" if expires_at else "unknown",
             "created_at": created_at,
+            "source_url": extract_source_url(row),
             "is_stream": is_stream,
             "is_active": is_active
         })

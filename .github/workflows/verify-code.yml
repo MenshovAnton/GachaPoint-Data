@@ -1,0 +1,99 @@
+name: Verify Promo Code
+
+on:
+  workflow_dispatch:
+    inputs:
+      game_type:
+        description: 'Game: 0 Genshin, 1 HSR, 2 ZZZ, 3 HI3'
+        required: true
+        default: '0'
+      code:
+        description: 'Promo code'
+        required: true
+      result:
+        description: 'ok, expired or invalid'
+        required: true
+        default: 'ok'
+      expires_at:
+        description: 'Exact expiry (ISO-8601), optional'
+        required: false
+        default: ''
+      note:
+        description: 'Optional note'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-sync
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Apply manual verification
+        shell: bash
+        env:
+          GAME_TYPE: ${{ inputs.game_type }}
+          CODE: ${{ inputs.code }}
+          RESULT: ${{ inputs.result }}
+          EXPIRES_AT: ${{ inputs.expires_at }}
+          NOTE: ${{ inputs.note }}
+        run: |
+          set -euo pipefail
+          python -m scripts.tools.apply_code_checks \
+            --set "$GAME_TYPE" "$CODE" "$RESULT" \
+            --expires-at "$EXPIRES_AT" \
+            --note "$NOTE"
+
+      - name: Normalize datasets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.sync.sync_promocodes --no-scrape --no-verify
+
+      - name: Validate datasets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.tools.lint_data --strict
+
+      - name: Notify Telegram on Failure
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python -m scripts.lib.notify --failure "Verify promo code workflow failed. Run ID: $GITHUB_RUN_ID"
+
+      - name: Commit and push
+        shell: bash
+        env:
+          CODE: ${{ inputs.code }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for file in promocodes.json quarantine_codes.json code_checks.json pending_banners.json; do
+            if [ -f "$file" ]; then
+              git add "$file"
+            fi
+          done
+          if git diff --staged --quiet; then
+            echo "No changes detected."
+          else
+            git commit -m "chore(data): verify promo code $CODE [skip ci]"
+            git push
+          fi
