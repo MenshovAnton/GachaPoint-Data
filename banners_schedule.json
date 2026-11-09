@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T13:24:46Z",
+  "updated_at": "2026-11-09T14:01:37Z",
   "games": [
     {
       "game_type": 0,
@@ -8,7 +8,7 @@
         {
           "version": "7.2",
           "title": "Час погибели",
-          "start_date": "2026-11-03",
+          "start_date": "2026-11-04",
           "end_date": "2026-12-15"
         },
         {
@@ -3530,7 +3530,7 @@
           "type": "CHARACTER",
           "version": "7.2",
           "phase": 1,
-          "start_date": "2026-11-03",
+          "start_date": "2026-11-04",
           "end_date": "2026-11-24",
           "status": "CURRENT",
           "featured_five_stars_ru": [
@@ -3555,7 +3555,7 @@
           "source_id": "21997,21998",
           "source_type": "official",
           "verification_status": "verified",
-          "verified_at": "2026-11-09T13:24:42Z"
+          "verified_at": "2026-11-09T14:01:32Z"
         }
       ]
     },
