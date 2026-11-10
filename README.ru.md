@@ -1,4 +1,4 @@
-[English](README.md) | [Русский](README.ru.md) | [Отчёт об аудите](AUDIT.ru.md)
+[English](README.md) | [Русский](README.ru.md)
 
 <h1 align="center">GachaPoint Data Hub</h1>
 
