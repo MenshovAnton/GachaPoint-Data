@@ -3,6 +3,7 @@
 GachaPoint Notification Module — Telegram Failure & Event Alerts
 """
 
+import html
 import os
 import sys
 import json
@@ -37,6 +38,25 @@ def get_credentials() -> tuple[Optional[str], Optional[str]]:
     return token, chat_id
 
 
+def _split_chunks(text: str, max_size: int = 4000) -> list[str]:
+    if len(text) <= max_size:
+        return [text]
+    chunks = []
+    lines = text.split("\n")
+    current: list[str] = []
+    current_len = 0
+    for line in lines:
+        if current_len + len(line) + 1 > max_size and current:
+            chunks.append("\n".join(current))
+            current = []
+            current_len = 0
+        current.append(line)
+        current_len += len(line) + 1
+    if current:
+        chunks.append("\n".join(current))
+    return chunks
+
+
 def send_telegram_message(text: str, parse_mode: str = "HTML") -> bool:
     """Sends a message via Telegram Bot API. Returns True if successful, False otherwise."""
     token, chat_id = get_credentials()
@@ -45,31 +65,36 @@ def send_telegram_message(text: str, parse_mode: str = "HTML") -> bool:
         return False
 
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = {
-        "chat_id": chat_id,
-        "text": text,
-        "parse_mode": parse_mode,
-        "disable_web_page_preview": True
-    }
+    chunks = _split_chunks(text)
+    overall_success = True
 
-    try:
-        data = json.dumps(payload).encode("utf-8")
-        req = urllib.request.Request(
-            url,
-            data=data,
-            headers={"Content-Type": "application/json", "User-Agent": "GachaPointBot/1.0"},
-            method="POST"
-        )
-        with urllib.request.urlopen(req, timeout=10) as response:
-            if response.status == 200:
-                print("[Telegram] Notification sent successfully.")
-                return True
-            else:
-                print(f"[Telegram] Failed with status {response.status}")
-                return False
-    except Exception as e:
-        print(f"[Telegram] Error sending alert: {e}", file=sys.stderr)
-        return False
+    for chunk in chunks:
+        payload = {
+            "chat_id": chat_id,
+            "text": chunk,
+            "parse_mode": parse_mode,
+            "disable_web_page_preview": True
+        }
+
+        try:
+            data = json.dumps(payload).encode("utf-8")
+            req = urllib.request.Request(
+                url,
+                data=data,
+                headers={"Content-Type": "application/json", "User-Agent": "GachaPointBot/1.0"},
+                method="POST"
+            )
+            with urllib.request.urlopen(req, timeout=10) as response:
+                if response.status == 200:
+                    print("[Telegram] Notification sent successfully.")
+                else:
+                    print(f"[Telegram] Failed with status {response.status}")
+                    overall_success = False
+        except Exception as e:
+            print(f"[Telegram] Error sending alert: {e}", file=sys.stderr)
+            overall_success = False
+
+    return overall_success
 
 
 def notify_failure(summary: str, details: Optional[str] = None):
@@ -82,10 +107,10 @@ def notify_failure(summary: str, details: Optional[str] = None):
 
     msg = (
         f"🚨 <b>[GachaPoint Bot Alert: Sync Failure]</b>\n\n"
-        f"<b>Summary:</b> {summary}\n"
+        f"<b>Summary:</b> {html.escape(str(summary))}\n"
     )
     if details:
-        clean_details = details[:800].replace("<", "&lt;").replace(">", "&gt;")
+        clean_details = html.escape(str(details)[:800])
         msg += f"<pre>{clean_details}</pre>\n\n"
 
     msg += f"🔗 <a href=\"{link}\">View Workflow Run</a>"
@@ -101,9 +126,10 @@ def notify_new_codes(new_codes: list[dict]):
     msg = f"🎁 <b>[GachaPoint: New Promo Codes Found]</b>\n\n"
 
     for c in new_codes:
-        g_name = game_names.get(c.get("game_type", 0), "Gacha")
-        code = c.get("code", "")
-        rewards = c.get("rewards_description_ru") or c.get("rewards_description_en") or "Награды"
+        g_name = html.escape(game_names.get(c.get("game_type", 0), "Gacha"))
+        code = html.escape(str(c.get("code", "")))
+        raw_rewards = c.get("rewards_description_ru") or c.get("rewards_description_en") or "Награды"
+        rewards = html.escape(str(raw_rewards))
         is_stream = "🔥 [STREAM]" if c.get("is_stream") else "✨"
         msg += f"• <b>{g_name}</b> {is_stream} <code>{code}</code>\n  {rewards}\n"
 
@@ -114,12 +140,13 @@ def notify_suspicious_announcement(game_name: str, title: str, reason: str, post
     """Sends an alert when an announcement contains unknown characters or ambiguous info requiring manual verification."""
     msg = (
         f"⚠️ <b>[GachaPoint Bot: Требуется проверка анонса]</b>\n\n"
-        f"<b>Игра:</b> {game_name}\n"
-        f"<b>Новость:</b> {title}\n"
-        f"<b>Причина:</b> {reason}\n"
+        f"<b>Игра:</b> {html.escape(str(game_name))}\n"
+        f"<b>Новость:</b> {html.escape(str(title))}\n"
+        f"<b>Причина:</b> {html.escape(str(reason))}\n"
     )
     if post_url:
-        msg += f"🔗 <a href=\"{post_url}\">Открыть публикацию HoYoLAB</a>\n\n"
+        clean_url = html.escape(str(post_url))
+        msg += f"🔗 <a href=\"{clean_url}\">Открыть публикацию HoYoLAB</a>\n\n"
     msg += "<i>Бот не стал добавлять непроверенные данные, чтобы исключить сливы и ошибки. Проверьте и примените вручную.</i>"
     send_telegram_message(msg)
 
@@ -144,13 +171,17 @@ def notify_code_review(items: list[dict]):
     msg = "🔎 <b>[GachaPoint: коды требуют проверки]</b>\n\n"
     for item in items[:10]:
         game_type = int(item.get("game_type", 0))
-        code = item.get("code", "")
-        rewards = item.get("rewards_description_ru") or item.get("rewards_description_en") or "Награды не распознаны"
-        source = item.get("source_url") or "официальный источник не найден"
+        code = html.escape(str(item.get("code", "")))
+        raw_rewards = item.get("rewards_description_ru") or item.get("rewards_description_en") or "Награды не распознаны"
+        rewards = html.escape(str(raw_rewards))
+        raw_source = item.get("source_url") or "официальный источник не найден"
+        source = html.escape(str(raw_source))
         template = redeem_urls.get(game_type, "")
-        redeem = template.format(code=code) if template else ""
+        raw_redeem = template.format(code=item.get("code", "")) if template else ""
+        redeem = html.escape(str(raw_redeem))
+        g_name = html.escape(game_names.get(game_type, "Gacha"))
         msg += (
-            f"• <b>{game_names.get(game_type, 'Gacha')}</b> <code>{code}</code>\n"
+            f"• <b>{g_name}</b> <code>{code}</code>\n"
             f"  {rewards}\n"
             f"  Источник: {source}\n"
         )
@@ -174,11 +205,12 @@ def notify_new_banners(new_banners: list[dict]):
     game_names = {0: "Genshin Impact", 1: "Honkai: Star Rail", 2: "Zenless Zone Zero", 3: "Honkai Impact 3rd"}
     msg = f"🗓️ <b>[GachaPoint: Обнаружены новые официальные баннеры]</b>\n\n"
     for b in new_banners:
-        g_name = game_names.get(b.get("game_type", 0), "Gacha")
-        ver = b.get("version", "?")
-        phase = b.get("phase", "?")
-        fives = ", ".join(b.get("featured_five_stars_ru") or b.get("featured_five_stars_en") or [])
-        dates = f"{b.get('start_date', '?')} — {b.get('end_date', '?')}"
+        g_name = html.escape(game_names.get(b.get("game_type", 0), "Gacha"))
+        ver = html.escape(str(b.get("version", "?")))
+        phase = html.escape(str(b.get("phase", "?")))
+        raw_fives = b.get("featured_five_stars_ru") or b.get("featured_five_stars_en") or []
+        fives = html.escape(", ".join(raw_fives))
+        dates = html.escape(f"{b.get('start_date', '?')} — {b.get('end_date', '?')}")
         msg += f"• <b>{g_name} v{ver} (Фаза {phase})</b>\n  5★: {fives}\n  Сроки: {dates}\n"
     send_telegram_message(msg)
 

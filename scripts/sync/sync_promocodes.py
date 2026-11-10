@@ -1018,7 +1018,8 @@ def main():
     except Exception as e:
         tb = traceback.format_exc()
         print(f"[CRITICAL ERROR] Sync failed: {e}\n{tb}", file=sys.stderr)
-        notify_failure("Data Hub Sync Failed", str(e))
+        if not os.environ.get("GITHUB_RUN_ID"):
+            notify_failure("Data Hub Sync Failed", str(e))
         sys.exit(1)
 
 
