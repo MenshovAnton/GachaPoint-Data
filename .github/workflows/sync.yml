@@ -34,18 +34,6 @@ jobs:
           set -euo pipefail
           python -m unittest discover -s tests
 
-      - name: Validate standard pools
-        shell: bash
-        run: |
-          set -euo pipefail
-          python -m scripts.tools.apply_standard_pools --check
-
-      - name: Validate committed datasets
-        shell: bash
-        run: |
-          set -euo pipefail
-          python -m scripts.tools.lint_data --strict
-
       - name: Run sync and scraping script
         shell: bash
         env:
@@ -56,6 +44,18 @@ jobs:
           python -m scripts.sync.sync_promocodes
 
       - name: Run lint and integrity validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.tools.lint_data --strict
+
+      - name: Validate standard pools
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m scripts.tools.apply_standard_pools --check
+
+      - name: Validate committed datasets
         shell: bash
         run: |
           set -euo pipefail
