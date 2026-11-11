@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-11T10:35:52Z",
+  "updated_at": "2026-11-11T11:16:07Z",
   "codes": [
     {
       "id": "scraped_3_lbwy2yi5v4",
@@ -21,7 +21,7 @@
       "verification_status": "unverified",
       "quarantine_reason": "official_source_not_found",
       "last_notified_at": "2026-11-11T03:17:24Z",
-      "last_checked_at": "2026-11-11T10:34:20Z"
+      "last_checked_at": "2026-11-11T11:14:36Z"
     }
   ]
 }
