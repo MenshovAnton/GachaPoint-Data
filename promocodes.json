@@ -285,7 +285,7 @@
         "EXP",
         "MATERIAL"
       ],
-      "status": "ACTIVE",
+      "status": "EXPIRED",
       "expires_at": "2026-11-10T15:59:59Z",
       "created_at": "2026-10-09T12:00:00Z",
       "is_stream": false,
