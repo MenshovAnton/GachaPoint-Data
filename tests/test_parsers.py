@@ -8,6 +8,7 @@ from scripts.parsers.official_banners_parser import (
     HSR_FOUR_RU_BLOCK_RE,
     HSR_NAME_RU_RE,
     extract_hoyolab_text,
+    extract_zzz_four_agents,
     make_banner,
     normalize_name,
     parse_date,
@@ -204,6 +205,19 @@ class OfficialParserHelpersTests(unittest.TestCase):
         items = parse_section_rows(row, 3, is_section_expired=False, seen_codes=set())
         self.assertEqual(len(items), 1)
         self.assertEqual(items[0]["created_at"], "2026-10-31T12:00:00Z")
+
+    def test_zzz_default_a_rank_agents_parsed(self):
+        content = (
+            'During the event, the limited S-Rank Agent Roxy (Wind - Stun) '
+            'and default A-Rank Agents Corin (Physical - Attack) & Billy (Physical - Attack) '
+            'have significantly boosted reception rates!'
+        )
+        lookup = {
+            normalize_name("Corin Wickes"): {"name_en": "Corin Wickes"},
+            normalize_name("Billy Kid"): {"name_en": "Billy Kid"},
+        }
+        self.assertEqual(extract_zzz_four_agents(content, ["Roxy"], lookup), ["Corin", "Billy"])
+        self.assertEqual(extract_zzz_four_agents("The A-Rank Rate Up feature allows Proxies to select 2 A-Rank Agents.", ["Severian"], lookup), [])
 
 
 if __name__ == "__main__":

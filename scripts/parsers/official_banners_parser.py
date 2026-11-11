@@ -90,6 +90,14 @@ GS_CHAR_RE = re.compile(
     r'"([^"]+)"\s+([A-Z][A-Za-z0-9\'. •-]+?)\s+\((Anemo|Geo|Electro|Dendro|Hydro|Pyro|Cryo)\)'
 )
 ZZZ_AGENT_RE = re.compile(r"limited S-Rank Agent\s+([A-Z][A-Za-z' -]+?)\s+\(", re.IGNORECASE)
+ZZZ_FOUR_BLOCK_RE = re.compile(
+    r"(?:default\s+)?A-Rank Agents?\s+(.+?)(?=\s+(?:have|will)\s+(?:significantly\s+boosted|a\s+significantly\s+boosted|receive|be\s+boosted)|\.)",
+    re.IGNORECASE,
+)
+ZZZ_FOUR_ITEM_RE = re.compile(
+    r"\s*(?:^|[&,]|(?:\band\b))\s*([A-Z][A-Za-z0-9'. -]+?)\s*\([^)]+\)",
+    re.IGNORECASE,
+)
 HI3_SUIT_RE = re.compile(
     r"New (?:IMG-type )?S-rank Battlesuit\s+([A-Z][A-Za-z' -]{2,40}?)"
     r"(?=\s+(?:is|who|debuts|and|coming)\b|[.,(])",
@@ -443,6 +451,23 @@ def fetch_content_detail(app: str, content_id: str, lang: str) -> Dict[str, Any]
     return payload.get("data", {}) or {}
 
 
+def extract_zzz_four_agents(
+    content: str,
+    exclude_names: Optional[List[str]] = None,
+    game_lookup: Optional[Dict[str, Dict[str, Any]]] = None,
+) -> List[str]:
+    excluded = {normalize_name(name) for name in (exclude_names or [])}
+    four_agents: List[str] = []
+    for block in ZZZ_FOUR_BLOCK_RE.findall(content or ""):
+        for match in ZZZ_FOUR_ITEM_RE.findall(block):
+            clean = match.strip()
+            if not clean or normalize_name(clean) in excluded or clean in four_agents:
+                continue
+            if game_lookup is None or resolve_item(clean, game_lookup) is not None:
+                four_agents.append(clean)
+    return four_agents
+
+
 def parse_zzz_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
     items = fetch_content_list(ZZZ_APP, ZZZ_CHANNEL, "en-us")
     patch_starts: Dict[str, str] = {}
@@ -495,9 +520,11 @@ def parse_zzz_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
         if not agents:
             continue
 
+        four_agents = extract_zzz_four_agents(content, agents, catalog_lookup.get(2, {}))
+
         banner = make_banner(
             2, version, phase, start_date, end_date,
-            agents, [],
+            agents, four_agents,
             ZZZ_SITE.format(id=content_id), content_id, catalog_lookup,
         )
         if banner:
