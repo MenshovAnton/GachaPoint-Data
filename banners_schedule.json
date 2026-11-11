@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T09:00:13Z",
+  "updated_at": "2026-11-11T03:17:52Z",
   "games": [
     {
       "game_type": 0,
@@ -3566,7 +3566,7 @@
           "version": "4.7",
           "title": "Now, Lay Laughter to All Stars",
           "start_date": "2026-11-11",
-          "end_date": "2026-12-22"
+          "end_date": "2026-12-23"
         },
         {
           "version": "4.6",
@@ -5575,7 +5575,7 @@
           "phase": 2,
           "start_date": "2026-10-21",
           "end_date": "2026-11-10",
-          "status": "CURRENT",
+          "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Жемчуг",
             "Мортенакс Блэйд"
@@ -6816,7 +6816,7 @@
           "phase": 2,
           "start_date": "2026-11-11",
           "end_date": "2026-12-01",
-          "status": "ANNOUNCED",
+          "status": "CURRENT",
           "featured_five_stars_ru": [
             "Севериан Лоуэлл",
             "Норма Холлоуэлл"
