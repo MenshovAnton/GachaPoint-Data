@@ -45,11 +45,15 @@ class OfficialCodeVerificationTests(unittest.TestCase):
     def test_discovery_requires_context_and_digit(self):
         text = (
             "Promo code: ZZZ12345. "
+            "Redemption code: KEEPUPWITHMITYA. "
+            "Redeem at https://hsr.hoyoverse.com/gift?code=AHABLESSYOU. "
             "The Version 3.3 update is live. "
             "Use code UPDATE for nothing."
         )
         codes = [entry["code"] for entry in discover_official_codes([source(2, text)])]
         self.assertIn("ZZZ12345", codes)
+        self.assertIn("KEEPUPWITHMITYA", codes)
+        self.assertIn("AHABLESSYOU", codes)
         self.assertNotIn("UPDATE", codes)
 
 

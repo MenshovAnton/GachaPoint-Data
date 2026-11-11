@@ -172,9 +172,10 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[Optional[str
     en_parts = []
 
     # 1. Primary currency: Primogems / Stellar Jade / Polychromes / Crystals
-    prim_match = re.search(r'(?:Primogem|Stellar Jade|Polychrome|Crystal)s?\s*(?:x|\*|×)\s*(\d+)', row_text, re.IGNORECASE)
+    prim_names = r"(?:Primogem|Stellar Jade|Polychrome|Crystal)s?|Камн[а-яё]* Истока|Зв[её]здн[а-яё]* нефрит[а-яё]*|Полихром[а-яё]*|Кристалл[а-яё]*"
+    prim_match = re.search(rf'(?:{prim_names})\s*(?:x|\*|×)\s*(\d+)', row_text, re.IGNORECASE)
     if not prim_match:
-        prim_match = re.search(r'(\d+)\s*(?:x|\*|×)?\s*(?:\[\[)?(?:Primogem|Stellar Jade|Polychrome|Crystal)', row_text, re.IGNORECASE)
+        prim_match = re.search(rf'(?:x|\*|×)?\s*(\d+)\s*(?:x|\*|×)?\s*(?:\[\[)?(?:{prim_names})', row_text, re.IGNORECASE)
     if not prim_match:
         prim_match = re.search(r'{{(?:Item\|)?(?:Primogem|Stellar Jade|Polychrome|Crystal)[^}]*?(?:quantity|x|count)\s*=\s*(\d+)', row_text, re.IGNORECASE)
     if not prim_match:
@@ -187,9 +188,10 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[Optional[str
         en_parts.append(f"{amount} {config['primary_name_en']}")
 
     # 2. Secondary currency: Mora / Credits / Dennies / Coins
-    sec_match = re.search(r'(?:Mora|Credit|Dennie|Denny|Coin)s?\s*(?:x|\*|×)\s*([\d,]+)', row_text, re.IGNORECASE)
+    sec_names = r"(?:Mora|Credit|Dennie|Denny|Coin)s?|Мор[аы]|Кредит[а-яё]*|Денни|Монет[а-яё]*"
+    sec_match = re.search(rf'(?:{sec_names})\s*(?:x|\*|×)\s*([\d,]+(?:\s\d{{3}})*)', row_text, re.IGNORECASE)
     if not sec_match:
-        sec_match = re.search(r'([\d,]+)\s*(?:x|\*|×)?\s*(?:\[\[)?(?:Mora|Credit|Dennie|Denny|Coin)', row_text, re.IGNORECASE)
+        sec_match = re.search(rf'(?:x|\*|×)?\s*([\d,]+)\s*(?:x|\*|×)?\s*(?:\[\[)?(?:{sec_names})', row_text, re.IGNORECASE)
     if not sec_match:
         sec_match = re.search(r'{{(?:Item\|)?(?:Mora|Credit|Dennie|Denny|Coin)[^}]*?(?:quantity|x|count)\s*=\s*([\d,]+)', row_text, re.IGNORECASE)
     if not sec_match:
@@ -296,13 +298,38 @@ def extract_source_url(row: str) -> Optional[str]:
     return None
 
 
+MONTH_ABBR = {
+    "JAN": 1, "FEB": 2, "MAR": 3, "APR": 4, "MAY": 5, "JUN": 6,
+    "JUL": 7, "AUG": 8, "SEP": 9, "OCT": 10, "NOV": 11, "DEC": 12,
+}
+
+
+def extract_row_dates(row: str) -> List[str]:
+    dates = re.findall(r'\b(\d{4}-\d{2}-\d{2})\b', row)
+    if dates:
+        return dates
+    parsed = []
+    for mon, day, year in re.findall(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{1,2}),\s*(\d{2,4})\b', row, re.IGNORECASE):
+        month = MONTH_ABBR.get(mon[:3].upper())
+        if not month:
+            continue
+        yr = int(year)
+        if yr < 100:
+            yr += 2000
+        try:
+            parsed.append(datetime(yr, month, int(day)).strftime("%Y-%m-%d"))
+        except ValueError:
+            pass
+    return parsed
+
+
 def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen_codes: set) -> List[Dict[str, Any]]:
     """Parses individual rows from wikitext table, computing anchor-based dates."""
     config = GAMES_CONFIG[game_type]
     now = datetime.now(timezone.utc)
     now_iso = now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    rows = re.split(r'\{\{(?:Code Row|Redemption Code Row)|\n\|-', text)
+    rows = re.split(r'\{\{(?:Code Row|Redemption Code Row)|\n\|-', text, flags=re.IGNORECASE)
     results = []
 
     for row in rows:
@@ -313,7 +340,7 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
         seen_codes.add(found_code)
         desc_ru, desc_en, reward_types = parse_rewards_from_text(row, game_type)
 
-        dates = re.findall(r'\b(\d{4}-\d{2}-\d{2})\b', row)
+        dates = extract_row_dates(row)
         row_lower = row.lower()
 
         # Stream detection: requires explicit stream indicators or 1-2 day lifespan

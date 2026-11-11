@@ -363,12 +363,56 @@ def merge_quarantine(
     incoming: List[Dict[str, Any]],
 ) -> List[Dict[str, Any]]:
     merged = {}
-    for item in list(existing or []) + list(incoming or []):
+    for item in list(existing or []):
+        key = (int(item.get("game_type", 0)), (item.get("code") or "").strip().upper())
+        if key[1]:
+            merged[key] = dict(item)
+    for item in list(incoming or []):
         key = (int(item.get("game_type", 0)), (item.get("code") or "").strip().upper())
         if not key[1]:
             continue
-        merged[key] = item
+        prev = merged.get(key)
+        updated = dict(item)
+        if prev:
+            if prev.get("last_notified_at") and not updated.get("last_notified_at"):
+                updated["last_notified_at"] = prev["last_notified_at"]
+            if prev.get("created_at") and not updated.get("created_at"):
+                updated["created_at"] = prev["created_at"]
+            elif prev.get("created_at") and prev.get("last_checked_at"):
+                updated["created_at"] = prev["created_at"]
+        merged[key] = updated
     return list(merged.values())
+
+
+def prune_quarantined_codes(
+    quarantined: List[Dict[str, Any]],
+    promo_data: dict,
+    expired_keys: set,
+    now: Optional[datetime] = None,
+) -> List[Dict[str, Any]]:
+    now = now or datetime.now(timezone.utc)
+    published_keys = {
+        (int(code.get("game_type", 0)), (code.get("code") or "").strip().upper())
+        for code in promo_data.get("codes", [])
+    }
+    kept = []
+    for item in quarantined or []:
+        key = (int(item.get("game_type", 0)), (item.get("code") or "").strip().upper())
+        if not key[1] or key in published_keys or key in expired_keys:
+            continue
+        if (item.get("status") or "").upper() == "EXPIRED":
+            continue
+        expires_at = parse_iso_datetime(item.get("expires_at"))
+        if expires_at is not None and now > expires_at:
+            continue
+        created_at = parse_iso_datetime(item.get("created_at"))
+        if item.get("is_stream"):
+            if created_at is not None and (now - created_at) > timedelta(hours=28):
+                continue
+        elif created_at is not None and (now - created_at).days >= 45:
+            continue
+        kept.append(item)
+    return kept
 
 
 def should_notify_review(item: Dict[str, Any], now: datetime) -> bool:
@@ -433,17 +477,18 @@ def apply_official_verification(
             item["source_id"] = result.get("source_id") or ""
             item["verified_at"] = now_iso
             item["expiry_confidence"] = result.get("expiry_confidence") or "unknown"
-            if result.get("expires_at"):
-                item["expires_at"] = result["expires_at"]
-            else:
-                item["expires_at"] = None
-            item["status"] = "ACTIVE"
-            item["is_active"] = True
+            expires_at_str = result.get("expires_at")
+            item["expires_at"] = expires_at_str or None
+            expires_at_dt = parse_iso_datetime(expires_at_str)
+            is_already_expired = expires_at_dt is not None and now > expires_at_dt
+            item["status"] = "EXPIRED" if is_already_expired else "ACTIVE"
+            item["is_active"] = not is_already_expired
             item.pop("quarantine_reason", None)
             item.pop("last_checked_at", None)
             item.pop("last_notified_at", None)
             published[key] = item
-            verified_new.append(item)
+            if not is_already_expired:
+                verified_new.append(item)
             print(f"[OfficialCodes] Verified {code} ({game_type}) via {result.get('source_url')}")
             continue
 
@@ -900,12 +945,18 @@ def main():
         promo_data = load_json(promocodes_file, {"schema_version": 1, "codes": []})
         all_new_codes = []
         quarantined_codes = []
+        expired_scraped_keys = set()
 
         # 1. Automated scraping from Fandom MediaWiki
         if not args.no_scrape:
             try:
                 print("Running automated web scraping for Genshin, HSR and ZZZ...")
                 scraped = parse_all_games()
+                expired_scraped_keys = {
+                    (int(item.get("game_type", 0)), (item.get("code") or "").strip().upper())
+                    for item in scraped
+                    if item.get("status") == "EXPIRED"
+                }
                 new_scraped, quarantined_codes = import_scraped_codes(promo_data, scraped)
                 all_new_codes.extend(new_scraped)
             except Exception as e:
@@ -970,6 +1021,9 @@ def main():
         promo_data = moderate_promocodes(promo_data)
         quarantined_codes.extend(quarantine_unverified_codes(promo_data))
         quarantined_codes = merge_quarantine([], quarantined_codes)
+        quarantined_codes = prune_quarantined_codes(
+            quarantined_codes, promo_data, expired_scraped_keys
+        )
         save_json(promocodes_file, promo_data)
         save_quarantined_codes(base_dir, quarantined_codes)
 

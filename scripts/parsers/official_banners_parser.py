@@ -13,6 +13,7 @@ resolved against the catalog is returned as a pending item instead of being
 published.
 """
 
+import html
 import json
 import os
 import re
@@ -77,12 +78,16 @@ MONTHS = {
     "JAN": 1, "FEB": 2, "MAR": 3, "APR": 4, "MAY": 5, "JUN": 6,
     "JUL": 7, "AUG": 8, "SEP": 9, "OCT": 10, "NOV": 11, "DEC": 12,
 }
+RU_MONTHS = {
+    "января": 1, "февраля": 2, "марта": 3, "апреля": 4, "мая": 5, "июня": 6,
+    "июля": 7, "августа": 8, "сентября": 9, "октября": 10, "ноября": 11, "декабря": 12,
+}
 
 TAG_RE = re.compile(r"<[^>]+>")
 DATE_RE = re.compile(r"(\d{4})[/-](\d{1,2})[/-](\d{1,2})")
 VERSION_RE = re.compile(r"(?:Version|версии)\s*(\d+\.\d+)", re.IGNORECASE)
 GS_CHAR_RE = re.compile(
-    r'"([^"]+)"\s+([A-Z][A-Za-z\' -]+?)\s+\((Anemo|Geo|Electro|Dendro|Hydro|Pyro|Cryo)\)'
+    r'"([^"]+)"\s+([A-Z][A-Za-z0-9\'. •-]+?)\s+\((Anemo|Geo|Electro|Dendro|Hydro|Pyro|Cryo)\)'
 )
 ZZZ_AGENT_RE = re.compile(r"limited S-Rank Agent\s+([A-Z][A-Za-z' -]+?)\s+\(", re.IGNORECASE)
 HI3_SUIT_RE = re.compile(
@@ -91,16 +96,38 @@ HI3_SUIT_RE = re.compile(
     re.IGNORECASE,
 )
 HSR_FIVE_RE = re.compile(r"5-Star\s+([A-Z][A-Za-z' -]+?)\s+\(")
+HSR_FIVE_EN_WARP_RE = re.compile(
+    r'Character Event Warp,\s+the drop rates of the limited 5-star character\s+(.+?)\s*\([^)]+:[^)]+\)',
+    re.IGNORECASE,
+)
+HSR_FIVE_EN_LIST_RE = re.compile(
+    r"limited 5-star characters?\s+(.+?)(?=\s+and the limited 5-star Light Cone|\s+will (?:be boosted|return))",
+    re.IGNORECASE,
+)
+HSR_FOUR_EN_BLOCK_RE = re.compile(
+    r"4-star characters:?\s+(.+?)(?=,?\s+as well as|\s+will be boosted|\s+and 4-star Light Cones|\.)",
+    re.IGNORECASE,
+)
+HSR_NAME_EN_RE = re.compile(r"([^,()]+?)\s*\([^)]+:[^)]+\)")
 HSR_FIVE_RU_RE = re.compile(r"эксклюзивного персонажа\s+5★\s+([^(]+?)\s*\(", re.IGNORECASE)
+HSR_FIVE_RU_LIST_RE = re.compile(
+    r"эксклюзивных персонажей\s+5★\s+(.+?)(?=,\s+а также|\s+и\s+эксклюзив|\.)",
+    re.IGNORECASE,
+)
 HSR_FOUR_RU_BLOCK_RE = re.compile(
-    r"персонажей\s+4★:\s*(.+?)(?:\s+и\s+Световых конусов|\s+Световых конусов|\.)",
+    r"персонажей\s+4★:?\s*(.+?)(?=,?\s+а также|\s+и\s+Световых конусов|\s+Световых конусов|\.)",
     re.IGNORECASE,
 )
 HSR_NAME_RU_RE = re.compile(r"([А-ЯЁA-Z][^,()]+?)\s*\(")
 HSR_DATE_RANGE_RE = re.compile(
     r"(?:с выхода версии\s+\d+\.\d+\s+)?"
-    r"(\d{4}/\d{1,2}/\d{1,2})(?:\s+\d{1,2}:\d{2})?\s*(?:до|[-–—])\s*"
+    r"(\d{4}/\d{1,2}/\d{1,2})(?:\s+\d{1,2}:\d{2})?\s*(?:до|[-–—]|to)\s*"
     r"(\d{4}/\d{1,2}/\d{1,2})(?:\s+\d{1,2}:\d{2})?",
+    re.IGNORECASE,
+)
+HSR_RU_DATE_RANGE_RE = re.compile(
+    r"(\d{1,2}\s+[а-яё]+\s+\d{4})(?:\s+\d{1,2}:\d{2})?\s*(?:до|[-–—])\s*"
+    r"(\d{1,2}\s+[а-яё]+\s+\d{4})(?:\s+\d{1,2}:\d{2})?",
     re.IGNORECASE,
 )
 
@@ -126,8 +153,29 @@ def fetch_json(url: str, lang: Optional[str] = None, timeout: int = 40) -> Any:
 
 
 def strip_html(value: str) -> str:
-    text = TAG_RE.sub(" ", value or "")
+    unescaped = html.unescape(value or "")
+    text = TAG_RE.sub(" ", unescaped)
     return re.sub(r"\s+", " ", text).strip()
+
+
+def extract_hoyolab_text(post: Dict[str, Any]) -> str:
+    raw = (post.get("content") or "").strip()
+    if raw.lower() not in ("", "en-us", "ru-ru", "en", "ru"):
+        cleaned = strip_html(raw)
+        if len(cleaned) >= 40:
+            return cleaned
+    structured = post.get("structured_content")
+    if structured:
+        try:
+            ops = json.loads(structured) if isinstance(structured, str) else structured
+            if isinstance(ops, list):
+                parts = [op["insert"] for op in ops if isinstance(op, dict) and isinstance(op.get("insert"), str)]
+                joined = strip_html(" ".join(parts))
+                if joined:
+                    return joined
+        except Exception:
+            pass
+    return strip_html(raw)
 
 
 def normalize_name(value: str) -> str:
@@ -245,6 +293,32 @@ def parse_month_day(month: str, day: str, year: int) -> Optional[str]:
         return None
 
 
+def parse_ru_date(value: str) -> Optional[str]:
+    match = re.search(r"(\d{1,2})\s+([а-яё]+)\s+(\d{4})", (value or "").lower())
+    if not match:
+        return None
+    day, month_name, year = match.groups()
+    month = RU_MONTHS.get(month_name)
+    if not month:
+        return None
+    try:
+        return datetime(int(year), month, int(day)).strftime("%Y-%m-%d")
+    except ValueError:
+        return None
+
+
+def parse_genshin_dates(content: str, patch_start: str) -> Tuple[Optional[str], Optional[str]]:
+    dates = DATE_RE.findall(content or "")
+    if not dates:
+        return None, None
+    if re.search(r"After the Version\s+\d+\.\d+\s+update", content[:600], re.IGNORECASE) or len(dates) == 1:
+        end_date = parse_date("/".join(dates[-1]))
+        return (patch_start, end_date) if end_date else (None, None)
+    start_date = parse_date("/".join(dates[0]))
+    end_date = parse_date("/".join(dates[1]))
+    return (start_date, end_date) if (start_date and end_date) else (None, None)
+
+
 def parse_genshin_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
     payload = fetch_json(GENSHIN_ANN_URL, lang="en-us")
     announcements = payload.get("data", {}).get("list", [])
@@ -281,11 +355,8 @@ def parse_genshin_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> 
         patch = patches.get(version)
         if not patch:
             continue
-        dates = DATE_RE.findall(content)
-        if not dates:
-            continue
-        end_date = parse_date("/".join(dates[-1]))
-        if not end_date:
+        start_date, end_date = parse_genshin_dates(content, patch["start_date"])
+        if not start_date or not end_date:
             continue
         names = GS_CHAR_RE.findall(content)
         if not names:
@@ -298,7 +369,7 @@ def parse_genshin_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> 
                 four_names.append(name)
         candidates.append({
             "version": version,
-            "start_date": patch["start_date"],
+            "start_date": start_date,
             "end_date": end_date,
             "five_names": five_names,
             "four_names": four_names,
@@ -504,6 +575,96 @@ def parse_hi3_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
     return banners, patches
 
 
+def extract_hsr_date_ranges(content: str) -> List[Tuple[str, str]]:
+    ranges: List[Tuple[str, str]] = []
+    for raw_start, raw_end in HSR_DATE_RANGE_RE.findall(content or ""):
+        start_date = parse_date(raw_start)
+        end_date = parse_date(raw_end)
+        if start_date and end_date:
+            ranges.append((start_date, end_date))
+    for raw_start, raw_end in HSR_RU_DATE_RANGE_RE.findall(content or ""):
+        start_date = parse_ru_date(raw_start)
+        end_date = parse_ru_date(raw_end)
+        if start_date and end_date:
+            ranges.append((start_date, end_date))
+    return ranges
+
+
+def select_hsr_phase_dates(ranges: List[Tuple[str, str]], phase: int) -> Tuple[Optional[str], Optional[str]]:
+    if not ranges:
+        return None, None
+    if len(ranges) == 1:
+        return ranges[0]
+    if phase == 2:
+        latest_start = max(r[0] for r in ranges)
+        return min((r for r in ranges if r[0] == latest_start), key=lambda r: r[1])
+    earliest_start = min(r[0] for r in ranges)
+    return min((r for r in ranges if r[0] == earliest_start), key=lambda r: r[1])
+
+
+def _clean_hsr_name(name: str) -> str:
+    return re.sub(r"^(?:and|и)\s+", "", (name or "").strip(), flags=re.IGNORECASE).strip()
+
+
+def parse_hsr_banner_content(
+    content: str,
+    phase: int,
+) -> Tuple[Optional[str], Optional[str], List[str], List[str]]:
+    ranges = extract_hsr_date_ranges(content)
+    start_date, end_date = select_hsr_phase_dates(ranges, phase)
+    if not start_date or not end_date:
+        return None, None, [], []
+
+    five_names: List[str] = []
+    four_names: List[str] = []
+
+    for match in HSR_FIVE_EN_WARP_RE.findall(content):
+        clean_name = _clean_hsr_name(match)
+        if clean_name and clean_name not in five_names:
+            five_names.append(clean_name)
+
+    if not five_names:
+        for block in HSR_FIVE_EN_LIST_RE.findall(content):
+            for match in HSR_NAME_EN_RE.findall(block):
+                clean_name = _clean_hsr_name(match)
+                if clean_name and clean_name not in five_names:
+                    five_names.append(clean_name)
+
+    for block in HSR_FOUR_EN_BLOCK_RE.findall(content):
+        for match in HSR_NAME_EN_RE.findall(block):
+            clean_name = _clean_hsr_name(match)
+            if clean_name and clean_name not in five_names and clean_name not in four_names:
+                four_names.append(clean_name)
+        if four_names:
+            break
+
+    if not five_names:
+        for match in HSR_FIVE_RU_RE.findall(content):
+            clean_name = _clean_hsr_name(match)
+            if clean_name and clean_name not in five_names:
+                five_names.append(clean_name)
+        for block in HSR_FIVE_RU_LIST_RE.findall(content):
+            for match in HSR_NAME_RU_RE.findall(block):
+                clean_name = _clean_hsr_name(match)
+                if clean_name and clean_name not in five_names:
+                    five_names.append(clean_name)
+
+    if not four_names:
+        block = HSR_FOUR_RU_BLOCK_RE.search(content)
+        if block:
+            for match in HSR_NAME_RU_RE.findall(block.group(1)):
+                clean_name = _clean_hsr_name(match)
+                if clean_name and clean_name not in five_names and clean_name not in four_names:
+                    four_names.append(clean_name)
+
+    return start_date, end_date, five_names, four_names
+
+
+def _fetch_hsr_hoyolab_posts(lang: str) -> List[Dict[str, Any]]:
+    news = fetch_json(HSR_HOYOLAB_LIST, lang=lang)
+    return news.get("data", {}).get("list", [])
+
+
 def parse_hsr_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
     banners: List[Dict[str, Any]] = []
     patches: Dict[str, Dict[str, str]] = {}
@@ -531,19 +692,25 @@ def parse_hsr_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
             patches[version] = {"start_date": start_date, "end_date": end_date}
             break
 
-    try:
-        news = fetch_json(HSR_HOYOLAB_LIST, lang="ru-ru")
-        posts = news.get("data", {}).get("list", [])
-    except Exception as error:
-        print(f"[OfficialParser] HSR HoYoLAB list failed: {error}")
+    posts_by_id: Dict[str, Tuple[str, Dict[str, Any]]] = {}
+    for lang in ("en-us", "ru-ru"):
+        try:
+            for entry in _fetch_hsr_hoyolab_posts(lang):
+                post = entry.get("post", {}) or {}
+                post_id = str(post.get("post_id", ""))
+                if post_id and post_id not in posts_by_id:
+                    posts_by_id[post_id] = (lang, post)
+        except Exception as error:
+            print(f"[OfficialParser] HSR HoYoLAB list ({lang}) failed: {error}")
+
+    if not posts_by_id:
         return banners, patches
 
     today = datetime.now(timezone.utc).date()
-    for entry in posts:
-        post = entry.get("post", {}) or {}
+    for post_id, (lang, post) in posts_by_id.items():
         subject = post.get("subject", "") or ""
         match = re.search(
-            r"(?:Version\s+(\d+\.\d+)\s+Event Warp:\s+Phase\s+(I|II)|"
+            r"(?:Version\s+(\d+\.\d+)\s+Event Warp:\s+Phase\s+(II|I)\b|"
             r"Прыжок события версии\s+(\d+\.\d+):\s*(первая|вторая)\s+фаза)",
             subject,
             re.IGNORECASE,
@@ -553,50 +720,36 @@ def parse_hsr_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
         version = match.group(1) or match.group(3)
         phase_text = match.group(2) or match.group(4) or "I"
         phase = 2 if phase_text.upper() in ("II", "ВТОРАЯ") else 1
-        post_id = str(post.get("post_id", ""))
-        try:
-            detail = fetch_json(
-                f"{HSR_HOYOLAB_POST}?{urllib.parse.urlencode({'post_id': post_id})}",
-                lang="ru-ru",
+
+        banner = None
+        for attempt_lang in (lang, "ru-ru" if lang == "en-us" else "en-us"):
+            try:
+                detail = fetch_json(
+                    f"{HSR_HOYOLAB_POST}?{urllib.parse.urlencode({'post_id': post_id})}",
+                    lang=attempt_lang,
+                )
+                post_obj = detail.get("data", {}).get("post", {}).get("post", {}) or {}
+                content = extract_hoyolab_text(post_obj)
+            except Exception as error:
+                print(f"[OfficialParser] HSR post {post_id} ({attempt_lang}) failed: {error}")
+                continue
+            if not content:
+                continue
+
+            start_date, end_date, five_names, four_names = parse_hsr_banner_content(content, phase)
+            if not start_date or not end_date:
+                continue
+            if datetime.strptime(end_date, "%Y-%m-%d").date() < today - timedelta(days=45):
+                break
+
+            banner = make_banner(
+                1, version, phase, start_date, end_date,
+                five_names, four_names,
+                HSR_ARTICLE.format(id=post_id), post_id, catalog_lookup,
             )
-            content = strip_html(
-                detail.get("data", {}).get("post", {}).get("post", {}).get("content", "") or ""
-            )
-        except Exception as error:
-            print(f"[OfficialParser] HSR post {post_id} failed: {error}")
-            continue
-        if not content:
-            continue
+            if banner:
+                break
 
-        ranges = HSR_DATE_RANGE_RE.findall(content)
-        if not ranges:
-            continue
-        start_date = parse_date(ranges[-1][0])
-        end_date = parse_date(ranges[-1][1])
-        if not start_date or not end_date:
-            continue
-        if datetime.strptime(end_date, "%Y-%m-%d").date() < today - timedelta(days=45):
-            continue
-
-        five_names = []
-        for name in HSR_FIVE_RU_RE.findall(content):
-            clean_name = name.strip()
-            if clean_name and clean_name not in five_names:
-                five_names.append(clean_name)
-
-        four_names = []
-        block = HSR_FOUR_RU_BLOCK_RE.search(content)
-        if block:
-            for name in HSR_NAME_RU_RE.findall(block.group(1)):
-                clean_name = name.strip()
-                if clean_name and clean_name not in five_names and clean_name not in four_names:
-                    four_names.append(clean_name)
-
-        banner = make_banner(
-            1, version, phase, start_date, end_date,
-            five_names, four_names,
-            HSR_ARTICLE.format(id=post_id), post_id, catalog_lookup,
-        )
         if banner:
             banners.append(banner)
 

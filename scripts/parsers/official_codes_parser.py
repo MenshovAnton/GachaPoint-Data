@@ -16,6 +16,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from scripts.parsers.fandom_parser import parse_rewards_from_text
 from scripts.parsers.official_banners_parser import (
     GENSHIN_ANN_URL,
+    GENSHIN_DETAIL,
     GENSHIN_SITE,
     HI3_APP,
     HI3_CHANNEL,
@@ -27,6 +28,7 @@ from scripts.parsers.official_banners_parser import (
     ZZZ_APP,
     ZZZ_CHANNEL,
     ZZZ_SITE,
+    extract_hoyolab_text,
     fetch_content_detail,
     fetch_content_list,
     fetch_json,
@@ -38,6 +40,12 @@ HOYOLAB_NEWS_URL = "https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsLi
 HOYOLAB_ARTICLE_URL = "https://www.hoyolab.com/article/{id}"
 HOYOLAB_GIDS = {0: 2, 1: 6, 2: 8, 3: 1}
 GENSHIN_CONTENT_APP = "a1b1f9d3315447cc"
+GENSHIN_CONTENT_CHANNEL = "395"
+HSR_ANN_CONTENT_URL = (
+    "https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnContent"
+    "?game=hkrpg&game_biz=hkrpg_global&lang=en&bundle_id=hkrpg_global"
+    "&platform=pc&region=prod_official_usa&level=60&uid=100000000"
+)
 CONTENT_APP_MAP = {
     0: GENSHIN_CONTENT_APP,
     1: HSR_APP,
@@ -47,9 +55,13 @@ CONTENT_APP_MAP = {
 DETAIL_ID_RE = re.compile(r"/detail/(\d+)")
 HOYOLAB_ID_RE = re.compile(r"/article/(\d+)")
 
+CODE_URL_RE = re.compile(
+    r"(?:gift|redemption|index\.html)\?(?:[^\s\"'<>]*&)?(?:code|cdkey)=([A-Za-z0-9_-]{4,30})",
+    re.IGNORECASE,
+)
 CODE_CONTEXT_RE = re.compile(
-    r"(?:promo\s*code|redemption\s*code|gift\s*code|special\s*code|code|промокод|код)"
-    r"\s*[:：\-–—]?\s*([A-Za-z0-9_-]{6,20})",
+    r"(?:promo\s*codes?|redemption\s*codes?|gift\s*codes?|special\s*codes?|codes?|промокод(?:ы|а)?|код(?:ы)?)"
+    r"\s*[:：\-–—]?\s*([A-Za-z0-9_-]{6,20}(?:\s*[,/]\s*[A-Za-z0-9_-]{6,20})*)",
     re.IGNORECASE,
 )
 EXPIRY_HINT_RE = re.compile(
@@ -61,9 +73,16 @@ EXPIRY_HINT_RE = re.compile(
 DISALLOWED_TOKENS = {
     "CODE", "CODES", "PROMOCODE", "PROMO", "REWARD", "REWARDS", "GIFT",
     "UPDATE", "VERSION", "SEASON", "PHASE", "EVENT", "PROGRAM", "STREAM",
-    "SERVER", "REGION", "BANNER", "NOTICE", "DETAIL", "DETAILS", "STATUS",
-    "PLAYER", "TRAVELER", "TRAILBLAZER", "PROXY", "CAPTAIN", "PLEASE",
-    "GLOBAL", "SPECIAL", "PROGRAM", "PREVIEW", "RELEASE", "VACATION",
+    "SERVER", "SERVERS", "REGION", "BANNER", "NOTICE", "DETAIL", "DETAILS", "STATUS",
+    "PLAYER", "PLAYERS", "TRAVELER", "TRAVELERS", "TRAILBLAZER", "TRAILBLAZERS",
+    "PROXY", "PROXIES", "CAPTAIN", "CAPTAINS", "PLEASE", "GLOBAL", "SPECIAL",
+    "PREVIEW", "RELEASE", "VACATION", "REDEEM", "REDEMPTION", "OFFICIAL",
+    "ACCOUNT", "LIMITED", "ANDROID", "IPHONE", "WINDOWS", "DESKTOP",
+    "HOYOVERSE", "HOYOLAB", "GENSHIN", "STARRAIL", "ZENLESS", "HONKAI",
+    "CHARACTER", "CHARACTERS", "WEAPON", "WEAPONS", "TWITTER", "YOUTUBE",
+    "DISCORD", "TWITCH", "FACEBOOK", "TELEGRAM", "INSTAGRAM", "TIKTOK",
+    "ENGLISH", "RUSSIAN", "CHINESE", "JAPANESE", "KOREAN", "DOWNLOAD",
+    "INSTALL", "DUALSHOCK", "PLAYSTATION", "CONTROLLER",
 }
 
 GAME_NAMES = {
@@ -142,49 +161,95 @@ def collect_official_sources(recent_limit: int = 10) -> List[Dict[str, Any]]:
         except Exception as error:
             print(f"[OfficialCodes] Genshin announcements ({lang}) failed: {error}")
 
-    content_sources = (
-        (2, ZZZ_APP, ZZZ_CHANNEL, ZZZ_SITE),
-        (1, HSR_APP, HSR_CHANNEL, HSR_SITE),
-        (3, HI3_APP, HI3_CHANNEL, HI3_SITE),
-    )
-    for game_type, app, channel, site in content_sources:
+    for lang in ("en-us", "ru-ru"):
         try:
-            items = fetch_content_list(app, channel, "en-us")
-            for item in _recent(items, recent_limit):
-                content_id = str(item.get("iInfoId", ""))
-                detail = fetch_content_detail(app, content_id, "en-us")
+            payload = _fetch_json_cached(HSR_ANN_CONTENT_URL, lang=lang)
+            for item in payload.get("data", {}).get("list", []):
                 entry = _official_text(
-                    game_type,
-                    item.get("sTitle", ""),
-                    site.format(id=content_id),
-                    content_id,
-                    detail.get("sContent", "") or item.get("sContent", ""),
+                    1,
+                    item.get("title", ""),
+                    HSR_SITE.format(id=item.get("ann_id", "")),
+                    item.get("ann_id", ""),
+                    item.get("content", ""),
                 )
                 if entry:
                     sources.append(entry)
         except Exception as error:
-            print(f"[OfficialCodes] {game_name(game_type)} content failed: {error}")
+            print(f"[OfficialCodes] HSR announcements ({lang}) failed: {error}")
 
+    content_sources = (
+        (0, GENSHIN_CONTENT_APP, GENSHIN_CONTENT_CHANNEL, GENSHIN_DETAIL, ("en-us", "ru-ru")),
+        (1, HSR_APP, HSR_CHANNEL, HSR_SITE, ("en-us",)),
+        (1, HSR_APP, "248", HSR_SITE, ("en-us",)),
+        (1, HSR_APP, "249", HSR_SITE, ("en-us",)),
+        (2, ZZZ_APP, ZZZ_CHANNEL, ZZZ_SITE, ("en-us",)),
+        (3, HI3_APP, HI3_CHANNEL, HI3_SITE, ("en-us",)),
+    )
+    seen_content = set()
+    for game_type, app, channel, site, langs in content_sources:
+        for lang in langs:
+            try:
+                items = fetch_content_list(app, channel, lang)
+                for item in _recent(items, recent_limit):
+                    content_id = str(item.get("iInfoId", ""))
+                    if not content_id or (game_type, content_id, lang) in seen_content:
+                        continue
+                    seen_content.add((game_type, content_id, lang))
+                    detail = fetch_content_detail(app, content_id, lang)
+                    entry = _official_text(
+                        game_type,
+                        item.get("sTitle", ""),
+                        site.format(id=content_id),
+                        content_id,
+                        detail.get("sContent", "") or item.get("sContent", ""),
+                    )
+                    if entry:
+                        sources.append(entry)
+            except Exception as error:
+                print(f"[OfficialCodes] {game_name(game_type)} content ({channel}/{lang}) failed: {error}")
+
+    hoyolab_keywords = (
+        "code", "redeem", "livestream", "special program", "gift", "reward",
+        "промокод", "код", "стрим", "спецпрограмм", "наград", "подар",
+    )
     for game_type, gid in HOYOLAB_GIDS.items():
-        try:
-            payload = _fetch_json_cached(
-                f"{HOYOLAB_NEWS_URL}?gids={gid}&type=1&page_size=50&client_type=4",
-                lang="en-us",
-            )
-            for wrapper in payload.get("data", {}).get("list", []):
-                post = wrapper.get("post", {}) or {}
-                post_id = str(post.get("post_id", ""))
-                entry = _official_text(
-                    game_type,
-                    post.get("subject", ""),
-                    HOYOLAB_ARTICLE_URL.format(id=post_id),
-                    post_id,
-                    post.get("content", ""),
+        for lang in ("en-us", "ru-ru"):
+            try:
+                payload = _fetch_json_cached(
+                    f"{HOYOLAB_NEWS_URL}?gids={gid}&type=1&page_size=30&client_type=4",
+                    lang=lang,
                 )
-                if entry:
-                    sources.append(entry)
-        except Exception as error:
-            print(f"[OfficialCodes] HoYoLAB gid {gid} failed: {error}")
+                for idx, wrapper in enumerate(payload.get("data", {}).get("list", [])):
+                    post = wrapper.get("post", {}) or {}
+                    post_id = str(post.get("post_id", ""))
+                    if not post_id:
+                        continue
+                    subject = post.get("subject", "") or ""
+                    text = extract_hoyolab_text(post)
+                    needs_full = idx < 5 or any(kw in subject.lower() or kw in text.lower() for kw in hoyolab_keywords)
+                    if needs_full:
+                        try:
+                            full_payload = _fetch_json_cached(
+                                f"{HSR_HOYOLAB_POST}?post_id={post_id}",
+                                lang=lang,
+                            )
+                            full_post = full_payload.get("data", {}).get("post", {}).get("post", {}) or {}
+                            full_text = extract_hoyolab_text(full_post)
+                            if full_text:
+                                text = full_text
+                        except Exception:
+                            pass
+                    entry = _official_text(
+                        game_type,
+                        subject,
+                        HOYOLAB_ARTICLE_URL.format(id=post_id),
+                        post_id,
+                        text,
+                    )
+                    if entry:
+                        sources.append(entry)
+            except Exception as error:
+                print(f"[OfficialCodes] HoYoLAB gid {gid} ({lang}) failed: {error}")
 
     print(f"[OfficialCodes] Collected {len(sources)} official text sources.")
     return sources
@@ -222,12 +287,13 @@ def sources_from_candidate_urls(
                     f"{HSR_HOYOLAB_POST}?post_id={post_id}",
                     lang="en-us",
                 )
-                content = (
+                full_post = (
                     payload.get("data", {})
                     .get("post", {})
                     .get("post", {})
-                    .get("content", "")
+                    or {}
                 )
+                content = extract_hoyolab_text(full_post)
                 entry = _official_text(game_type, url, url, post_id, content)
                 if entry:
                     sources.append(entry)
@@ -376,22 +442,39 @@ def verify_code(
     return result
 
 
+def _is_valid_discovered_token(raw_token: str, from_url: bool) -> bool:
+    token = (raw_token or "").strip().upper()
+    if not CODE_RE.match(token):
+        return False
+    if token in DISALLOWED_TOKENS or token.isdigit():
+        return False
+    if re.fullmatch(r"(?:19|20)\d{2}", token):
+        return False
+    if from_url:
+        return len(token) >= 4
+    if any(ch.isdigit() for ch in token):
+        return len(token) >= 6
+    return raw_token.strip().isupper() and len(token) >= 8
+
+
 def discover_official_codes(sources: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Finds conservative code-like tokens in official texts."""
     discovered: List[Dict[str, Any]] = []
     seen = set()
     for source in sources:
         game_type = source.get("game_type", 0)
-        for match in CODE_CONTEXT_RE.finditer(source.get("text", "")):
-            token = match.group(1).strip().upper()
-            if not CODE_RE.match(token):
+        text = source.get("text", "") or ""
+        candidates: List[Tuple[str, bool]] = []
+        for match in CODE_URL_RE.finditer(text):
+            candidates.append((match.group(1), True))
+        for match in CODE_CONTEXT_RE.finditer(text):
+            for part in re.split(r"[,/]", match.group(1)):
+                candidates.append((part.strip(), False))
+
+        for raw_token, from_url in candidates:
+            if not _is_valid_discovered_token(raw_token, from_url=from_url):
                 continue
-            if token in DISALLOWED_TOKENS or token.isdigit():
-                continue
-            if not any(ch.isdigit() for ch in token):
-                continue
-            if re.fullmatch(r"(?:19|20)\d{2}", token):
-                continue
+            token = raw_token.strip().upper()
             key = (game_type, token)
             if key in seen:
                 continue
