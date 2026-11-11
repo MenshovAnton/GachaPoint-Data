@@ -5599,7 +5599,43 @@
           "source_type": "official",
           "verification_status": "verified",
           "verified_at": "2026-11-09T11:48:43Z"
-        }
+        },
+        {
+  "id": "hsr_4_7_1",
+  "type": "CHARACTER",
+  "version": "4.7",
+  "phase": 1,
+  "start_date": "2026-11-11",
+  "end_date": "2026-12-02",
+  "status": "ACTIVE",
+  "featured_five_stars_ru": [
+    "Аха",
+    "Серебряный Волк LV.999",
+    "Яо Гуан",
+    "Спаркси"
+  ],
+  "featured_five_stars_en": [
+    "Aha",
+    "Silver Wolf LV.999",
+    "Yao Guang",
+    "Sparxie"
+  ],
+  "featured_four_stars_ru": [
+    "Аста",
+    "Рысь",
+    "Юйкун"
+  ],
+  "featured_four_stars_en": [
+    "Asta",
+    "Lynx",
+    "Yukong"
+  ],
+  "source_url": "https://hoyolab.com",
+  "source_id": "47142300",
+  "source_type": "official",
+  "verification_status": "verified",
+  "verified_at": "2026-11-11T04:00:00Z"
+}
       ]
     },
     {
