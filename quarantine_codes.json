@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T02:21:31Z",
+  "updated_at": "2026-11-12T11:33:33Z",
   "codes": [
     {
       "id": "scraped_3_lbwy2yi5v4",
@@ -21,7 +21,7 @@
       "verification_status": "unverified",
       "quarantine_reason": "official_source_not_found",
       "last_notified_at": "2026-11-11T03:17:24Z",
-      "last_checked_at": "2026-11-12T02:20:06Z"
+      "last_checked_at": "2026-11-12T11:32:07Z"
     },
     {
       "id": "scraped_3_zbl0w0qi8t",
@@ -42,7 +42,7 @@
       "verification_status": "unverified",
       "quarantine_reason": "official_source_not_found",
       "last_notified_at": "2026-11-11T19:44:27Z",
-      "last_checked_at": "2026-11-12T02:20:06Z"
+      "last_checked_at": "2026-11-12T11:32:07Z"
     }
   ]
 }
