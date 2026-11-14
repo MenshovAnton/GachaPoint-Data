@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14T01:31:09Z",
+  "updated_at": "2026-11-14T10:43:31Z",
   "codes": [
     {
       "id": "scraped_3_lbwy2yi5v4",
@@ -21,7 +21,7 @@
       "verification_status": "unverified",
       "quarantine_reason": "official_source_not_found",
       "last_notified_at": "2026-11-11T03:17:24Z",
-      "last_checked_at": "2026-11-14T01:29:58Z"
+      "last_checked_at": "2026-11-14T10:42:02Z"
     },
     {
       "id": "scraped_3_zbl0w0qi8t",
@@ -42,7 +42,29 @@
       "verification_status": "unverified",
       "quarantine_reason": "official_source_not_found",
       "last_notified_at": "2026-11-11T19:44:27Z",
-      "last_checked_at": "2026-11-14T01:29:58Z"
+      "last_checked_at": "2026-11-14T10:42:02Z"
+    },
+    {
+      "id": "scraped_0_qyjwfb784mfl",
+      "game_type": 0,
+      "code": "QYJWFB784MFL",
+      "rewards_description_ru": "60 Камней Истока, 5 Опыта искателя",
+      "rewards_description_en": "60 Primogems, 5 Adventurer's Exp",
+      "reward_types": [
+        "PRIMOGEM",
+        "EXP"
+      ],
+      "status": "ACTIVE",
+      "expires_at": null,
+      "expiry_confidence": "unknown",
+      "created_at": "2026-11-08T12:00:00Z",
+      "source_url": "https://x.com/pun_rii/status/2119522166664466850",
+      "is_stream": false,
+      "is_active": true,
+      "verification_status": "unverified",
+      "quarantine_reason": "official_source_not_found",
+      "last_checked_at": "2026-11-14T10:42:02Z",
+      "last_notified_at": "2026-11-14T10:42:02Z"
     }
   ]
 }
