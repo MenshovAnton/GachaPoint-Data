@@ -65,29 +65,6 @@
       "quarantine_reason": "official_source_not_found",
       "last_notified_at": "2026-11-14T10:42:02Z",
       "last_checked_at": "2026-11-16T06:51:13Z"
-    },
-    {
-      "id": "scraped_0_archonsanswers",
-      "game_type": 0,
-      "code": "ARCHONSANSWERS",
-      "rewards_description_ru": "40 Камней Истока, 30 000 Моры, 3 Опыта героя",
-      "rewards_description_en": "40 Primogems, 30 000 Mora, 3 Hero's Wit",
-      "reward_types": [
-        "PRIMOGEM",
-        "MORA",
-        "EXP"
-      ],
-      "status": "ACTIVE",
-      "expires_at": "2026-11-26T23:59:59Z",
-      "expiry_confidence": "estimated",
-      "created_at": "2026-11-15T12:00:00Z",
-      "source_url": "https://x.com/GenshinImpact/status/2122162757814637041",
-      "is_stream": false,
-      "is_active": true,
-      "verification_status": "unverified",
-      "quarantine_reason": "official_source_not_found",
-      "last_checked_at": "2026-11-16T06:51:13Z",
-      "last_notified_at": "2026-11-16T06:51:13Z"
     }
   ]
 }

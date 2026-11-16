@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-09T12:37:47Z",
+  "checked_at": "2026-11-16T07:22:04Z",
   "instructions": "Set result to ok, expired, or invalid. Set expires_at (ISO-8601) if the in-game screen shows it.",
   "results": [
     {
@@ -164,6 +164,13 @@
       "result": null,
       "expires_at": null,
       "note": "Нет аккаунта, потом кину на проверку людям в тгк"
+    },
+    {
+      "game_type": 0,
+      "code": "ARCHONSANSWERS",
+      "result": "ok",
+      "expires_at": "",
+      "note": ""
     }
   ]
 }
