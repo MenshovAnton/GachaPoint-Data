@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T02:27:01Z",
+  "updated_at": "2026-11-20T11:57:30Z",
   "codes": [
     {
       "id": "scraped_3_lbwy2yi5v4",
@@ -21,7 +21,7 @@
       "verification_status": "unverified",
       "quarantine_reason": "official_source_not_found",
       "last_notified_at": "2026-11-18T11:57:33Z",
-      "last_checked_at": "2026-11-20T02:25:49Z"
+      "last_checked_at": "2026-11-20T11:56:16Z"
     },
     {
       "id": "scraped_3_zbl0w0qi8t",
@@ -42,7 +42,7 @@
       "verification_status": "unverified",
       "quarantine_reason": "official_source_not_found",
       "last_notified_at": "2026-11-18T20:44:17Z",
-      "last_checked_at": "2026-11-20T02:25:49Z"
+      "last_checked_at": "2026-11-20T11:56:16Z"
     },
     {
       "id": "scraped_0_qyjwfb784mfl",
@@ -64,7 +64,51 @@
       "verification_status": "unverified",
       "quarantine_reason": "official_source_not_found",
       "last_notified_at": "2026-11-14T10:42:02Z",
-      "last_checked_at": "2026-11-20T02:25:49Z"
+      "last_checked_at": "2026-11-20T11:56:16Z"
+    },
+    {
+      "id": "scraped_0_poymansxf877",
+      "game_type": 0,
+      "code": "POYMANSXF877",
+      "rewards_description_ru": "20 Камней Истока",
+      "rewards_description_en": "20 Primogems",
+      "reward_types": [
+        "PRIMOGEM"
+      ],
+      "status": "ACTIVE",
+      "expires_at": null,
+      "expiry_confidence": "unknown",
+      "created_at": "2026-11-20T12:00:00Z",
+      "source_url": null,
+      "is_stream": false,
+      "is_active": true,
+      "verification_status": "unverified",
+      "quarantine_reason": "official_source_not_found",
+      "last_checked_at": "2026-11-20T11:56:16Z",
+      "last_notified_at": "2026-11-20T11:56:16Z"
+    },
+    {
+      "id": "scraped_2_sunchaser",
+      "game_type": 2,
+      "code": "SUNCHASER",
+      "rewards_description_ru": "300 Полихромов, 30 000 Денни, 2 Журналов",
+      "rewards_description_en": "300 Polychromes, 30 000 Dennies, 2 Investigator Logs",
+      "reward_types": [
+        "POLYCHROME",
+        "DENNY",
+        "EXP"
+      ],
+      "status": "STREAM",
+      "expires_at": "2026-11-22T23:59:59Z",
+      "expiry_confidence": "estimated",
+      "created_at": "2026-11-20T12:00:00Z",
+      "source_url": null,
+      "is_stream": true,
+      "is_active": true,
+      "verification_status": "unverified",
+      "quarantine_reason": "official_source_not_found",
+      "last_checked_at": "2026-11-20T11:56:16Z",
+      "last_notified_at": "2026-11-20T11:56:16Z"
     }
   ]
 }
