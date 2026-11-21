@@ -61,7 +61,7 @@ class DataQualityTests(unittest.TestCase):
                 f"{entry.get('code')} is active but not verified",
             )
             self.assertTrue(
-                entry.get("source_url") or entry.get("source_type") == "manual_in_game",
+                entry.get("source_url") or entry.get("source_type") in ("manual_in_game", "community"),
                 f"{entry.get('code')} has no source",
             )
 

@@ -1,70 +1,383 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T02:27:01Z",
+  "updated_at": "2026-11-20T11:40:23Z",
   "codes": [
     {
-      "id": "scraped_3_lbwy2yi5v4",
+      "id": "scraped_3_godentropy",
       "game_type": 3,
-      "code": "LBWY2YI5V4",
-      "rewards_description_ru": "30 Кристаллов",
-      "rewards_description_en": "30 Crystals",
+      "code": "GODENTROPY",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "350 Кристаллов",
+      "rewards_description_en": "350 Crystals",
       "reward_types": [
         "CRYSTAL"
       ],
-      "status": "ACTIVE",
+      "created_at": null,
       "expires_at": null,
+      "verification_status": "legacy",
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-11T03:17:24Z",
-      "source_url": null,
-      "is_stream": false,
-      "is_active": true,
-      "verification_status": "unverified",
-      "quarantine_reason": "official_source_not_found",
-      "last_notified_at": "2026-11-18T11:57:33Z",
-      "last_checked_at": "2026-11-20T02:25:49Z"
+      "quarantine_reason": "official_source_required"
     },
     {
-      "id": "scraped_3_zbl0w0qi8t",
+      "id": "scraped_3_bv8fvtzx6k",
       "game_type": 3,
-      "code": "ZBL0W0QI8T",
+      "code": "BV8FVTZX6K",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
       "rewards_description_ru": "500 Астерита",
       "rewards_description_en": "500 Asterite",
       "reward_types": [
         "ASTERITE"
       ],
-      "status": "ACTIVE",
+      "created_at": null,
       "expires_at": null,
+      "verification_status": "legacy",
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-11T12:00:00Z",
-      "source_url": "https://x.com/HonkaiImpact3rd/status/2120471601544073472",
-      "is_stream": false,
-      "is_active": true,
-      "verification_status": "unverified",
-      "quarantine_reason": "official_source_not_found",
-      "last_notified_at": "2026-11-18T20:44:17Z",
-      "last_checked_at": "2026-11-20T02:25:49Z"
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2102714594691092649",
+      "quarantine_reason": "official_source_required"
     },
     {
-      "id": "scraped_0_qyjwfb784mfl",
-      "game_type": 0,
-      "code": "QYJWFB784MFL",
-      "rewards_description_ru": "60 Камней Истока, 5 Опыта искателя",
-      "rewards_description_en": "60 Primogems, 5 Adventurer's Exp",
+      "id": "scraped_3_qubp3ncyi3",
+      "game_type": 3,
+      "code": "QUBP3NCYI3",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
       "reward_types": [
-        "PRIMOGEM",
-        "EXP"
+        "ASTERITE"
       ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2097278777843646622",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_tosenadina",
+      "game_type": 3,
+      "code": "TOSENADINA",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2090634997870862503",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_zu1tnfwrx2",
+      "game_type": 3,
+      "code": "ZU1TNFWRX2",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2089744131388060136",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_w1gpb7dgnh",
+      "game_type": 3,
+      "code": "W1GPB7DGNH",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2079884159355342904",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_g5mponnqut",
+      "game_type": 3,
+      "code": "G5MPONNQUT",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2075897891336462498",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_mydelivery",
+      "game_type": 3,
+      "code": "MYDELIVERY",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_chiefmedic",
+      "game_type": 3,
+      "code": "CHIEFMEDIC",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "350 Кристаллов",
+      "rewards_description_en": "350 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_q9mpenxj6n",
+      "game_type": 3,
+      "code": "Q9MPENXJ6N",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2067819663120044467",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_timealbum",
+      "game_type": 3,
+      "code": "TIMEALBUM",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2067094888458363364",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_m1xt0frzlc",
+      "game_type": 3,
+      "code": "M1XT0FRZLC",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2065026257570464044",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_5t8nupyuc2",
+      "game_type": 3,
+      "code": "5T8NUPYUC2",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2058865661418377353",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_39mtmfmmsp",
+      "game_type": 3,
+      "code": "39MTMFMMSP",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2051617907180724306",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_youyunsgift",
+      "game_type": 3,
+      "code": "YOUYUNSGIFT",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "100 Кристаллов",
+      "rewards_description_en": "100 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_gt8penfn5i",
+      "game_type": 3,
+      "code": "GT8PENFN5I",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2049805965948600414",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_79vnqp4wqv",
+      "game_type": 3,
+      "code": "79VNQP4WQV",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "30 Кристаллов",
+      "rewards_description_en": "30 Crystals",
+      "reward_types": [
+        "CRYSTAL"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_1n6pu7w6fl",
+      "game_type": 3,
+      "code": "1N6PU7W6FL",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2043645372568883337",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "scraped_3_6tztqfars7",
+      "game_type": 3,
+      "code": "6TZTQFARS7",
+      "status": "ACTIVE",
+      "is_stream": false,
+      "is_active": true,
+      "rewards_description_ru": "500 Астерита",
+      "rewards_description_en": "500 Asterite",
+      "reward_types": [
+        "ASTERITE"
+      ],
+      "created_at": null,
+      "expires_at": null,
+      "verification_status": "legacy",
+      "expiry_confidence": "unknown",
+      "source_url": "https://x.com/HonkaiImpact3rd/status/2040021494554567011",
+      "quarantine_reason": "official_source_required"
+    },
+    {
+      "id": "ennead_1_4tksx77y58qk",
+      "game_type": 1,
+      "code": "4TKSX77Y58QK",
+      "rewards_description_ru": "Внутриигровые награды",
+      "rewards_description_en": "In-game rewards",
+      "reward_types": [],
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-08T12:00:00Z",
-      "source_url": "https://x.com/pun_rii/status/2119522166664466850",
+      "created_at": "2026-11-20T11:25:50Z",
+      "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
+      "source_type": "community",
+      "verification_status": "unverified",
+      "verified_at": "2026-11-20T11:25:50Z",
       "is_stream": false,
       "is_active": true,
-      "verification_status": "unverified",
       "quarantine_reason": "official_source_not_found",
-      "last_notified_at": "2026-11-14T10:42:02Z",
-      "last_checked_at": "2026-11-20T02:25:49Z"
+      "last_checked_at": "2026-11-20T11:28:04Z",
+      "last_notified_at": "2026-11-20T11:28:04Z"
     }
   ]
 }

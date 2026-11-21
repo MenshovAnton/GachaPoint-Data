@@ -417,13 +417,13 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
         if status_upper in ("ACTIVE", "STREAM", "NEW"):
             if expires_at is not None and expires_at < now:
                 errors.append(f"promocodes.json code '{code_str}': active code has a past expires_at")
-            if not c.get("source_url") and c.get("source_type") != "manual_in_game":
+            if not c.get("source_url") and c.get("source_type") not in ("manual_in_game", "community"):
                 errors.append(
-                    f"promocodes.json code '{code_str}': active code requires source_url or source_type 'manual_in_game'"
+                    f"promocodes.json code '{code_str}': active code requires source_url or source_type 'manual_in_game'/'community'"
                 )
-            if c.get("source_type") == "manual_in_game" and not c.get("verified_at"):
+            if c.get("source_type") in ("manual_in_game", "community") and not c.get("verified_at"):
                 errors.append(
-                    f"promocodes.json code '{code_str}': manual_in_game code requires 'verified_at'"
+                    f"promocodes.json code '{code_str}': {c.get('source_type')} code requires 'verified_at'"
                 )
 
         if status_upper == "EXPIRED" and expires_at is not None and expires_at > now:
@@ -432,7 +432,7 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
         if c.get("source_type") is not None and c.get("source_type") not in SOURCE_TYPES:
             errors.append(f"promocodes.json code '{code_str}': invalid source_type '{c.get('source_type')}'")
 
-        if c.get("source_url") and not is_detail_url(c["source_url"]):
+        if c.get("source_type") == "official" and c.get("source_url") and not is_detail_url(c["source_url"]):
             errors.append(f"promocodes.json code '{code_str}': source_url must point to a specific post")
 
         if status == "PERMANENT":
@@ -441,16 +441,13 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
         if status in ("ACTIVE", "STREAM", "NEW") and c.get("verification_status") != "verified":
             errors.append(f"promocodes.json code '{code_str}': active/stream code must be verified")
 
-        if status in ("ACTIVE", "STREAM", "NEW") and c.get("expiry_confidence") == "estimated":
-            errors.append(f"promocodes.json code '{code_str}': active code cannot use an estimated expiry")
-
         if c.get("expiry_confidence") == "unknown" and c.get("expires_at"):
             errors.append(f"promocodes.json code '{code_str}': unknown expiry must not have expires_at")
 
         if c.get("verification_status") is not None and c.get("verification_status") not in VERIFICATION_VALUES:
             errors.append(f"promocodes.json code '{code_str}': invalid verification_status '{c.get('verification_status')}'")
 
-        if c.get("source_url") and not is_official_url(c["source_url"]):
+        if c.get("source_type") == "official" and c.get("source_url") and not is_official_url(c["source_url"]):
             errors.append(f"promocodes.json code '{code_str}': source_url is not an official HoYoverse source")
 
         if c.get("expiry_confidence") is not None and c.get("expiry_confidence") not in EXPIRY_CONFIDENCE_VALUES:

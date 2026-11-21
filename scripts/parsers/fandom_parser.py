@@ -33,6 +33,7 @@ GAMES_CONFIG = {
         "name": "Zenless Zone Zero",
         "wiki": "zenless-zone-zero",
         "page": "Redemption_Code",
+        "history_page": "Redemption_Code/History",
         "primary_reward": "POLYCHROME",
         "primary_name_ru": "Полихромов",
         "primary_name_en": "Polychromes"
@@ -229,7 +230,7 @@ def parse_rewards_from_text(row_text: str, game_type: int) -> Tuple[Optional[str
     # 4. Asterite (HI3)
     ast_match = re.search(r'{{Item\|Asterite[^}]*?quantity\s*=\s*([\d,]+)', row_text, re.IGNORECASE)
     if not ast_match:
-        ast_match = re.search(r'(?:Asterite|Астерит)s?\s*(?:x|\*|\:)?\s*([\d,]+)', row_text, re.IGNORECASE)
+        ast_match = re.search(r'(?:Asterite|Астерит)s?\s*(?:x|\*|\:|×)?\s*([\d,]+)', row_text, re.IGNORECASE)
     if not ast_match:
         ast_match = re.search(r'([\d,]+)\s*(?:Asterite|Астерит)', row_text, re.IGNORECASE)
     if ast_match:
@@ -369,6 +370,13 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
                 expires_at = f"{dates[0]}T23:59:59Z"
             else:
                 expires_at = None
+            if expires_at:
+                try:
+                    exp_dt = datetime.strptime(expires_at[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc, hour=23, minute=59, second=59)
+                    if exp_dt > now:
+                        is_expired = False
+                except Exception:
+                    pass
         else:
             # Active section parsing
             if len(dates) >= 2:
@@ -400,6 +408,11 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
         status = "EXPIRED" if is_expired else ("STREAM" if is_stream else "ACTIVE")
         is_active = not is_expired
 
+        has_verified_rewards = bool(desc_ru and any(ch.isdigit() for ch in desc_ru))
+        page_url = f"https://{config['wiki']}.fandom.com/wiki/{config['page']}"
+        source_url = extract_source_url(row) or page_url
+        verification_status = "verified" if has_verified_rewards else "unverified"
+
         results.append({
             "id": f"scraped_{game_type}_{found_code.lower()}",
             "game_type": game_type,
@@ -409,9 +422,12 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
             "reward_types": reward_types,
             "status": status,
             "expires_at": expires_at,
-            "expiry_confidence": "estimated" if expires_at else "unknown",
+            "expiry_confidence": "official" if expires_at else "unknown",
             "created_at": created_at,
-            "source_url": extract_source_url(row),
+            "source_url": source_url,
+            "source_type": "community",
+            "verification_status": verification_status,
+            "verified_at": now_iso if verification_status == "verified" else None,
             "is_stream": is_stream,
             "is_active": is_active
         })
@@ -434,6 +450,12 @@ def parse_game_promocodes(game_type: int) -> List[Dict[str, Any]]:
 
     active_items = parse_section_rows(active_text, game_type, is_section_expired=False, seen_codes=seen_codes)
     expired_items = parse_section_rows(expired_text, game_type, is_section_expired=True, seen_codes=seen_codes)
+
+    if config.get("history_page"):
+        hist_text = fetch_page_wikitext(config["wiki"], config["history_page"])
+        if hist_text:
+            hist_items = parse_section_rows(hist_text, game_type, is_section_expired=True, seen_codes=seen_codes)
+            expired_items.extend(hist_items)
 
     total_items = active_items + expired_items
     print(f"[Parser] Extracted {len(active_items)} active and {len(expired_items)} expired codes for {config['name']}")

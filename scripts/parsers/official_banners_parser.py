@@ -21,6 +21,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, timedelta
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -48,6 +49,12 @@ GENSHIN_ANN_LIST_URL = (
     "https://sg-hk4e-api.hoyoverse.com/common/hk4e_global/announcement/api/getAnnList"
     "?game=hk4e&game_biz=hk4e_global&lang=en&bundle_id=hk4e_global"
     "&platform=pc&region=os_usa&level=60&uid=100000000"
+)
+
+HSR_ANN_CONTENT_URL = (
+    "https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnContent"
+    "?game=hkrpg&game_biz=hkrpg_global&lang=en&bundle_id=hkrpg_global"
+    "&platform=pc&region=prod_official_usa&level=60&uid=100000000"
 )
 
 CONTENT_API = "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/{app}/getContentList"
@@ -140,7 +147,14 @@ HSR_RU_DATE_RANGE_RE = re.compile(
 )
 
 
-def fetch_json(url: str, lang: Optional[str] = None, timeout: int = 40) -> Any:
+SHARED_HTTP_CACHE: Dict[Tuple[str, str], Any] = {}
+
+
+def fetch_json(url: str, lang: Optional[str] = None, timeout: int = 10, use_cache: bool = True) -> Any:
+    cache_key = (url, lang or "")
+    if use_cache and cache_key in SHARED_HTTP_CACHE:
+        return SHARED_HTTP_CACHE[cache_key]
+
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) GachaPointOfficialParser/4.0",
         "Accept": "application/json",
@@ -148,15 +162,18 @@ def fetch_json(url: str, lang: Optional[str] = None, timeout: int = 40) -> Any:
     if lang:
         headers["x-rpc-language"] = lang
     last_error: Optional[Exception] = None
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             request = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(request, timeout=timeout) as response:
-                return json.loads(response.read().decode("utf-8"))
+                data = json.loads(response.read().decode("utf-8"))
+                if use_cache:
+                    SHARED_HTTP_CACHE[cache_key] = data
+                return data
         except Exception as error:
             last_error = error
-            if attempt < 2:
-                time.sleep(2 * (attempt + 1))
+            if attempt < 1:
+                time.sleep(1)
     raise last_error or RuntimeError(f"Failed to fetch {url}")
 
 
@@ -223,6 +240,50 @@ def resolve_item(name: str, game_lookup: Dict[str, Dict[str, Any]]) -> Optional[
     return candidates[0] if len(candidates) == 1 else None
 
 
+def auto_register_catalog_character(
+    name: str,
+    game_type: int,
+    is_five: bool,
+    catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]],
+    catalog_path: Optional[str] = None,
+) -> Dict[str, Any]:
+    rarity = ("5★" if is_five else "4★") if game_type in (0, 1) else ("S" if is_five else "A")
+    clean_name = name.strip()
+    new_item = {
+        "name_ru": clean_name,
+        "name_en": clean_name,
+        "rarity": rarity,
+        "type": "CHARACTER",
+        "is_standard": False,
+        "icon_path": "",
+        "aliases": [clean_name],
+    }
+    game_lookup = catalog_lookup.setdefault(game_type, {})
+    game_lookup[normalize_name(clean_name)] = new_item
+
+    if catalog_path and os.path.exists(catalog_path):
+        try:
+            with open(catalog_path, "r", encoding="utf-8-sig") as file:
+                cat_data = json.load(file)
+            for g in cat_data.get("games", []):
+                if int(g.get("game_type", 0)) == game_type:
+                    existing = [it.get("name_en") for it in g.get("items", [])]
+                    if clean_name not in existing:
+                        g.setdefault("items", []).append(new_item)
+                        cat_data["updated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+                        tmp_path = catalog_path + ".tmp"
+                        with open(tmp_path, "w", encoding="utf-8") as out:
+                            json.dump(cat_data, out, ensure_ascii=False, indent=2)
+                            out.write("\n")
+                        os.replace(tmp_path, catalog_path)
+                        print(f"[OfficialParser] Auto-registered character '{clean_name}' into catalog for {GAME_NAMES.get(game_type, game_type)}")
+                    break
+        except Exception as error:
+            print(f"[OfficialParser] Failed to auto-register character '{clean_name}': {error}")
+
+    return new_item
+
+
 def make_banner(
     game_type: int,
     version: str,
@@ -234,6 +295,7 @@ def make_banner(
     source_url: str,
     source_id: str,
     catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]],
+    catalog_path: Optional[str] = None,
 ) -> Optional[Dict[str, Any]]:
     game_lookup = catalog_lookup.get(game_type, {})
     five_ru: List[str] = []
@@ -244,15 +306,17 @@ def make_banner(
     for name in five_names:
         item = resolve_item(name, game_lookup)
         if not item:
-            print(f"[OfficialParser] Unresolved 5-star '{name}' for {GAME_NAMES[game_type]}; banner skipped")
-            return None
+            item = auto_register_catalog_character(
+                name, game_type, is_five=True, catalog_lookup=catalog_lookup, catalog_path=catalog_path
+            )
         five_ru.append(item.get("name_ru") or item.get("name_en") or name)
         five_en.append(item.get("name_en") or name)
     for name in four_names:
         item = resolve_item(name, game_lookup)
         if not item:
-            print(f"[OfficialParser] Unresolved 4-star '{name}' for {GAME_NAMES[game_type]}; banner skipped")
-            return None
+            item = auto_register_catalog_character(
+                name, game_type, is_five=False, catalog_lookup=catalog_lookup, catalog_path=catalog_path
+            )
         four_ru.append(item.get("name_ru") or item.get("name_en") or name)
         four_en.append(item.get("name_en") or name)
 
@@ -327,7 +391,10 @@ def parse_genshin_dates(content: str, patch_start: str) -> Tuple[Optional[str], 
     return (start_date, end_date) if (start_date and end_date) else (None, None)
 
 
-def parse_genshin_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
+def parse_genshin_data(
+    catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]],
+    catalog_path: Optional[str] = None,
+) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
     payload = fetch_json(GENSHIN_ANN_URL, lang="en-us")
     announcements = payload.get("data", {}).get("list", [])
     list_payload = fetch_json(GENSHIN_ANN_LIST_URL, lang="en-us")
@@ -418,6 +485,7 @@ def parse_genshin_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> 
             0, version, phase, start_date, data["end_date"],
             data["five_names"], data["four_names"],
             source_url, ",".join(source_ids), catalog_lookup,
+            catalog_path=catalog_path,
         )
         if banner:
             banners.append(banner)
@@ -468,7 +536,10 @@ def extract_zzz_four_agents(
     return four_agents
 
 
-def parse_zzz_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
+def parse_zzz_data(
+    catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]],
+    catalog_path: Optional[str] = None,
+) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
     items = fetch_content_list(ZZZ_APP, ZZZ_CHANNEL, "en-us")
     patch_starts: Dict[str, str] = {}
     for item in items:
@@ -483,11 +554,11 @@ def parse_zzz_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
     patches: Dict[str, Dict[str, str]] = {}
     for item in items:
         title = item.get("sTitle", "") or ""
-        match = re.search(r"V(\d+\.\d+) Limited-Time Channels \(Phase (I|II)\)", title, re.IGNORECASE)
+        match = re.search(r"V(\d+\.\d+)\s+Limited-Time Channels\s*\(Phase\s*(I|II|1|2)\)", title, re.IGNORECASE)
         if not match:
             continue
         version = match.group(1)
-        phase = 1 if match.group(2).upper() == "I" else 2
+        phase = 1 if match.group(2).upper() in ("I", "1") else 2
         content_id = str(item.get("iInfoId", ""))
         detail = fetch_content_detail(ZZZ_APP, content_id, "en-us")
         content = strip_html(detail.get("sContent", "") or "")
@@ -526,6 +597,7 @@ def parse_zzz_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
             2, version, phase, start_date, end_date,
             agents, four_agents,
             ZZZ_SITE.format(id=content_id), content_id, catalog_lookup,
+            catalog_path=catalog_path,
         )
         if banner:
             banners.append(banner)
@@ -539,7 +611,10 @@ def parse_zzz_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
     return banners, patches
 
 
-def parse_hi3_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
+def parse_hi3_data(
+    catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]],
+    catalog_path: Optional[str] = None,
+) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
     items = fetch_content_list(HI3_APP, HI3_CHANNEL, "en-us")
     banners: List[Dict[str, Any]] = []
     patches: Dict[str, Dict[str, str]] = {}
@@ -593,6 +668,7 @@ def parse_hi3_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
             3, version, 1, start_date, end_date,
             suits, [],
             HI3_SITE.format(id=content_id), content_id, catalog_lookup,
+            catalog_path=catalog_path,
         )
         if banner:
             banners.append(banner)
@@ -692,7 +768,45 @@ def _fetch_hsr_hoyolab_posts(lang: str) -> List[Dict[str, Any]]:
     return news.get("data", {}).get("list", [])
 
 
-def parse_hsr_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
+def _parse_hsr_ingame_announcements(
+    catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]],
+    catalog_path: Optional[str] = None,
+) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
+    banners: List[Dict[str, Any]] = []
+    patches: Dict[str, Dict[str, str]] = {}
+    try:
+        payload = fetch_json(HSR_ANN_CONTENT_URL, lang="en")
+        ann_list = payload.get("data", {}).get("list", [])
+        for item in ann_list:
+            title = item.get("title", "") or ""
+            content = strip_html(item.get("content", "") or "")
+            if not ("Event Warp" in title or "Warp" in title or "Character Event" in title):
+                continue
+            ver_match = VERSION_RE.search(title) or VERSION_RE.search(content)
+            if not ver_match:
+                continue
+            version = ver_match.group(1)
+            phase = 2 if re.search(r"Phase\s*(?:II|2)\b|вторая\s+фаза", title, re.IGNORECASE) else 1
+            ann_id = str(item.get("ann_id", ""))
+            start_date, end_date, five_names, four_names = parse_hsr_banner_content(content, phase)
+            if start_date and end_date and five_names:
+                banner = make_banner(
+                    1, version, phase, start_date, end_date,
+                    five_names, four_names,
+                    HSR_SITE.format(id=ann_id), ann_id, catalog_lookup,
+                    catalog_path=catalog_path,
+                )
+                if banner:
+                    banners.append(banner)
+    except Exception as error:
+        print(f"[OfficialParser] HSR in-game announcement fetch failed: {error}")
+    return banners, patches
+
+
+def parse_hsr_data(
+    catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]],
+    catalog_path: Optional[str] = None,
+) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
     banners: List[Dict[str, Any]] = []
     patches: Dict[str, Dict[str, str]] = {}
 
@@ -719,6 +833,10 @@ def parse_hsr_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
             patches[version] = {"start_date": start_date, "end_date": end_date}
             break
 
+    ingame_banners, ingame_patches = _parse_hsr_ingame_announcements(catalog_lookup, catalog_path)
+    banners.extend(ingame_banners)
+    patches.update(ingame_patches)
+
     posts_by_id: Dict[str, Tuple[str, Dict[str, Any]]] = {}
     for lang in ("en-us", "ru-ru"):
         try:
@@ -734,19 +852,25 @@ def parse_hsr_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
         return banners, patches
 
     today = datetime.now(timezone.utc).date()
+    seen_phases = {(b.get("version"), b.get("phase")) for b in banners}
+
     for post_id, (lang, post) in posts_by_id.items():
         subject = post.get("subject", "") or ""
         match = re.search(
-            r"(?:Version\s+(\d+\.\d+)\s+Event Warp:\s+Phase\s+(II|I)\b|"
-            r"Прыжок события версии\s+(\d+\.\d+):\s*(первая|вторая)\s+фаза)",
+            r"(?:Version\s+(\d+\.\d+)\s+Event Warp:\s+Phase\s+(II|I|2|1)\b|"
+            r"Прыжок события версии\s+(\d+\.\d+):\s*(первая|вторая|1-я|2-я|1|2)\s+фаза|"
+            r"фаза\s*(II|I|2|1)\s*прыжка события версии\s*(\d+\.\d+))",
             subject,
             re.IGNORECASE,
         )
         if not match:
             continue
-        version = match.group(1) or match.group(3)
-        phase_text = match.group(2) or match.group(4) or "I"
-        phase = 2 if phase_text.upper() in ("II", "ВТОРАЯ") else 1
+        version = match.group(1) or match.group(3) or match.group(6)
+        phase_text = match.group(2) or match.group(4) or match.group(5) or "I"
+        phase = 2 if phase_text.upper() in ("II", "ВТОРАЯ", "2", "2-Я") else 1
+
+        if (version, phase) in seen_phases:
+            continue
 
         banner = None
         for attempt_lang in (lang, "ru-ru" if lang == "en-us" else "en-us"):
@@ -773,8 +897,10 @@ def parse_hsr_data(catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]]) -> Tupl
                 1, version, phase, start_date, end_date,
                 five_names, four_names,
                 HSR_ARTICLE.format(id=post_id), post_id, catalog_lookup,
+                catalog_path=catalog_path,
             )
             if banner:
+                seen_phases.add((version, phase))
                 break
 
         if banner:
@@ -790,14 +916,20 @@ def parse_all_official_data(catalog_path: str) -> Dict[str, Any]:
     errors: Dict[int, str] = {}
 
     parsers = [(0, parse_genshin_data), (2, parse_zzz_data), (3, parse_hi3_data), (1, parse_hsr_data)]
-    for game_type, parser in parsers:
-        try:
-            game_banners, game_patches = parser(catalog_lookup)
-            banners.extend(game_banners)
-            patches[game_type].update(game_patches)
-        except Exception as error:
-            errors[game_type] = str(error)
-            print(f"[OfficialParser] {GAME_NAMES[game_type]} failed: {error}")
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        future_to_game = {
+            executor.submit(parser, catalog_lookup, catalog_path): game_type
+            for game_type, parser in parsers
+        }
+        for future in as_completed(future_to_game):
+            game_type = future_to_game[future]
+            try:
+                game_banners, game_patches = future.result()
+                banners.extend(game_banners)
+                patches[game_type].update(game_patches)
+            except Exception as error:
+                errors[game_type] = str(error)
+                print(f"[OfficialParser] {GAME_NAMES[game_type]} failed: {error}")
 
     return {"banners": banners, "patches": patches, "errors": errors}
 

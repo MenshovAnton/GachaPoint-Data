@@ -118,20 +118,32 @@ def notify_failure(summary: str, details: Optional[str] = None):
 
 
 def notify_new_codes(new_codes: list[dict]):
-    """Sends an informational notification when new promo codes are added."""
     if not new_codes:
         return
 
     game_names = {0: "Genshin Impact", 1: "Honkai: Star Rail", 2: "Zenless Zone Zero", 3: "Honkai Impact 3rd"}
+    redeem_urls = {
+        0: "https://genshin.hoyoverse.com/ru/gift?code={code}",
+        1: "https://hsr.hoyoverse.com/gift?code={code}",
+        2: "https://zenless.hoyoverse.com/redemption?code={code}",
+        3: "https://act.hoyoverse.com/puzzle/bh3/pz_u6h7mQo34g/index.html?cdkey={code}",
+    }
     msg = f"🎁 <b>[GachaPoint: New Promo Codes Found]</b>\n\n"
 
     for c in new_codes:
-        g_name = html.escape(game_names.get(c.get("game_type", 0), "Gacha"))
-        code = html.escape(str(c.get("code", "")))
+        gt = c.get("game_type", 0)
+        g_name = html.escape(game_names.get(gt, "Gacha"))
+        code_str = str(c.get("code", ""))
+        code = html.escape(code_str)
         raw_rewards = c.get("rewards_description_ru") or c.get("rewards_description_en") or "Награды"
         rewards = html.escape(str(raw_rewards))
         is_stream = "🔥 [STREAM]" if c.get("is_stream") else "✨"
+        template = redeem_urls.get(gt, "")
+        raw_redeem = template.format(code=code_str) if template else ""
+        redeem = html.escape(str(raw_redeem))
         msg += f"• <b>{g_name}</b> {is_stream} <code>{code}</code>\n  {rewards}\n"
+        if redeem:
+            msg += f"  <a href=\"{redeem}\">Активировать</a>\n"
 
     send_telegram_message(msg)
 

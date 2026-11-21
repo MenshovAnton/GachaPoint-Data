@@ -49,10 +49,23 @@ except ImportError:
         return []
 
 try:
-    from scripts.parsers.official_banners_parser import parse_all_official_data
+    from scripts.parsers.ennead_parser import parse_ennead_codes, parse_ennead_banners
+except ImportError:
+    def parse_ennead_codes():
+        return []
+    def parse_ennead_banners(catalog_lookup, catalog_path=None):
+        return []
+
+try:
+    from scripts.parsers.official_banners_parser import (
+        parse_all_official_data,
+        load_catalog_lookup,
+    )
 except ImportError:
     def parse_all_official_data(catalog_path):
         return {"banners": [], "patches": {}, "errors": {}}
+    def load_catalog_lookup(catalog_path):
+        return {}
 
 try:
     from scripts.parsers.official_codes_parser import verify_candidates
@@ -143,6 +156,16 @@ def parse_date(date_str: str):
         return datetime.strptime(date_str[:10], "%Y-%m-%d").date()
     except Exception:
         return None
+
+
+def is_date_jitter(old_date_str: Optional[str], new_date_str: Optional[str]) -> bool:
+    if not old_date_str or not new_date_str:
+        return False
+    d1 = parse_date(old_date_str)
+    d2 = parse_date(new_date_str)
+    if not d1 or not d2:
+        return False
+    return abs((d1 - d2).days) <= 1
 
 
 def load_json(filepath: str, default: dict) -> dict:
@@ -317,9 +340,11 @@ def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> Tup
                 for field in (
                     "status", "is_active", "expires_at", "created_at", "is_stream",
                     "rewards_description_ru", "rewards_description_en", "reward_types",
-                    "source_url", "verified_at", "expiry_confidence",
+                    "source_url", "source_type", "verified_at", "expiry_confidence",
                 ):
                     if item.get(field) is not None:
+                        if field == "expiry_confidence" and item.get(field) == "unknown" and (existing_item.get("expires_at") or item.get("expires_at")):
+                            continue
                         existing_item[field] = item[field]
                 existing_item["verification_status"] = "verified"
             elif item.get("source_url") and not existing_item.get("source_url"):
@@ -341,6 +366,14 @@ def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> Tup
             item["rewards_description_ru"] = "Внутриигровые награды"
             item["rewards_description_en"] = "In-game rewards"
             item["verification_status"] = "unverified"
+
+        if not is_placeholder_reward(desc_ru) and not is_placeholder_reward(desc_en) and has_number:
+            if item.get("source_url") or item.get("source_type"):
+                item["verification_status"] = "verified"
+                if not item.get("source_type"):
+                    item["source_type"] = "community"
+                if not item.get("verified_at"):
+                    item["verified_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
         if item.get("verification_status") != "verified":
             item["quarantine_reason"] = "unverified_source"
@@ -521,7 +554,7 @@ def apply_official_verification(
     return list(quarantine.values()), verified_new, review
 
 
-def moderate_promocodes(data: dict) -> dict:
+def moderate_promocodes(data: dict, active_scraped_keys: Optional[set] = None) -> dict:
     now = datetime.now(timezone.utc)
     raw_codes = data.get("codes", [])
     print(f"Processing {len(raw_codes)} promocodes...")
@@ -539,7 +572,6 @@ def moderate_promocodes(data: dict) -> dict:
         item["code"] = raw_code
         item["game_type"] = game_type
 
-        # 1. Protect permanent codes
         if key in PERMANENT_CODES:
             perm_meta = PERMANENT_CODES.get(key, {})
             item["status"] = "PERMANENT"
@@ -553,7 +585,6 @@ def moderate_promocodes(data: dict) -> dict:
             deduped[key] = item
             continue
 
-        # 2. Identify livestream codes
         is_stream = bool(
             item.get("is_stream", False)
             or item.get("status") == "STREAM"
@@ -564,21 +595,8 @@ def moderate_promocodes(data: dict) -> dict:
         expires_at_dt = parse_iso_datetime(item.get("expires_at"))
         created_at_dt = parse_iso_datetime(item.get("created_at"))
 
-        if item.get("verification_status") == "verified":
-            if not item.get("status"):
-                item["status"] = "ACTIVE"
-            if expires_at_dt is not None and now > expires_at_dt:
-                item["is_active"] = False
-                item["status"] = "EXPIRED"
-            else:
-                item["is_active"] = item.get("status") != "EXPIRED"
-            deduped[key] = item
-            continue
-
-        # 3. Check expiration
         is_expired = False
         if is_stream:
-            # Stream codes invariant: only valid for <= 28 hours from broadcast/creation
             if created_at_dt is not None and (now - created_at_dt) > timedelta(hours=28):
                 is_expired = True
             elif expires_at_dt is not None and now > expires_at_dt:
@@ -586,17 +604,16 @@ def moderate_promocodes(data: dict) -> dict:
             elif created_at_dt is None and expires_at_dt is None:
                 is_expired = True
         else:
-            # Regular codes
-            if expires_at_dt is not None and now > expires_at_dt:
-                is_expired = True
-            elif created_at_dt is not None and (now - created_at_dt).days >= 45:
-                # If discovered over 45 days ago without explicit verified future expiry
-                if expires_at_dt is not None and expires_at_dt > now and (expires_at_dt - created_at_dt).days <= 65:
-                    pass
-                else:
+            if expires_at_dt is not None:
+                if now > expires_at_dt:
                     is_expired = True
-
-        was_active = item.get("is_active", True)
+            else:
+                item["expiry_confidence"] = "unknown"
+                if created_at_dt is not None and (now - created_at_dt).days >= 45:
+                    if active_scraped_keys and key in active_scraped_keys:
+                        is_expired = False
+                    else:
+                        is_expired = True
 
         if is_expired:
             item["is_active"] = False
@@ -608,10 +625,14 @@ def moderate_promocodes(data: dict) -> dict:
             elif item.get("status") == "NEW":
                 if created_at_dt is not None and (now - created_at_dt) > timedelta(days=7):
                     item["status"] = "ACTIVE"
-            elif not item.get("status") or (item.get("status") == "EXPIRED" and was_active):
+            elif not item.get("status") or item.get("status") == "EXPIRED":
                 item["status"] = "ACTIVE"
-            if item.get("status") == "EXPIRED":
-                item["is_active"] = False
+
+        if item.get("expires_at"):
+            if item.get("expiry_confidence") not in ("official", "estimated"):
+                item["expiry_confidence"] = "estimated"
+        else:
+            item["expiry_confidence"] = "unknown"
 
         deduped[key] = item
 
@@ -679,17 +700,17 @@ def moderate_promocodes(data: dict) -> dict:
     }
 
 
-def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """Merges parsed official banners into the schedule using version/phase upsert."""
+def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
     if not scraped_banners:
-        return []
+        return [], []
 
     games = data.setdefault("games", [])
     game_dict = {}
     for g in games:
         game_dict[g.get("game_type", 0)] = g
 
-    touched = []
+    newly_added = []
+    updated = []
 
     for b in scraped_banners:
         gt = b.get("game_type", 0)
@@ -710,7 +731,7 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
 
         if match is None:
             existing_banners.append(payload)
-            touched.append(b)
+            newly_added.append(b)
             continue
 
         changed = False
@@ -725,6 +746,8 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
             ):
                 value = b.get(key)
                 if value is not None and match.get(key) != value:
+                    if key in ("start_date", "end_date") and match.get(key) and is_date_jitter(match.get(key), value):
+                        continue
                     match[key] = value
                     changed = True
             if changed and b.get("verified_at"):
@@ -755,7 +778,7 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
                 changed = True
 
         if changed:
-            touched.append({**match, "game_type": gt})
+            updated.append({**match, "game_type": gt})
 
     for g in games:
         g["banners"] = sorted(
@@ -768,9 +791,11 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
             )
         )
 
-    if touched:
-        print(f"Merged {len(touched)} official banner updates.")
-    return touched
+    if newly_added:
+        print(f"Added {len(newly_added)} new banners.")
+    if updated:
+        print(f"Merged {len(updated)} official banner updates.")
+    return newly_added, updated
 
 
 def moderate_banners(data: dict) -> dict:
@@ -840,6 +865,8 @@ def merge_official_patches(data: dict, patches: Dict[int, Dict[str, Dict[str, st
                 for key in ("start_date", "end_date"):
                     value = dates.get(key)
                     if value and patch.get(key) != value:
+                        if patch.get(key) and is_date_jitter(patch.get(key), value):
+                            continue
                         patch[key] = value
                         changed = True
         game["patches"].sort(key=lambda item: item.get("start_date", ""), reverse=True)
@@ -900,15 +927,19 @@ def save_pending_banners(
     print(f"Quarantined {len(pending)} unverified banners to {path}")
 
 
-def save_quarantined_codes(base_dir: str, pending: List[Dict[str, Any]]):
+def save_quarantined_codes(
+    base_dir: str,
+    pending: List[Dict[str, Any]],
+    published_keys: Optional[set] = None,
+):
     path = os.path.join(base_dir, "quarantine_codes.json")
     merged = {}
-    if os.path.exists(path):
-        existing = load_json(path, {"codes": []})
-        for item in existing.get("codes", []):
-            merged[(item.get("game_type", 0), item.get("code", ""))] = item
     for item in pending:
-        merged[(item.get("game_type", 0), item.get("code", ""))] = item
+        key = (int(item.get("game_type", 0)), (item.get("code") or "").strip().upper())
+        if key[1]:
+            merged[key] = item
+    for key in published_keys or set():
+        merged.pop(key, None)
     payload = {
         "schema_version": 1,
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -947,15 +978,27 @@ def main():
         quarantined_codes = []
         expired_scraped_keys = set()
 
-        # 1. Automated scraping from Fandom MediaWiki
+        # 1. Automated scraping from Fandom MediaWiki and Ennead
+        active_scraped_keys = set()
         if not args.no_scrape:
             try:
-                print("Running automated web scraping for Genshin, HSR and ZZZ...")
+                print("Running automated web scraping for Genshin, HSR, ZZZ and HI3...")
                 scraped = parse_all_games()
+                try:
+                    ennead_codes = parse_ennead_codes()
+                    scraped.extend(ennead_codes)
+                except Exception as ee:
+                    print(f"[Warning] Ennead codes scraper failed: {ee}")
+
                 expired_scraped_keys = {
                     (int(item.get("game_type", 0)), (item.get("code") or "").strip().upper())
                     for item in scraped
                     if item.get("status") == "EXPIRED"
+                }
+                active_scraped_keys = {
+                    (int(item.get("game_type", 0)), (item.get("code") or "").strip().upper())
+                    for item in scraped
+                    if item.get("status") != "EXPIRED"
                 }
                 new_scraped, quarantined_codes = import_scraped_codes(promo_data, scraped)
                 all_new_codes.extend(new_scraped)
@@ -1018,14 +1061,18 @@ def main():
                 print(f"[Warning] Official code verification encountered an error: {e}")
 
         # 5. Moderation & deduplication
-        promo_data = moderate_promocodes(promo_data)
+        promo_data = moderate_promocodes(promo_data, active_scraped_keys)
         quarantined_codes.extend(quarantine_unverified_codes(promo_data))
         quarantined_codes = merge_quarantine([], quarantined_codes)
         quarantined_codes = prune_quarantined_codes(
             quarantined_codes, promo_data, expired_scraped_keys
         )
         save_json(promocodes_file, promo_data)
-        save_quarantined_codes(base_dir, quarantined_codes)
+        published_promo_keys = {
+            (int(c.get("game_type", 0)), (c.get("code") or "").strip().upper())
+            for c in promo_data.get("codes", [])
+        }
+        save_quarantined_codes(base_dir, quarantined_codes, published_promo_keys)
 
         # 6. Banner announcements scraping & calendar moderation
         if os.path.exists(banners_file):
@@ -1042,8 +1089,16 @@ def main():
                             f"[Warning] Some official banner parsers failed: {official_data['errors']}",
                             file=sys.stderr,
                         )
-                    newly_added_banners = import_scraped_banners(
-                        banner_data, official_data.get("banners", [])
+                    banners_list = list(official_data.get("banners", []))
+                    try:
+                        catalog_lookup = load_catalog_lookup(catalog_file)
+                        ennead_banners = parse_ennead_banners(catalog_lookup, catalog_path=catalog_file)
+                        banners_list.extend(ennead_banners)
+                    except Exception as eb:
+                        print(f"[Warning] Ennead banners scraper failed: {eb}")
+
+                    newly_added_banners, _ = import_scraped_banners(
+                        banner_data, banners_list
                     )
                     merge_official_patches(banner_data, official_data.get("patches", {}))
                 except Exception as e:
@@ -1061,7 +1116,13 @@ def main():
             save_json(banners_file, banner_data)
 
             if newly_added_banners:
-                notify_new_banners(newly_added_banners)
+                today = datetime.now(timezone.utc).date()
+                future_new_banners = [
+                    b for b in newly_added_banners
+                    if parse_date(b.get("end_date")) is None or parse_date(b.get("end_date")) >= today
+                ]
+                if future_new_banners:
+                    notify_new_banners(future_new_banners)
 
         # 7. Telegram notification on new codes
         if all_new_codes:
