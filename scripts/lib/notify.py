@@ -223,19 +223,20 @@ def notify_pending_banners(items: list[dict]):
 
 
 def notify_new_banners(new_banners: list[dict]):
-    """Sends an alert when new verified official banners are scheduled."""
     if not new_banners:
         return
     game_names = {0: "Genshin Impact", 1: "Honkai: Star Rail", 2: "Zenless Zone Zero", 3: "Honkai Impact 3rd"}
-    msg = f"🗓️ <b>[GachaPoint: Обнаружены новые официальные баннеры]</b>\n\n"
+    msg = "🗓️ <b>[GachaPoint: Обнаружены новые подтверждённые баннеры]</b>\n\n"
     for b in new_banners:
-        g_name = html.escape(game_names.get(b.get("game_type", 0), "Gacha"))
+        gt = int(b.get("game_type", 0))
+        g_name = html.escape(game_names.get(gt, "Gacha"))
         ver = html.escape(str(b.get("version", "?")))
         phase = html.escape(str(b.get("phase", "?")))
         raw_fives = b.get("featured_five_stars_ru") or b.get("featured_five_stars_en") or []
         fives = html.escape(", ".join(raw_fives))
         dates = html.escape(f"{b.get('start_date', '?')} — {b.get('end_date', '?')}")
-        msg += f"• <b>{g_name} v{ver} (Фаза {phase})</b>\n  5★: {fives}\n  Сроки: {dates}\n"
+        rarity_label = "S-ранг" if gt in (2, 3) else "5★"
+        msg += f"• <b>{g_name} v{ver} (Фаза {phase})</b>\n  {rarity_label}: {fives}\n  Сроки: {dates}\n"
     send_telegram_message(msg)
 
 

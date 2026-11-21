@@ -778,6 +778,21 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
                     if value is not None and match.get(key) != value:
                         if key in ("start_date", "end_date") and match.get(key) and is_date_jitter(match.get(key), value):
                             continue
+                        if key == "start_date" and value:
+                            has_overlap = False
+                            for other in existing_banners:
+                                if (other is not match
+                                        and other.get("version") == match.get("version")
+                                        and (other.get("type") or "CHARACTER").upper() == (match.get("type") or "CHARACTER").upper()):
+                                    other_phase = int(other.get("phase", 0))
+                                    this_phase = int(match.get("phase", 0))
+                                    if other_phase < this_phase:
+                                        other_start = other.get("start_date")
+                                        if other_start and value <= other_start:
+                                            has_overlap = True
+                                            break
+                            if has_overlap:
+                                continue
                         match[key] = value
                         changed = True
                 if changed and b.get("verified_at"):

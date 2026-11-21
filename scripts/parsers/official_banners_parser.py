@@ -298,6 +298,8 @@ def make_banner(
     catalog_path: Optional[str] = None,
     source_type: str = "official",
     verification_status: str = "verified",
+    banner_type: str = "CHARACTER",
+    banner_id: Optional[str] = None,
 ) -> Optional[Dict[str, Any]]:
     game_lookup = catalog_lookup.get(game_type, {})
     five_ru: List[str] = []
@@ -326,13 +328,17 @@ def make_banner(
         return None
 
     prefix = {0: "genshin", 1: "hsr", 2: "zzz", 3: "hi3"}[game_type]
-    banner_id = f"{prefix}_{version.replace('.', '_')}_{phase}"
+    if not banner_id:
+        if banner_type.upper() == "CHRONICLED":
+            banner_id = f"{prefix}_{version.replace('.', '_')}_chronicled"
+        else:
+            banner_id = f"{prefix}_{version.replace('.', '_')}_{phase}"
     if not source_id:
         source_id = banner_id
 
     return {
         "id": banner_id,
-        "type": "CHARACTER",
+        "type": banner_type.upper(),
         "game_type": game_type,
         "version": version,
         "phase": phase,
@@ -408,6 +414,32 @@ def parse_genshin_data(
             metadata[int(item.get("ann_id", 0))] = item
 
     patches: Dict[str, Dict[str, str]] = {}
+    existing_phases: Dict[Tuple[str, int], Dict[str, str]] = {}
+    if catalog_path and os.path.exists(catalog_path):
+        base_dir = os.path.dirname(catalog_path)
+        banners_path = os.path.join(base_dir, "banners_schedule.json")
+        if os.path.exists(banners_path):
+            try:
+                with open(banners_path, "r", encoding="utf-8-sig") as bf:
+                    bs_data = json.load(bf)
+                for g in bs_data.get("games", []):
+                    if int(g.get("game_type", 0)) == 0:
+                        for p in g.get("patches", []):
+                            pv = str(p.get("version", ""))
+                            ps = str(p.get("start_date", ""))
+                            pe = str(p.get("end_date", ""))
+                            if pv and ps and pe:
+                                patches[pv] = {"start_date": ps, "end_date": pe}
+                        for eb in g.get("banners", []):
+                            ev = str(eb.get("version", ""))
+                            es = str(eb.get("start_date", ""))
+                            ee = str(eb.get("end_date", ""))
+                            ep = int(eb.get("phase", 0))
+                            if ev and es and ep and (eb.get("type") or "CHARACTER").upper() == "CHARACTER":
+                                existing_phases[(ev, ep)] = {"start_date": es, "end_date": ee}
+            except Exception:
+                pass
+
     for item in metadata.values():
         title = item.get("title", "") or ""
         match = re.search(r"Version\s+(\d+\.\d+)\s+Update Details", title, re.IGNORECASE)
@@ -416,7 +448,7 @@ def parse_genshin_data(
         version = match.group(1)
         start = parse_date(str(item.get("start_time", "")))
         end = parse_date(str(item.get("end_time", "")))
-        if start and end:
+        if start and end and version not in patches:
             patches[version] = {"start_date": start, "end_date": end}
 
     candidates: List[Dict[str, Any]] = []
@@ -426,25 +458,38 @@ def parse_genshin_data(
             continue
         if "Epitome Invocation" in title:
             continue
+        is_chronicle = "Chronicled Wish" in title
         content = strip_html(item.get("content", "") or "")
         version_match = VERSION_RE.search(content) or VERSION_RE.search(title)
-        if not version_match:
-            continue
-        version = version_match.group(1)
-        patch = patches.get(version)
+        version = version_match.group(1) if version_match else None
+
+        patch = patches.get(version) if version else None
         patch_start = patch["start_date"] if patch else ""
         start_date, end_date = parse_genshin_dates(content, patch_start)
         if not start_date or not end_date:
             continue
+
+        if not version:
+            for v, p_info in patches.items():
+                p_s = p_info.get("start_date", "")
+                p_e = p_info.get("end_date", "")
+                if p_s and p_e and p_s <= start_date <= p_e and p_s <= end_date <= p_e:
+                    version = v
+                    break
+        if not version:
+            continue
+
         names = GS_CHAR_RE.findall(content)
         if not names:
             continue
-        five_names = [names[0][1]]
+        five_names = [names[0][1]] if not is_chronicle else [entry[1] for entry in names]
         four_names = []
-        for entry in names[1:]:
-            name = entry[1]
-            if name not in five_names and name not in four_names:
-                four_names.append(name)
+        if not is_chronicle:
+            for entry in names[1:]:
+                name = entry[1]
+                if name not in five_names and name not in four_names:
+                    four_names.append(name)
+
         candidates.append({
             "version": version,
             "start_date": start_date,
@@ -452,15 +497,50 @@ def parse_genshin_data(
             "five_names": five_names,
             "four_names": four_names,
             "source_id": str(item.get("ann_id", "")),
+            "is_chronicle": is_chronicle,
         })
 
+    banners: List[Dict[str, Any]] = []
+    regular_candidates = [c for c in candidates if not c.get("is_chronicle")]
+    chronicle_candidates = [c for c in candidates if c.get("is_chronicle")]
+
+    for cand in chronicle_candidates:
+        source_id = cand["source_id"]
+        source_url = GENSHIN_DETAIL.format(id=source_id) if source_id else GENSHIN_SITE
+        c_phase = 1
+        ver = cand["version"]
+        if (ver, 1) in existing_phases:
+            ex_e = existing_phases[(ver, 1)]["end_date"]
+            if cand["start_date"] >= ex_e:
+                c_phase = 2
+        b = make_banner(
+            0, cand["version"], c_phase, cand["start_date"], cand["end_date"],
+            cand["five_names"], cand["four_names"],
+            source_url, source_id, catalog_lookup,
+            catalog_path=catalog_path,
+            banner_type="CHRONICLED",
+            banner_id=f"genshin_{cand['version'].replace('.', '_')}_chronicled",
+        )
+        if b:
+            banners.append(b)
+
     grouped: Dict[Tuple[str, str], Dict[str, Any]] = {}
-    for candidate in candidates:
-        key = (candidate["version"], candidate["start_date"])
+    for candidate in regular_candidates:
+        ver = candidate["version"]
+        s_date = candidate["start_date"]
+        e_date = candidate["end_date"]
+
+        if (ver, 1) in existing_phases:
+            ex_s = existing_phases[(ver, 1)]["start_date"]
+            ex_e = existing_phases[(ver, 1)]["end_date"]
+            if e_date == ex_e or abs((datetime.strptime(s_date, "%Y-%m-%d") - datetime.strptime(ex_s, "%Y-%m-%d")).days) <= 1:
+                s_date = ex_s
+
+        key = (ver, s_date)
         target = grouped.setdefault(key, {
-            "version": candidate["version"],
-            "start_date": candidate["start_date"],
-            "end_date": candidate["end_date"],
+            "version": ver,
+            "start_date": s_date,
+            "end_date": e_date,
             "five_names": [],
             "four_names": [],
             "source_ids": [],
@@ -473,43 +553,21 @@ def parse_genshin_data(
                 target["four_names"].append(name)
         target["source_ids"].append(candidate["source_id"])
 
-    starts_by_version: Dict[str, List[str]] = {}
-    for version, start_date in grouped:
-        starts_by_version.setdefault(version, []).append(start_date)
-    for version in starts_by_version:
-        starts_by_version[version] = sorted(set(starts_by_version[version]))
-
-    existing_phases: Dict[Tuple[str, str], int] = {}
-    if catalog_path and os.path.exists(catalog_path):
-        base_dir = os.path.dirname(catalog_path)
-        banners_path = os.path.join(base_dir, "banners_schedule.json")
-        if os.path.exists(banners_path):
-            try:
-                with open(banners_path, "r", encoding="utf-8-sig") as bf:
-                    bs_data = json.load(bf)
-                for g in bs_data.get("games", []):
-                    if int(g.get("game_type", 0)) == 0:
-                        for eb in g.get("banners", []):
-                            ev = str(eb.get("version", ""))
-                            es = str(eb.get("start_date", ""))
-                            ep = int(eb.get("phase", 0))
-                            if ev and es and ep:
-                                existing_phases[(ev, es)] = ep
-            except Exception:
-                pass
-
-    banners: List[Dict[str, Any]] = []
     for (version, start_date), data in grouped.items():
-        if (version, start_date) in existing_phases:
-            phase = existing_phases[(version, start_date)]
+        matched_phase = None
+        for (ev, ep), ex_info in existing_phases.items():
+            if ev == version:
+                if ex_info["start_date"] == start_date or ex_info["end_date"] == data["end_date"]:
+                    matched_phase = ep
+                    break
+        if matched_phase:
+            phase = matched_phase
         else:
             prev_phases = [
-                p for (v, s), p in existing_phases.items()
-                if v == version and s < start_date
+                ep for (ev, ep), ex_info in existing_phases.items()
+                if ev == version and ex_info["end_date"] <= start_date
             ]
-            base_phase = max(prev_phases) if prev_phases else 0
-            offset = starts_by_version[version].index(start_date) + 1
-            phase = max(base_phase + 1, offset)
+            phase = (max(prev_phases) + 1) if prev_phases else 1
 
         source_ids = data["source_ids"]
         source_url = GENSHIN_DETAIL.format(id=source_ids[0]) if source_ids else GENSHIN_SITE
@@ -574,6 +632,27 @@ def parse_zzz_data(
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, str]]]:
     items = fetch_content_list(ZZZ_APP, ZZZ_CHANNEL, "en-us")
     patch_starts: Dict[str, str] = {}
+    patches: Dict[str, Dict[str, str]] = {}
+
+    if catalog_path and os.path.exists(catalog_path):
+        base_dir = os.path.dirname(catalog_path)
+        banners_path = os.path.join(base_dir, "banners_schedule.json")
+        if os.path.exists(banners_path):
+            try:
+                with open(banners_path, "r", encoding="utf-8-sig") as bf:
+                    bs_data = json.load(bf)
+                for g in bs_data.get("games", []):
+                    if int(g.get("game_type", 0)) == 2:
+                        for p in g.get("patches", []):
+                            pv = str(p.get("version", ""))
+                            ps = str(p.get("start_date", ""))
+                            pe = str(p.get("end_date", ""))
+                            if pv and ps and pe:
+                                patches[pv] = {"start_date": ps, "end_date": pe}
+                                patch_starts[pv] = ps
+            except Exception:
+                pass
+
     for item in items:
         title = item.get("sTitle", "") or ""
         match = re.search(r"Version\s+(\d+\.\d+).*Update Announcement", title, re.IGNORECASE)
@@ -583,18 +662,25 @@ def parse_zzz_data(
                 patch_starts[match.group(1)] = start
 
     banners: List[Dict[str, Any]] = []
-    patches: Dict[str, Dict[str, str]] = {}
     for item in items:
         title = item.get("sTitle", "") or ""
-        match = re.search(r"V(?:ersion)?\s*(\d+\.\d+)", title, re.IGNORECASE)
-        if not match:
+        title_lower = title.lower()
+        if not ("channel" in title_lower or "signal search" in title_lower):
             continue
-        version = match.group(1)
+        if any(skip in title_lower for skip in ("probability", "statistical tool", "overview", "update")):
+            continue
+
+        match = re.search(r"V(?:ersion)?\s*(\d+\.\d+)", title, re.IGNORECASE)
+        version = match.group(1) if match else None
         content_id = str(item.get("iInfoId", ""))
         detail = fetch_content_detail(ZZZ_APP, content_id, "en-us")
         content = strip_html(detail.get("sContent", "") or "")
         if not content:
             continue
+
+        if not version:
+            vm = VERSION_RE.search(content)
+            version = vm.group(1) if vm else None
 
         phase = 2 if any(k in (title + " " + content).lower() for k in ("phase ii", "phase 2", "second phase")) else 1
         phase_match = re.search(r"Phase\s*(I{1,2}|1|2)", title, re.IGNORECASE)
@@ -620,8 +706,21 @@ def parse_zzz_data(
         if not start_date or not end_date:
             continue
 
+        if not version:
+            for v, p_info in patches.items():
+                ps = p_info.get("start_date", "")
+                pe = p_info.get("end_date", "")
+                if ps and pe and ps <= start_date <= pe and ps <= end_date <= pe:
+                    version = v
+                    break
+        if not version:
+            continue
+
         agents = []
         for name in ZZZ_AGENT_RE.findall(content):
+            item_match = resolve_item(name, catalog_lookup.get(2, {}))
+            if item_match and item_match.get("type") != "CHARACTER":
+                continue
             if name not in agents:
                 agents.append(name)
         if not agents:

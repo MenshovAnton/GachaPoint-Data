@@ -103,6 +103,26 @@ def parse_ennead_banners(
     banners = []
     now = datetime.now(timezone.utc).date()
 
+    existing_phases: Dict[Tuple[int, str, int], Tuple[str, str]] = {}
+    if catalog_path and os.path.exists(catalog_path):
+        base_dir = os.path.dirname(catalog_path)
+        banners_path = os.path.join(base_dir, "banners_schedule.json")
+        if os.path.exists(banners_path):
+            try:
+                with open(banners_path, "r", encoding="utf-8-sig") as bf:
+                    bs_data = json.load(bf)
+                for g in bs_data.get("games", []):
+                    gt = int(g.get("game_type", 0))
+                    for eb in g.get("banners", []):
+                        ev = str(eb.get("version", ""))
+                        ep = int(eb.get("phase", 0))
+                        es = str(eb.get("start_date", ""))
+                        ee = str(eb.get("end_date", ""))
+                        if ev and ep and es and ee and (eb.get("type") or "CHARACTER").upper() == "CHARACTER":
+                            existing_phases[(gt, ev, ep)] = (es, ee)
+            except Exception:
+                pass
+
     for game_type in (0, 1, 2):
         slug = SLUGS.get(game_type)
         if not slug:
@@ -156,6 +176,21 @@ def parse_ennead_banners(
                     phase = int(b.get("phase"))
                 except Exception:
                     phase = 1
+            else:
+                matched_phase = None
+                for (egt, ev, ep), (es, ee) in existing_phases.items():
+                    if egt == game_type and ev == version:
+                        if es == start_date or ee == end_date:
+                            matched_phase = ep
+                            break
+                if matched_phase is not None:
+                    phase = matched_phase
+                else:
+                    prev = [
+                        ep for (egt, ev, ep), (es, ee) in existing_phases.items()
+                        if egt == game_type and ev == version and ee <= start_date
+                    ]
+                    phase = (max(prev) + 1) if prev else 1
 
             banner_obj = make_banner(
                 game_type,

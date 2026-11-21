@@ -327,7 +327,7 @@ def lint_banners(base_dir: str, catalog_lookup: Dict[int, Dict[str, Any]]) -> Tu
             if "type" not in b:
                 errors.append(f"Game {gt} banner '{b_id}': missing 'type'")
 
-            if version in patch_by_version and phase == 1 and s_date:
+            if (b.get("type") or "CHARACTER").upper() not in special_types and version in patch_by_version and phase == 1 and s_date:
                 patch_start = patch_by_version[version].get("start_date")
                 if patch_start and s_date != patch_start:
                     warnings.append(
