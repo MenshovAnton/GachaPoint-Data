@@ -57,20 +57,18 @@ Each game uses native, authentic terminology:
 
 ### 1. Scheduled GitHub Actions Sync (`.github/workflows/sync.yml`)
 Runs every 3 hours:
-- Reads official Genshin in-game announcements (Event Wish posts).
-- Reads official ZZZ news (`Limited-Time Channels`) and HI3 update announcements.
-- Uses Fandom MediaWiki only for discovery; unverified candidates are written to
-  `quarantine_codes.json` instead of the published dataset.
-- Scans official Genshin announcements, HSR/ZZZ/HI3 website news and HoYoLAB
-  news for candidate codes. A code is published automatically only when the
-  exact value is found in an official text and its reward quantities can be
-  extracted.
-- Sends ambiguous or unconfirmed codes to Telegram for manual review. Results
-  are applied with `apply_code_checks.py` or the `Verify Promo Code` workflow.
-- Quarantines unverified `CURRENT`/`ANNOUNCED` banners to `pending_banners.json`.
-- Performs calendar moderation (`CURRENT`, `ANNOUNCED`, `EXPIRED`) for banner phases.
-- Runs parser tests and `scripts/tools/lint_data.py --strict` before commits.
-- Dispatches Telegram notifications for verified discoveries and failures.
+- Reads official game announcements (Genshin Event Wish, HSR Warps, ZZZ Channels, HI3 Updates).
+- Pulls verified banner schedules and active promo codes from trusted API providers (`api.ennead.cc`).
+- Uses Fandom MediaWiki for preliminary discovery; unverified candidates are isolated in `quarantine_codes.json`.
+- Automatically verifies candidate codes against official texts and news feeds.
+- Dispatches targeted Telegram notifications:
+  - 🎁 New verified promo codes with instant redemption links.
+  - 🔥 Priority alerts for time-sensitive livestream codes (STREAM).
+  - 🗓️ New official and trusted banner announcements.
+  - ⚠️ Instant notifications for newly quarantined codes/banners with 1-click CLI validation commands.
+- Quarantines unverified `CURRENT`/`ANNOUNCED` banners into `pending_banners.json`.
+- Performs calendar moderation (`CURRENT`, `ANNOUNCED`, `EXPIRED`) for banner phases across all 4 games.
+- Runs unit tests and `scripts/tools/lint_data.py --strict` before committing changes.
 
 ### 2. Adding New Characters or Weapons
 Run `scripts/tools/add_entity.py` CLI:

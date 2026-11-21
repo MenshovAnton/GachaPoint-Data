@@ -76,7 +76,7 @@ def parse_ennead_codes() -> List[Dict[str, Any]]:
                 "expiry_confidence": "unknown",
                 "created_at": now_iso,
                 "source_url": url,
-                "source_type": "community",
+                "source_type": "trusted_api",
                 "verification_status": "verified",
                 "verified_at": now_iso,
                 "is_stream": is_stream,
@@ -164,6 +164,8 @@ def parse_ennead_banners(
                 str(b.get("id") or f"ennead_{slug}_{version}_{phase}"),
                 catalog_lookup,
                 catalog_path=catalog_path,
+                source_type="trusted_api",
+                verification_status="verified",
             )
             if banner_obj:
                 banners.append(banner_obj)

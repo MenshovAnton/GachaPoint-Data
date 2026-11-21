@@ -17,10 +17,11 @@ from typing import Dict, List, Set, Tuple, Any
 BANNER_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 CODE_RE = re.compile(r"^[A-Za-z0-9_-]{3,30}$")
 REPLACEMENT_RE = re.compile(r"\?{2,}|\ufffd")
-OFFICIAL_HOSTS = ("hoyoverse.com", "hoyolab.com", "x.com", "twitter.com")
+OFFICIAL_HOSTS = ("hoyoverse.com", "hoyolab.com", "mihoyo.com", "x.com", "twitter.com")
+TRUSTED_API_HOSTS = ("api.ennead.cc",)
 VERIFICATION_VALUES = {"verified", "legacy", "unverified"}
 EXPIRY_CONFIDENCE_VALUES = {"official", "estimated", "unknown"}
-SOURCE_TYPES = {"official", "manual_in_game", "community"}
+SOURCE_TYPES = {"official", "trusted_api", "manual_in_game", "community"}
 PERMANENT_ALLOWLIST = {
     (0, "GENSHINGIFT"),
     (1, "STARRAILGIFT"),
@@ -45,6 +46,14 @@ def is_official_url(value: str) -> bool:
     except Exception:
         return False
     return any(host == domain or host.endswith("." + domain) for domain in OFFICIAL_HOSTS)
+
+
+def is_trusted_api_url(value: str) -> bool:
+    try:
+        host = urllib.parse.urlparse(value).hostname or ""
+    except Exception:
+        return False
+    return any(host == domain or host.endswith("." + domain) for domain in TRUSTED_API_HOSTS)
 
 
 def is_detail_url(value: str) -> bool:
@@ -250,22 +259,31 @@ def lint_banners(base_dir: str, catalog_lookup: Dict[int, Dict[str, Any]]) -> Tu
                     f"Game {gt} banner '{b_id}': invalid verification_status '{b.get('verification_status')}'"
                 )
 
-            if b.get("source_url") and not is_official_url(b["source_url"]):
-                errors.append(
-                    f"Game {gt} banner '{b_id}': source_url is not an official HoYoverse source"
-                )
+            src_type = b.get("source_type") or "official"
+            src_url = b.get("source_url") or ""
 
             if b.get("source_type") is not None and b.get("source_type") not in SOURCE_TYPES:
                 errors.append(
                     f"Game {gt} banner '{b_id}': invalid source_type '{b.get('source_type')}'"
                 )
 
-            if expected in ("CURRENT", "ANNOUNCED"):
-                if not b.get("source_url"):
+            if src_type == "official":
+                if src_url and not is_official_url(src_url):
                     errors.append(
-                        f"Game {gt} banner '{b_id}': CURRENT/ANNOUNCED banner requires an official source_url"
+                        f"Game {gt} banner '{b_id}': source_url is not an official HoYoverse source"
                     )
-                elif not is_detail_url(b["source_url"]):
+            elif src_type == "trusted_api":
+                if src_url and not (is_trusted_api_url(src_url) or is_official_url(src_url)):
+                    errors.append(
+                        f"Game {gt} banner '{b_id}': source_url is not a recognized trusted API source"
+                    )
+
+            if expected in ("CURRENT", "ANNOUNCED"):
+                if not src_url:
+                    errors.append(
+                        f"Game {gt} banner '{b_id}': CURRENT/ANNOUNCED banner requires source_url"
+                    )
+                elif src_type == "official" and not is_detail_url(src_url):
                     errors.append(
                         f"Game {gt} banner '{b_id}': source_url must point to a specific post, not a news index"
                     )
@@ -417,11 +435,11 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
         if status_upper in ("ACTIVE", "STREAM", "NEW"):
             if expires_at is not None and expires_at < now:
                 errors.append(f"promocodes.json code '{code_str}': active code has a past expires_at")
-            if not c.get("source_url") and c.get("source_type") not in ("manual_in_game", "community"):
+            if not c.get("source_url") and c.get("source_type") not in ("manual_in_game", "community", "trusted_api"):
                 errors.append(
-                    f"promocodes.json code '{code_str}': active code requires source_url or source_type 'manual_in_game'/'community'"
+                    f"promocodes.json code '{code_str}': active code requires source_url or valid source_type"
                 )
-            if c.get("source_type") in ("manual_in_game", "community") and not c.get("verified_at"):
+            if c.get("source_type") in ("manual_in_game", "community", "trusted_api") and not c.get("verified_at"):
                 errors.append(
                     f"promocodes.json code '{code_str}': {c.get('source_type')} code requires 'verified_at'"
                 )
@@ -434,6 +452,9 @@ def lint_promocodes(base_dir: str) -> Tuple[List[str], List[str]]:
 
         if c.get("source_type") == "official" and c.get("source_url") and not is_detail_url(c["source_url"]):
             errors.append(f"promocodes.json code '{code_str}': source_url must point to a specific post")
+
+        if c.get("source_type") == "trusted_api" and c.get("source_url") and not (is_trusted_api_url(c["source_url"]) or is_official_url(c["source_url"])):
+            errors.append(f"promocodes.json code '{code_str}': source_url is not a recognized trusted API source")
 
         if status == "PERMANENT":
             found_perms.add(pair)

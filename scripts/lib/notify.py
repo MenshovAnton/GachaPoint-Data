@@ -149,22 +149,10 @@ def notify_new_codes(new_codes: list[dict]):
 
 
 def notify_suspicious_announcement(game_name: str, title: str, reason: str, post_url: Optional[str] = None):
-    """Sends an alert when an announcement contains unknown characters or ambiguous info requiring manual verification."""
-    msg = (
-        f"⚠️ <b>[GachaPoint Bot: Требуется проверка анонса]</b>\n\n"
-        f"<b>Игра:</b> {html.escape(str(game_name))}\n"
-        f"<b>Новость:</b> {html.escape(str(title))}\n"
-        f"<b>Причина:</b> {html.escape(str(reason))}\n"
-    )
-    if post_url:
-        clean_url = html.escape(str(post_url))
-        msg += f"🔗 <a href=\"{clean_url}\">Открыть публикацию HoYoLAB</a>\n\n"
-    msg += "<i>Бот не стал добавлять непроверенные данные, чтобы исключить сливы и ошибки. Проверьте и примените вручную.</i>"
-    send_telegram_message(msg)
+    pass
 
 
 def notify_code_review(items: list[dict]):
-    """Sends a digest of promo codes that need manual verification."""
     if not items:
         return
 
@@ -183,19 +171,21 @@ def notify_code_review(items: list[dict]):
     msg = "🔎 <b>[GachaPoint: коды требуют проверки]</b>\n\n"
     for item in items[:10]:
         game_type = int(item.get("game_type", 0))
-        code = html.escape(str(item.get("code", "")))
+        code_str = str(item.get("code", ""))
+        code = html.escape(code_str)
         raw_rewards = item.get("rewards_description_ru") or item.get("rewards_description_en") or "Награды не распознаны"
         rewards = html.escape(str(raw_rewards))
         raw_source = item.get("source_url") or "официальный источник не найден"
         source = html.escape(str(raw_source))
         template = redeem_urls.get(game_type, "")
-        raw_redeem = template.format(code=item.get("code", "")) if template else ""
+        raw_redeem = template.format(code=code_str) if template else ""
         redeem = html.escape(str(raw_redeem))
         g_name = html.escape(game_names.get(game_type, "Gacha"))
         msg += (
             f"• <b>{g_name}</b> <code>{code}</code>\n"
             f"  {rewards}\n"
             f"  Источник: {source}\n"
+            f"  Команда: <code>python -m scripts.tools.apply_code_checks --set {game_type} {code} ok</code>\n"
         )
         if redeem:
             msg += f"  Проверить: <a href=\"{redeem}\">открыть страницу активации</a>\n"
@@ -203,10 +193,32 @@ def notify_code_review(items: list[dict]):
     if len(items) > 10:
         msg += f"\n…и ещё {len(items) - 10} код(ов) в quarantine_codes.json."
 
-    msg += (
-        f"\n🔗 <a href=\"{verify_url}\">Подтвердить в GitHub Actions</a>\n"
-        "<i>Или локально: python -m scripts.tools.apply_code_checks --set GAME CODE ok</i>"
-    )
+    msg += f"\n🔗 <a href=\"{verify_url}\">Подтвердить в GitHub Actions</a>"
+    send_telegram_message(msg)
+
+
+def notify_pending_banners(items: list[dict]):
+    if not items:
+        return
+    game_names = {0: "Genshin Impact", 1: "Honkai: Star Rail", 2: "Zenless Zone Zero", 3: "Honkai Impact 3rd"}
+    msg = "⚠️ <b>[GachaPoint: баннеры требуют проверки]</b>\n\n"
+    for b in items[:10]:
+        gt = int(b.get("game_type", 0))
+        g_name = html.escape(game_names.get(gt, "Gacha"))
+        ver = html.escape(str(b.get("version", "?")))
+        phase = html.escape(str(b.get("phase", "?")))
+        raw_fives = b.get("featured_five_stars_ru") or b.get("featured_five_stars_en") or []
+        fives = html.escape(", ".join(raw_fives))
+        dates = html.escape(f"{b.get('start_date', '?')} — {b.get('end_date', '?')}")
+        reason = html.escape(str(b.get("quarantine_reason", "Требуется проверка")))
+        msg += (
+            f"• <b>{g_name} v{ver} (Фаза {phase})</b>\n"
+            f"  5★: {fives}\n"
+            f"  Сроки: {dates}\n"
+            f"  Причина: {reason}\n"
+        )
+    if len(items) > 10:
+        msg += f"\n…и ещё {len(items) - 10} баннер(ов) в pending_banners.json."
     send_telegram_message(msg)
 
 

@@ -118,6 +118,13 @@ GENERIC_ITEM_ALIASES = {
     "guide to charity": ("Указания о «Милосердии»", "Guide to Charity", "TALENT_BOOK"),
     "kristallfold": ("Кристаллический гриб-зонтик", "Kristallfold", "MATERIAL"),
     "energy-replenishing meal": ("Энергетический обед", "Energy-Replenishing Meal", "FOOD"),
+    "traveler's guide": ("Путеводитель путешественника", "Traveler's Guide", "EXP_MATERIAL"),
+    "refined aether": ("Очищенный эфир", "Refined Aether", "EXP_MATERIAL"),
+    "lost crystal": ("Утраченный кристалл", "Lost Crystal", "EXP_MATERIAL"),
+    "official investigator log": ("Журнал эксперта", "Official Investigator Log", "EXP_MATERIAL"),
+    "w-engine battery supply": ("Энергоаккумулятор амплификатора", "W-Engine Battery Supply", "EXP_MATERIAL"),
+    "boopon": ("Банпупон", "Boopon", "MATERIAL"),
+    "phase shifter": ("Фазовый переключатель", "Phase Shifter", "MATERIAL"),
 }
 
 CURRENCY_ITEM_KEYS = {

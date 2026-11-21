@@ -296,6 +296,8 @@ def make_banner(
     source_id: str,
     catalog_lookup: Dict[int, Dict[str, Dict[str, Any]]],
     catalog_path: Optional[str] = None,
+    source_type: str = "official",
+    verification_status: str = "verified",
 ) -> Optional[Dict[str, Any]]:
     game_lookup = catalog_lookup.get(game_type, {})
     five_ru: List[str] = []
@@ -343,8 +345,8 @@ def make_banner(
         "featured_four_stars_en": four_en,
         "source_url": source_url,
         "source_id": source_id,
-        "source_type": "official",
-        "verification_status": "verified",
+        "source_type": source_type,
+        "verification_status": verification_status,
         "verified_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
 
@@ -430,9 +432,8 @@ def parse_genshin_data(
             continue
         version = version_match.group(1)
         patch = patches.get(version)
-        if not patch:
-            continue
-        start_date, end_date = parse_genshin_dates(content, patch["start_date"])
+        patch_start = patch["start_date"] if patch else ""
+        start_date, end_date = parse_genshin_dates(content, patch_start)
         if not start_date or not end_date:
             continue
         names = GS_CHAR_RE.findall(content)
@@ -478,9 +479,38 @@ def parse_genshin_data(
     for version in starts_by_version:
         starts_by_version[version] = sorted(set(starts_by_version[version]))
 
+    existing_phases: Dict[Tuple[str, str], int] = {}
+    if catalog_path and os.path.exists(catalog_path):
+        base_dir = os.path.dirname(catalog_path)
+        banners_path = os.path.join(base_dir, "banners_schedule.json")
+        if os.path.exists(banners_path):
+            try:
+                with open(banners_path, "r", encoding="utf-8-sig") as bf:
+                    bs_data = json.load(bf)
+                for g in bs_data.get("games", []):
+                    if int(g.get("game_type", 0)) == 0:
+                        for eb in g.get("banners", []):
+                            ev = str(eb.get("version", ""))
+                            es = str(eb.get("start_date", ""))
+                            ep = int(eb.get("phase", 0))
+                            if ev and es and ep:
+                                existing_phases[(ev, es)] = ep
+            except Exception:
+                pass
+
     banners: List[Dict[str, Any]] = []
     for (version, start_date), data in grouped.items():
-        phase = starts_by_version[version].index(start_date) + 1
+        if (version, start_date) in existing_phases:
+            phase = existing_phases[(version, start_date)]
+        else:
+            prev_phases = [
+                p for (v, s), p in existing_phases.items()
+                if v == version and s < start_date
+            ]
+            base_phase = max(prev_phases) if prev_phases else 0
+            offset = starts_by_version[version].index(start_date) + 1
+            phase = max(base_phase + 1, offset)
+
         source_ids = data["source_ids"]
         source_url = GENSHIN_DETAIL.format(id=source_ids[0]) if source_ids else GENSHIN_SITE
         banner = make_banner(
@@ -556,16 +586,20 @@ def parse_zzz_data(
     patches: Dict[str, Dict[str, str]] = {}
     for item in items:
         title = item.get("sTitle", "") or ""
-        match = re.search(r"V(\d+\.\d+)\s+Limited-Time Channels\s*\(Phase\s*(I|II|1|2)\)", title, re.IGNORECASE)
+        match = re.search(r"V(?:ersion)?\s*(\d+\.\d+)", title, re.IGNORECASE)
         if not match:
             continue
         version = match.group(1)
-        phase = 1 if match.group(2).upper() in ("I", "1") else 2
         content_id = str(item.get("iInfoId", ""))
         detail = fetch_content_detail(ZZZ_APP, content_id, "en-us")
         content = strip_html(detail.get("sContent", "") or "")
         if not content:
             continue
+
+        phase = 2 if any(k in (title + " " + content).lower() for k in ("phase ii", "phase 2", "second phase")) else 1
+        phase_match = re.search(r"Phase\s*(I{1,2}|1|2)", title, re.IGNORECASE)
+        if phase_match:
+            phase = 2 if phase_match.group(1).upper() in ("II", "2") else 1
 
         after_update = re.search(
             r"After the Version\s+\d+\.\d+\s+Update\s*[–-]\s*"
@@ -573,7 +607,7 @@ def parse_zzz_data(
             content,
         )
         if after_update:
-            start_date = patch_starts.get(version)
+            start_date = patch_starts.get(version) or parse_date(str(item.get("dtStartTime", "")))
             end_date = parse_date(after_update.group(1))
         else:
             period = re.search(
@@ -590,6 +624,12 @@ def parse_zzz_data(
         for name in ZZZ_AGENT_RE.findall(content):
             if name not in agents:
                 agents.append(name)
+        if not agents:
+            for it_name, cat_it in catalog_lookup.get(2, {}).items():
+                if cat_it.get("rarity") == "S" and cat_it.get("type") == "CHARACTER":
+                    c_en = cat_it.get("name_en", "")
+                    if c_en and c_en in content and c_en not in agents:
+                        agents.append(c_en)
         if not agents:
             continue
 

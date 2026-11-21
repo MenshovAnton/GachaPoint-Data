@@ -28,6 +28,7 @@ try:
         notify_failure,
         notify_new_banners,
         notify_new_codes,
+        notify_pending_banners,
         notify_suspicious_announcement,
     )
 except ImportError:
@@ -37,8 +38,10 @@ except ImportError:
         print(f"[Alert] New codes found: {len(new_codes)}")
     def notify_new_banners(new_banners):
         print(f"[Alert] New banners found: {len(new_banners)}")
+    def notify_pending_banners(items):
+        print(f"[Alert] Banners needing review: {len(items)}")
     def notify_suspicious_announcement(game_name, title, reason, post_url=None):
-        print(f"[Alert] Suspicious announcement in {game_name}: {title} ({reason})")
+        pass
     def notify_code_review(items):
         print(f"[Alert] Codes needing review: {len(items)}")
 
@@ -49,13 +52,18 @@ except ImportError:
         return []
 
 try:
-    from scripts.parsers.ennead_parser import parse_ennead_codes
+    from scripts.parsers.ennead_parser import parse_ennead_codes, parse_ennead_banners
 except ImportError:
     def parse_ennead_codes():
         return []
+    def parse_ennead_banners(catalog_lookup, catalog_path=None):
+        return []
 
 try:
-    from scripts.parsers.official_banners_parser import parse_all_official_data
+    from scripts.parsers.official_banners_parser import (
+        parse_all_official_data,
+        load_catalog_lookup,
+    )
 except ImportError:
     def parse_all_official_data(catalog_path):
         return {"banners": [], "patches": {}, "errors": {}}
@@ -741,19 +749,24 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
             ("featured_five_stars_ru", "featured_five_stars_en"),
             ("featured_four_stars_ru", "featured_four_stars_en"),
         ]
+        is_match_official = match.get("source_type") == "official"
+        is_new_official = b.get("source_type") == "official"
+        can_overwrite = is_new_official or not is_match_official
+
         if b.get("verification_status") == "verified":
-            for key in (
-                "start_date", "end_date", "source_url", "source_id",
-                "source_type", "verification_status",
-            ):
-                value = b.get(key)
-                if value is not None and match.get(key) != value:
-                    if key in ("start_date", "end_date") and match.get(key) and is_date_jitter(match.get(key), value):
-                        continue
-                    match[key] = value
-                    changed = True
-            if changed and b.get("verified_at"):
-                match["verified_at"] = b["verified_at"]
+            if can_overwrite:
+                for key in (
+                    "start_date", "end_date", "source_url", "source_id",
+                    "source_type", "verification_status",
+                ):
+                    value = b.get(key)
+                    if value is not None and match.get(key) != value:
+                        if key in ("start_date", "end_date") and match.get(key) and is_date_jitter(match.get(key), value):
+                            continue
+                        match[key] = value
+                        changed = True
+                if changed and b.get("verified_at"):
+                    match["verified_at"] = b["verified_at"]
             for ru_key, en_key in pairs:
                 new_ru = b.get(ru_key) or []
                 new_en = b.get(en_key) or []
@@ -1041,6 +1054,10 @@ def main():
             os.path.join(base_dir, "quarantine_codes.json"),
             {"schema_version": 1, "codes": []},
         ).get("codes", [])
+        existing_quarantine_keys = {
+            (int(c.get("game_type", 0)), (c.get("code") or "").strip().upper())
+            for c in existing_quarantine
+        }
         quarantined_codes = merge_quarantine(existing_quarantine, quarantined_codes)
 
         if not args.no_verify:
@@ -1057,8 +1074,6 @@ def main():
                     promo_data, quarantined_codes, results, now_iso
                 )
                 all_new_codes.extend(verified_by_official)
-                if review_items:
-                    notify_code_review(review_items)
             except Exception as e:
                 print(f"[Warning] Official code verification encountered an error: {e}")
 
@@ -1076,9 +1091,24 @@ def main():
         }
         save_quarantined_codes(base_dir, quarantined_codes, published_promo_keys)
 
+        newly_quarantined_codes = [
+            c for c in quarantined_codes
+            if (int(c.get("game_type", 0)), (c.get("code") or "").strip().upper()) not in existing_quarantine_keys
+        ]
+        if newly_quarantined_codes:
+            notify_code_review(newly_quarantined_codes)
+
         # 6. Banner announcements scraping & calendar moderation
         if os.path.exists(banners_file):
             banner_data = load_json(banners_file, {"schema_version": 1, "games": []})
+            existing_pending = load_json(
+                os.path.join(base_dir, "pending_banners.json"),
+                {"schema_version": 1, "banners": []},
+            ).get("banners", [])
+            existing_pending_keys = {
+                (int(b.get("game_type", 0)), b.get("id", ""))
+                for b in existing_pending
+            }
             newly_added_banners = []
 
             if not args.no_scrape:
@@ -1091,12 +1121,20 @@ def main():
                             f"[Warning] Some official banner parsers failed: {official_data['errors']}",
                             file=sys.stderr,
                         )
+                    banners_list = list(official_data.get("banners", []))
+                    try:
+                        catalog_lookup = load_catalog_lookup(catalog_file)
+                        ennead_banners = parse_ennead_banners(catalog_lookup, catalog_path=catalog_file)
+                        banners_list.extend(ennead_banners)
+                    except Exception as eb:
+                        print(f"[Warning] Ennead banners scraper failed: {eb}")
+
                     newly_added_banners, _ = import_scraped_banners(
-                        banner_data, official_data.get("banners", [])
+                        banner_data, banners_list
                     )
                     merge_official_patches(banner_data, official_data.get("patches", {}))
                 except Exception as e:
-                    print(f"[Warning] Official banner parser failed: {e}", file=sys.stderr)
+                    print(f"[Warning] Banner parser failed: {e}", file=sys.stderr)
 
             banner_data = moderate_banners(banner_data)
             pending_banners = quarantine_unverified_banners(banner_data)
@@ -1108,6 +1146,13 @@ def main():
             }
             save_pending_banners(base_dir, pending_banners, published_keys)
             save_json(banners_file, banner_data)
+
+            new_pending_banners = [
+                b for b in pending_banners
+                if (int(b.get("game_type", 0)), b.get("id", "")) not in existing_pending_keys
+            ]
+            if new_pending_banners:
+                notify_pending_banners(new_pending_banners)
 
             if newly_added_banners:
                 today = datetime.now(timezone.utc).date()

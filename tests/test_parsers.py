@@ -150,6 +150,21 @@ class OfficialParserHelpersTests(unittest.TestCase):
         self.assertEqual(banner["featured_five_stars_ru"], ["Митя"])
         self.assertEqual(banner["verification_status"], "verified")
 
+    def test_make_banner_trusted_api_source(self):
+        lookup = {
+            0: {
+                normalize_name("Mitya"): {"name_ru": "Митя", "name_en": "Mitya"},
+            }
+        }
+        banner = make_banner(
+            0, "7.2", 2, "2026-11-24", "2026-12-15",
+            ["Mitya"], [], "https://api.ennead.cc/mihoyo/genshin/calendar", "ennead_7_2_2", lookup,
+            source_type="trusted_api", verification_status="verified",
+        )
+        self.assertEqual(banner["id"], "genshin_7_2_2")
+        self.assertEqual(banner["source_type"], "trusted_api")
+        self.assertEqual(banner["verification_status"], "verified")
+
     def test_hsr_4_7_en_structured_banner_parsing(self):
         post = {
             "content": "en-us",

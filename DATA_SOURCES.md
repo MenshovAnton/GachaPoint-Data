@@ -2,29 +2,18 @@
 
 ## Publication policy
 
-- Published datasets contain only records confirmed by an official HoYoverse source.
-- Fandom MediaWiki is used for discovery only. Scraped candidates are written to
-  `quarantine_codes.json` and are not exposed to the Android client.
-- Published `ACTIVE`, `STREAM`, and `NEW` promo codes must have
-  `verification_status: verified`. Unverified codes are moved to
-  `quarantine_codes.json` on every sync.
-- Permanent promo codes are kept as `legacy`; they require a manual review if a
-  code stops working.
-- Official texts (in-game announcements, website news and official HoYoLAB
-  posts) are scanned for candidate codes on every sync. A code is published
-  automatically only when its exact value appears in an official text and the
-  reward quantities can be extracted from the surrounding text.
-- Codes that cannot be confirmed automatically stay in `quarantine_codes.json`
-  and are sent to Telegram for manual review. The review result is applied with
-  `scripts/tools/apply_code_checks.py` or the `Verify Promo Code` workflow.
-- A code confirmed in-game may be published with
-  `source_type: manual_in_game`, `verification_status: verified` and a
-  `verified_at` timestamp.
-- A `CURRENT` or `ANNOUNCED` banner without an official source is moved to
-  `pending_banners.json` before the dataset is saved.
+- Published datasets contain verified records confirmed by an official HoYoverse source, recognized trusted API, or verified in-game check.
+- Data sources are structured into four tiers:
+  - `official`: direct in-game announcements, official news feeds, official social channels (@GenshinImpact, @honkaistarrail, @ZZZ_KO).
+  - `trusted_api`: high-reliability community API providers (e.g. Ennead API) whose entities resolve against `game_catalog.json`.
+  - `manual_in_game`: confirmed through manual in-game check recorded in `code_checks.json`.
+  - `community`: Fandom MediaWiki, Reddit, and social forums used for initial discovery only. Unverified candidates are kept in `quarantine_codes.json` / `pending_banners.json`.
+- Published `ACTIVE`, `STREAM`, and `NEW` promo codes must have `verification_status: verified`. Unverified codes are moved to `quarantine_codes.json` on every sync.
+- Permanent promo codes are kept as `legacy`; they require a manual review if a code stops working.
+- Official texts and news feeds are scanned for candidate codes on every sync. A code is published automatically when its exact value appears in an official text and reward quantities can be extracted.
+- Codes and banners that cannot be confirmed automatically stay in quarantine (`quarantine_codes.json`, `pending_banners.json`) and trigger Telegram review notifications.
+- `CURRENT` and `ANNOUNCED` banners require `verification_status: verified`, valid dates matching calendar status, and all featured entities present in `game_catalog.json`.
 - Historical records without a source are kept as `verification_status: legacy`.
-- The linter rejects `CURRENT`/`ANNOUNCED` banners without an official `source_url`,
-  `verification_status: verified`, and `verified_at`.
 
 ## Official sources
 
@@ -75,9 +64,9 @@ Published records may contain these optional fields:
 
 | Field | Meaning |
 | :--- | :--- |
-| `source_url` | Official HoYoverse, HoYoLAB, or official social post URL |
+| `source_url` | Official HoYoverse, HoYoLAB, official social post, or trusted API URL |
 | `source_id` | Announcement/news ID used for audit |
-| `source_type` | `official`, `manual_in_game` or `community` |
+| `source_type` | `official`, `trusted_api`, `manual_in_game` or `community` |
 | `last_checked_at` | Last automatic verification attempt |
 | `last_notified_at` | Last Telegram review notification for quarantined codes |
 | `verification_status` | `verified`, `legacy`, or `unverified` |

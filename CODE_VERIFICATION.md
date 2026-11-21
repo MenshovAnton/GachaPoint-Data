@@ -2,10 +2,7 @@
 
 ## Policy
 
-Only codes confirmed by an official HoYoverse/HoYoLAB/official social source or
-by an in-game check are published as `ACTIVE` or `STREAM`. Fandom MediaWiki is
-used for discovery only. Unverified candidates are written to
-`quarantine_codes.json` and are not exposed to the Android client.
+Only codes confirmed by an official HoYoverse/HoYoLAB source, verified trusted API, or an in-game check are published as `ACTIVE` or `STREAM`. Community sources (Fandom MediaWiki, Reddit) are used for discovery only. Unverified candidates are written to `quarantine_codes.json` and are not exposed to the Android client.
 
 ## Automatic verification
 
