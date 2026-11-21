@@ -325,6 +325,8 @@ def make_banner(
 
     prefix = {0: "genshin", 1: "hsr", 2: "zzz", 3: "hi3"}[game_type]
     banner_id = f"{prefix}_{version.replace('.', '_')}_{phase}"
+    if not source_id:
+        source_id = banner_id
 
     return {
         "id": banner_id,

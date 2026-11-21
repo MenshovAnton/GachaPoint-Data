@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T11:42:01Z",
+  "updated_at": "2026-11-21T11:22:54Z",
   "codes": [
     {
       "id": "scraped_0_poymansxf877",
@@ -14,11 +14,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-20T12:00:00Z",
-      "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "is_stream": false,
       "is_active": true
     },
@@ -36,12 +36,12 @@
       "status": "ACTIVE",
       "expires_at": "2026-11-26T23:59:59Z",
       "expiry_confidence": "official",
-      "created_at": "2026-11-15T12:00:00Z",
-      "source_url": "https://x.com/GenshinImpact/status/2122162757814637041",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
       "is_stream": false,
       "is_active": true,
       "verification_status": "verified",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community",
       "checked_note": ""
     },
@@ -58,11 +58,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-08T12:00:00Z",
-      "source_url": "https://x.com/pun_rii/status/2119522166664466850",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "is_stream": false,
       "is_active": true
     },
@@ -78,15 +78,15 @@
       ],
       "status": "ACTIVE",
       "expires_at": null,
-      "created_at": "2026-11-04T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "is_stream": false,
       "is_active": true,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community",
       "checked_note": "",
-      "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
+      "source_url": "https://api.ennead.cc/mihoyo/genshin/codes"
     },
     {
       "id": "scraped_0_mijiq23v2437",
@@ -100,15 +100,15 @@
       ],
       "status": "ACTIVE",
       "expires_at": null,
-      "created_at": "2026-11-04T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "is_stream": false,
       "is_active": true,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community",
       "checked_note": "",
-      "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
+      "source_url": "https://api.ennead.cc/mihoyo/genshin/codes"
     },
     {
       "id": "scraped_0_pj2kebraysrm",
@@ -123,14 +123,77 @@
         "PRIMOGEM",
         "EXP"
       ],
-      "created_at": "2026-10-23T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community",
       "checked_note": "",
-      "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
+      "source_url": "https://api.ennead.cc/mihoyo/genshin/codes"
+    },
+    {
+      "id": "ennead_0_qyjwqvri39be",
+      "game_type": 0,
+      "code": "QYJWQVRI39BE",
+      "rewards_description_ru": "60 Камней Истока, 5 Опыта искателя",
+      "rewards_description_en": "60 Primogems, 5 Adventurer's Exp",
+      "reward_types": [
+        "PRIMOGEM",
+        "EXP"
+      ],
+      "status": "ACTIVE",
+      "expires_at": null,
+      "expiry_confidence": "unknown",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
+      "source_type": "community",
+      "verification_status": "verified",
+      "verified_at": "2026-11-21T11:20:18Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "ennead_0_qyjw21zvv5z8",
+      "game_type": 0,
+      "code": "QYJW21ZVV5Z8",
+      "rewards_description_ru": "60 Камней Истока, 5 Опыта искателя",
+      "rewards_description_en": "60 Primogems, 5 Adventurer's Exp",
+      "reward_types": [
+        "PRIMOGEM",
+        "EXP"
+      ],
+      "status": "ACTIVE",
+      "expires_at": null,
+      "expiry_confidence": "unknown",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
+      "source_type": "community",
+      "verification_status": "verified",
+      "verified_at": "2026-11-21T11:20:18Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "ennead_0_qyjw92k1ds3x",
+      "game_type": 0,
+      "code": "QYJW92K1DS3X",
+      "rewards_description_ru": "60 Камней Истока, 5 Опыта искателя",
+      "rewards_description_en": "60 Primogems, 5 Adventurer's Exp",
+      "reward_types": [
+        "PRIMOGEM",
+        "EXP"
+      ],
+      "status": "ACTIVE",
+      "expires_at": null,
+      "expiry_confidence": "unknown",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
+      "source_type": "community",
+      "verification_status": "verified",
+      "verified_at": "2026-11-21T11:20:18Z",
+      "is_stream": false,
+      "is_active": true
     },
     {
       "id": "genshin_oktcv81f9h8d",
@@ -149,7 +212,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:15Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -184,11 +247,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-20T11:25:50Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "is_stream": false,
       "is_active": true
     },
@@ -205,11 +268,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-20T11:25:50Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "is_stream": false,
       "is_active": true
     },
@@ -225,13 +288,13 @@
       "reward_types": [
         "JADE"
       ],
-      "created_at": "2026-11-20T11:25:50Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:50Z"
+      "verified_at": "2026-11-21T11:20:18Z"
     },
     {
       "id": "hsr_farewell",
@@ -251,7 +314,7 @@
       "expiry_confidence": "unknown",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "hsr_ifyouarereadingthis",
@@ -271,7 +334,7 @@
       "expiry_confidence": "unknown",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "hsr_omega",
@@ -285,13 +348,13 @@
       "reward_types": [
         "JADE"
       ],
-      "created_at": "2026-11-20T11:25:50Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:50Z"
+      "verified_at": "2026-11-21T11:20:18Z"
     },
     {
       "id": "hsr_starrailgift",
@@ -307,34 +370,33 @@
         "CREDIT",
         "EXP"
       ],
-      "created_at": "2026-11-20T11:25:50Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:50Z"
+      "verified_at": "2026-11-21T11:20:18Z"
     },
     {
       "id": "scraped_2_sunchaser",
       "game_type": 2,
       "code": "SUNCHASER",
-      "rewards_description_ru": "300 Полихромов, 30 000 Денни, 2 Журналов",
-      "rewards_description_en": "300 Polychromes, 30 000 Dennies, 2 Investigator Logs",
+      "rewards_description_ru": "300 Полихромов, 30 000 Денни",
+      "rewards_description_en": "300 Polychromes, 30 000 Dennies",
       "reward_types": [
         "POLYCHROME",
-        "DENNY",
-        "EXP"
+        "DENNY"
       ],
-      "status": "STREAM",
+      "status": "ACTIVE",
       "expires_at": "2026-11-22T23:59:59Z",
       "expiry_confidence": "official",
-      "created_at": "2026-11-20T12:00:00Z",
-      "source_url": "https://zenless-zone-zero.fandom.com/wiki/Redemption_Code",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-20T11:25:49Z",
-      "is_stream": true,
+      "verified_at": "2026-11-21T11:20:18Z",
+      "is_stream": false,
       "is_active": true
     },
     {
@@ -350,14 +412,14 @@
         "POLYCHROME",
         "DENNY"
       ],
-      "created_at": "2026-10-24T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:49Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community",
       "checked_note": "",
-      "source_url": "https://zenless-zone-zero.fandom.com/wiki/Redemption_Code"
+      "source_url": "https://api.ennead.cc/mihoyo/zenless/codes"
     },
     {
       "id": "zzz_levelup33",
@@ -372,14 +434,14 @@
         "POLYCHROME",
         "DENNY"
       ],
-      "created_at": "2026-10-24T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:49Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community",
       "checked_note": "",
-      "source_url": "https://zenless-zone-zero.fandom.com/wiki/Redemption_Code"
+      "source_url": "https://api.ennead.cc/mihoyo/zenless/codes"
     },
     {
       "id": "zzz_hollowrun33",
@@ -394,14 +456,118 @@
         "POLYCHROME",
         "DENNY"
       ],
-      "created_at": "2026-10-23T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:49Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community",
       "checked_note": "",
-      "source_url": "https://zenless-zone-zero.fandom.com/wiki/Redemption_Code"
+      "source_url": "https://api.ennead.cc/mihoyo/zenless/codes"
+    },
+    {
+      "id": "scraped_2_inkshift34",
+      "game_type": 2,
+      "code": "INKSHIFT34",
+      "rewards_description_ru": "20 Полихромов, 2 222 Денни",
+      "rewards_description_en": "20 Polychromes, 2 222 Dennies",
+      "reward_types": [
+        "POLYCHROME",
+        "DENNY"
+      ],
+      "status": "ACTIVE",
+      "expires_at": null,
+      "expiry_confidence": "unknown",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
+      "source_type": "community",
+      "verification_status": "verified",
+      "verified_at": "2026-11-21T11:20:18Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_2_levelup34",
+      "game_type": 2,
+      "code": "LEVELUP34",
+      "rewards_description_ru": "20 Полихромов, 2 222 Денни",
+      "rewards_description_en": "20 Polychromes, 2 222 Dennies",
+      "reward_types": [
+        "POLYCHROME",
+        "DENNY"
+      ],
+      "status": "ACTIVE",
+      "expires_at": null,
+      "expiry_confidence": "unknown",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
+      "source_type": "community",
+      "verification_status": "verified",
+      "verified_at": "2026-11-21T11:20:18Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_2_hollowrun34",
+      "game_type": 2,
+      "code": "HOLLOWRUN34",
+      "rewards_description_ru": "20 Полихромов, 2 222 Денни",
+      "rewards_description_en": "20 Polychromes, 2 222 Dennies",
+      "reward_types": [
+        "POLYCHROME",
+        "DENNY"
+      ],
+      "status": "ACTIVE",
+      "expires_at": null,
+      "expiry_confidence": "unknown",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
+      "source_type": "community",
+      "verification_status": "verified",
+      "verified_at": "2026-11-21T11:20:18Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_2_zzz34sunbringer",
+      "game_type": 2,
+      "code": "ZZZ34SUNBRINGER",
+      "rewards_description_ru": "60 Полихромов, 6 666 Денни",
+      "rewards_description_en": "60 Polychromes, 6 666 Dennies",
+      "reward_types": [
+        "POLYCHROME",
+        "DENNY"
+      ],
+      "status": "ACTIVE",
+      "expires_at": null,
+      "expiry_confidence": "unknown",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
+      "source_type": "community",
+      "verification_status": "verified",
+      "verified_at": "2026-11-21T11:20:18Z",
+      "is_stream": false,
+      "is_active": true
+    },
+    {
+      "id": "scraped_2_zzzhsrcollab",
+      "game_type": 2,
+      "code": "ZZZHSRCOLLAB",
+      "rewards_description_ru": "50 Полихромов",
+      "rewards_description_en": "50 Polychromes",
+      "reward_types": [
+        "POLYCHROME"
+      ],
+      "status": "ACTIVE",
+      "expires_at": null,
+      "expiry_confidence": "unknown",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
+      "source_type": "community",
+      "verification_status": "verified",
+      "verified_at": "2026-11-21T11:20:18Z",
+      "is_stream": false,
+      "is_active": true
     },
     {
       "id": "zzz_zenlessgift",
@@ -416,13 +582,13 @@
         "POLYCHROME",
         "EXP"
       ],
-      "created_at": "2024-07-04T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "source_url": "https://zenless-zone-zero.fandom.com/wiki/Redemption_Code",
+      "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:18Z"
     },
     {
       "id": "scraped_3_zbl0w0qi8t",
@@ -436,11 +602,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-11T12:00:00Z",
-      "source_url": "https://x.com/HonkaiImpact3rd/status/2120471601544073472",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "is_stream": false,
       "is_active": true
     },
@@ -456,12 +622,12 @@
       "reward_types": [
         "ASTERITE"
       ],
-      "created_at": "2026-10-31T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "source_url": "https://x.com/HonkaiImpact3rd/status/2116485335395824087",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community"
     },
     {
@@ -476,12 +642,12 @@
       "reward_types": [
         "CRYSTAL"
       ],
-      "created_at": "2026-10-31T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "source_url": "https://x.com/HonkaiImpact3rd/status/2116424936566727141",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community"
     },
     {
@@ -496,12 +662,12 @@
       "reward_types": [
         "ASTERITE"
       ],
-      "created_at": "2026-10-24T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "source_url": "https://x.com/HonkaiImpact3rd/status/2113948619799699693",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community"
     },
     {
@@ -516,12 +682,12 @@
       "reward_types": [
         "ASTERITE"
       ],
-      "created_at": "2026-10-22T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "source_url": "https://x.com/HonkaiImpact3rd/status/2113487014691737953",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community"
     },
     {
@@ -536,12 +702,12 @@
       "reward_types": [
         "ITEM"
       ],
-      "created_at": "2026-10-22T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "source_url": "https://x.com/HonkaiImpact3rd/status/2113487014691737953",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community"
     },
     {
@@ -556,12 +722,12 @@
       "reward_types": [
         "COIN"
       ],
-      "created_at": "2026-10-22T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "source_url": "https://x.com/HonkaiImpact3rd/status/2113487014691737953",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community"
     },
     {
@@ -576,12 +742,12 @@
       "reward_types": [
         "ITEM"
       ],
-      "created_at": "2026-10-22T12:00:00Z",
+      "created_at": "2026-11-21T11:20:18Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "source_url": "https://x.com/HonkaiImpact3rd/status/2113487014691737953",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community"
     },
     {
@@ -596,11 +762,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-10-22T12:00:00Z",
-      "source_url": "https://honkaiimpact3.fandom.com/wiki/Exchange_Rewards",
+      "created_at": "2026-11-21T11:20:18Z",
+      "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "is_stream": false,
       "is_active": true
     },
@@ -639,7 +805,7 @@
       "is_active": false,
       "source_url": "https://genshin.hoyoverse.com/en/news/detail/167189",
       "verification_status": "verified",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:15Z",
       "expiry_confidence": "estimated",
       "source_type": "community"
     },
@@ -648,7 +814,7 @@
       "game_type": 1,
       "code": "AHABLESSYOU",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита",
       "rewards_description_en": "100 Stellar Jade",
@@ -661,14 +827,14 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "hsr_nevergonnagive",
       "game_type": 1,
       "code": "NEVERGONNAGIVE",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита, 50 000 Кредитов",
       "rewards_description_en": "100 Stellar Jade, 50 000 Credits",
@@ -682,14 +848,14 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "hsr_nevergonnamake",
       "game_type": 1,
       "code": "NEVERGONNAMAKE",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита, 5 Путеводителей",
       "rewards_description_en": "100 Stellar Jade, 5 Traveler's Guides",
@@ -703,7 +869,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "zzz_sunbringer",
@@ -723,7 +889,7 @@
       "expiry_confidence": "official",
       "source_url": "https://zenless-zone-zero.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:17Z"
     },
     {
       "id": "genshin_hourofruin",
@@ -806,7 +972,7 @@
       "expiry_confidence": "estimated",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:48Z"
+      "verified_at": "2026-11-21T11:20:15Z"
     },
     {
       "id": "genshin_vesnaonpatrol",
@@ -847,7 +1013,7 @@
       "verification_status": "verified",
       "expiry_confidence": "official",
       "source_url": "https://x.com/HonkaiImpact3rd/status/2111774290169278510",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "verified_at": "2026-11-21T11:20:18Z",
       "source_type": "community"
     },
     {
@@ -882,13 +1048,13 @@
       "status": "EXPIRED",
       "expires_at": "2026-10-11T23:59:59Z",
       "created_at": "2026-10-09T12:00:00Z",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "source_url": "https://zenless-zone-zero.fandom.com/wiki/Redemption_Code",
       "source_id": "166644",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "verified_at": "2026-11-21T11:20:17Z",
       "expiry_confidence": "official"
     },
     {
@@ -910,7 +1076,7 @@
       "expiry_confidence": "estimated",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:48Z"
+      "verified_at": "2026-11-21T11:20:15Z"
     },
     {
       "id": "genshin_6ls3f3ls5k87",
@@ -928,7 +1094,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:15Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -950,7 +1116,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:15Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -971,7 +1137,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:15Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -1017,7 +1183,7 @@
       "expiry_confidence": "estimated",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:48Z"
+      "verified_at": "2026-11-21T11:20:15Z"
     },
     {
       "id": "genshin_dugodwkrhakdnj",
@@ -1039,7 +1205,7 @@
       "expiry_confidence": "estimated",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:48Z"
+      "verified_at": "2026-11-21T11:20:15Z"
     },
     {
       "id": "genshin_operacollab",
@@ -1059,7 +1225,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:15Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -1082,7 +1248,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-20T11:25:48Z",
+      "verified_at": "2026-11-21T11:20:15Z",
       "source_type": "community",
       "checked_note": "Максимальное число использований",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -1092,7 +1258,7 @@
       "game_type": 1,
       "code": "MALSV2F247FP",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита",
       "rewards_description_en": "100 Stellar Jade",
@@ -1105,14 +1271,14 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "hsr_7s4ad2x35ne3",
       "game_type": 1,
       "code": "7S4AD2X35NE3",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита, 5 Путеводителей",
       "rewards_description_en": "100 Stellar Jade, 5 Traveler's Guides",
@@ -1126,14 +1292,14 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "hsr_ka5sv3fjm7wx",
       "game_type": 1,
       "code": "KA5SV3FJM7WX",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита, 50 000 Кредитов",
       "rewards_description_en": "100 Stellar Jade, 50 000 Credits",
@@ -1147,7 +1313,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "genshin_2bj64qrz7rt8",
@@ -1168,7 +1334,7 @@
       "expiry_confidence": "estimated",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:48Z"
+      "verified_at": "2026-11-21T11:20:15Z"
     },
     {
       "id": "zzz_zzz2year",
@@ -1186,7 +1352,7 @@
       "expires_at": "2026-09-08T23:59:59Z",
       "verification_status": "verified",
       "expiry_confidence": "official",
-      "verified_at": "2026-11-20T11:25:50Z",
+      "verified_at": "2026-11-21T11:20:17Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://x.com/ZZZ_EN/status/2078328912094929015"
@@ -1226,7 +1392,7 @@
       "expires_at": "2026-08-16T23:59:59Z",
       "verification_status": "verified",
       "expiry_confidence": "official",
-      "verified_at": "2026-11-20T11:25:49Z",
+      "verified_at": "2026-11-21T11:20:16Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code"
@@ -1236,7 +1402,7 @@
       "game_type": 1,
       "code": "YAJQ2TR6ZY2P",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита",
       "rewards_description_en": "100 Stellar Jade",
@@ -1249,14 +1415,14 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "scraped_1_lsj9jarpzh33",
       "game_type": 1,
       "code": "LSJ9JARPZH33",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита, 5 Путеводителей",
       "rewards_description_en": "100 Stellar Jade, 5 Traveler's Guides",
@@ -1270,14 +1436,14 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "scraped_1_2tkrkar6yg2x",
       "game_type": 1,
       "code": "2TKRKAR6YG2X",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита, 50 000 Кредитов",
       "rewards_description_en": "100 Stellar Jade, 50 000 Credits",
@@ -1291,7 +1457,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "hsr_bestcoffeeever",
@@ -1309,7 +1475,7 @@
       "expires_at": "2026-07-24T23:59:59Z",
       "verification_status": "verified",
       "expiry_confidence": "official",
-      "verified_at": "2026-11-20T11:25:49Z",
+      "verified_at": "2026-11-21T11:20:16Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code"
@@ -1330,7 +1496,7 @@
       "expires_at": "2026-07-24T23:59:59Z",
       "verification_status": "verified",
       "expiry_confidence": "official",
-      "verified_at": "2026-11-20T11:25:49Z",
+      "verified_at": "2026-11-21T11:20:16Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code"
@@ -1340,7 +1506,7 @@
       "game_type": 2,
       "code": "ZZZY2ANNIV",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "300 Полихромов, 30 000 Денни, 2 Журналов",
       "rewards_description_en": "300 Polychromes, 30 000 Dennies, 2 Investigator Logs",
@@ -1355,14 +1521,14 @@
       "expiry_confidence": "official",
       "source_url": "https://zenless-zone-zero.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:50Z"
+      "verified_at": "2026-11-21T11:20:17Z"
     },
     {
       "id": "scraped_1_xtj9mv38dl3x",
       "game_type": 1,
       "code": "XTJ9MV38DL3X",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита",
       "rewards_description_en": "100 Stellar Jade",
@@ -1375,14 +1541,14 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "scraped_1_ht3qmcj9u4jb",
       "game_type": 1,
       "code": "HT3QMCJ9U4JB",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита, 5 Путеводителей",
       "rewards_description_en": "100 Stellar Jade, 5 Traveler's Guides",
@@ -1396,14 +1562,14 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "scraped_1_wak84u29vlyp",
       "game_type": 1,
       "code": "WAK84U29VLYP",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита, 50 000 Кредитов",
       "rewards_description_en": "100 Stellar Jade, 50 000 Credits",
@@ -1417,7 +1583,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "genshin_fbjcmysalgp5",
@@ -1442,7 +1608,7 @@
       "game_type": 1,
       "code": "CA395VK8ULCP",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита, 50 000 Кредитов",
       "rewards_description_en": "100 Stellar Jade, 50 000 Credits",
@@ -1456,14 +1622,14 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "hsr_yt295d38dleb",
       "game_type": 1,
       "code": "YT295D38DLEB",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита, 5 Путеводителей",
       "rewards_description_en": "100 Stellar Jade, 5 Traveler's Guides",
@@ -1477,14 +1643,14 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "hsr_eb395cj8v5xf",
       "game_type": 1,
       "code": "EB395CJ8V5XF",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита",
       "rewards_description_en": "100 Stellar Jade",
@@ -1497,7 +1663,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "hsr_silverwolflv999",
@@ -1517,7 +1683,7 @@
       "expiry_confidence": "official",
       "source_url": "https://x.com/honkaistarrail/status/2046835044547719437?s=20",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "scraped_3_cheerscaptain",
@@ -1537,14 +1703,14 @@
       "verification_status": "verified",
       "expiry_confidence": "official",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:50Z"
+      "verified_at": "2026-11-21T11:20:18Z"
     },
     {
       "id": "scraped_1_happy3rdanniv",
       "game_type": 1,
       "code": "HAPPY3RDANNIV",
       "status": "EXPIRED",
-      "is_stream": true,
+      "is_stream": false,
       "is_active": false,
       "rewards_description_ru": "100 Звёздного нефрита",
       "rewards_description_en": "100 Stellar Jade",
@@ -1557,7 +1723,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-20T11:25:49Z"
+      "verified_at": "2026-11-21T11:20:16Z"
     },
     {
       "id": "zzz_catchaboo",
@@ -1610,27 +1776,6 @@
       "expires_at": null,
       "verification_status": "legacy",
       "expiry_confidence": "unknown"
-    },
-    {
-      "id": "scraped_0_yuanshen",
-      "game_type": 0,
-      "code": "YUANSHEN",
-      "status": "EXPIRED",
-      "is_stream": false,
-      "is_active": false,
-      "rewards_description_ru": "50 Камней Истока, 3 Опыта героя",
-      "rewards_description_en": "50 Primogems, 3 Hero's Wit",
-      "reward_types": [
-        "PRIMOGEM",
-        "EXP"
-      ],
-      "created_at": "2020-11-10T12:00:00Z",
-      "expires_at": null,
-      "verification_status": "verified",
-      "expiry_confidence": "unknown",
-      "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
-      "source_type": "community",
-      "verified_at": "2026-11-20T11:25:48Z"
     }
   ]
 }

@@ -50,7 +50,7 @@ def parse_ennead_codes() -> List[Dict[str, Any]]:
 
         for item in active_codes:
             code = (item.get("code") or "").strip().upper()
-            if not code or len(code) < 3:
+            if not code or len(code) < 3 or code in ("YUANSHEN",):
                 continue
 
             raw_rewards = item.get("rewards") or []
@@ -161,7 +161,7 @@ def parse_ennead_banners(
                 five_names,
                 four_names,
                 url,
-                str(b.get("id") or ""),
+                str(b.get("id") or f"ennead_{slug}_{version}_{phase}"),
                 catalog_lookup,
                 catalog_path=catalog_path,
             )

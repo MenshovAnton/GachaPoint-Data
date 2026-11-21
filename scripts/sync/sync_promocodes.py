@@ -49,18 +49,13 @@ except ImportError:
         return []
 
 try:
-    from scripts.parsers.ennead_parser import parse_ennead_codes, parse_ennead_banners
+    from scripts.parsers.ennead_parser import parse_ennead_codes
 except ImportError:
     def parse_ennead_codes():
         return []
-    def parse_ennead_banners(catalog_lookup, catalog_path=None):
-        return []
 
 try:
-    from scripts.parsers.official_banners_parser import (
-        parse_all_official_data,
-        load_catalog_lookup,
-    )
+    from scripts.parsers.official_banners_parser import parse_all_official_data
 except ImportError:
     def parse_all_official_data(catalog_path):
         return {"banners": [], "patches": {}, "errors": {}}
@@ -362,7 +357,6 @@ def import_scraped_codes(data: dict, scraped_codes: List[Dict[str, Any]]) -> Tup
             game_names = {0: "Genshin Impact", 1: "Honkai: Star Rail", 2: "Zenless Zone Zero", 3: "Honkai Impact 3rd"}
             g_name = game_names.get(g_type, f"Game {g_type}")
             print(f"[Warning] Scraped code {code_str} for {g_name} has no verified reward quantities: '{desc_ru}'")
-            notify_suspicious_announcement(g_name, code_str, f"Promo code discovered without verified reward quantities: '{desc_ru}'")
             item["rewards_description_ru"] = "Внутриигровые награды"
             item["rewards_description_en"] = "In-game rewards"
             item["verification_status"] = "unverified"
@@ -585,23 +579,30 @@ def moderate_promocodes(data: dict, active_scraped_keys: Optional[set] = None) -
             deduped[key] = item
             continue
 
-        is_stream = bool(
+        is_stream_candidate = bool(
             item.get("is_stream", False)
             or item.get("status") == "STREAM"
             or "stream" in str(item.get("id", "")).lower()
         )
-        item["is_stream"] = is_stream
 
         expires_at_dt = parse_iso_datetime(item.get("expires_at"))
         created_at_dt = parse_iso_datetime(item.get("created_at"))
 
         is_expired = False
-        if is_stream:
-            if created_at_dt is not None and (now - created_at_dt) > timedelta(hours=28):
+        is_live_stream = False
+
+        if is_stream_candidate:
+            if expires_at_dt is not None and now > expires_at_dt:
                 is_expired = True
-            elif expires_at_dt is not None and now > expires_at_dt:
-                is_expired = True
-            elif created_at_dt is None and expires_at_dt is None:
+            elif created_at_dt is not None:
+                age = now - created_at_dt
+                if age <= timedelta(hours=16):
+                    is_live_stream = True
+                elif expires_at_dt is not None and expires_at_dt > now:
+                    is_live_stream = False
+                else:
+                    is_expired = True
+            elif expires_at_dt is None:
                 is_expired = True
         else:
             if expires_at_dt is not None:
@@ -615,17 +616,18 @@ def moderate_promocodes(data: dict, active_scraped_keys: Optional[set] = None) -
                     else:
                         is_expired = True
 
+        item["is_stream"] = is_live_stream
         if is_expired:
             item["is_active"] = False
             item["status"] = "EXPIRED"
         else:
             item["is_active"] = True
-            if is_stream:
+            if is_live_stream:
                 item["status"] = "STREAM"
             elif item.get("status") == "NEW":
                 if created_at_dt is not None and (now - created_at_dt) > timedelta(days=7):
                     item["status"] = "ACTIVE"
-            elif not item.get("status") or item.get("status") == "EXPIRED":
+            elif not item.get("status") or item.get("status") in ("EXPIRED", "STREAM"):
                 item["status"] = "ACTIVE"
 
         if item.get("expires_at"):
@@ -1089,16 +1091,8 @@ def main():
                             f"[Warning] Some official banner parsers failed: {official_data['errors']}",
                             file=sys.stderr,
                         )
-                    banners_list = list(official_data.get("banners", []))
-                    try:
-                        catalog_lookup = load_catalog_lookup(catalog_file)
-                        ennead_banners = parse_ennead_banners(catalog_lookup, catalog_path=catalog_file)
-                        banners_list.extend(ennead_banners)
-                    except Exception as eb:
-                        print(f"[Warning] Ennead banners scraper failed: {eb}")
-
                     newly_added_banners, _ = import_scraped_banners(
-                        banner_data, banners_list
+                        banner_data, official_data.get("banners", [])
                     )
                     merge_official_patches(banner_data, official_data.get("patches", {}))
                 except Exception as e:

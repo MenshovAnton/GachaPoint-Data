@@ -335,7 +335,7 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
 
     for row in rows:
         found_code = extract_code_from_row(row)
-        if not found_code or found_code in seen_codes:
+        if not found_code or found_code in seen_codes or found_code in ("YUANSHEN",):
             continue
 
         seen_codes.add(found_code)
@@ -344,15 +344,14 @@ def parse_section_rows(text: str, game_type: int, is_section_expired: bool, seen
         dates = extract_row_dates(row)
         row_lower = row.lower()
 
-        # Stream detection: requires explicit stream indicators or 1-2 day lifespan
         is_stream = False
-        if any(k in row_lower for k in ("special program", "livestream", "program code", "stream code", "preview stream")):
+        if any(k in row_lower for k in ("livestream code", "stream code", "preview stream")):
             is_stream = True
         elif len(dates) >= 2:
             try:
                 d_start = datetime.strptime(dates[0], "%Y-%m-%d")
                 d_end = datetime.strptime(dates[-1], "%Y-%m-%d")
-                if 0 <= (d_end - d_start).days <= 2 and config["primary_reward"] in reward_types:
+                if 0 <= (d_end - d_start).days <= 1 and config["primary_reward"] in reward_types:
                     is_stream = True
             except Exception:
                 pass
