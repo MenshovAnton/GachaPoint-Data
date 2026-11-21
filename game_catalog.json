@@ -8319,7 +8319,7 @@
           "rarity": "S",
           "type": "CHARACTER",
           "is_standard": false,
-          "icon_path": "",
+          "icon_path": "avatars/2/characters/sunbringer.png",
           "aliases": [
             "Санбрингер",
             "Sunbringer"

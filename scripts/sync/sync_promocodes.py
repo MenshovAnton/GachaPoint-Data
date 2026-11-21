@@ -798,14 +798,15 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
                 if changed and b.get("verified_at"):
                     match["verified_at"] = b["verified_at"]
             for ru_key, en_key in pairs:
-                new_ru = b.get(ru_key) or []
-                new_en = b.get(en_key) or []
-                if new_ru and match.get(ru_key) != new_ru:
-                    match[ru_key] = new_ru
-                    changed = True
-                if new_en and match.get(en_key) != new_en:
-                    match[en_key] = new_en
-                    changed = True
+                ru_list = match.setdefault(ru_key, [])
+                en_list = match.setdefault(en_key, [])
+                for ru, en in zip(b.get(ru_key, []), b.get(en_key, [])):
+                    if ru and ru not in ru_list:
+                        ru_list.append(ru)
+                        changed = True
+                    if en and en not in en_list:
+                        en_list.append(en)
+                        changed = True
         else:
             for ru_key, en_key in pairs:
                 ru_list = match.setdefault(ru_key, [])
