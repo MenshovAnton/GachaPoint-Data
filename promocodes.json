@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-21T11:22:54Z",
+  "updated_at": "2026-11-21T11:28:36Z",
   "codes": [
     {
       "id": "scraped_0_poymansxf877",
@@ -14,11 +14,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -36,12 +36,12 @@
       "status": "ACTIVE",
       "expires_at": "2026-11-26T23:59:59Z",
       "expiry_confidence": "official",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
       "is_stream": false,
       "is_active": true,
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community",
       "checked_note": ""
     },
@@ -58,11 +58,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -78,12 +78,12 @@
       ],
       "status": "ACTIVE",
       "expires_at": null,
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://api.ennead.cc/mihoyo/genshin/codes"
@@ -100,12 +100,12 @@
       ],
       "status": "ACTIVE",
       "expires_at": null,
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://api.ennead.cc/mihoyo/genshin/codes"
@@ -123,11 +123,11 @@
         "PRIMOGEM",
         "EXP"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://api.ennead.cc/mihoyo/genshin/codes"
@@ -145,11 +145,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -166,11 +166,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -187,11 +187,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/genshin/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -212,7 +212,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:15Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -247,11 +247,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -268,11 +268,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -288,13 +288,13 @@
       "reward_types": [
         "JADE"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:18Z"
+      "verified_at": "2026-11-21T11:27:22Z"
     },
     {
       "id": "hsr_farewell",
@@ -314,7 +314,7 @@
       "expiry_confidence": "unknown",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "hsr_ifyouarereadingthis",
@@ -334,7 +334,7 @@
       "expiry_confidence": "unknown",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "hsr_omega",
@@ -348,13 +348,13 @@
       "reward_types": [
         "JADE"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:18Z"
+      "verified_at": "2026-11-21T11:27:22Z"
     },
     {
       "id": "hsr_starrailgift",
@@ -370,13 +370,13 @@
         "CREDIT",
         "EXP"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:18Z"
+      "verified_at": "2026-11-21T11:27:22Z"
     },
     {
       "id": "scraped_2_sunchaser",
@@ -391,11 +391,11 @@
       "status": "ACTIVE",
       "expires_at": "2026-11-22T23:59:59Z",
       "expiry_confidence": "official",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -412,11 +412,11 @@
         "POLYCHROME",
         "DENNY"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://api.ennead.cc/mihoyo/zenless/codes"
@@ -434,11 +434,11 @@
         "POLYCHROME",
         "DENNY"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://api.ennead.cc/mihoyo/zenless/codes"
@@ -456,11 +456,11 @@
         "POLYCHROME",
         "DENNY"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://api.ennead.cc/mihoyo/zenless/codes"
@@ -478,11 +478,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -499,11 +499,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -520,11 +520,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -541,11 +541,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -561,11 +561,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -582,13 +582,13 @@
         "POLYCHROME",
         "EXP"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/zenless/codes",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:18Z"
+      "verified_at": "2026-11-21T11:27:22Z"
     },
     {
       "id": "scraped_3_zbl0w0qi8t",
@@ -602,11 +602,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -622,12 +622,12 @@
       "reward_types": [
         "ASTERITE"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community"
     },
     {
@@ -642,12 +642,12 @@
       "reward_types": [
         "CRYSTAL"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community"
     },
     {
@@ -662,12 +662,12 @@
       "reward_types": [
         "ASTERITE"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community"
     },
     {
@@ -682,12 +682,12 @@
       "reward_types": [
         "ASTERITE"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community"
     },
     {
@@ -702,12 +702,12 @@
       "reward_types": [
         "ITEM"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community"
     },
     {
@@ -722,12 +722,12 @@
       "reward_types": [
         "COIN"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community"
     },
     {
@@ -742,12 +742,12 @@
       "reward_types": [
         "ITEM"
       ],
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
       "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community"
     },
     {
@@ -762,11 +762,11 @@
       "status": "ACTIVE",
       "expires_at": null,
       "expiry_confidence": "unknown",
-      "created_at": "2026-11-21T11:20:18Z",
+      "created_at": "2026-11-21T11:27:22Z",
       "source_url": "https://api.ennead.cc/mihoyo/honkai/codes",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "is_stream": false,
       "is_active": true
     },
@@ -805,7 +805,7 @@
       "is_active": false,
       "source_url": "https://genshin.hoyoverse.com/en/news/detail/167189",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:15Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "expiry_confidence": "estimated",
       "source_type": "community"
     },
@@ -827,7 +827,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "hsr_nevergonnagive",
@@ -848,7 +848,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "hsr_nevergonnamake",
@@ -869,7 +869,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "zzz_sunbringer",
@@ -889,7 +889,7 @@
       "expiry_confidence": "official",
       "source_url": "https://zenless-zone-zero.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:17Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "genshin_hourofruin",
@@ -972,7 +972,7 @@
       "expiry_confidence": "estimated",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:15Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "genshin_vesnaonpatrol",
@@ -1013,7 +1013,7 @@
       "verification_status": "verified",
       "expiry_confidence": "official",
       "source_url": "https://x.com/HonkaiImpact3rd/status/2111774290169278510",
-      "verified_at": "2026-11-21T11:20:18Z",
+      "verified_at": "2026-11-21T11:27:22Z",
       "source_type": "community"
     },
     {
@@ -1054,7 +1054,7 @@
       "source_id": "166644",
       "source_type": "community",
       "verification_status": "verified",
-      "verified_at": "2026-11-21T11:20:17Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "expiry_confidence": "official"
     },
     {
@@ -1076,7 +1076,7 @@
       "expiry_confidence": "estimated",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:15Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "genshin_6ls3f3ls5k87",
@@ -1094,7 +1094,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:15Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -1116,7 +1116,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:15Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -1137,7 +1137,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:15Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -1183,7 +1183,7 @@
       "expiry_confidence": "estimated",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:15Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "genshin_dugodwkrhakdnj",
@@ -1205,7 +1205,7 @@
       "expiry_confidence": "estimated",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:15Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "genshin_operacollab",
@@ -1225,7 +1225,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:15Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -1248,7 +1248,7 @@
       "expires_at": null,
       "verification_status": "verified",
       "expiry_confidence": "unknown",
-      "verified_at": "2026-11-21T11:20:15Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "source_type": "community",
       "checked_note": "Максимальное число использований",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code"
@@ -1271,7 +1271,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "hsr_7s4ad2x35ne3",
@@ -1292,7 +1292,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "hsr_ka5sv3fjm7wx",
@@ -1313,7 +1313,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "genshin_2bj64qrz7rt8",
@@ -1334,7 +1334,7 @@
       "expiry_confidence": "estimated",
       "source_url": "https://genshin-impact.fandom.com/wiki/Promotional_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:15Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "zzz_zzz2year",
@@ -1352,7 +1352,7 @@
       "expires_at": "2026-09-08T23:59:59Z",
       "verification_status": "verified",
       "expiry_confidence": "official",
-      "verified_at": "2026-11-21T11:20:17Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://x.com/ZZZ_EN/status/2078328912094929015"
@@ -1392,7 +1392,7 @@
       "expires_at": "2026-08-16T23:59:59Z",
       "verification_status": "verified",
       "expiry_confidence": "official",
-      "verified_at": "2026-11-21T11:20:16Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code"
@@ -1415,7 +1415,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "scraped_1_lsj9jarpzh33",
@@ -1436,7 +1436,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "scraped_1_2tkrkar6yg2x",
@@ -1457,7 +1457,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "hsr_bestcoffeeever",
@@ -1475,7 +1475,7 @@
       "expires_at": "2026-07-24T23:59:59Z",
       "verification_status": "verified",
       "expiry_confidence": "official",
-      "verified_at": "2026-11-21T11:20:16Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code"
@@ -1496,7 +1496,7 @@
       "expires_at": "2026-07-24T23:59:59Z",
       "verification_status": "verified",
       "expiry_confidence": "official",
-      "verified_at": "2026-11-21T11:20:16Z",
+      "verified_at": "2026-11-21T11:27:21Z",
       "source_type": "community",
       "checked_note": "",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code"
@@ -1521,7 +1521,7 @@
       "expiry_confidence": "official",
       "source_url": "https://zenless-zone-zero.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:17Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "scraped_1_xtj9mv38dl3x",
@@ -1541,7 +1541,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "scraped_1_ht3qmcj9u4jb",
@@ -1562,7 +1562,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "scraped_1_wak84u29vlyp",
@@ -1583,7 +1583,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "genshin_fbjcmysalgp5",
@@ -1622,7 +1622,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "hsr_yt295d38dleb",
@@ -1643,7 +1643,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "hsr_eb395cj8v5xf",
@@ -1663,7 +1663,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "hsr_silverwolflv999",
@@ -1683,7 +1683,7 @@
       "expiry_confidence": "official",
       "source_url": "https://x.com/honkaistarrail/status/2046835044547719437?s=20",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "scraped_3_cheerscaptain",
@@ -1703,7 +1703,7 @@
       "verification_status": "verified",
       "expiry_confidence": "official",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:18Z"
+      "verified_at": "2026-11-21T11:27:22Z"
     },
     {
       "id": "scraped_1_happy3rdanniv",
@@ -1723,7 +1723,7 @@
       "expiry_confidence": "official",
       "source_url": "https://honkai-star-rail.fandom.com/wiki/Redemption_Code",
       "source_type": "community",
-      "verified_at": "2026-11-21T11:20:16Z"
+      "verified_at": "2026-11-21T11:27:21Z"
     },
     {
       "id": "zzz_catchaboo",
