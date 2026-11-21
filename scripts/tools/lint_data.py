@@ -354,9 +354,22 @@ def lint_banners(base_dir: str, catalog_lookup: Dict[int, Dict[str, Any]]) -> Tu
                     continue
                 if a.get("type", "").upper() in special_types or b.get("type", "").upper() in special_types:
                     continue
-                if a_end == b_start or b_end == a_start:
+                if a_end <= b_start or b_end <= a_start:
                     continue
-                if a_start < b_end and b_start < a_end:
+
+                try:
+                    da_start = date.fromisoformat(a_start)
+                    da_end = date.fromisoformat(a_end)
+                    db_start = date.fromisoformat(b_start)
+                    db_end = date.fromisoformat(b_end)
+                    overlap_days = (min(da_end, db_end) - max(da_start, db_start)).days
+                except ValueError:
+                    continue
+
+                if overlap_days <= 1 and (a.get("version") == b.get("version") or abs((da_end - db_start).days) <= 1 or abs((db_end - da_start).days) <= 1):
+                    continue
+
+                if da_start < db_end and db_start < da_end:
                     warnings.append(
                         f"Game {gt}: banners '{a.get('id')}' and '{b.get('id')}' overlap without a special type"
                     )

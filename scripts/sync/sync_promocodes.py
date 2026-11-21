@@ -740,6 +740,21 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
                 break
 
         if match is None:
+            for ex in existing_banners:
+                if (ex.get("version") == payload.get("version")
+                        and (ex.get("type") or "CHARACTER").upper() == (payload.get("type") or "CHARACTER").upper()):
+                    ex_phase = int(ex.get("phase", 0))
+                    new_phase = int(payload.get("phase", 0))
+                    if ex_phase < new_phase:
+                        ex_end = ex.get("end_date")
+                        new_start = payload.get("start_date")
+                        if ex_end and new_start and is_date_jitter(ex_end, new_start) and ex_end != new_start:
+                            ex["end_date"] = new_start
+                    elif ex_phase > new_phase:
+                        new_end = payload.get("end_date")
+                        ex_start = ex.get("start_date")
+                        if new_end and ex_start and is_date_jitter(new_end, ex_start) and new_end != ex_start:
+                            payload["end_date"] = ex_start
             existing_banners.append(payload)
             newly_added.append(b)
             continue
