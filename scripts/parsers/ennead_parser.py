@@ -134,12 +134,17 @@ def parse_ennead_banners(
             four_names = []
             for c in characters:
                 name = c.get("full_name") or c.get("name") or ""
+                if not name:
+                    continue
+                resolved = resolve_item(name, catalog_lookup.get(game_type, {}))
+                if resolved and resolved.get("type") and resolved.get("type") != "CHARACTER":
+                    continue
                 rarity = str(c.get("rarity") or "")
                 if rarity in ("5", "5★", "S"):
-                    if name and name not in five_names:
+                    if name not in five_names:
                         five_names.append(name)
                 elif rarity in ("4", "4★", "A"):
-                    if name and name not in four_names:
+                    if name not in four_names:
                         four_names.append(name)
 
             if not five_names:

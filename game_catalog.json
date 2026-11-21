@@ -8314,13 +8314,14 @@
           ]
         },
         {
-          "name_ru": "Sunbringer",
+          "name_ru": "Санбрингер",
           "name_en": "Sunbringer",
           "rarity": "S",
           "type": "CHARACTER",
           "is_standard": false,
           "icon_path": "",
           "aliases": [
+            "Санбрингер",
             "Sunbringer"
           ]
         }
