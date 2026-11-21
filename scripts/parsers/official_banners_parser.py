@@ -313,16 +313,24 @@ def make_banner(
             item = auto_register_catalog_character(
                 name, game_type, is_five=True, catalog_lookup=catalog_lookup, catalog_path=catalog_path
             )
-        five_ru.append(item.get("name_ru") or item.get("name_en") or name)
-        five_en.append(item.get("name_en") or name)
+        ru = item.get("name_ru") or item.get("name_en") or name
+        en = item.get("name_en") or name
+        if ru not in five_ru:
+            five_ru.append(ru)
+        if en not in five_en:
+            five_en.append(en)
     for name in four_names:
         item = resolve_item(name, game_lookup)
         if not item:
             item = auto_register_catalog_character(
                 name, game_type, is_five=False, catalog_lookup=catalog_lookup, catalog_path=catalog_path
             )
-        four_ru.append(item.get("name_ru") or item.get("name_en") or name)
-        four_en.append(item.get("name_en") or name)
+        ru = item.get("name_ru") or item.get("name_en") or name
+        en = item.get("name_en") or name
+        if ru not in four_ru:
+            four_ru.append(ru)
+        if en not in four_en:
+            four_en.append(en)
 
     if not five_ru:
         return None
@@ -482,7 +490,14 @@ def parse_genshin_data(
         names = GS_CHAR_RE.findall(content)
         if not names:
             continue
-        five_names = [names[0][1]] if not is_chronicle else [entry[1] for entry in names]
+        five_names = []
+        if is_chronicle:
+            for entry in names:
+                name = entry[1]
+                if name not in five_names:
+                    five_names.append(name)
+        else:
+            five_names = [names[0][1]]
         four_names = []
         if not is_chronicle:
             for entry in names[1:]:

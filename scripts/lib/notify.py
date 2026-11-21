@@ -207,13 +207,20 @@ def notify_pending_banners(items: list[dict]):
         g_name = html.escape(game_names.get(gt, "Gacha"))
         ver = html.escape(str(b.get("version", "?")))
         phase = html.escape(str(b.get("phase", "?")))
+        is_chronicle = (b.get("type") or "").upper() == "CHRONICLED" or "chronicled" in str(b.get("id", "")).lower()
+        banner_title = "Молитва хроник" if is_chronicle else f"Фаза {phase}"
         raw_fives = b.get("featured_five_stars_ru") or b.get("featured_five_stars_en") or []
-        fives = html.escape(", ".join(raw_fives))
+        deduped_fives = []
+        for name in raw_fives:
+            if name and name not in deduped_fives:
+                deduped_fives.append(name)
+        fives = html.escape(", ".join(deduped_fives))
         dates = html.escape(f"{b.get('start_date', '?')} — {b.get('end_date', '?')}")
         reason = html.escape(str(b.get("quarantine_reason", "Требуется проверка")))
+        rarity_label = "S-ранг" if gt in (2, 3) else "5★"
         msg += (
-            f"• <b>{g_name} v{ver} (Фаза {phase})</b>\n"
-            f"  5★: {fives}\n"
+            f"• <b>{g_name} v{ver} ({banner_title})</b>\n"
+            f"  {rarity_label}: {fives}\n"
             f"  Сроки: {dates}\n"
             f"  Причина: {reason}\n"
         )
@@ -232,11 +239,17 @@ def notify_new_banners(new_banners: list[dict]):
         g_name = html.escape(game_names.get(gt, "Gacha"))
         ver = html.escape(str(b.get("version", "?")))
         phase = html.escape(str(b.get("phase", "?")))
+        is_chronicle = (b.get("type") or "").upper() == "CHRONICLED" or "chronicled" in str(b.get("id", "")).lower()
+        banner_title = "Молитва хроник" if is_chronicle else f"Фаза {phase}"
         raw_fives = b.get("featured_five_stars_ru") or b.get("featured_five_stars_en") or []
-        fives = html.escape(", ".join(raw_fives))
+        deduped_fives = []
+        for name in raw_fives:
+            if name and name not in deduped_fives:
+                deduped_fives.append(name)
+        fives = html.escape(", ".join(deduped_fives))
         dates = html.escape(f"{b.get('start_date', '?')} — {b.get('end_date', '?')}")
         rarity_label = "S-ранг" if gt in (2, 3) else "5★"
-        msg += f"• <b>{g_name} v{ver} (Фаза {phase})</b>\n  {rarity_label}: {fives}\n  Сроки: {dates}\n"
+        msg += f"• <b>{g_name} v{ver} ({banner_title})</b>\n  {rarity_label}: {fives}\n  Сроки: {dates}\n"
     send_telegram_message(msg)
 
 
