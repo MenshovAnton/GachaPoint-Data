@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-24T02:25:28Z",
+  "updated_at": "2026-11-24T14:00:19Z",
   "games": [
     {
       "game_type": 0,
@@ -3621,11 +3621,21 @@
           "status": "CURRENT",
           "featured_five_stars_ru": [
             "Цзы Бай",
-            "Линнея"
+            "Линнея",
+            "Вареса",
+            "Часка",
+            "Шилонен",
+            "Муалани",
+            "Кинич"
           ],
           "featured_five_stars_en": [
             "Zibai",
-            "Linnea"
+            "Linnea",
+            "Varesa",
+            "Chasca",
+            "Xilonen",
+            "Mualani",
+            "Kinich"
           ],
           "featured_four_stars_ru": [
             "Иллуги",
