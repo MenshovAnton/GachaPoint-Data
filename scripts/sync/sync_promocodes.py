@@ -797,27 +797,28 @@ def import_scraped_banners(data: dict, scraped_banners: List[Dict[str, Any]]) ->
                         changed = True
                 if changed and b.get("verified_at"):
                     match["verified_at"] = b["verified_at"]
-            for ru_key, en_key in pairs:
-                ru_list = match.setdefault(ru_key, [])
-                en_list = match.setdefault(en_key, [])
-                for ru, en in zip(b.get(ru_key, []), b.get(en_key, [])):
-                    if ru and ru not in ru_list:
-                        ru_list.append(ru)
-                        changed = True
-                    if en and en not in en_list:
-                        en_list.append(en)
-                        changed = True
+                for ru_key, en_key in pairs:
+                    ru_list = match.setdefault(ru_key, [])
+                    en_list = match.setdefault(en_key, [])
+                    for ru, en in zip(b.get(ru_key, []), b.get(en_key, [])):
+                        if ru and ru not in ru_list:
+                            ru_list.append(ru)
+                            changed = True
+                        if en and en not in en_list:
+                            en_list.append(en)
+                            changed = True
         else:
-            for ru_key, en_key in pairs:
-                ru_list = match.setdefault(ru_key, [])
-                en_list = match.setdefault(en_key, [])
-                for ru, en in zip(b.get(ru_key, []), b.get(en_key, [])):
-                    if ru not in ru_list:
-                        ru_list.append(ru)
-                        changed = True
-                    if en not in en_list:
-                        en_list.append(en)
-                        changed = True
+            if can_overwrite:
+                for ru_key, en_key in pairs:
+                    ru_list = match.setdefault(ru_key, [])
+                    en_list = match.setdefault(en_key, [])
+                    for ru, en in zip(b.get(ru_key, []), b.get(en_key, [])):
+                        if ru not in ru_list:
+                            ru_list.append(ru)
+                            changed = True
+                        if en not in en_list:
+                            en_list.append(en)
+                            changed = True
 
             if b.get("source_url") and not match.get("source_url"):
                 match["source_url"] = b["source_url"]

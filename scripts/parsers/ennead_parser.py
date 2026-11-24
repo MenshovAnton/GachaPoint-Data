@@ -170,6 +170,16 @@ def parse_ennead_banners(
             if not five_names:
                 continue
 
+            b_name = (b.get("name") or b.get("title") or "").lower()
+            is_chronicled = (game_type == 0) and (
+                "chronicled" in b_name
+                or "хроник" in b_name
+                or str(b.get("type", "")).upper() == "CHRONICLED"
+                or "chronicled" in str(b.get("id", "")).lower()
+                or len(five_names) >= 5
+            )
+            banner_type = "CHRONICLED" if is_chronicled else "CHARACTER"
+
             phase = 1
             if b.get("phase"):
                 try:
@@ -192,6 +202,12 @@ def parse_ennead_banners(
                     ]
                     phase = (max(prev) + 1) if prev else 1
 
+            banner_id = (
+                f"genshin_{version.replace('.', '_')}_chronicled"
+                if (game_type == 0 and is_chronicled)
+                else str(b.get("id") or f"ennead_{slug}_{version}_{phase}")
+            )
+
             banner_obj = make_banner(
                 game_type,
                 version,
@@ -201,9 +217,10 @@ def parse_ennead_banners(
                 five_names,
                 four_names,
                 url,
-                str(b.get("id") or f"ennead_{slug}_{version}_{phase}"),
+                banner_id,
                 catalog_lookup,
                 catalog_path=catalog_path,
+                banner_type=banner_type,
                 source_type="trusted_api",
                 verification_status="verified",
             )

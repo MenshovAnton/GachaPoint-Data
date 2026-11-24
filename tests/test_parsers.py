@@ -17,7 +17,11 @@ from scripts.parsers.official_banners_parser import (
     parse_month_day,
     resolve_item,
 )
-from scripts.sync.sync_promocodes import import_scraped_codes, is_placeholder_reward
+from scripts.sync.sync_promocodes import (
+    import_scraped_banners,
+    import_scraped_codes,
+    is_placeholder_reward,
+)
 
 
 class FandomRewardParsingTests(unittest.TestCase):
@@ -233,6 +237,92 @@ class OfficialParserHelpersTests(unittest.TestCase):
         }
         self.assertEqual(extract_zzz_four_agents(content, ["Roxy"], lookup), ["Corin", "Billy"])
         self.assertEqual(extract_zzz_four_agents("The A-Rank Rate Up feature allows Proxies to select 2 A-Rank Agents.", ["Severian"], lookup), [])
+
+
+class BannerMergeTests(unittest.TestCase):
+    def test_trusted_api_does_not_mutate_official_banner_characters(self):
+        data = {
+            "schema_version": 1,
+            "games": [{
+                "game_type": 0,
+                "banners": [{
+                    "id": "genshin_7_2_2",
+                    "type": "CHARACTER",
+                    "version": "7.2",
+                    "phase": 2,
+                    "start_date": "2026-11-24",
+                    "end_date": "2026-12-15",
+                    "status": "CURRENT",
+                    "featured_five_stars_ru": ["Цзы Бай", "Линнея"],
+                    "featured_five_stars_en": ["Zibai", "Linnea"],
+                    "source_url": "https://genshin.hoyoverse.com/en/news/detail/21980",
+                    "source_id": "21980,21981",
+                    "source_type": "official",
+                    "verification_status": "verified",
+                    "verified_at": "2026-11-21T13:04:40Z",
+                }]
+            }]
+        }
+        scraped = [{
+            "id": "ennead_genshin_7_2_2",
+            "type": "CHARACTER",
+            "game_type": 0,
+            "version": "7.2",
+            "phase": 2,
+            "start_date": "2026-11-24",
+            "end_date": "2026-12-15",
+            "featured_five_stars_ru": ["Вареса", "Часка", "Шилонен", "Муалани", "Кинич"],
+            "featured_five_stars_en": ["Varesa", "Chasca", "Xilonen", "Mualani", "Kinich"],
+            "source_url": "https://api.ennead.cc/mihoyo/genshin/calendar",
+            "source_type": "trusted_api",
+            "verification_status": "verified",
+        }]
+        import_scraped_banners(data, scraped)
+        banner = data["games"][0]["banners"][0]
+        self.assertEqual(banner["featured_five_stars_ru"], ["Цзы Бай", "Линнея"])
+        self.assertEqual(banner["featured_five_stars_en"], ["Zibai", "Linnea"])
+
+    def test_co_running_official_banners_merge_in_hsr(self):
+        data = {
+            "schema_version": 1,
+            "games": [{
+                "game_type": 1,
+                "banners": [{
+                    "id": "hsr_4_7_1",
+                    "type": "CHARACTER",
+                    "version": "4.7",
+                    "phase": 1,
+                    "start_date": "2026-11-11",
+                    "end_date": "2026-12-02",
+                    "status": "CURRENT",
+                    "featured_five_stars_ru": ["Эон ★ Аха"],
+                    "featured_five_stars_en": ["Aeon ★ Aha"],
+                    "source_url": "https://hsr.hoyoverse.com/en-us/news",
+                    "source_type": "official",
+                    "verification_status": "verified",
+                }]
+            }]
+        }
+        scraped = [{
+            "id": "hsr_4_7_1_silverwolf",
+            "type": "CHARACTER",
+            "game_type": 1,
+            "version": "4.7",
+            "phase": 1,
+            "start_date": "2026-11-11",
+            "end_date": "2026-12-02",
+            "featured_five_stars_ru": ["Серебряный Волк LV.999", "Спаркси", "Яо Гуан"],
+            "featured_five_stars_en": ["Silver Wolf LV.999", "Sparxie", "Yao Guang"],
+            "source_url": "https://hsr.hoyoverse.com/en-us/news",
+            "source_type": "official",
+            "verification_status": "verified",
+        }]
+        import_scraped_banners(data, scraped)
+        banner = data["games"][0]["banners"][0]
+        self.assertEqual(
+            banner["featured_five_stars_ru"],
+            ["Эон ★ Аха", "Серебряный Волк LV.999", "Спаркси", "Яо Гуан"]
+        )
 
 
 if __name__ == "__main__":
