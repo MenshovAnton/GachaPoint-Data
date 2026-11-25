@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-24T14:00:19Z",
+  "updated_at": "2026-11-25T08:55:05Z",
   "games": [
     {
       "game_type": 0,
@@ -3586,7 +3586,7 @@
           "phase": 1,
           "start_date": "2026-11-03",
           "end_date": "2026-11-24",
-          "status": "CURRENT",
+          "status": "EXPIRED",
           "featured_five_stars_ru": [
             "Митя",
             "Фурина"
