@@ -91,6 +91,7 @@ jobs:
             echo "LEGACY_MIRROR_TOKEN is not set" >&2
             exit 1
           fi
+          git config --local --unset-all http.https://github.com/.extraheader || true
           git push --force "https://x-access-token:${LEGACY_MIRROR_TOKEN}@github.com/MenshovAnton/GachaPoint-Data.git" HEAD:main
 
       - name: Notify Telegram on Failure
