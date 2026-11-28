@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-27T23:36:50Z",
+  "updated_at": "2026-11-28T08:09:25Z",
   "codes": [
     {
       "id": "ennead_1_4tksx77y58qk",
@@ -16,12 +16,12 @@
       "source_url": "https://api.ennead.cc/mihoyo/starrail/codes",
       "source_type": "trusted_api",
       "verification_status": "unverified",
-      "verified_at": "2026-11-27T23:35:27Z",
+      "verified_at": "2026-11-28T08:08:01Z",
       "is_stream": false,
       "is_active": true,
       "quarantine_reason": "official_source_not_found",
       "last_notified_at": "2026-11-27T12:49:56Z",
-      "last_checked_at": "2026-11-27T23:35:29Z"
+      "last_checked_at": "2026-11-28T08:08:04Z"
     }
   ]
 }
