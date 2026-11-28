@@ -61,14 +61,6 @@ jobs:
           set -euo pipefail
           python -m scripts.tools.lint_data --strict
 
-      - name: Notify Telegram on Failure
-        if: failure()
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          python -m scripts.lib.notify --failure "GitHub Actions sync workflow execution failed on runner. Run ID: $GITHUB_RUN_ID"
-
       - name: Commit and push changes
         shell: bash
         run: |
@@ -88,3 +80,23 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Sync legacy mirror for v0.3.2 clients
+        shell: bash
+        env:
+          LEGACY_MIRROR_TOKEN: ${{ secrets.LEGACY_MIRROR_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${LEGACY_MIRROR_TOKEN:-}" ]; then
+            echo "LEGACY_MIRROR_TOKEN is not set" >&2
+            exit 1
+          fi
+          git push --force "https://x-access-token:${LEGACY_MIRROR_TOKEN}@github.com/MenshovAnton/GachaPoint-Data.git" HEAD:main
+
+      - name: Notify Telegram on Failure
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python -m scripts.lib.notify --failure "GitHub Actions sync workflow execution failed on runner. Run ID: $GITHUB_RUN_ID"
